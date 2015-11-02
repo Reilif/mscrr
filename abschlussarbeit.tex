@@ -1,0 +1,177 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Vorlage fuer Abschlussarbeit (IFM, FB-T, FH Bielefeld)
+%% Autor: Carsten Gips, modified by Matthias Koenig
+%% Datum: 04.04.2013
+\documentclass[11pt, a4paper]{article}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Nuetzliche Pakete
+\usepackage{natbib} 
+\usepackage[english, ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}   
+\usepackage{marvosym}
+% \usepackage{times}
+
+\usepackage[babel]{csquotes}
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage{setspace}
+% \usepackage{latexsym}
+% \usepackage{exscale}
+% \usepackage{verbatim}
+% 
+% \usepackage{tikz}
+% \usepackage{wasysym}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{listings}
+% \usepackage{fancybox}
+% \usepackage{pdfpages}
+% \usepackage{xspace}
+\usepackage{hyperref}
+\usepackage{color}
+% \usepackage[table]{xcolor}
+% \usepackage{colortbl}
+% \usepackage{supertabular}
+% \usepackage{colortbl}
+% \usepackage{rotating}
+\usepackage[ruled,vlined]{algorithm2e}
+% \usepackage{float}
+% 
+
+\usepackage{amssymb,amsmath}
+
+\definecolor{listinggray}{gray}{0.92}
+\definecolor{commentgray}{gray}{0.6}
+\definecolor{quellengray}{gray}{0.8}
+
+
+\lstnewenvironment{java}{
+%\lstset{xleftmargin=\bigskipamount, xrightmargin=\bigskipamount, aboveskip=\bigskipamount, belowskip=\bigskipamount,}
+\lstset{language=Java, basicstyle=\footnotesize\ttfamily\mdseries}
+\lstset{keywordstyle=\bfseries\color{blue},identifierstyle=\ttfamily, commentstyle=\bfseries\color{gray}\textsl,stringstyle=\color{magenta}\upshape}
+\lstset{emphstyle=\color{red}, emphstyle={[2]\color{blue}}}
+%\lstset{texcl=true}
+\lstset{texcl=false}
+\lstset{escapechar=@}
+\lstset{inputencoding=utf8}
+%\lstset{framexleftmargin=5mm, frame=shadowbox, rulesepcolor=\color{black}}
+\lstset{columns=fullflexible, showspaces=false, showstringspaces=false, numbers=none, breaklines=true,tabsize=4, backgroundcolor=\color{listinggray}}
+}{}
+
+
+
+
+% \usepackage{makeidx}         % index
+% \makeindex
+% % damits angezeigt wird:
+% % makeindex diss.idx
+% \usepackage[german]{nomencl} % nomenclatur
+% \makeglossary
+% % damits angezeigt wird:
+% % makeindex diss.glo -s nomencl.ist -o diss.gls
+% 
+% \usepackage{theorem}
+% \usepackage{varioref}  % \vref{} ...
+
+
+% % \sloppy
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Start des Dokuments
+\begin{document}
+\onehalfspacing
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Titelseite
+\input{tex/titelseite}\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Erklaerung
+\input{tex/eidesstattlicheerklaerung}\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Abstract
+\input{tex/abstract}\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Verzeichnisse
+\input{tex/verzeichnisse}\clearpage
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Einleitung
+\input{tex/einleitung}\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Related Work
+\input{tex/stateoftheart}\clearpage
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Inhaltliche Kapitel
+% TODO anpassen
+\input{tex/beispielkapitel}\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Zusammenfassung und Ausblick
+\input{tex/zusammenfassung}\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Danksagung
+\input{tex/danksagung}\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Literatur
+%% braucht einen Zwischenlauf mit "bibtex abschlussarbeit"
+%% nach Änderungen: pdflatex, bibtex, pdflatex, pdflatex, pdflatex
+\input{tex/literatur}\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Anhang
+\input{tex/anhang}\clearpage
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Game over ;-)
+\end{document}
+
+

@@ -1,0 +1,17 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: abschlussarbeit.aux
+The style file: plainnat.bst
+Database file #1: babib.bib
+A bad cross reference---entry "brunozandonella2013"
+refers to entry "http://www.bpb.de/system/files/dokument_pdf/4810_tb99_bevoelkerungsentwicklung_online_farbe_k1.pdf", which doesn't exist
+Warning--I didn't find a database entry for "Claus98a"
+Warning--I didn't find a database entry for "http://www.bpb.de/system/files/dokument_pdf/4810_tb99_bevoelkerungsentwicklung_online_farbe_k1.pdf"
+Too many commas in name 1 of "B. Badura, S.v. Bandemer, G. Bausch-Weis, weitere" for entry AOK2004
+while executing---line 1347 of file plainnat.bst
+Too many commas in name 1 of "B. Badura, S.v. Bandemer, G. Bausch-Weis, weitere" for entry AOK2004
+while executing---line 1347 of file plainnat.bst
+Too many commas in name 1 of "B. Badura, S.v. Bandemer, G. Bausch-Weis, weitere" for entry AOK2004
+while executing---line 1429 of file plainnat.bst
+Too many commas in name 1 of "B. Badura, S.v. Bandemer, G. Bausch-Weis, weitere" for entry AOK2004
+while executing---line 1429 of file plainnat.bst
+Warning--empty journal in brunozandonella2013
+(There were 5 error messages)

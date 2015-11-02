@@ -1,0 +1,27 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[B.~Badura(2005)]{AOK2004}
+G.~Bausch-Weis~weitere B.~Badura, S.v.~Bandemer.
+\newblock \emph{Fehlzeiten-Report 2004 Gesundheitsmanagement in Krankenhäusern
+  und Pflegeeinrichtungen}.
+\newblock Badura, Prof. Dr. Bernhard Schellschmidt, Dr. Henner Vetter,
+  Christian, 2005.
+\newblock ISBN 978-3-540-27051-5.
+
+\bibitem[Wagner(2009)]{wagner2009tele}
+Cosima Wagner.
+\newblock „{T}ele-{A}ltenpflege“ und „{R}obotertherapie “: {L}eben mit
+  {R}obotern als {V}ision und {R}ealit{\"a}t f{\"u}r die alternde
+  {G}esellschaft {J}apans, 2009.
+
+\bibitem[Zandonella(2013)]{brunozandonella2013}
+Bruno Zandonella.
+\newblock Bevölkerungsentwicklung und {R}enten.
+\newblock oct 2013.
+
+\end{thebibliography}
