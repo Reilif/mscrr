@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -6,12 +6,29 @@
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
 \bibitem[B.~Badura(2005)]{AOK2004}
-G.~Bausch-Weis~weitere B.~Badura, S.v.~Bandemer.
+weitere B.~Badura.
 \newblock \emph{Fehlzeiten-Report 2004 Gesundheitsmanagement in Krankenhäusern
   und Pflegeeinrichtungen}.
 \newblock Badura, Prof. Dr. Bernhard Schellschmidt, Dr. Henner Vetter,
   Christian, 2005.
 \newblock ISBN 978-3-540-27051-5.
+
+\bibitem[Kobayashi(1999)]{kobayashihisato1999}
+Hisato Kobayashi.
+\newblock \emph{Technolife Series. Robotto wa tomodachi da! [Technolife-Serie.
+  Der Roboter ist ein Freund!]}.
+\newblock Ohmsha, Tokyo, 1999.
+
+\bibitem[Meyer(2011)]{dr.sibyllemeyer2011}
+Dr.~Sibylle Meyer.
+\newblock \emph{Mein Freund der Roboter}.
+\newblock BMBF/VDE Innovationspartnerschaft AAL, oct 2011.
+\newblock ISBN-10: 3800733420.
+
+\bibitem[Panasonic(2005)]{panasonic2005}
+Panasonic, may 2005.
+\newblock URL \url{http://panasonic.co. jp/museum/smilennium/kaden/
+  robot/38/01.html}.
 
 \bibitem[Wagner(2009)]{wagner2009tele}
 Cosima Wagner.

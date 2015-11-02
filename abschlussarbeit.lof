@@ -1,9 +1,12 @@
 \select@language {ngerman}
 \select@language {english}
 \select@language {ngerman}
-\contentsline {figure}{\numberline {1}{\ignorespaces Typischer Beispieltext}}{4}{figure.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Zum Beispieltext passende Abbildungen (Depiktionen)}}{4}{figure.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {teil 1}}}{4}{figure.2}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {teil 2}}}{4}{figure.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {teil 3}}}{4}{figure.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Sourcecode f\IeC {\"u}r Kram}}{5}{figure.3}
+\contentsline {figure}{\numberline {1}{\ignorespaces Roboter in Seniorenheimen}}{2}{figure.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Roboterteddy K\={o}-chan Quelle: \citep {panasonic2005}}}}{2}{figure.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Roboterkatze zur Therapie Quelle: \citep {wagner2009tele}}}}{2}{figure.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Typischer Beispieltext}}{5}{figure.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Zum Beispieltext passende Abbildungen (Depiktionen)}}{5}{figure.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {teil 1}}}{5}{figure.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {teil 2}}}{5}{figure.3}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {teil 3}}}{5}{figure.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Sourcecode f\IeC {\"u}r Kram}}{6}{figure.4}
