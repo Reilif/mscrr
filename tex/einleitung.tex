@@ -22,5 +22,30 @@ Einen alternativen Weg bringt die Technik. Einfache zu bedienende Systeme könne
 
 Nicht nur in Japan, sondern auch in Deutschland wird sich mit dem Thema \textit{Care(rob)bots} befasst. So finden sich unter dem Stichpunkt \textit{Mensch-Maschine-Entgrenzungen} Studien zu der Thematik. Andere Untersuchungen befassen sich mit der Gegenseite, der Akzeptanz der Senioren\FemaleMale für Roboter. So ergab eine Befragung der VDE-Studie "Mein Freund der Roboter", dass eine Mehrheit (56\%) der Senioren\FemaleMale Robotern im Haushalt offen gegenüber stehen und diese einem Pflege-/Altersheim vorziehen würden. Neben den bekannten Staubsauger- und Rasenmährobotern, sind es auch zukünftige Anwendung, wie ein roboterisierter Rollstuhl, die hohe Akzeptanzwerte erreichen. Die Studie zeigte aber auch, dass Senioren\FemaleMale zunächst Robotern skeptisch gegenüberstehen. Spontan lehnten 40 Prozent der Senioren\FemaleMale Roboter in ihrem privaten Umfeld ab, 60 Prozent empfanden Robotik sogar als unheimlich. jedoch zeigte sich, dass der Wunsch nach einer selbstständigen Lebensführung ein starker Faktor für die Akzeptanz ist. Dadurch ergibt sich eine Beliebtheit für Serviceroboter. So sind Roboter, die abgrenzbare Tätigkeiten im Haushalt selbständig erledigen, sehr beliebt. Wichtige Kriterien für die Akzeptanz waren zudem die intuitive Bedienbarkeit, die Robustheit und die Flexibilität gegenüber unterschiedlicher Handicaps. Auch menschliche Faktoren wie Geduld, Verständnis, Höflichkeit und Achtung der Intimsphäre waren den Anwendern\FemaleMale wichtig.\citep{dr.sibyllemeyer2011}
 
+Neben den sozialen Forschungen gibt es in Deutschland auch ingenieurwissenschaftliche Ergebnisse auf diesem Gebiet. So beschäftigt sich das  Cluster of Excellence Cognitive Interaction Technology (CITEC) in Bielefeld, zusammen mit der Stiftung Bethel, in der Forschung auf dem Gebiet der Unterstützung für Demenzkranke. Die dort entwickelten Assistenzsysteme helfen den Patienten unter anderem beim Zähneputzen und geben ihnen so ein Stück Selbstständigkeit zurück.
+
+Viele Forschungen und Entwicklungen beschäftigen sich momentan mit der Mensch-Maschine/Roboter Beziehung. Dabei geraten die Roboter-Roboter-Interaktionen in den Hintergrund. Da aber heutige Roboter keine Allround-Lösungen bieten, sondern meist hochgradig spezialisiert sind und nur eine Tätigkeit ausführen können( zum Beispiel Saugroboter, Fensterwischroboter und weitere), ist das Zusammenspiel und die Komposition der Roboter wichtig. Das Szenario in Abbildung \ref{fig:szen1} zeigt, wie solch eine Komposition aussehen könnte.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=1.4]{fig/szen1}   
+	\caption[Beispiel Szenario 1]{Mensch A stößt einen Blumentopf um (1). Ein Kamerasystem dediziert das der Topf umgefallen ist und Erde auf dem Boden liegt. Ein Roboter mit Arm wird gerufen, der zunächst die Vase aufhebt und an ihren Platz zurückstellt (2). Anschließend wird ein Saugroboter aktiviert, der die Erde weg saugt (3). Bei schwereren Verschmutzungen wird noch ein Wischroboter bestellt.}
+	\label{fig:szen1}
+\end{figure}
+
+Dabei führt jeder Roboter selbstständig  und unabhängig von den anderen seine Arbeit aus. Die Kommunikation geht immer von der Zentralen Steuereinheit, dem \textit{Master}, aus. Zwischen den einzelnen Robotern findet kein großer Informationsaustausch statt. Die Änderung an dem Szenario in Abbildung \ref{fig:szen2} ändert jedoch die Art der Zusammenarbeit und der Kommunikation. Nun ist es nötig, dass die Roboter notwendige Informationen, wie die Übergabepose oder eine Synchronisierung der Gripper, austauschen.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=1.0]{fig/szen2}   
+	\caption[Erweiterung Szenario 1]{Beim Zurückstellen der Vase stellt der Roboter fest, dass er die gewünschte Position nicht erreichen kann(1), weil sein Arm zu kurz ist. Da auf der Anrichte noch ein weiterer Arm steht nimmt er die Kommunikation mit diesem Manipulator auf. Sie kommunizieren einen Übergabepunkt und führen ein Übergabemanöver durch. Arm 2 stellt nun die Vase an die gewünschte Position.
+	}
+	\label{fig:szen2}
+\end{figure}
+
+
+Der zentrale Aspekt dieser Arbeit befasst sich mit der Abstraktion von Szenario 2. Roboter 1 übergibt ein Objekt an Roboter 2. Dabei werden verschiedene Thematiken aufgegriffen, untersucht und erläutert. Das Folgende Kapitel befasst sich mit den Grundlagen dieser Arbeit, es werden einzelne Begriffe aus der Robotik und der Middleware \textbf{R}obot \textbf{O}perating \textbf{S}ystem erläutert, sowie der genutzte Laboraufbau dargestellt. Dabei wird die verwendete Hardware aufgelistet und im Detail betrachtet. Kapitel \ref{sec:relatedwork} zeigt schon bestehende Arbeiten im Bereich Robotik, die mit dieser Arbeit in Zusammenhang bestehen. So wird unter anderem der Begriff PEIS (Physically Embedded Intelligent Systems) erläutert und die Verbindung zur Thesis gezeigt. Des Weiteren werden Arbeiten für Multirobot Systeme und Handover-Methoden erklärt. Im darauf folgenden Kapitel 
+
+
 
 

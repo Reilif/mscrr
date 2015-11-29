@@ -1,0 +1,35 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Related Work
+\subsection{Nomenklatur}
+\label{sec:basic-math}
+    
+  Die folgende Tabelle erläutert die genutzten mathematischen Symbole und orientiert sich an dem Buch "Robitcs, Vision and Control". Von links nach rechts sind das Symbol, die Einheit und die Beschreibung gegeben. Einige Symbole werden mehrfach verwendet und haben je nach Kontext eine andere Bedeutung.
+
+  \begin{table}[h]%
+  \begin{tabularx}{\columnwidth}{|l|l|X|}
+  	\hline Symbol & Einheit & Beschreibung \\ 
+  	\hline $T$ & s & Messintervall \\
+ 	\hline $T$ &  & homogene Transformation, $T \in SE(2)$ oder $SE(3)$ \\
+ 	\hline $^AT_B$ &  & homogene Transformation zur Darstellung von Koordinatensystem $ B $ betrachtet von Koordinatensystem $ A $. Koordinatensystem $ 0 $ bezeichnet das Weltkoordinatensystem und muss nicht explizit angegeben werden $^0T_B = T_B$(). Die inverse kann auf zwei Arten betrachtet werden: $(^AT_B)^{-1} = ^BT_A $ \\
+ 	\hline $\theta$ & rad & Winkel im Bogenmaß. Wenn nichts weiteres gegeben ist sind Winkel immer im \textbf{Bogenmaß} zu sehen. \\ 
+ 	\hline $ \pmb{\theta}$ & rad & Vektor von Winkel im Bogenmaß. \\ 
+	\hline $\theta_r \theta_p \theta_y$ & rad & Roll-Pitch-Gear Winkel, beziehungsweise Rollen \\
+ 	\hline $\alpha$ & \textdegree & Winkel in Grad. Wenn nichts weiteres gegeben ist sind Winkel immer im \textbf{Bogenmaß} zu sehen. \\
+ 	\hline $v$ & m s$^{-1}$ & Geschwindigkeit. \\
+ 	\hline $\pmb{v}$ &  m s$^{-1}$  & Geschwindigkeitsvektor. Meist $\in \mathds{R}^3$. \\
+ 	\hline $\omega$ & rad s$^{-1}$ & Drehwinkel-Geschwindigkeit. \\
+ 	\hline $\pmb{\omega}$ &  rad s$^{-1}$  & Drehwinkel-Geschwindigkeitsvektor. Meist $\in \mathds{R}^3$. \\
+ 	\hline $\pmb{v}$ &  & Geschwindigkeit-Drehung (engl. Twist, Screw).  $\pmb{v} \in \mathds{R}^6$, $\pmb{v} = (v_x, v_y, v_z,\omega_x, \omega_y, \omega_z)$ \\
+ 	\hline X,Y,Z &   & Kartesische Koordinaten. \\
+ 	\hline $\xi$ &   & Abstrakte Darstellung einer 3-dimensionalen Kartesischen Pose  $\xi  \in \mathds{R}^6$ \\
+ 	\hline $^A\xi_B$ &   & Abstrakte Darstellung einer \textbf{relativen} 3-dimensionalen Kartesischen Pose, Pose $ B $ betrachtet von Pose $ A $ \\
+	\hline $\oplus$ &   & Hintereinanderausführung (Addition) zweier Posen \\
+	\hline $\ominus$ &   & Unärer Operator zur Invertierung von Posen \\
+ 	\hline
+  \end{tabularx}
+  \caption{Nomenklatur}
+  \label{tab:nomenklatur}
+  
+    \end{table}%
+  
+

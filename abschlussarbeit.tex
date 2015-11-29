@@ -39,7 +39,11 @@
 % \usepackage{supertabular}
 % \usepackage{colortbl}
 % \usepackage{rotating}
+\usepackage{textcomp}
+\usepackage{ dsfont }
 \usepackage[ruled,vlined]{algorithm2e}
+\usepackage{tabularx}
+\usepackage{longtable, tabu}
 % \usepackage{float}
 % 
 
@@ -49,6 +53,7 @@
 \definecolor{commentgray}{gray}{0.6}
 \definecolor{quellengray}{gray}{0.8}
 
+\lstset{language=bash}
 
 \lstnewenvironment{java}{
 %\lstset{xleftmargin=\bigskipamount, xrightmargin=\bigskipamount, aboveskip=\bigskipamount, belowskip=\bigskipamount,}
@@ -62,6 +67,7 @@
 %\lstset{framexleftmargin=5mm, frame=shadowbox, rulesepcolor=\color{black}}
 \lstset{columns=fullflexible, showspaces=false, showstringspaces=false, numbers=none, breaklines=true,tabsize=4, backgroundcolor=\color{listinggray}}
 }{}
+
 
 
 
@@ -127,6 +133,10 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Grundlagen
+\input{tex/grundlagen}\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Related Work
 \input{tex/stateoftheart}\clearpage
 
@@ -136,7 +146,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Inhaltliche Kapitel
 % TODO anpassen
-\input{tex/beispielkapitel}\clearpage
+%\input{tex/beispielkapitel}\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

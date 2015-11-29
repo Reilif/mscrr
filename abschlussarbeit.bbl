@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -27,8 +27,16 @@ Dr.~Sibylle Meyer.
 
 \bibitem[Panasonic(2005)]{panasonic2005}
 Panasonic, may 2005.
-\newblock URL \url{http://panasonic.co. jp/museum/smilennium/kaden/
-  robot/38/01.html}.
+\newblock URL
+  \url{http://panasonic.com.jp/museum/smilennium/kaden/robot/38/01.html}.
+
+\bibitem[Quigley et~al.(2009)Quigley, Conley, Gerkey, Faust, Foote, Leibs,
+  Wheeler, and Ng]{quigley2009ros}
+Morgan Quigley, Ken Conley, Brian Gerkey, Josh Faust, Tully Foote, Jeremy
+  Leibs, Rob Wheeler, and Andrew~Y Ng.
+\newblock Ros: an open-source robot operating system.
+\newblock In \emph{ICRA workshop on open source software}, volume~3, page~5,
+  2009.
 
 \bibitem[Wagner(2009)]{wagner2009tele}
 Cosima Wagner.

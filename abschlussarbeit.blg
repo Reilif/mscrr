@@ -2,10 +2,8 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: abschlussarbeit.aux
 The style file: plainnat.bst
 Database file #1: babib.bib
 Warning--entry type for "panasonic2005" isn't style-file defined
---line 33 of file babib.bib
-A bad cross reference---entry "brunozandonella2013"
-refers to entry "http://www.bpb.de/system/files/dokument_pdf/4810_tb99_bevoelkerungsentwicklung_online_farbe_k1.pdf", which doesn't exist
+--line 32 of file babib.bib
 Warning--I didn't find a database entry for "Claus98a"
-Warning--I didn't find a database entry for "http://www.bpb.de/system/files/dokument_pdf/4810_tb99_bevoelkerungsentwicklung_online_farbe_k1.pdf"
+Warning--can't use both volume and number fields in quigley2009ros
 Warning--empty journal in brunozandonella2013
-(There was 1 error message)
+(There were 4 warnings)
