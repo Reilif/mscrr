@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -12,6 +12,14 @@ weitere B.~Badura.
 \newblock Badura, Prof. Dr. Bernhard Schellschmidt, Dr. Henner Vetter,
   Christian, 2005.
 \newblock ISBN 978-3-540-27051-5.
+
+\bibitem[Corke(2011)]{Corke2011}
+Peter Corke.
+\newblock \emph{Robotics, Vision and Control - Fundamental Algorithms in
+  MATLAB}.
+\newblock Springer Science \& Business Media, Berlin Heidelberg, 1st ed. 2011
+  edition, 2011.
+\newblock ISBN 978-3-642-20143-1.
 
 \bibitem[Kobayashi(1999)]{kobayashihisato1999}
 Hisato Kobayashi.
@@ -37,6 +45,9 @@ Morgan Quigley, Ken Conley, Brian Gerkey, Josh Faust, Tully Foote, Jeremy
 \newblock Ros: an open-source robot operating system.
 \newblock In \emph{ICRA workshop on open source software}, volume~3, page~5,
   2009.
+
+\bibitem[Steidl(2011)]{danielasteidl2011}
+Daniela Steidl, 2011.
 
 \bibitem[Wagner(2009)]{wagner2009tele}
 Cosima Wagner.

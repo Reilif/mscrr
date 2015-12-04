@@ -3,7 +3,11 @@ The style file: plainnat.bst
 Database file #1: babib.bib
 Warning--entry type for "panasonic2005" isn't style-file defined
 --line 32 of file babib.bib
-Warning--I didn't find a database entry for "Claus98a"
+Warning--entry type for "danielasteidl2011" isn't style-file defined
+--line 102 of file babib.bib
+A bad cross reference---entry "danielasteidl2011"
+refers to entry "https://wwwcg.in.tum.de/fileadmin/user_upload/Lehrstuehle/Lehrstuhl_XV/Teaching/SS11/Proseminar-PIXAR/Daniela_Steidl_talk.pdf", which doesn't exist
+Warning--I didn't find a database entry for "https://wwwcg.in.tum.de/fileadmin/user_upload/Lehrstuehle/Lehrstuhl_XV/Teaching/SS11/Proseminar-PIXAR/Daniela_Steidl_talk.pdf"
 Warning--can't use both volume and number fields in quigley2009ros
 Warning--empty journal in brunozandonella2013
-(There were 4 warnings)
+(There was 1 error message)
