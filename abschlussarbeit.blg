@@ -5,9 +5,10 @@ Warning--entry type for "panasonic2005" isn't style-file defined
 --line 32 of file babib.bib
 Warning--entry type for "danielasteidl2011" isn't style-file defined
 --line 102 of file babib.bib
-A bad cross reference---entry "danielasteidl2011"
-refers to entry "https://wwwcg.in.tum.de/fileadmin/user_upload/Lehrstuehle/Lehrstuhl_XV/Teaching/SS11/Proseminar-PIXAR/Daniela_Steidl_talk.pdf", which doesn't exist
-Warning--I didn't find a database entry for "https://wwwcg.in.tum.de/fileadmin/user_upload/Lehrstuehle/Lehrstuhl_XV/Teaching/SS11/Proseminar-PIXAR/Daniela_Steidl_talk.pdf"
+Warning--entry type for "monikaflorekjasinska2015" isn't style-file defined
+--line 116 of file babib.bib
+Warning--entry type for "kuka2015" isn't style-file defined
+--line 123 of file babib.bib
 Warning--can't use both volume and number fields in quigley2009ros
 Warning--empty journal in brunozandonella2013
-(There was 1 error message)
+(There were 6 warnings)

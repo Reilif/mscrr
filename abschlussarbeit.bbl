@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -21,11 +21,23 @@ Peter Corke.
   edition, 2011.
 \newblock ISBN 978-3-642-20143-1.
 
+\bibitem[Florek-Jasinska(2015)]{monikaflorekjasinska2015}
+Monika Florek-Jasinska.
+\newblock Youbot detailed specifications, dec 2015.
+\newblock URL
+  \url{http://www.youbot-store.com/wiki/index.php/YouBot_Detailed_Specifications}.
+
 \bibitem[Kobayashi(1999)]{kobayashihisato1999}
 Hisato Kobayashi.
 \newblock \emph{Technolife Series. Robotto wa tomodachi da! [Technolife-Serie.
   Der Roboter ist ein Freund!]}.
 \newblock Ohmsha, Tokyo, 1999.
+
+\bibitem[Kuka(2015)]{kuka2015}
+Kuka.
+\newblock Mounting and sensor plate, dec 2015.
+\newblock URL
+  \url{http://www.youbot-store.com/accessories/youbot-extensions/mounting-and-sensor-plate}.
 
 \bibitem[Meyer(2011)]{dr.sibyllemeyer2011}
 Dr.~Sibylle Meyer.
@@ -48,6 +60,8 @@ Morgan Quigley, Ken Conley, Brian Gerkey, Josh Faust, Tully Foote, Jeremy
 
 \bibitem[Steidl(2011)]{danielasteidl2011}
 Daniela Steidl, 2011.
+\newblock URL
+  \url{https://wwwcg.in.tum.de/fileadmin/user_upload/Lehrstuehle/Lehrstuhl_XV/Teaching/SS11/Proseminar-PIXAR/Daniela_Steidl_talk.pdf}.
 
 \bibitem[Wagner(2009)]{wagner2009tele}
 Cosima Wagner.

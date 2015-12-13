@@ -17,12 +17,15 @@
 \contentsline {subsubsection}{\numberline {2.3.4}Inverse Kinematik}{12}{subsubsection.2.3.4}
 \contentsline {subsection}{\numberline {2.4}Aufbau}{13}{subsection.2.4}
 \contentsline {subsubsection}{\numberline {2.4.1}Aufbau Teststand}{13}{subsubsection.2.4.1}
-\contentsline {section}{\numberline {3}Stand der Technik}{15}{section.3}
-\contentsline {subsection}{\numberline {3.1}Physically Embedded Intelligent Systems - PEIS}{15}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Multirobots System - Komposition und Konfiguration}{15}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Handover - \IeC {\"U}bergabe zwischen Roboter-Maschine und Roboter-Roboter}{15}{subsection.3.3}
-\contentsline {section}{\numberline {4}Zusammenfassung und Ausblick}{16}{section.4}
-\contentsline {section}{\numberline {5}Danksagung}{17}{section.5}
-\contentsline {section}{\numberline {6}Literaturverzeichnis}{18}{section.6}
-\contentsline {section}{\numberline {A}Erster Anhang}{19}{appendix.A}
-\contentsline {section}{\numberline {B}Noch ein Anhang}{19}{appendix.B}
+\contentsline {subsubsection}{\numberline {2.4.2}YouBot}{13}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Sensoren}{17}{subsubsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.4.4}Netzwerk}{18}{subsubsection.2.4.4}
+\contentsline {section}{\numberline {3}Stand der Technik}{19}{section.3}
+\contentsline {subsection}{\numberline {3.1}Physically Embedded Intelligent Systems - PEIS}{19}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Multirobots System - Komposition und Konfiguration}{19}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Handover - \IeC {\"U}bergabe zwischen Roboter-Maschine und Roboter-Roboter}{19}{subsection.3.3}
+\contentsline {section}{\numberline {4}Zusammenfassung und Ausblick}{20}{section.4}
+\contentsline {section}{\numberline {5}Danksagung}{21}{section.5}
+\contentsline {section}{\numberline {6}Literaturverzeichnis}{22}{section.6}
+\contentsline {section}{\numberline {A}Erster Anhang}{23}{appendix.A}
+\contentsline {section}{\numberline {B}Noch ein Anhang}{23}{appendix.B}

@@ -9,5 +9,9 @@
 \contentsline {figure}{\numberline {4}{\ignorespaces Master Service}}{7}{figure.4}
 \contentsline {figure}{\numberline {5}{\ignorespaces Netzwerk Entlastung durch Peer-to-Peer Verbindungen}}{8}{figure.5}
 \contentsline {figure}{\numberline {6}{\ignorespaces Topic Beispiel}}{8}{figure.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Aufbau Teststand: Draufsicht}}{13}{figure.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Aufbau Teststand: Draufsicht}}{14}{figure.8}
+\contentsline {figure}{\numberline {7}{\ignorespaces YouBot Arm Kinematik}}{14}{figure.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Arbeitsraum YouBot. Bilderquelle:\cite {monikaflorekjasinska2015}}}{15}{figure.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {YouBot Arm Arbeitsraum. Reichweite der einzelnen Gelenk und einzelne Abmessung der Links und Link-Offsets. Einheitslose Angaben sind in mm.}}}{15}{figure.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Draufsicht YouBot Arm Arbeitsraum.}}}{15}{figure.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces YouBot Base}}{16}{figure.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Mobile YouBot Plattform mit Sensorplatte. Bilderquelle:\cite {kuka2015}}}{17}{figure.10}
