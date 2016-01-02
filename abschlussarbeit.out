@@ -12,17 +12,30 @@
 \BOOKMARK [3][-]{subsubsection.2.3.2}{Kinematik}{subsection.2.3}% 12
 \BOOKMARK [3][-]{subsubsection.2.3.3}{Forward Kinematics}{subsection.2.3}% 13
 \BOOKMARK [3][-]{subsubsection.2.3.4}{Inverse Kinematik}{subsection.2.3}% 14
-\BOOKMARK [2][-]{subsection.2.4}{Aufbau}{section.2}% 15
-\BOOKMARK [3][-]{subsubsection.2.4.1}{Aufbau Teststand}{subsection.2.4}% 16
-\BOOKMARK [3][-]{subsubsection.2.4.2}{YouBot}{subsection.2.4}% 17
-\BOOKMARK [3][-]{subsubsection.2.4.3}{Sensoren}{subsection.2.4}% 18
-\BOOKMARK [3][-]{subsubsection.2.4.4}{Netzwerk}{subsection.2.4}% 19
-\BOOKMARK [1][-]{section.3}{Stand der Technik}{}% 20
-\BOOKMARK [2][-]{subsection.3.1}{Physically Embedded Intelligent Systems - PEIS}{section.3}% 21
-\BOOKMARK [2][-]{subsection.3.2}{Multirobots System - Komposition und Konfiguration}{section.3}% 22
-\BOOKMARK [2][-]{subsection.3.3}{Handover - \334bergabe zwischen Roboter-Maschine und Roboter-Roboter}{section.3}% 23
-\BOOKMARK [1][-]{section.4}{Zusammenfassung und Ausblick}{}% 24
-\BOOKMARK [1][-]{section.5}{Danksagung}{}% 25
-\BOOKMARK [1][-]{section.6}{Literaturverzeichnis}{}% 26
-\BOOKMARK [1][-]{appendix.A}{Erster Anhang}{}% 27
-\BOOKMARK [1][-]{appendix.B}{Noch ein Anhang}{}% 28
+\BOOKMARK [1][-]{section.3}{Stand der Technik}{}% 15
+\BOOKMARK [2][-]{subsection.3.1}{Multi-robot system - Konzepte zur Verwaltung mehrerer Roboter}{section.3}% 16
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Klassifizierung der Koordinierung}{subsection.3.1}% 17
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Probleme der Koordinierung}{subsection.3.1}% 18
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Zusammenfassung}{subsection.3.1}% 19
+\BOOKMARK [2][-]{subsection.3.2}{Physically Embedded Intelligent Systems - PEIS}{section.3}% 20
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Konzept}{subsection.3.2}% 21
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Implementation}{subsection.3.2}% 22
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Zusammenfassung}{subsection.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.3}{Grasping und Handover - Arbeiten zu Roboterarmen}{section.3}% 24
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Grasping - Greifen mit einem Roboterarm}{subsection.3.3}% 25
+\BOOKMARK [1][-]{section.4}{Laboraufbau}{}% 26
+\BOOKMARK [2][-]{subsection.4.1}{Aufbau Teststand}{section.4}% 27
+\BOOKMARK [2][-]{subsection.4.2}{YouBot}{section.4}% 28
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Manipulator}{subsection.4.2}% 29
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Mobile Plattform}{subsection.4.2}% 30
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Rechner}{subsection.4.2}% 31
+\BOOKMARK [2][-]{subsection.4.3}{Sensoren}{section.4}% 32
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Asus XTion Pro}{subsection.4.3}% 33
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Hokuyo URG-04LX-UG01}{subsection.4.3}% 34
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Argos 3D - P100}{subsection.4.3}% 35
+\BOOKMARK [3][-]{subsubsection.4.3.4}{Netzwerk- und Sensoranbindung}{subsection.4.3}% 36
+\BOOKMARK [1][-]{section.5}{Zusammenfassung und Ausblick}{}% 37
+\BOOKMARK [1][-]{section.6}{Danksagung}{}% 38
+\BOOKMARK [1][-]{section.7}{Literaturverzeichnis}{}% 39
+\BOOKMARK [1][-]{appendix.A}{Erster Anhang}{}% 40
+\BOOKMARK [1][-]{appendix.B}{Noch ein Anhang}{}% 41

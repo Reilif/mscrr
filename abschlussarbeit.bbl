@@ -1,17 +1,96 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{60}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[B.~Badura(2005)]{AOK2004}
-weitere B.~Badura.
+\bibitem[Adjie-Winoto et~al.(1999)Adjie-Winoto, Schwartz, Balakrishnan, and
+  Lilley]{adjie1999design}
+William Adjie-Winoto, Elliot Schwartz, Hari Balakrishnan, and Jeremy Lilley.
+\newblock The design and implementation of an intentional naming system.
+\newblock In \emph{ACM SIGOPS Operating Systems Review}, volume~33, pages
+  186--201. ACM, 1999.
+
+\bibitem[Arkin(1987)]{arkin1987motor}
+Ronald~C Arkin.
+\newblock Motor schema based navigation for a mobile robot: An approach to
+  programming by behavior.
+\newblock In \emph{Robotics and Automation. Proceedings. 1987 IEEE
+  International Conference on}, volume~4, pages 264--271. IEEE, 1987.
+
+\bibitem[Arregui et~al.(2003)Arregui, Fernstrom, Pacull, and
+  Gilbert]{arregui2003stitch}
+Dami{\'a}n Arregui, Christer Fernstrom, Fran{\c{c}}ois Pacull, and J~Gilbert.
+\newblock Stitch: Middleware for ubiquitous applications.
+\newblock In \emph{Proc. of the Smart Object Conf}, 2003.
+
+\bibitem[Asus(2015)]{asus2015}
+Asus.
+\newblock Xtion pro live, dec 2015.
+\newblock URL \url{https://www.asus.com/de/3D-Sensor/Xtion_PRO_LIVE/}.
+
+\bibitem[Badura(2005)]{AOK2004}
+B.~Badura.
 \newblock \emph{Fehlzeiten-Report 2004 Gesundheitsmanagement in Krankenhäusern
   und Pflegeeinrichtungen}.
 \newblock Badura, Prof. Dr. Bernhard Schellschmidt, Dr. Henner Vetter,
   Christian, 2005.
 \newblock ISBN 978-3-540-27051-5.
+
+\bibitem[Balch(1999)]{balch1999impact}
+Tucker Balch.
+\newblock The impact of diversity on performance in multi-robot foraging.
+\newblock In \emph{Proceedings of the third annual conference on Autonomous
+  Agents}, pages 92--99. ACM, 1999.
+
+\bibitem[Bicchi and Kumar(2000)]{bicchi2000robotic}
+Antonio Bicchi and Vijay Kumar.
+\newblock Robotic grasping and contact: A review.
+\newblock In \emph{ICRA}, pages 348--353. Citeseer, 2000.
+
+\bibitem[Bluetechnix(2015)]{bluetechnix2015}
+Bluetechnix.
+\newblock Depth sensing - bluetechnix, dec 2015.
+\newblock URL
+  \url{http://www.bluetechnix.com/de/products/depthsensing/product/argos3d-p100/}.
+
+\bibitem[Boella(2002)]{boella2002norms}
+Guido Boella.
+\newblock Norms and cooperation: Two sides of social rationality.
+\newblock 2002.
+
+\bibitem[Botelho and Alami(1999)]{botelho1999m+}
+Sylvia~C Botelho and Rachid Alami.
+\newblock M+: a scheme for multi-robot cooperation through negotiated task
+  allocation and achievement.
+\newblock In \emph{Robotics and Automation, 1999. Proceedings. 1999 IEEE
+  International Conference on}, volume~2, pages 1234--1239. IEEE, 1999.
+
+\bibitem[Broxvall and Saffiotti(2005)]{Saffiotti:2005:PEA:1107548.1107615}
+Mathias Broxvall and Alessandro Saffiotti.
+\newblock Peis ecologies: Ambient intelligence meets autonomous robotics.
+\newblock In \emph{Proceedings of the 2005 Joint Conference on Smart Objects
+  and Ambient Intelligence: Innovative Context-aware Services: Usages and
+  Technologies}, sOc-EUSAI '05, pages 277--281, New York, NY, USA, 2005. ACM.
+\newblock ISBN 1-59593-304-2.
+\newblock \doi{10.1145/1107548.1107615}.
+\newblock URL \url{http://doi.acm.org/10.1145/1107548.1107615}.
+
+\bibitem[Caceres et~al.(2003)Caceres, Mart{\i}nez, Zamora, and
+  Tom{\'a}s]{caceres2003real}
+D~Alonso Caceres, H~Mart{\i}nez, MA~Zamora, and LM~Tom{\'a}s.
+\newblock A real-time framework for robotics software.
+\newblock In \emph{Int Conf on Computer Integrated Manufacturing}, 2003.
+
+\bibitem[Caloud et~al.(1990)Caloud, Choi, Latombe, Le~Pape, and
+  Yim]{caloud1990indoor}
+Philippe Caloud, Wonyun Choi, Jean-Claude Latombe, Claude Le~Pape, and Mark
+  Yim.
+\newblock Indoor automation with many mobile robots.
+\newblock In \emph{Intelligent Robots and Systems' 90.'Towards a New Frontier
+  of Applications', Proceedings. IROS'90. IEEE International Workshop on},
+  pages 67--72. IEEE, 1990.
 
 \bibitem[Corke(2011)]{Corke2011}
 Peter Corke.
@@ -21,11 +100,97 @@ Peter Corke.
   edition, 2011.
 \newblock ISBN 978-3-642-20143-1.
 
+\bibitem[Davis and Smith(2003)]{davis2003negotiation}
+Randall Davis and Reid~G Smith.
+\newblock Negotiation as a metaphor for distributed problem solving.
+\newblock In \emph{Communication in Multiagent Systems}, pages 51--97.
+  Springer, 2003.
+
+\bibitem[Dias and Stentz(2003)]{dias2003comparative}
+M~Bernadine Dias and Anthony Stentz.
+\newblock A comparative study between centralized, market-based, and behavioral
+  multirobot coordination approaches.
+\newblock In \emph{Intelligent Robots and Systems, 2003.(IROS 2003).
+  Proceedings. 2003 IEEE/RSJ International Conference on}, volume~3, pages
+  2279--2284. IEEE, 2003.
+
+\bibitem[Dias and Stentz(2000)]{dias2000market}
+M~Bernardine Dias and Anthony Stentz.
+\newblock A market approach to multirobot coordination.
+\newblock Technical report, DTIC Document, 2000.
+
+\bibitem[Durfee et~al.(1987)Durfee, Lesser, and Corkill]{durfee1987coherent}
+Edmund~H Durfee, Victor~R Lesser, and Daniel~D Corkill.
+\newblock Coherent cooperation among communicating problem solvers.
+\newblock \emph{Computers, IEEE Transactions on}, 100\penalty0 (11):\penalty0
+  1275--1291, 1987.
+
+\bibitem[Farinelli et~al.(2004)Farinelli, Iocchi, and
+  Nardi]{farinelli2004multirobot}
+Alessandro Farinelli, Luca Iocchi, and Daniele Nardi.
+\newblock Multirobot systems: a classification focused on coordination.
+\newblock \emph{Systems, Man, and Cybernetics, Part B: Cybernetics, IEEE
+  Transactions on}, 34\penalty0 (5):\penalty0 2015--2028, 2004.
+
 \bibitem[Florek-Jasinska(2015)]{monikaflorekjasinska2015}
 Monika Florek-Jasinska.
 \newblock Youbot detailed specifications, dec 2015.
 \newblock URL
   \url{http://www.youbot-store.com/wiki/index.php/YouBot_Detailed_Specifications}.
+
+\bibitem[Frias-Martinez et~al.(2005)Frias-Martinez, Sklar, and
+  Parsons]{frias2005exploring}
+Vanessa Frias-Martinez, Elizabeth Sklar, and Simon Parsons.
+\newblock Exploring auction mechanisms for role assignment in teams of
+  autonomous robots.
+\newblock In \emph{RoboCup 2004: Robot Soccer World Cup VIII}, pages 532--539.
+  Springer, 2005.
+
+\bibitem[Gale(1989)]{gale1989theory}
+David Gale.
+\newblock \emph{The theory of linear economic models}.
+\newblock University of Chicago press, 1989.
+
+\bibitem[Gerkey and Matari(2002)]{gerkey2002sold}
+Brian~P Gerkey and Maja~J Matari.
+\newblock Sold!: Auction methods for multirobot coordination.
+\newblock \emph{Robotics and Automation, IEEE Transactions on}, 18\penalty0
+  (5):\penalty0 758--768, 2002.
+
+\bibitem[Gerkey and Matari{\'c}(2004)]{gerkey2004formal}
+Brian~P Gerkey and Maja~J Matari{\'c}.
+\newblock A formal analysis and taxonomy of task allocation in multi-robot
+  systems.
+\newblock \emph{The International Journal of Robotics Research}, 23\penalty0
+  (9):\penalty0 939--954, 2004.
+
+\bibitem[Hayes and Dormiani-Tabatabaei(2002)]{hayes2002self}
+Adam~T Hayes and Parsa Dormiani-Tabatabaei.
+\newblock Self-organized flocking with agent failure: Off-line optimization and
+  demonstration with real robots.
+\newblock In \emph{Robotics and Automation, 2002. Proceedings. ICRA'02. IEEE
+  International Conference on}, volume~4, pages 3900--3905. IEEE, 2002.
+
+\bibitem[Heidemann et~al.(2001)Heidemann, Silva, Intanagonwiwat, Govindan,
+  Estrin, and Ganesan]{heidemann2001building}
+John Heidemann, Fabio Silva, Chalermek Intanagonwiwat, Ramesh Govindan, Deborah
+  Estrin, and Deepak Ganesan.
+\newblock Building efficient wireless sensor networks with low-level naming.
+\newblock In \emph{ACM SIGOPS Operating Systems Review}, volume~35, pages
+  146--159. ACM, 2001.
+
+\bibitem[Kalra et~al.(2004)Kalra, Stentz, and Ferguson]{kalra2004hoplites}
+Nidhi Kalra, Tony Stentz, and Dave Ferguson.
+\newblock Hoplites: A market framework for complex tight coordination in
+  multi-agent teams.
+\newblock Technical report, DTIC Document, 2004.
+
+\bibitem[Kalra et~al.(2005)Kalra, Ferguson, and Stentz]{kalra2005hoplites}
+Nidhi Kalra, Dave Ferguson, and Anthony Stentz.
+\newblock Hoplites: A market-based framework for planned tight coordination in
+  multirobot teams.
+\newblock In \emph{Robotics and Automation, 2005. ICRA 2005. Proceedings of the
+  2005 IEEE International Conference on}, pages 1170--1177. IEEE, 2005.
 
 \bibitem[Kobayashi(1999)]{kobayashihisato1999}
 Hisato Kobayashi.
@@ -39,16 +204,86 @@ Kuka.
 \newblock URL
   \url{http://www.youbot-store.com/accessories/youbot-extensions/mounting-and-sensor-plate}.
 
+\bibitem[Lau and Zhang(2003)]{lau2003task}
+Hoong~Chuin Lau and Lei Zhang.
+\newblock Task allocation via multi-agent coalition formation: Taxonomy,
+  algorithms and complexity.
+\newblock In \emph{Tools with Artificial Intelligence, 2003. Proceedings. 15th
+  IEEE International Conference on}, pages 346--350. IEEE, 2003.
+
+\bibitem[Lundh et~al.(2005)Lundh, Karlsson, and Saffiotti]{lundh2005can}
+Robert Lundh, Lars Karlsson, and Alessandro Saffiotti.
+\newblock Can emil help pippi.
+\newblock In \emph{Proc. of the ICRA-05 Workshop on Cooperative Robotics},
+  2005.
+
+\bibitem[Lundh et~al.(2006)Lundh, Karlsson, and Saffiotti]{lundh2006plan}
+Robert Lundh, Lars Karlsson, and Alessandro Saffiotti.
+\newblock Plan-based configuration of a group of robots.
+\newblock 2006.
+
+\bibitem[MAEDA(2009)]{maeda2009}
+MAEDA.
+\newblock \emph{Scanning Laser Range Finder URG-04LX-UG01 (Simple-URG)
+  Specifications}.
+\newblock Hokuyo, aug 2009.
+
 \bibitem[Meyer(2011)]{dr.sibyllemeyer2011}
 Dr.~Sibylle Meyer.
 \newblock \emph{Mein Freund der Roboter}.
 \newblock BMBF/VDE Innovationspartnerschaft AAL, oct 2011.
 \newblock ISBN-10: 3800733420.
 
+\bibitem[Nowak(2015)]{nowak2015}
+Nowak.
+\newblock Hokuyo urg-04lx-ug01, dec 2015.
+\newblock URL
+  \url{http://www.youbot-store.com/wiki/index.php/Hokuyo_URG-04LX-UG01}.
+
 \bibitem[Panasonic(2005)]{panasonic2005}
 Panasonic, may 2005.
 \newblock URL
   \url{http://panasonic.com.jp/museum/smilennium/kaden/robot/38/01.html}.
+
+\bibitem[Parker(1998)]{parker1998alliance}
+Lynne~E Parker.
+\newblock Alliance: An architecture for fault tolerant multirobot cooperation.
+\newblock \emph{Robotics and Automation, IEEE Transactions on}, 14\penalty0
+  (2):\penalty0 220--240, 1998.
+
+\bibitem[Parker(2003{\natexlab{a}})]{parker2003current}
+Lynne~E Parker.
+\newblock Current research in multirobot systems.
+\newblock \emph{Artificial Life and Robotics}, 7\penalty0 (1-2):\penalty0 1--5,
+  2003{\natexlab{a}}.
+
+\bibitem[Parker(2003{\natexlab{b}})]{parker2003effect}
+Lynne~E Parker.
+\newblock The effect of heterogeneity in teams of 100+ mobile robots.
+\newblock \emph{Multi-Robot Systems}, 2:\penalty0 205--215, 2003{\natexlab{b}}.
+
+\bibitem[Parker et~al.(2004)Parker, Kannan, Tang, and
+  Bailey]{parker2004tightly}
+Lynne~E Parker, Balajee Kannan, Fang Tang, and Michael Bailey.
+\newblock Tightly-coupled navigation assistance in heterogeneous multi-robot
+  teams.
+\newblock In \emph{Intelligent Robots and Systems, 2004.(IROS 2004).
+  Proceedings. 2004 IEEE/RSJ International Conference on}, volume~1, pages
+  1016--1022. IEEE, 2004.
+
+\bibitem[Parker et~al.(2005)Parker, Chandra, and Tang]{parker2005enabling}
+Lynne~E Parker, Maureen Chandra, and Fang Tang.
+\newblock Enabling autonomous sensor-sharing for tightly-coupled cooperative
+  tasks.
+\newblock In \emph{Multi-Robot Systems. From Swarms to Intelligent Automata
+  Volume III}, pages 119--130. Springer, 2005.
+
+\bibitem[Pynadath and Tambe(2003)]{pynadath2003automated}
+David~V Pynadath and Milind Tambe.
+\newblock An automated teamwork infrastructure for heterogeneous software
+  agents and humans.
+\newblock \emph{Autonomous Agents and Multi-Agent Systems}, 7\penalty0
+  (1-2):\penalty0 71--100, 2003.
 
 \bibitem[Quigley et~al.(2009)Quigley, Conley, Gerkey, Faust, Foote, Leibs,
   Wheeler, and Ng]{quigley2009ros}
@@ -58,10 +293,82 @@ Morgan Quigley, Ken Conley, Brian Gerkey, Josh Faust, Tully Foote, Jeremy
 \newblock In \emph{ICRA workshop on open source software}, volume~3, page~5,
   2009.
 
+\bibitem[Saffiotti et~al.(2000)Saffiotti, Zumel, and
+  Ruspini]{saffiotti2000multi}
+Alessandro Saffiotti, Nina~B Zumel, and Enrique~H Ruspini.
+\newblock Multi-robot team coordination using desirabilities.
+\newblock In \emph{Proc of the 6th Intl Conf on Inteligent Autonomous Systems},
+  pages 107--114, 2000.
+
+\bibitem[Shehory and Kraus(1998)]{shehory1998methods}
+Onn Shehory and Sarit Kraus.
+\newblock Methods for task allocation via agent coalition formation.
+\newblock \emph{Artificial Intelligence}, 101\penalty0 (1):\penalty0 165--200,
+  1998.
+
+\bibitem[Siegemund(2004)]{siegemund2004context}
+Frank Siegemund.
+\newblock A context-aware communication platform for smart objects.
+\newblock In \emph{Pervasive Computing}, pages 69--86. Springer, 2004.
+
+\bibitem[Simmons et~al.(2001)Simmons, Singh, Hershberger, Ramos, and
+  Smith]{simmons2001first}
+Reid Simmons, Sanjiv Singh, David Hershberger, Josue Ramos, and Trey Smith.
+\newblock First results in the coordination of heterogeneous robots for
+  large-scale assembly.
+\newblock In \emph{Experimental Robotics VII}, pages 323--332. Springer, 2001.
+
+\bibitem[Simmons et~al.(2002)Simmons, Smith, Dias, Goldberg, Hershberger,
+  Stentz, and Zlot]{simmons2002layered}
+Reid Simmons, Trey Smith, M~Bernardine Dias, Dani Goldberg, David Hershberger,
+  Anthony Stentz, and Robert Zlot.
+\newblock A layered architecture for coordination of mobile robots.
+\newblock In \emph{Multi-robot systems: from swarms to intelligent automata},
+  pages 103--112. Springer, 2002.
+
 \bibitem[Steidl(2011)]{danielasteidl2011}
 Daniela Steidl, 2011.
 \newblock URL
   \url{https://wwwcg.in.tum.de/fileadmin/user_upload/Lehrstuehle/Lehrstuhl_XV/Teaching/SS11/Proseminar-PIXAR/Daniela_Steidl_talk.pdf}.
+
+\bibitem[Stone and Veloso(1999)]{stone1999task}
+Peter Stone and Manuela Veloso.
+\newblock Task decomposition, dynamic role assignment, and low-bandwidth
+  communication for real-time strategic teamwork.
+\newblock \emph{Artificial Intelligence}, 110\penalty0 (2):\penalty0 241--273,
+  1999.
+
+\bibitem[Timm and Woelk(2003)]{timm2003ontology}
+Ingo~J Timm and Peer-Oliver Woelk.
+\newblock Ontology-based capability management for distributed problem solving
+  in the manufacturing domain.
+\newblock In \emph{Multiagent System Technologies}, pages 168--179. Springer,
+  2003.
+
+\bibitem[und Holger~Büttner(2003)]{ethercat}
+Dr.-Ing. Dirk~Janssen und Holger~Büttner.
+\newblock Ethercat – der ethernet-feldbus.
+\newblock Technical Report~23, Elektronik, 2003.
+
+\bibitem[Vail and Veloso(2003)]{vail2003multi}
+Douglas Vail and Manuela Veloso.
+\newblock Multi-robot dynamic role assignment and coordination through shared
+  potential fields.
+\newblock \emph{Multi-robot systems}, pages 87--98, 2003.
+
+\bibitem[Vaughan et~al.(2000)Vaughan, St{\o}y, Sukhatme, and
+  Matari{\'c}]{vaughan2000whistling}
+Richard~T Vaughan, Kasper St{\o}y, Gaurav~S Sukhatme, and Maja~J Matari{\'c}.
+\newblock Whistling in the dark: cooperative trail following in uncertain
+  localization space.
+\newblock In \emph{Proceedings of the fourth international conference on
+  Autonomous agents}, pages 187--194. ACM, 2000.
+
+\bibitem[Vig and Adams(2005)]{vig2005issues}
+Lovekesh Vig and Julie~A Adams.
+\newblock Issues in multi-robot coalition formation.
+\newblock In \emph{Multi-Robot Systems. From Swarms to Intelligent Automata
+  Volume III}, pages 15--26. Springer, 2005.
 
 \bibitem[Wagner(2009)]{wagner2009tele}
 Cosima Wagner.
@@ -69,9 +376,21 @@ Cosima Wagner.
   {R}obotern als {V}ision und {R}ealit{\"a}t f{\"u}r die alternde
   {G}esellschaft {J}apans, 2009.
 
+\bibitem[Werger and Matari{\'c}(2000)]{werger2000broadcast}
+Barry~Brian Werger and Maja~J Matari{\'c}.
+\newblock Broadcast of local eligibility for multi-target observation.
+\newblock In \emph{Distributed autonomous robotic systems 4}, pages 347--356.
+  Springer, 2000.
+
 \bibitem[Zandonella(2013)]{brunozandonella2013}
 Bruno Zandonella.
 \newblock Bevölkerungsentwicklung und {R}enten.
 \newblock oct 2013.
+
+\bibitem[Zlot and Stentz(2005)]{zlot2005complex}
+Robert Zlot and Anthony Stentz.
+\newblock Complex task allocation for multiple robots.
+\newblock In \emph{Robotics and Automation, 2005. ICRA 2005. Proceedings of the
+  2005 IEEE International Conference on}, pages 1515--1522. IEEE, 2005.
 
 \end{thebibliography}

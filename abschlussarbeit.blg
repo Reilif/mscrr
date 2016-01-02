@@ -9,6 +9,16 @@ Warning--entry type for "monikaflorekjasinska2015" isn't style-file defined
 --line 116 of file babib.bib
 Warning--entry type for "kuka2015" isn't style-file defined
 --line 123 of file babib.bib
+Warning--entry type for "asus2015" isn't style-file defined
+--line 130 of file babib.bib
+Warning--entry type for "nowak2015" isn't style-file defined
+--line 144 of file babib.bib
+Warning--entry type for "bluetechnix2015" isn't style-file defined
+--line 151 of file babib.bib
+Warning--can't use both volume and number fields in adjie1999design
+Warning--empty journal in boella2002norms
+Warning--can't use both volume and number fields in heidemann2001building
+Warning--empty journal in lundh2006plan
 Warning--can't use both volume and number fields in quigley2009ros
 Warning--empty journal in brunozandonella2013
-(There were 6 warnings)
+(There were 13 warnings)

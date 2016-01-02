@@ -1,8 +1,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Related Work
-\subsection{Handover - Übergabe zwischen Roboter-Maschine und Roboter-Roboter}
-\label{sec:relatedwork-peis}
-    
-    Andere beschäftigen sich grad mit \ldots
+\subsection{Grasping und Handover - Arbeiten zu Roboterarmen}
+\label{sec:relatedwork-handover}
+Dieses Kapitel befasst sich mit Arbeiten zu dem Thema Roboterarmen. Zunächst wird das Greifen eines Gegenstandes, \textit{Grasping}, aufgezeigt. Dabei werden Arbeiten zum allgemeinen Greifen, zur Erkennung geeigneter Greifpositionen an Gegenstände und Kamera-Unterstütztem Grasping aufgeführt. Im Anschluss wird die Thematik der Übergabe, dem zentralen Thema dieser Arbeit, aufgegriffen und Literatur zu Roboter-Mensch Übergaben betrachtet.
+
+\subsubsection{Grasping - Greifen mit einem Roboterarm}
+Als Ausgangsarbeit für dieses Thema bietet sich die Arbeit \cite{bicchi2000robotic} an. In diesem werden die Grundlagen des Greifens erläutert. Dabei wird zunächst die menschliche Hand und ihre Verwendungszwecke betrachtet. Der Mensch nutzt seine Hand zur Erkundung, zum Festhalten und zur Manipulation von Objekten. Das Erkunden von Objekten ist der eigene große Forschungsbereich \textit{Haptik} und kann bisher, auf Grund von fehlender Sensorik, in der Robotik nicht vollständig eingesetzt werden. Zwischen dem Festhalten, Fixieren und der Manipulation wird in der Arbeit unterschieden, sowie zwischen dem Manipulieren mit den Fingern und der Manipulation mit dem gesamten Arm. Dies liegt vor allem an den Anwendungs- und Forschungsbereichen. Während das Fixieren eines Objektes, beziehungsweise die Manipulation mit dem gesamten Arm, in der Industrie oft eingesetzt wird, ist die filigrane Arbeit mit den Fingern noch ein Thema der Forschung. Die ersten Arbeiten zu diesem Thema der Robotik gehen auf \cite{asada1979studies}  und \cite{mason1985robot} zurück. Neben dem Greifen mit den Fingern der Hand gibt es auch Griffe mit dem Kompletten Arm, bezeichnet mit \textit{whole arm graps} (\cite{townsend1988effect}, \cite{bicchi1994problem} und \textit{power grasps} (\cite{mirza1990force}). \cite{bicchi2000robotic}
+
+Das Greifen unterliegt physischen Grenzen, dabei wird der Griff, beziehungsweise das Halten, unter anderem durch den Kraftvektor und dem Haftkoeffizienten beeinflusst. Ein Griff wird durch $N$ Kontakte beschrieben. Dabei wird angenommen, dass alle Kontakte punktuell sind. Auch ein Kontakt auf einer Linie oder Oberfläche wird durch zwei oder mehr Punktkontakte abgebildet. Die Literatur unterscheidet diese Kontakte in reibungslose, reibungsbedingte oder weiche Punktkontakte.\cite{salisbury1983kinematic} Ein reibungsloser Kontakt kann nur eine Kraft entlang der gemeinsamen Normalen erzeugen. Ein reibungsbedingter kann neben der normalen auch eine tangentiale Kraft und ein weicher Kontakt zusätzlich einen Drehmoment erzeugen. Die Kontaktart ist abhängig von den Oberflächeneigenschaften des Grippers und des Objektes. Bei einer gummiähnlichen Oberfläche des Grippers wird das Kontakt als weich modelliert. Haben Gripper und Objekt beide harte und raue Oberflächen wird ein reibungsbedingter Kontakt angenommen. Sind die Kontaktstellen auf Gripper und Objekt glatt und ist ein kleiner Reibungskoeffizient gegeben, gilt der Kontakt als reibungslos.\cite{bicchi2000robotic}
+
+An jedem Kontaktpunkt ist das Zielobjekt einer normalen Kraft, einer tangentialen Kraft und einem Drehmoment um die Normale unterworfen. Diese werden als Drehung $^iw_N$, $^iw_T$ und $^iw_\theta$ notiert. Wobei jede Drehung als ein $6 \times 1$-Einheitsvektor, zusammengesetzt aus Kraft und Drehmoment, definiert ist. Die dazugehörigen Intensitäten werden als $^ic_N$, $^ic_T$ und $^ic_\theta$ angegeben. Die $N$ Kontakte werden nun in den Submatrizen $w_N$, $w_T$, $w_\theta$, $c_N$, $c_T$ und $c_\theta$ geordnet. Die Drehungen werden nun als $W$ und die Intensitäten als $c$ zusammengeführt. Außerdem wird noch $g$ als bekannte äußere Drehung eingeführt. Die kann eventuell 0 sein. Folgende Definitionen und Eigenschaften können nun für Griffe aufgestellt werden \cite{salisbury1983kinematic}:
+
+Ein gegriffenes Objekt ist im Gleichgewicht $\Leftrightarrow$ 
+
+\begin{enumerate}
+	\item $^ic_N \geq 0 ~\textbar ~\forall i \in N $ (1. Kontaktbedingung)
+	\item $\mid ~^ic_T ~\mid~ \leq ~^i\mu_T ~^ic_N ~\textbar~ \forall i \in N $ (2. Kontaktbedingung, Coulombsches Gesetz)
+	\item $\mid ~^ic_\theta ~\mid ~\leq ~^i\mu_\theta ~^ic_N ~\textbar~ \forall i \in N $ (3. Kontaktbedingung, abgewandeltes Coulombsches Gesetz \cite{mason1985robot})
+	\item $Wc+g=0$ (Statisches Gleichgewicht)
+\end{enumerate}
+
 
 
