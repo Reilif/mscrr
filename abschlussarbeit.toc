@@ -24,21 +24,22 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Konzept}{20}{subsubsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2}Implementation}{20}{subsubsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.3}Zusammenfassung}{21}{subsubsection.3.2.3}
-\contentsline {subsection}{\numberline {3.3}Grasping und Handover - Arbeiten zu Roboterarmen}{21}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Grasping - Greifen mit einem Roboterarm}{21}{subsubsection.3.3.1}
-\contentsline {section}{\numberline {4}Laboraufbau}{23}{section.4}
-\contentsline {subsection}{\numberline {4.1}Aufbau Teststand}{23}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}YouBot}{23}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Manipulator}{23}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}Mobile Plattform}{25}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.3}Rechner}{27}{subsubsection.4.2.3}
-\contentsline {subsection}{\numberline {4.3}Sensoren}{28}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Asus XTion Pro}{28}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.2}Hokuyo URG-04LX-UG01}{28}{subsubsection.4.3.2}
-\contentsline {subsubsection}{\numberline {4.3.3}Argos 3D - P100}{29}{subsubsection.4.3.3}
-\contentsline {subsubsection}{\numberline {4.3.4}Netzwerk- und Sensoranbindung}{30}{subsubsection.4.3.4}
-\contentsline {section}{\numberline {5}Zusammenfassung und Ausblick}{32}{section.5}
-\contentsline {section}{\numberline {6}Danksagung}{33}{section.6}
-\contentsline {section}{\numberline {7}Literaturverzeichnis}{34}{section.7}
-\contentsline {section}{\numberline {A}Erster Anhang}{39}{appendix.A}
-\contentsline {section}{\numberline {B}Noch ein Anhang}{39}{appendix.B}
+\contentsline {subsection}{\numberline {3.3}Grasping und Handover - Arbeiten zu Roboterarmen}{22}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Grasping - Greifen mit einem Roboterarm}{22}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Handover - \IeC {\"U}bergabe zwischen zwei Systemen}{23}{subsubsection.3.3.2}
+\contentsline {section}{\numberline {4}Laboraufbau}{25}{section.4}
+\contentsline {subsection}{\numberline {4.1}Aufbau Teststand}{25}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}YouBot}{25}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Manipulator}{25}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Mobile Plattform}{27}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Rechner}{29}{subsubsection.4.2.3}
+\contentsline {subsection}{\numberline {4.3}Sensoren}{30}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Asus XTion Pro}{30}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Hokuyo URG-04LX-UG01}{30}{subsubsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3}Argos 3D - P100}{31}{subsubsection.4.3.3}
+\contentsline {subsubsection}{\numberline {4.3.4}Netzwerk- und Sensoranbindung}{32}{subsubsection.4.3.4}
+\contentsline {section}{\numberline {5}Zusammenfassung und Ausblick}{34}{section.5}
+\contentsline {section}{\numberline {6}Danksagung}{35}{section.6}
+\contentsline {section}{\numberline {7}Literaturverzeichnis}{36}{section.7}
+\contentsline {section}{\numberline {A}Erster Anhang}{42}{appendix.A}
+\contentsline {section}{\numberline {B}Noch ein Anhang}{42}{appendix.B}

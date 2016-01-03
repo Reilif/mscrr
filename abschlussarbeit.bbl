@@ -1,4 +1,4 @@
-\begin{thebibliography}{60}
+\begin{thebibliography}{79}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -25,6 +25,12 @@ Dami{\'a}n Arregui, Christer Fernstrom, Fran{\c{c}}ois Pacull, and J~Gilbert.
 \newblock Stitch: Middleware for ubiquitous applications.
 \newblock In \emph{Proc. of the Smart Object Conf}, 2003.
 
+\bibitem[Asada(1979)]{asada1979studies}
+Haruhiko Asada.
+\newblock Studies on prehension and handling by robot hands with elastic
+  fingers.
+\newblock \emph{PhD dissertationKyoto University}, 1979.
+
 \bibitem[Asus(2015)]{asus2015}
 Asus.
 \newblock Xtion pro live, dec 2015.
@@ -43,6 +49,26 @@ Tucker Balch.
 \newblock The impact of diversity on performance in multi-robot foraging.
 \newblock In \emph{Proceedings of the third annual conference on Autonomous
   Agents}, pages 92--99. ACM, 1999.
+
+\bibitem[Basili et~al.()Basili, Huber, Kourakos, Hirche, Brandt, and
+  Glasauer]{basiliapproach}
+P~Basili, M~Huber, O~Kourakos, S~Hirche, T~Brandt, and S~Glasauer.
+\newblock Approach and handover for human-robot interaction.
+
+\bibitem[Bicchi et~al.(1993)Bicchi, Salisbury, and
+  Brock]{bicchi1993experimental}
+A~Bicchi, J~Salisbury, and DL~Brock.
+\newblock Experimental evaluation of friction data with an articulated hand and
+  intrinsic contact sensors.
+\newblock \emph{Experimental robotics: III (eds Chatila R., Hirzinger G.),
+  Berlin/Heidelberg, Germany: Springer}, 1993.
+
+\bibitem[Bicchi(1994)]{bicchi1994problem}
+Antonio Bicchi.
+\newblock On the problem of decomposing grasp and manipulation forces in
+  multiple whole-limb manipulation.
+\newblock \emph{Robotics and Autonomous Systems}, 13\penalty0 (2):\penalty0
+  127--147, 1994.
 
 \bibitem[Bicchi and Kumar(2000)]{bicchi2000robotic}
 Antonio Bicchi and Vijay Kumar.
@@ -66,6 +92,12 @@ Sylvia~C Botelho and Rachid Alami.
   allocation and achievement.
 \newblock In \emph{Robotics and Automation, 1999. Proceedings. 1999 IEEE
   International Conference on}, volume~2, pages 1234--1239. IEEE, 1999.
+
+\bibitem[Bowers and Lumia(2003)]{bowers2003manipulation}
+David~L Bowers and Ron Lumia.
+\newblock Manipulation of unmodeled objects using intelligent grasping schemes.
+\newblock \emph{Fuzzy Systems, IEEE Transactions on}, 11\penalty0 (3):\penalty0
+  320--330, 2003.
 
 \bibitem[Broxvall and Saffiotti(2005)]{Saffiotti:2005:PEA:1107548.1107615}
 Mathias Broxvall and Alessandro Saffiotti.
@@ -91,6 +123,13 @@ Philippe Caloud, Wonyun Choi, Jean-Claude Latombe, Claude Le~Pape, and Mark
 \newblock In \emph{Intelligent Robots and Systems' 90.'Towards a New Frontier
   of Applications', Proceedings. IROS'90. IEEE International Workshop on},
   pages 67--72. IEEE, 1990.
+
+\bibitem[Coelho et~al.(2001)Coelho, Piater, and Grupen]{coelho2001developing}
+Jefferson Coelho, Justus Piater, and Roderic Grupen.
+\newblock Developing haptic and visual perceptual categories for reaching and
+  grasping with a humanoid robot.
+\newblock \emph{Robotics and Autonomous Systems}, 37\penalty0 (2):\penalty0
+  195--218, 2001.
 
 \bibitem[Corke(2011)]{Corke2011}
 Peter Corke.
@@ -179,6 +218,13 @@ John Heidemann, Fabio Silva, Chalermek Intanagonwiwat, Ramesh Govindan, Deborah
 \newblock In \emph{ACM SIGOPS Operating Systems Review}, volume~35, pages
   146--159. ACM, 2001.
 
+\bibitem[Huber et~al.(2008)Huber, Rickert, Knoll, Brandt, and
+  Glasauer]{huber2008human}
+Markus Huber, Markus Rickert, Alois Knoll, Thomas Brandt, and Stefan Glasauer.
+\newblock Human-robot interaction in handing-over tasks.
+\newblock In \emph{Robot and Human Interactive Communication, 2008. RO-MAN
+  2008. The 17th IEEE International Symposium on}, pages 107--112. IEEE, 2008.
+
 \bibitem[Kalra et~al.(2004)Kalra, Stentz, and Ferguson]{kalra2004hoplites}
 Nidhi Kalra, Tony Stentz, and Dave Ferguson.
 \newblock Hoplites: A market framework for complex tight coordination in
@@ -192,6 +238,12 @@ Nidhi Kalra, Dave Ferguson, and Anthony Stentz.
 \newblock In \emph{Robotics and Automation, 2005. ICRA 2005. Proceedings of the
   2005 IEEE International Conference on}, pages 1170--1177. IEEE, 2005.
 
+\bibitem[Kamon et~al.(1996)Kamon, Flash, and Edelman]{kamon1996learning}
+Ishay Kamon, Tamar Flash, and Shimon Edelman.
+\newblock Learning to grasp using visual information.
+\newblock In \emph{Robotics and Automation, 1996. Proceedings., 1996 IEEE
+  International Conference on}, volume~3, pages 2470--2476. IEEE, 1996.
+
 \bibitem[Kobayashi(1999)]{kobayashihisato1999}
 Hisato Kobayashi.
 \newblock \emph{Technolife Series. Robotto wa tomodachi da! [Technolife-Serie.
@@ -203,6 +255,12 @@ Kuka.
 \newblock Mounting and sensor plate, dec 2015.
 \newblock URL
   \url{http://www.youbot-store.com/accessories/youbot-extensions/mounting-and-sensor-plate}.
+
+\bibitem[Kuli{\'c} and Croft(2005)]{kulic2005safe}
+Dana Kuli{\'c} and Elizabeth~A Croft.
+\newblock Safe planning for human-robot interaction.
+\newblock \emph{Journal of Robotic Systems}, 22\penalty0 (7):\penalty0
+  383--396, 2005.
 
 \bibitem[Lau and Zhang(2003)]{lau2003task}
 Hoong~Chuin Lau and Lei Zhang.
@@ -228,11 +286,44 @@ MAEDA.
   Specifications}.
 \newblock Hokuyo, aug 2009.
 
+\bibitem[Mainprice et~al.(2010)Mainprice, Sisbot, Sim{\'e}on, and
+  Alami]{mainprice2010planning}
+Jim Mainprice, E~Akin Sisbot, Thierry Sim{\'e}on, and Rachid Alami.
+\newblock Planning safe and legible hand-over motions for human-robot
+  interaction.
+\newblock In \emph{IARP workshop on technical challenges for dependable robots
+  in human environments}, volume~2, page~7, 2010.
+
+\bibitem[Maitin-Shepard et~al.(2010)Maitin-Shepard, Cusumano-Towner, Lei, and
+  Abbeel]{maitin2010cloth}
+Jeremy Maitin-Shepard, Marco Cusumano-Towner, Jinna Lei, and Pieter Abbeel.
+\newblock Cloth grasp point detection based on multiple-view geometric cues
+  with application to robotic towel folding.
+\newblock In \emph{Robotics and Automation (ICRA), 2010 IEEE International
+  Conference on}, pages 2308--2315. IEEE, 2010.
+
+\bibitem[Mason and Salisbury~Jr(1985)]{mason1985robot}
+Matthew~T Mason and J~Kenneth Salisbury~Jr.
+\newblock Robot hands and the mechanics of manipulation.
+\newblock 1985.
+
 \bibitem[Meyer(2011)]{dr.sibyllemeyer2011}
 Dr.~Sibylle Meyer.
 \newblock \emph{Mein Freund der Roboter}.
 \newblock BMBF/VDE Innovationspartnerschaft AAL, oct 2011.
 \newblock ISBN-10: 3800733420.
+
+\bibitem[Mirza and Orin(1990)]{mirza1990force}
+K~Mirza and DE~Orin.
+\newblock Force distribution for power grasp in the digits system.
+\newblock In \emph{Proc. 8th CISM-IFToMM Symp. Theory Practice Robots
+  Manipulators}, 1990.
+
+\bibitem[Nguyen(1988)]{nguyen1988constructing}
+Van-Duc Nguyen.
+\newblock Constructing force-closure grasps.
+\newblock \emph{The International Journal of Robotics Research}, 7\penalty0
+  (3):\penalty0 3--16, 1988.
 
 \bibitem[Nowak(2015)]{nowak2015}
 Nowak.
@@ -278,6 +369,14 @@ Lynne~E Parker, Maureen Chandra, and Fang Tang.
 \newblock In \emph{Multi-Robot Systems. From Swarms to Intelligent Automata
   Volume III}, pages 119--130. Springer, 2005.
 
+\bibitem[Prada et~al.(2014)Prada, Remazeilles, Koene, and
+  Endo]{prada2014implementation}
+Miguel Prada, Anthony Remazeilles, Ansgar Koene, and Shuichiro Endo.
+\newblock Implementation and experimental validation of dynamic movement
+  primitives for object handover.
+\newblock In \emph{Intelligent Robots and Systems (IROS 2014), 2014 IEEE/RSJ
+  International Conference on}, pages 2146--2153. IEEE, 2014.
+
 \bibitem[Pynadath and Tambe(2003)]{pynadath2003automated}
 David~V Pynadath and Milind Tambe.
 \newblock An automated teamwork infrastructure for heterogeneous software
@@ -300,11 +399,30 @@ Alessandro Saffiotti, Nina~B Zumel, and Enrique~H Ruspini.
 \newblock In \emph{Proc of the 6th Intl Conf on Inteligent Autonomous Systems},
   pages 107--114, 2000.
 
+\bibitem[Salisbury and Roth(1983)]{salisbury1983kinematic}
+J~Kenneth Salisbury and B~Roth.
+\newblock Kinematic and force analysis of articulated mechanical hands.
+\newblock \emph{Journal of Mechanical Design}, 105\penalty0 (1):\penalty0
+  35--41, 1983.
+
+\bibitem[Saxena et~al.(2008)Saxena, Driemeyer, and Ng]{saxena2008robotic}
+Ashutosh Saxena, Justin Driemeyer, and Andrew~Y Ng.
+\newblock Robotic grasping of novel objects using vision.
+\newblock \emph{The International Journal of Robotics Research}, 27\penalty0
+  (2):\penalty0 157--173, 2008.
+
 \bibitem[Shehory and Kraus(1998)]{shehory1998methods}
 Onn Shehory and Sarit Kraus.
 \newblock Methods for task allocation via agent coalition formation.
 \newblock \emph{Artificial Intelligence}, 101\penalty0 (1):\penalty0 165--200,
   1998.
+
+\bibitem[Shibata et~al.(1995)Shibata, Tanaka, and
+  Shimizu]{shibata1995experimental}
+Satour Shibata, Kiyoshi Tanaka, and Akira Shimizu.
+\newblock Experimental analysis of handing over.
+\newblock In \emph{Robot and Human Communication, 1995. RO-MAN'95 TOKYO,
+  Proceedings., 4th IEEE International Workshop on}, pages 53--58. IEEE, 1995.
 
 \bibitem[Siegemund(2004)]{siegemund2004context}
 Frank Siegemund.
@@ -344,6 +462,12 @@ Ingo~J Timm and Peer-Oliver Woelk.
   in the manufacturing domain.
 \newblock In \emph{Multiagent System Technologies}, pages 168--179. Springer,
   2003.
+
+\bibitem[Townsend(1988)]{townsend1988effect}
+William~Thomas Townsend.
+\newblock The effect of transmission design on force-controlled manipulator
+  performance.
+\newblock 1988.
 
 \bibitem[und Holger~Büttner(2003)]{ethercat}
 Dr.-Ing. Dirk~Janssen und Holger~Büttner.

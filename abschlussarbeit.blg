@@ -15,10 +15,20 @@ Warning--entry type for "nowak2015" isn't style-file defined
 --line 144 of file babib.bib
 Warning--entry type for "bluetechnix2015" isn't style-file defined
 --line 151 of file babib.bib
+Repeated entry---line 627 of file babib.bib
+ : @article{saxena2008robotic
+ :                           ,
+I'm skipping whatever remains of this entry
 Warning--can't use both volume and number fields in adjie1999design
+Warning--empty journal in basiliapproach
+Warning--empty year in basiliapproach
+Warning--empty year in basiliapproach
 Warning--empty journal in boella2002norms
 Warning--can't use both volume and number fields in heidemann2001building
 Warning--empty journal in lundh2006plan
+Warning--can't use both volume and number fields in mainprice2010planning
+Warning--empty journal in mason1985robot
 Warning--can't use both volume and number fields in quigley2009ros
+Warning--empty journal in townsend1988effect
 Warning--empty journal in brunozandonella2013
-(There were 13 warnings)
+(There was 1 error message)

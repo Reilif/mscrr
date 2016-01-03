@@ -20,5 +20,30 @@ Ein gegriffenes Objekt ist im Gleichgewicht $\Leftrightarrow$
 	\item $Wc+g=0$ (Statisches Gleichgewicht)
 \end{enumerate}
 
+Wobei $^i\mu_T$ und $^i\mu_\theta$ angenäherte Haftkoeffizienten sind. Alternativ kann für eine höhere Genauigkeit auch ein gekoppeltes lineares Modell der Haftungskegel für die tangentialen Kräfte und die Drehmomente angenommen werden.\cite{bicchi1993experimental} Ein Griff gilt dann als fest umschlossen (\textit{force closed}), wenn jede beliebige Drehung $\hat{w}$ im Gleichgewicht ist. Daraus folgt, dass ein Griff fest umschlossen ist, wenn für jede beliebige Drehung $\hat{w}$ ein Intensitätsvektor $\lambda$ existiert, der die Kontaktbedingung erfüllt, sodass gilt \cite{nguyen1988constructing}:
 
+\begin{math}
+	W\lambda = \hat{w}
+\end{math}
 
+Dieser Exkurs in die physikalischen Grundlagen ist für das spätere Greifen nötig, damit bestimmt werden kann wie viel Kraft benötigt wird um das gewünschte Objekt zu greifen. Weitere Informationen zu dem Thema finden sich in \cite{bicchi2000robotic}.
+
+Neben dem Greifen selbst existiert auch die Problematik des Greifpunktes. Also der Stelle am Objekt an welcher der Gripper ansetzt. Dazu existieren verschiedene Arbeiten. Die ersten zu diesem Thema waren die Arbeiten \cite{kamon1996learning}, \cite{coelho2001developing} und \cite{bowers2003manipulation}. In diesen wird mit Hilfe von Sensoren planare 2D-Objekte gegriffen. Ergebnisse mit 3D-Objekten erreichte die Arbeit \cite{saxena2008robotic}. Dabei werden zunächst mit maschinellem Lernen und gelabelten Testdatensätzen gute Griffpunkte für 3D-Objekte angelernt. Anschließend kann der Algorithmus unbekannte 3D-Objekte bewerten und die besten Griffpunkte finden. Diese Grundlagenforschung wird in der Arbeit \cite{maitin2010cloth} genutzt um an unbekannten 3D-Objekten aus Stoff Ecken zum Greifen und Zusammenlegen zu finden. In dieser werden vor allem Ansätze nach dem RANSAC-Verfahren gewählt, um bestimmte Strukturen gezielt zu finden. Für weitere Informationen lassen sich in der Literatur noch viele verschiedene Anwendungsfälle und Ansätze zum Greifen finden.
+
+\subsubsection{Handover - Übergabe zwischen zwei Systemen}
+Die Übergabe zwischen zwei Systemen ist eine häufige Interaktion im Alltag. Dieses betrifft oft die Manipulation eines Objektes. Die Arbeit \cite{huber2008human} beschäftigt sich mit der Übergabe zwischen Mensch und Roboter und beinhaltet zunächst eine Analyse einer Übergabe zwischen zwei Menschen. Dabei stellt sich folgende Aktionsreihenfolge für eine Übergabe raus \cite{huber2008human}:
+
+\begin{enumerate}
+	\item Der Geber nimmt das Zielobjekt
+	\item Der Geber bewegt die Hand Richtung Übergabeposition
+	\item Der Nehmer bewegt die Hand Richtung Übergabeposition
+	\item Transaktion
+	\item Beide nehmen ihre Hände zurück
+\end{enumerate}
+
+Eigene Beobachtungen vom Mensch-Mensch Übergaben ergaben, dass diese Form der Übergabe nur einem Interaktionsart ist und als \textit{Geben} bezeichnet werden kann, da die Interaktion vom Geber ausgeht. Eine Alternative dazu stellt das \textit{Nehmen} dar, bei dem die Interaktion vom Nehmer ausgeht. Eine optimierte dritte Interaktionsart wäre eine synchrone Bewegung beider Akteure, bei der eine Verzögerung durch die Reaktionszeit des Interaktionspartners entfällt.
+
+In der Robotik existieren mehrere Arten der Übergabe. Diese unterscheiden sich anhand des Interaktionspartners und des Anwendungsfeldes. 
+In der Industrie, zum Beispiel dem Autobau, werden die Werkstücke nicht direkt zwischen den einzelnen Robotern übergeben, sondern befinden sich auf einem Förderband. Dieses fährt das Werksstuck auf eine definierte Position und die einzelnen Roboter führen ihren Arbeitsschritt aus. Anschließend wird das Werksstück zur nächsten Station gebracht. Eine weitere Art der Übergabe ist die Mensch-Roboter-Interaktion. Dieses Thema ist ein weitverbreitetes Thema mit vielen Aspekten. So beschäftigen sich die Arbeiten \cite{huber2008human} und \cite{shibata1995experimental} mit dem Timing-Verhalten, \cite{mainprice2010planning} und \cite{kulic2005safe} befassen sich mit der sicheren Planung von Übergabe-Interaktionen, weitere Arbeiten (unter anderem \cite{prada2014implementation} und \cite{basiliapproach}) beschäftigen sich mit den Reaktionen auf menschliche Aktionen, wie Gesten (zum Beispiel: Handfläche nach oben geöffnet als Geste fürs Nehmen) und Veränderungen während der Übergabe.
+
+In dieser Arbeit steht jedoch die Roboter-Roboter Übergabe im Fokus. Dieses Thema ist in der Literatur nicht vorhanden oder wird nur als Randaspekt erwähnt.
