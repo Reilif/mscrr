@@ -9,36 +9,36 @@ Dieses Kapitel befasst sich mit dem Aufbau der Versuchsanlage und der verwendete
 
 \subsection{Aufbau Teststand}
 
-% \begin{figure}[h]
-% 	\centering
-% 	\includegraphics[scale=0.8]{fig/ZeichnungRaum}   
-% 	\caption[Aufbau Teststand: Draufsicht]{Der Aufbau}
-% 	\label{fig:basic-aufbau-teststand}
-% \end{figure}
-% 
-% 
-%  \begin{figure}[h]
-%  	\centering
-%  	\includegraphics[scale=0.5]{fig/ZeichnungRaumH}   
-%  	\caption[Aufbau Teststand: Draufsicht]{Der Aufbau}
-%  	\label{fig:basic-aufbau-teststand}
-%  \end{figure}
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[scale=0.8]{fig/ZeichnungRaum}   
+ 	\caption[Aufbau Teststand: Draufsicht]{Der Aufbau der Testanlage als Draufsicht.}
+ 	\label{fig:basic-aufbau-teststand}
+ \end{figure}
+ 
+ 
+  \begin{figure}[h]
+  	\centering
+  	\includegraphics[scale=0.5]{fig/ZeichnungRaumH}   
+  	\caption[Aufbau Teststand: Seitenansicht]{Der Aufbau}
+  	\label{fig:basic-aufbau-teststandh}
+  \end{figure}
 
 \subsection{YouBot}
-In dieser Arbeit werden zwei Roboter genutzt. Bei beiden handelt es sich um YouBots der Firma Kuka. Diese wurden 2010 erstmals auf der Automatica in München vorgestellt. Kuka ist ein deutscher Hersteller von Industrierobotern mit Sitz in Augsburg.Kuka hat aber auch Erfahrung im Bau von experimentellen Robotern wie etwas die Arme für Justin, einem Service-Roboter.
+In dieser Arbeit werden zwei Roboter genutzt. Bei beiden handelt es sich um YouBots der Firma Kuka. Diese wurden 2010 erstmals auf der Automatica in München vorgestellt. Kuka ist ein deutscher Hersteller von Industrierobotern mit Sitz in Augsburg. Kuka hat aber auch Erfahrung im Bau von experimentellen Robotern wie etwas die Arme für Justin, einem Service-Roboter.
 
 Die beiden YouBots unterscheiden sich beim Aufbau. YouBot 1 besteht aus einem Manipulator mit Gripper, YouBot 2 besteht aus Manipulator mit Gripper und mobiler Plattform mit omnidirektionalen Rollen. Zur besseren Unterscheidung und zur Lesbarkeit dieser Arbeit haben beide Roboter einen Namen bekommen. YouBot 1 entspricht dabei \textbf{Dummy}, YouBot 2 ist \textbf{Rose}. Im Weiteren Verlauf der Arbeit werden nur noch diese Namen genutzt um eine Verwechslung zu vermeiden.
 
 
 \subsubsection{Manipulator}
- Die Roboterarme von Dummy und Rose sind eine offene kinematische Kette mit fünf Joints, die von der Basis aufsteigend numeriert sind. An Joint 5 sind die Gripper montiert, diese bestehen aus zwei individuellen Fingern, die linear auf einer Achse bewegt werden können.
+ Die Roboterarme von Dummy und Rose sind eine offene kinematische Kette mit fünf Joints, die von der Basis aufsteigend nummeriert sind. An Joint 5 sind die Gripper montiert, diese bestehen aus zwei individuellen Fingern, die linear auf einer Achse bewegt werden können.
 
 Joint 1 und Joint 5 sind zwei Drehgelenke um die Z-Achse, die bei ausgestreckter Haltung (Candle-Pose) parallel liegen. Joint 2, 3 und 4 sind Kippgelenke um die X-Achse, die immer parallel liegen. Durch diese Konstellation ergeben sich für den kompletten Arm fünf Freiheitsgrade (5-DOF). Durch die Einschränkung der Achsen auf die X- und Z-Achsen der einzelnen Joints ist ein seitlicher Griff bei $x_{base} = 0$ oder $y_{base} = 0$ nicht möglich. Die Höhe in Candle-Pose beträgt inklusiv Gripper 655mm. Die einzelnen Abstände lassen sich der Grafik \ref{fig:basic-aufbau-youbot-kinematik} entnehmen.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.8]{fig/kukaarm_1}   
-	\caption[YouBot Arm Kinematik]{YouBot Arm Kinematik. Links: Detailierter Mechanismus mit Joint und Link Angaben. Rechts: Vergrößerte Darstellung der Basis. Bildquelle: \cite{monikaflorekjasinska2015}}
+	\caption[YouBot Arm Kinematik]{YouBot Arm Kinematik. Links: Detaillierter Mechanismus mit Joint und Link Angaben. Rechts: Vergrößerte Darstellung der Basis. Bildquelle: \cite{monikaflorekjasinska2015}}
 	\label{fig:basic-aufbau-youbot-kinematik}
 \end{figure}
 

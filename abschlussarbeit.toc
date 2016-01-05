@@ -21,14 +21,14 @@
 \contentsline {subsubsection}{\numberline {3.1.2}Probleme der Koordinierung}{15}{subsubsection.3.1.2}
 \contentsline {subsubsection}{\numberline {3.1.3}Zusammenfassung}{18}{subsubsection.3.1.3}
 \contentsline {subsection}{\numberline {3.2}Physically Embedded Intelligent Systems - PEIS}{19}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Konzept}{20}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Implementation}{20}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Zusammenfassung}{21}{subsubsection.3.2.3}
-\contentsline {subsection}{\numberline {3.3}Grasping und Handover - Arbeiten zu Roboterarmen}{22}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Grasping - Greifen mit einem Roboterarm}{22}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Handover - \IeC {\"U}bergabe zwischen zwei Systemen}{23}{subsubsection.3.3.2}
-\contentsline {section}{\numberline {4}Laboraufbau}{25}{section.4}
-\contentsline {subsection}{\numberline {4.1}Aufbau Teststand}{25}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {3.2.1}Konzept}{19}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Implementation}{19}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Zusammenfassung}{20}{subsubsection.3.2.3}
+\contentsline {subsection}{\numberline {3.3}Grasping und Handover - Arbeiten zu Roboterarmen}{20}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Grasping - Greifen mit einem Roboterarm}{21}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Handover - \IeC {\"U}bergabe zwischen zwei Systemen}{22}{subsubsection.3.3.2}
+\contentsline {section}{\numberline {4}Laboraufbau}{24}{section.4}
+\contentsline {subsection}{\numberline {4.1}Aufbau Teststand}{24}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}YouBot}{25}{subsection.4.2}
 \contentsline {subsubsection}{\numberline {4.2.1}Manipulator}{25}{subsubsection.4.2.1}
 \contentsline {subsubsection}{\numberline {4.2.2}Mobile Plattform}{27}{subsubsection.4.2.2}
@@ -40,23 +40,25 @@
 \contentsline {subsubsection}{\numberline {4.3.4}Netzwerk- und Sensoranbindung}{32}{subsubsection.4.3.4}
 \contentsline {section}{\numberline {5}Entwicklung}{34}{section.5}
 \contentsline {subsection}{\numberline {5.1}Anforderungsanalyse}{34}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Inverse Kinematik}{34}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Architektur RATS}{34}{subsection.5.3}
-\contentsline {section}{\numberline {6}Implementierung}{35}{section.6}
-\contentsline {subsection}{\numberline {6.1}Inverse Kinematik}{35}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Robotersteuerung - RATSYoubot \& RATSDummy \& RATSRose}{35}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Raum\IeC {\"u}berwachung - RATSHawk}{35}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Nahfelderkennung - RATSEye}{35}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Koordinierung - RATSCore}{35}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Lokale Positionierung}{35}{subsection.6.6}
-\contentsline {subsection}{\numberline {6.7}Handoverpoint}{35}{subsection.6.7}
-\contentsline {section}{\numberline {7}Test und Bewertung}{36}{section.7}
-\contentsline {subsection}{\numberline {7.1}Robustheit}{36}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Genauigkeit \& Geschwindigkeit Inverse Kinematik}{36}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Genauigkeit Positionierung}{36}{subsection.7.3}
-\contentsline {section}{\numberline {8}Zusammenfassung und Ausblick}{37}{section.8}
-\contentsline {section}{\numberline {9}Danksagung}{38}{section.9}
-\contentsline {section}{\numberline {10}Literaturverzeichnis}{39}{section.10}
-\contentsline {section}{\numberline {A}ROS Package}{45}{appendix.A}
-\contentsline {section}{\numberline {B}ROS Launchfile}{45}{appendix.B}
-\contentsline {section}{\numberline {C}Datenbl\IeC {\"a}tter}{45}{appendix.C}
+\contentsline {subsubsection}{\numberline {5.1.1}Funktionale Anforderungen}{35}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Nicht-Funktionale Anforderungen}{35}{subsubsection.5.1.2}
+\contentsline {subsection}{\numberline {5.2}Inverse Kinematik}{35}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Architektur RATS}{35}{subsection.5.3}
+\contentsline {section}{\numberline {6}Implementierung}{36}{section.6}
+\contentsline {subsection}{\numberline {6.1}Inverse Kinematik}{36}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Robotersteuerung - RATSYoubot \& RATSDummy \& RATSRose}{36}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Raum\IeC {\"u}berwachung - RATSHawk}{36}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Nahfelderkennung - RATSEye}{36}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Koordinierung - RATSCore}{36}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Lokale Positionierung}{36}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}Handoverpoint}{36}{subsection.6.7}
+\contentsline {section}{\numberline {7}Test und Bewertung}{37}{section.7}
+\contentsline {subsection}{\numberline {7.1}Robustheit}{37}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Genauigkeit \& Geschwindigkeit Inverse Kinematik}{37}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Genauigkeit Positionierung}{37}{subsection.7.3}
+\contentsline {section}{\numberline {8}Zusammenfassung und Ausblick}{38}{section.8}
+\contentsline {section}{\numberline {9}Danksagung}{39}{section.9}
+\contentsline {section}{\numberline {10}Literaturverzeichnis}{40}{section.10}
+\contentsline {section}{\numberline {A}ROS Package}{46}{appendix.A}
+\contentsline {section}{\numberline {B}ROS Launchfile}{46}{appendix.B}
+\contentsline {section}{\numberline {C}Datenbl\IeC {\"a}tter}{46}{appendix.C}

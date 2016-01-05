@@ -1,5 +1,5 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: abschlussarbeit.aux
-The style file: plainnat.bst
+The style file: chicago.bst
 Database file #1: babib.bib
 Warning--entry type for "panasonic2005" isn't style-file defined
 --line 32 of file babib.bib
@@ -20,15 +20,31 @@ Repeated entry---line 627 of file babib.bib
  :                           ,
 I'm skipping whatever remains of this entry
 Warning--can't use both volume and number fields in adjie1999design
-Warning--empty journal in basiliapproach
+Warning--no number and no volume in asada1979studies
+Warning--page numbers missing in asada1979studies
 Warning--empty year in basiliapproach
-Warning--empty year in basiliapproach
-Warning--empty journal in boella2002norms
+Warning--no journal in basiliapproach
+Warning--no number and no volume in basiliapproach
+Warning--page numbers missing in basiliapproach
+Warning--no number and no volume in bicchi1993experimental
+Warning--page numbers missing in bicchi1993experimental
+Warning--no journal in boella2002norms
+Warning--no number and no volume in boella2002norms
+Warning--page numbers missing in boella2002norms
 Warning--can't use both volume and number fields in heidemann2001building
-Warning--empty journal in lundh2006plan
+Warning--no journal in lundh2006plan
+Warning--no number and no volume in lundh2006plan
+Warning--page numbers missing in lundh2006plan
 Warning--can't use both volume and number fields in mainprice2010planning
-Warning--empty journal in mason1985robot
+Warning--no journal in mason1985robot
+Warning--no number and no volume in mason1985robot
+Warning--page numbers missing in mason1985robot
 Warning--can't use both volume and number fields in quigley2009ros
-Warning--empty journal in townsend1988effect
-Warning--empty journal in brunozandonella2013
+Warning--no journal in townsend1988effect
+Warning--no number and no volume in townsend1988effect
+Warning--page numbers missing in townsend1988effect
+Warning--no number and no volume in vail2003multi
+Warning--no journal in brunozandonella2013
+Warning--no number and no volume in brunozandonella2013
+Warning--page numbers missing in brunozandonella2013
 (There was 1 error message)
