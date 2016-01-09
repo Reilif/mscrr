@@ -149,11 +149,22 @@ Eine an den Agenten enge-gekoppelte Funktionalität die an einen mobilen Roboter
 \end{tabular} 
 
 \paragraph{Beschreibung}
-Diese Funktionalität bildet die zentrale Aufgabe dieser Arbeit ab. Ein Objekt soll zwischen zwei Robotern übergeben werden. Roboter A hat das Objekt gegriffen und soll nun dieses nur an Roboter B übergeben. Dazu müssen zunächst die beiden Arbeitsräume der Roboter eine Schnittmenge aufweisen in der das Objekt übergeben werden kann. Neben der Position spielt dabei die Orientierung im Raum einen wichtigen Faktor, da je nach Objekt und Greifer die Griffpositionen an dem Objekt variiert. Da in dieser Arbeit mit einem einfachen symmetrischen Objekt, einem langgezogenen Quader, und einem Gripper mit parallelen Fingern gearbeitet wird ist ein entgegengesetzter Griff möglich. Dabei entspricht die Pose von Greifer B der invertierten Pose von Greifer A:
+Diese Funktionalität bildet die zentrale Aufgabe dieser Arbeit ab. Ein Objekt soll zwischen zwei Robotern übergeben werden. Roboter A hat das Objekt gegriffen und soll nun dieses nur an Roboter B übergeben. Dazu müssen zunächst die beiden Arbeitsräume der Roboter eine Schnittmenge aufweisen in der das Objekt übergeben werden kann. Danach muss eine Übergabeposition bestimmt werden. Diese sollte möglichst Energieeffizient sein. Neben der Position spielt die Orientierung im Raum einen wichtigen Faktor, da je nach Objekt und Greifer die Griffpositionen an dem Objekt variiert. Da in dieser Arbeit mit einem einfachen symmetrischen Objekt, einem langgezogenen Quader, und einem Gripper mit parallelen Fingern gearbeitet wird, ist ein entgegengesetzter Griff möglich. Dabei entspricht die Pose von Greifer B der invertierten Pose von Greifer A:
 
 \begin{equation}
 \xi_{GreiferB} = \ominus \xi_{GreiferA}
-\end{equation} 
+\label{eq:grip}
+\end{equation}
+
+
+Neben der Greifposition ist auch die Pfadplanung zur Greifposition wichtig, da der sich nähernde Greifer weder mit dem Objekt noch mit dem anderen Greifer kollidieren darf. Ebenfalls kann die Symmetrie der Übergabe genutzt werden. Unter der Bedingung, dass die Finger von Greifer A nicht die selbe Position haben dürfen wie die Finger von Greifer B, muss die Gleichung \ref{eq:grip} um ein Offset $\xi_\tau$ entlang der X-Achse des Objekts erweitert werden. Die Länge des Offsets $|\tau|$ entspricht dabei der Hälfte der aufsummierten Breiten der Finger der Greifer.
+
+\begin{equation}
+\xi_{GreiferB} = \ominus \xi_{GreiferA} \oplus \xi_\tau
+\label{eq:grip2}
+\end{equation}
+
+
 
 \paragraph{Einordnung}
 Diese Funktion ist eng-gekoppelt und benötigt einen hohen Aufwand an Koordinierung. Neben der Übergabeposition und -orientierung müssen auch die Zeitvorgaben für das Öffnen und Schließen der Greifer, sowie die Bewegungen koordiniert werden. 
