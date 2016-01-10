@@ -149,7 +149,7 @@ Eine an den Agenten enge-gekoppelte Funktionalität die an einen mobilen Roboter
 \end{tabular} 
 
 \paragraph{Beschreibung}
-Diese Funktionalität bildet die zentrale Aufgabe dieser Arbeit ab. Ein Objekt soll zwischen zwei Robotern übergeben werden. Roboter A hat das Objekt gegriffen und soll nun dieses nur an Roboter B übergeben. Dazu müssen zunächst die beiden Arbeitsräume der Roboter eine Schnittmenge aufweisen in der das Objekt übergeben werden kann. Danach muss eine Übergabeposition bestimmt werden. Diese sollte möglichst Energieeffizient sein. Neben der Position spielt die Orientierung im Raum einen wichtigen Faktor, da je nach Objekt und Greifer die Griffpositionen an dem Objekt variiert. Da in dieser Arbeit mit einem einfachen symmetrischen Objekt, einem langgezogenen Quader, und einem Gripper mit parallelen Fingern gearbeitet wird, ist ein entgegengesetzter Griff möglich. Dabei entspricht die Pose von Greifer B der invertierten Pose von Greifer A:
+Diese Funktionalität bildet die zentrale Aufgabe dieser Arbeit ab und ist deshalb etwas . Ein Objekt soll zwischen zwei Robotern übergeben werden. Roboter A hat das Objekt gegriffen und soll nun dieses nur an Roboter B übergeben. Dazu müssen zunächst die beiden Arbeitsräume der Roboter eine Schnittmenge aufweisen in der das Objekt übergeben werden kann. Danach muss eine Übergabeposition bestimmt werden. Diese sollte möglichst Energieeffizient sein. Neben der Position spielt die Orientierung im Raum einen wichtigen Faktor, da je nach Objekt und Greifer die Griffpositionen an dem Objekt variiert. Da in dieser Arbeit mit einem einfachen symmetrischen Objekt, einem langgezogenen Quader, und einem Gripper mit parallelen Fingern gearbeitet wird, ist ein entgegengesetzter Griff möglich (siehe Abbildung \ref{fig:grip1}). Dabei entspricht die Pose von Greifer B der invertierten Pose von Greifer A:
 
 \begin{equation}
 \xi_{GreiferB} = \ominus \xi_{GreiferA}
@@ -157,13 +157,58 @@ Diese Funktionalität bildet die zentrale Aufgabe dieser Arbeit ab. Ein Objekt s
 \end{equation}
 
 
-Neben der Greifposition ist auch die Pfadplanung zur Greifposition wichtig, da der sich nähernde Greifer weder mit dem Objekt noch mit dem anderen Greifer kollidieren darf. Ebenfalls kann die Symmetrie der Übergabe genutzt werden. Unter der Bedingung, dass die Finger von Greifer A nicht die selbe Position haben dürfen wie die Finger von Greifer B, muss die Gleichung \ref{eq:grip} um ein Offset $\xi_\tau$ entlang der X-Achse des Objekts erweitert werden. Die Länge des Offsets $|\tau|$ entspricht dabei der Hälfte der aufsummierten Breiten der Finger der Greifer.
+Neben der Greifposition ist auch die Pfadplanung zur Greifposition wichtig, da der sich nähernde Greifer weder mit dem Objekt noch mit dem anderen Greifer kollidieren darf. Ebenfalls kann die Symmetrie der Übergabe genutzt werden. Unter der Bedingung, dass die Finger von Greifer A nicht die selbe Position haben dürfen wie die Finger von Greifer B, muss die Gleichung \ref{eq:grip} um eine Translation $T_\tau$ entlang der X-Achse des Objekts erweitert werden. Dies ist in Abbildung \ref{fig:grip3} dargestellt. Die Länge der Translation $|T\tau|$ entspricht dabei mindestens der Hälfte der aufsummierten Breiten der Finger der Greifer.
 
 \begin{equation}
-\xi_{GreiferB} = \ominus \xi_{GreiferA} \oplus \xi_\tau
+\xi_{GreiferB} = \ominus \xi_{GreiferA} \oplus T_\tau
 \label{eq:grip2}
 \end{equation}
 
+ \begin{figure}
+ 	\centering
+  	\subfigure[Entgegengesetzter Griff: Die Ausrichtung der Greifer (grau) ist zueinander invertiert. Die Achsen liegen alle parallel, sind jedoch in gegensetzige ausgerichtet. Die Symetrie des Objekts (rosa) und die parallelen Finger der Greifer ermöglichen eine lineare Transjektion entlang der Z-Achsen (grün) ohne Kollisionen mit dem anderen Greifer oder dem Objekt.]{%
+ 		\includegraphics[scale=0.45]{fig/grip1}
+ 		\label{fig:grip1}}
+ 	\hfill
+ 	\subfigure[Translation($T_\tau$) an der X-Achse (blau) des Objektes (rose) zur Kollisionsvermeidung der Finger (grau). Die minimale Länge der Translation beträgt die Hälfter der aufsummierten Breite der Finger.]{%
+ 		\includegraphics[scale=0.45]{fig/grip3}
+ 		\label{fig:grip3}}
+ 	
+ 	\caption{Greifer bei der Übergabe}
+ 	\label{fig:grip}
+ \end{figure}
+
+Da diese Funktionalität ein MR-Task ist, werden Nachrichten zwischen den Agenten ausgetauscht, um den Ablauf zu koordinieren. Dieser Nachrichtenaustausch wird in den folgenden Sequenz-Diagrammen dargestellt und analysiert. Dabei werden die drei Arten der Übergabe Geben (Abbildung \ref{fig:segrip1}), Nehmen (Abbildung \ref{fig:segrip2}) und Rendezvous (Abbildung \ref{fig:segrip3}) auf die Anzahl der Nachrichten $k$, sowie deren Komplexität, untersucht. Ein weiterer Aspekt ist das zeitliche Verhalten $t$ und der Unterschied im Ablauf der drei Varianten.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1.0]{fig/SeqGive}
+	\label{fig:segrip1}
+	\caption[Sequenzdiagramm Geben]{Dieses Sequenzdiagramm zeigt den Ablauf des Gebens. Die Aktion wird dabei vom objekttragenden Roboter (A) initialisiert.}
+\end{figure}
+
+Die in Abbildung \ref{fig:segrip1} dargestellte Variante des \textit{Gebens} wird von dem Roboter initialisiert, der das Objekt trägt (Roboter A). Nach Bestimmung der Übergabe Position und Orientierung bewegt sich zunächst Roboter A in die Pose. Dabei ist eine lineare Annäherung nicht nötig, da noch kein Kollisionspotential besteht. Anschließend wird eine einfache Bestätigung an Roboter B geschickt, der sich anschließend in Bewegung setzt. Diese besteht zunächst aus einer Positionierung nahe des Objektes. Der Greifer ist dabei schon geöffnet und dem anderen Greifer entgegengesetzt orientiert wie in Abbildung \ref{fig:grip1}. Folgend kommt die Annäherung auf der linearen Trajektorie entlang der Z-Achse an das Objekt. Sobald der Greifer in Position ist wird dieser geschlossen und eine einfache Bestätigung an den anderen Roboter gesendet. Dieser öffnet seinen Greifer und bestätigt ebenfalls. Durch diese Nachricht löst sich nun Roboter B, ebenfalls auf der Z-Achse, um das Objekt aus dem Greifer von Roboter A zu entfernen. Darauf folgt eine Freigabe an Roboter A, welcher sich nun auch von der Position entfernt, und der Übergang in die sichere Candle-Stellung.
+
+Alle Nachrichten, die in dieser Variante ausgetauscht werden, sind einfache Bestätigungen oder Freigaben, die nur vom Zeitverhalten her dynamisch sind und keine weiteren Informationen beinhalten. Benötigt werden, ohne die Positionsbestimmung, vier Nachrichten zur vollständigen Koordinierung ($k_{Geben} = 4$). Für das Zeitverhalten gilt: $t_{Geben} = move_A + move_B + near_B + close_B + open_A + near_B + max(move_A, move_B)$ unter der Bedingung, dass $move_B \gg open_B$, da der Greifer von B während der Bewegung geöffnet wird. $move$ entspricht dabei der Zeit die für eine Bewegung von einer Pose in eine Zielpose benötigt wird, $near$ ist die Zeit für die positive oder negative Annäherung, $open$ und $close$ sind die benötigten Zeiten für das Öffnen und Schließen der Greifer.
+
+\begin{figure}
+		\centering
+	\includegraphics[scale=1.0]{fig/SeqTake}
+	\label{fig:segrip2}
+\caption[Sequenzdiagramm Nehmen]{In diesem Sequenzdiagramm wird der Ablauf des Nehmens abgebildet. Die Aktion wird dabei vom objektlosen Roboter initialisiert.}
+\end{figure}
+
+In Abbildung \ref{fig:segrip2} ist das \textit{Nehmen} dargestellt. Im Gegensatz zum \textit{Geben} wird die Aktion vom dem Roboter initialisiert, an den das Objekt übergeben wird. Nach der Positionsbestimmung bewegt Roboter A den Greifer ohne Objekt an die Übergabeposition und öffnet diesen während der Bewegung. Anschließend fordert er das Objekt an. Darauf nähert sich Roboter B mit dem Objekt auf der linearen Trajektorie entlang der Z-Achse dem Greifer A an und führt den Gegenstand zwischen den Fingern von Greifer A ein. Nach einer Positionsbestätigung schließt Roboter A den Greifer. In diesem Zustand wird das Objekt von beiden Robotern fixiert. Nach der Schließung des Greifers schickt Roboter A eine Nachricht an Roboter B, welcher nun seinen Greifer öffnet und dies mit einer Nachricht bestätigt. Roboter A entfernt nun das Objekt aus dem Greifer von Roboter B und gibt die Position frei nachdem er den Kollisionsraum verlassen hat. Anschließend bewegen sich beide Roboter in die sichere Candle-Stellung.
+
+Der Nachrichtenaufwand dieser Variante beträgt $k_{Nehmen} = 5$. Wie beim \textit{Geben}, ist die Komplexität der Nachrichten eher gering, da es sich nur um zeitkritische Freigaben handelt. Für das Zeitverhalten gilt, unter den gleichen Bedingungen und Angaben wie beim \textit{Geben}: $t_{Nehmen} = move_A + move_B + near_B + close_A + open_B + near_A + max(move_A, move_B)$
+
+
+\begin{figure}
+		\centering
+	\includegraphics[scale=1.0]{fig/SeqRond}
+	\label{fig:segrip3}
+\caption[Sequenzdiagramm Rendezvous]{Dieses Sequenzdiagramm zeigt die Rendezvous Variante der Übergabe. Die Aktion kann von beiden Agenten initialisiert.}
+\end{figure}
 
 
 \paragraph{Einordnung}
