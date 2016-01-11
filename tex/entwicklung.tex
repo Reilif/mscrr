@@ -198,18 +198,25 @@ Alle Nachrichten, die in dieser Variante ausgetauscht werden, sind einfache Best
 \caption[Sequenzdiagramm Nehmen]{In diesem Sequenzdiagramm wird der Ablauf des Nehmens abgebildet. Die Aktion wird dabei vom objektlosen Roboter initialisiert.}
 \end{figure}
 
-In Abbildung \ref{fig:segrip2} ist das \textit{Nehmen} dargestellt. Im Gegensatz zum \textit{Geben} wird die Aktion vom dem Roboter initialisiert, an den das Objekt übergeben wird. Nach der Positionsbestimmung bewegt Roboter A den Greifer ohne Objekt an die Übergabeposition und öffnet diesen während der Bewegung. Anschließend fordert er das Objekt an. Darauf nähert sich Roboter B mit dem Objekt auf der linearen Trajektorie entlang der Z-Achse dem Greifer A an und führt den Gegenstand zwischen den Fingern von Greifer A ein. Nach einer Positionsbestätigung schließt Roboter A den Greifer. In diesem Zustand wird das Objekt von beiden Robotern fixiert. Nach der Schließung des Greifers schickt Roboter A eine Nachricht an Roboter B, welcher nun seinen Greifer öffnet und dies mit einer Nachricht bestätigt. Roboter A entfernt nun das Objekt aus dem Greifer von Roboter B und gibt die Position frei nachdem er den Kollisionsraum verlassen hat. Anschließend bewegen sich beide Roboter in die sichere Candle-Stellung.
+In Abbildung \ref{fig:segrip2} ist das \textit{Nehmen} dargestellt. Im Gegensatz zum \textit{Geben} wird die Aktion vom dem Roboter initialisiert, an den das Objekt übergeben wird. Nach der Positionsbestimmung bewegt Roboter A den Greifer ohne Objekt an die Übergabeposition und öffnet diesen während der Bewegung. Anschließend fordert er das Objekt an. Darauf nähert sich Roboter B mit dem Objekt auf der linearen Trajektorie entlang der Z-Achse dem Greifer A an und führt den Gegenstand zwischen den Fingern von Greifer A ein. Nach einer Positionsbestätigung schließt Roboter A den Greifer. In diesem Zustand wird das Objekt von beiden Robotern fixiert. Nach der Schließung des Greifers schickt Roboter A eine Nachricht an Roboter B, welcher nun seinen Greifer öffnet und dies mit einer Nachricht bestätigt. Roboter A entfernt nun das Objekt aus dem Greifer von Roboter B und gibt die Position frei nachdem er den Kollisionsraum verlassen hat. Anschließend bewegen beide Roboter die Arme in die sichere Candle-Stellung.
 
-Der Nachrichtenaufwand dieser Variante beträgt $k_{Nehmen} = 5$. Wie beim \textit{Geben}, ist die Komplexität der Nachrichten eher gering, da es sich nur um zeitkritische Freigaben handelt. Für das Zeitverhalten gilt, unter den gleichen Bedingungen und Angaben wie beim \textit{Geben}: $t_{Nehmen} = move_A + move_B + near_B + close_A + open_B + near_A + max(move_A, move_B)$
+Der Nachrichtenaufwand dieser Variante beträgt $k_{Nehmen} = 5$. Wie beim \textit{Geben}, ist die Komplexität der Nachrichten eher gering, da es sich nur um zeitkritische Freigaben handelt. Für das Zeitverhalten gilt, unter den gleichen Bedingungen und Angaben wie beim \textit{Geben}: $t_{Nehmen} = move_A + move_B + near_B + close_A + open_B + near_A + max(move_A, move_B)$.
 
 
 \begin{figure}
 		\centering
 	\includegraphics[scale=1.0]{fig/SeqRond}
-	\label{fig:segrip3}
+
 \caption[Sequenzdiagramm Rendezvous]{Dieses Sequenzdiagramm zeigt die Rendezvous Variante der Übergabe. Die Aktion kann von beiden Agenten initialisiert.}
 \end{figure}
+\label{fig:segrip3}
 
+
+Die Rendezvous-Übergabe in Abbildung \ref{fig:segrip3} wird die Initialisierungsbewegung nicht explizit von einem Roboter ausgeführt, sondern von beiden gleichzeitig. Dabei bewegen sich zunächst beide Arme auf die Übergabeposition, wobei sich beide Greifer das letzte Wegstück auf der linearen Trajektorie annähern. Beide Roboter bestätigen ihre Position, sobald sie diese erreicht haben. Anschließend schließt der Roboter A, ohne Objekt, den Greifer und bestätigt.Roboter B öffnet den Greifer und übergibt so das Objekt. Wie bei den anderen Varianten bewegt sich Roboter A nach einer Nachricht nun mit Objekt auf einer linearen Bahn von Greifer B weg. Nach der anschließenden Positionsfreigabe bewegen sich beide Roboter in die sichere Candle-Stellung.
+
+Die Nachrichtenkomplexität ist bei dieser Variante etwas höher, als bei den anderen. Den Unterschied macht die erste Koordinierung, nachdem beide Arme in Position gegangen sind, da nicht definiert ist, welcher Roboter zuerst die Stellung erreicht und somit die Reihenfolge der Nachrichten nicht definiert ist. Die Komplexität des Inhaltes bleibt bei dieser Variante genauso gering, wie bei den anderen Variante, da es sich nur um Bestätigungen handelt. Die Anzahl der Nachrichten für diese Variante ist $k_{Rendezvous} = 5$. Für das Zeitverhalten gilt, unter den bekannten Bedingungen und Angaben:  $t_{Rendezvous} = max(move_A + near_A, move_B + near_B) + close_A + open_B + near_A + max(move_A, move_B)$.
+
+Ein Vergleich der Kennzahlen der Varianten zeigt, dass der Koordinierungsaufwand beim \textit{Geben} am geringsten ist. Dies liegt vor allem an der Anzahl der Nachrichten: $k_{Geben} < k_{Nehmen} = k_{Rendezvous}$. Außerdem ist die Komplexität der Nachrichten untereinander identisch, mit der Ausnahme am Anfang der \textit{Rendezvous}-Variante. Für das Zeitverhalten gilt $t_{Rendezvous} < t_{Geben} = t_{Nehmen}$. Dies liegt vor allem an der Parallelisierung der Bewegung am Anfang der Aktion. 
 
 \paragraph{Einordnung}
 Diese Funktion ist eng-gekoppelt und benötigt einen hohen Aufwand an Koordinierung. Neben der Übergabeposition und -orientierung müssen auch die Zeitvorgaben für das Öffnen und Schließen der Greifer, sowie die Bewegungen koordiniert werden. 
