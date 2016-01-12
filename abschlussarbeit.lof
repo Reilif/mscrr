@@ -21,14 +21,14 @@
 \contentsline {figure}{\numberline {14}{\ignorespaces Hokuyo URG-04LX-UG01}}{31}{figure.14}
 \contentsline {figure}{\numberline {15}{\ignorespaces Argos 3D - P100}}{32}{figure.15}
 \contentsline {figure}{\numberline {16}{\ignorespaces Schematische Darstellung der Verbindungen}}{32}{figure.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Use-Case Robotersystem}}{34}{figure.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Greifer bei der \IeC {\"U}bergabe}}{41}{figure.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Seitenansicht mobile Plattform mit Sensorplatte}}}{41}{figure.18}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Draufsicht mobile Plattform mit Sensorplatte}}}{41}{figure.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Produktbild. Bildquelle: \cite {nowak2015}}}}{41}{figure.18}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Schema: Reichweite und Sichtfeld. Sichtfeld in Messpunktsektoren (MP) unterteilt. Ver\IeC {\"a}ndert nach: \cite {maeda2009}}}}{41}{figure.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Entgegengesetzter Griff: Die Ausrichtung der Greifer (grau) ist zueinander invertiert. Die Achsen liegen alle parallel, sind jedoch in gegensetzige ausgerichtet. Die Symetrie des Objekts (rosa) und die parallelen Finger der Greifer erm\IeC {\"o}glichen eine lineare Transjektion entlang der Z-Achsen (gr\IeC {\"u}n) ohne Kollisionen mit dem anderen Greifer oder dem Objekt.}}}{41}{figure.18}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Translation($T_\tau $) an der X-Achse (blau) des Objektes (rose) zur Kollisionsvermeidung der Finger (grau). Die minimale L\IeC {\"a}nge der Translation betr\IeC {\"a}gt die H\IeC {\"a}lfter der aufsummierten Breite der Finger.}}}{41}{figure.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Sequenzdiagramm Geben}}{42}{figure.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces Sequenzdiagramm Nehmen}}{43}{figure.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Sequenzdiagramm Rendezvous}}{44}{figure.21}
+\contentsline {figure}{\numberline {17}{\ignorespaces Use-Case Robotersystem}}{36}{figure.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Greifer bei der \IeC {\"U}bergabe}}{44}{figure.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Seitenansicht mobile Plattform mit Sensorplatte}}}{44}{figure.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Draufsicht mobile Plattform mit Sensorplatte}}}{44}{figure.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Produktbild. Bildquelle: \cite {nowak2015}}}}{44}{figure.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Schema: Reichweite und Sichtfeld. Sichtfeld in Messpunktsektoren (MP) unterteilt. Ver\IeC {\"a}ndert nach: \cite {maeda2009}}}}{44}{figure.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Entgegengesetzter Griff: Die Ausrichtung der Greifer (grau) ist zueinander invertiert. Die Achsen liegen alle parallel, sind jedoch in gegensetzige ausgerichtet. Die Symetrie des Objekts (rosa) und die parallelen Finger der Greifer erm\IeC {\"o}glichen eine lineare Transjektion entlang der Z-Achsen (gr\IeC {\"u}n) ohne Kollisionen mit dem anderen Greifer oder dem Objekt.}}}{44}{figure.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Translation($T_\tau $) an der X-Achse (blau) des Objektes (rose) zur Kollisionsvermeidung der Finger (grau). Die minimale L\IeC {\"a}nge der Translation betr\IeC {\"a}gt die H\IeC {\"a}lfter der aufsummierten Breite der Finger.}}}{44}{figure.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Sequenzdiagramm Geben}}{45}{figure.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Sequenzdiagramm Nehmen}}{46}{figure.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Sequenzdiagramm Rendezvous}}{47}{figure.21}

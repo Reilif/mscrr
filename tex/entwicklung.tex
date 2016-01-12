@@ -2,23 +2,46 @@
 %% Zusammenfassung und Ausblick
 \section{Entwicklung}
 \label{sec:entwicklung}
-Dieses Kapitel befasst sich mit einzelnen Aspekten der Entwicklung. Nach der anfänglichen Anforderungsanalyse werden grundlegende Konzepte und Architekturen vorgestellt. Dabei werden erste Sensoren, Aktoren und bestehende Software Bibliotheken getestet und für eine Anschlussverwendung bewertet. Die weiteren benötigten Softwarepaket werden im nachfolgenden Kapitel Implementierung umgesetzt.
+Dieses Kapitel befasst sich mit einzelnen Aspekten der Entwicklung. Nach der Auflistung der Nicht-funktionalen Anforderungen, sowie der Funktionen, werden grundlegende Konzepte und Architekturen vorgestellt. Dabei werden erste Sensoren, Aktoren und bestehende Software Bibliotheken getestet und für eine Anschlussverwendung bewertet. Die weiteren benötigten Softwarepaket werden im nachfolgenden Kapitel Implementierung TODO umgesetzt.
+
+\subsection{Nicht-Funktionale Anforderungen}
+\label{sec:dev-nichtfunk}
+
+Die nicht-funktionalen Anforderungen beschreiben Qualitätsmerkmale des MRS. Diese sind in verschiedene Kategorien gruppiert und haben Auswirkungen auf die Funktionalität und die Architektur. Im Folgenden werden nur die für diese Arbeit relevanten Kategorien erläutert und in Bezug gebracht.
+
+\subsubsection{Sicherheit - Safety}
+
+Im englischen wird der Begriff Sicherheit in die Terme \textit{Security} und \textit{Safety} unterteilt. Ersteres beschäftigt sich unter anderem mit der Verschlüsselung von Daten. Der Begriff \textit{Safety} bezieht sich auf die Anwendersicherheit, zum Beispiel ob dieser durch das System Verletzungen erleiden kann oder ob sich das System selbst oder die Umwelt beschädigt. Da die Roboter in dieser Arbeit nicht, wie Industrieroboter, durch Gitterzäune gesichert sind wird eine Lichtwarnanlage installiert. Diese arbeitet ähnlich einer Ampel. Befindet sich das System in einer sicheren Stellung, in der es sich nicht bewegt, leuchtet die Lichtanlage in grün. Wird eine Bewegung geplant oder ist das System vor einer Bewegung blinkt die Lichtanlage fünf Sekunden gelb. Innerhalb dieses Intervalls bewegt sich das System nicht. Auf das Blinken folgt ein rotes Leuchten der Lichtanlage. In dieser Zeit führen die Roboter ihre Aktionen aus. Während dieser Aktionen nutzt das Robotersystem die Sensoren und berechnet kollisionsfreie Pfade um nicht mit sich selbst oder der Umwelt zu kollidieren. Objekte, die sich erst zur Laufzeit auf dem Pfad befinden, werden in dieser Arbeit noch nicht beachtet und können so zur Kollision führen. Um bei Bewegungen der mobilen Plattform oder zwischen zwei Tasks der Arme die Sicherheit dieser zu sicheren existieren die beiden Posen \textit{Candle} und \textit{Fold}. Die erste Pose streckt den Arm senkrecht in die Höhe und ermöglicht so kollisionsfreie Pfade in die meisten anderen Posen. In der zweiten Pose befinden sich alle Gelenke in ihrer minimalen Konfiguration. Sollte dem Roboter der Strom fehlen, bedingt durch einen Stromausfall oder leere Batterien, fällt der Roboterarm in sich zusammen, da die Gelenkmotoren die Position nicht mehr halten können. In der \textit{Fold}-Pose kann der Roboter nicht weiter in sich zusammenfallen, da alle Glieder aufeinander liegen. Deshalb sollten die Roboter diese Pose in längeren Inaktivitätsphasen einnehmen. Diese Aspekte werden während der Entwicklung der Funktionen berücksichtigt.
+
+\subsubsection{Zuverlässigkeit}
+Die Zuverlässigkeit des Systems beschreibt unter anderem das Systemverhalten bei einem Fehlerfall oder Teilsystemausfall. Das Robotersystem darf dabei nicht in einen unsicheren Zustand geraten. Da das Robotersystem auf ROS aufbaut werden einzelne Aktoren und Sensoren als ROS-Node betrieben. Jeder Node stellt dabei ein einzelnes Subsystem dar, welcher ausfallen kann. ROS ist so konzipiert, dass das ganze System nicht abstürzt, wenn ein einzelner Node ausfällt. Eine Schwachstelle bildet hierbei der ROS-Core. Dieser stellt den Mittelpunkt eines ROS-Systems dar. Fällt dieser aus bricht die Kommunikation zwischen den einzelnen Nodes zusammen. In diesem Fall müssen die Nodes in einen sicheren Fehlerzustand übergehen. Dies betrifft vor allem die Aktoren, besonders die Steuerungen der Roboter. 
+
+Ein weiterer Aspekt der Zuverlässigkeit ist die Wiederherstellbarkeit. Dies betrifft ob und wie komplex ein bestimmter fehlerfreier Systemstatus wiederhergestellt werden kann. Da die Nodes einzelne Subsysteme sind, können diese nach einem Ausfall einfach wieder gestartet werden und der Systemstatus ist wiederhergestellt. Dies betrifft auch den ROS-Core. Wird dieser auf der selben Adresse (IP und Port) neu gestartet, nehmen alle Nodes die Kommunikation wieder auf. Diese beiden Aspekte werden vor allem bei der Entwicklung der Architektur für das MRS berücksichtigt. Dabei ist das zentrale Koordinierungs- und Konfigurations-System eine Komponente, die zu einem potenziellen Single-Point-of-Failure führen kann.
 
 
-\subsection{Anforderungen}
-In diesem Kapitel werden die Anforderungen an das Robotersystem gestellt. Es werden die einzelnen Funktionalitäten für die Aktoren und Sensoren festgelegt. Außerdem werden die Anforderungen an die Architektur definiert. Das folgende Use-Case Diagramm \ref{fig:dev-usecase} stellt die groben Funktionsanforderungen an das Robotersystem dar.
+\subsubsection{Korrektheit}
+Die Korrektheit lässt sich in dieser Entwicklung durch die Genauigkeit der Funktionen definieren. So dürfen die Positionen und Orientierungen der Arme und der mobilen Plattform nur um bestimmte Grenzen abweichen. Dabei gelten für die End-Effektor-Pose eine Distanzabweichung von maximal 5mm für jede Dimension und für die Orientierung eine Abweichung von maximal 1\textdegree pro Achse. Dies muss bei der Entwicklung der inversen Kinematik berücksichtigt werden. Für die mobile Plattform gelten andere maximale Abweichungen. Für die Distanzabweichungen sind das 5cm in X- und Y-Richtung. Für die Z-Dimension darf sie maximal 5mm sein. Für die Rotation gilt: Z-Achse 5\textdegree, X- und Y- Achse 1\textdegree.
 
- \begin{figure}[H]
- 	\centering
- 	\includegraphics[scale=0.8]{fig/UseCase}   
- 	\caption[Use-Case Robotersystem]{Vereinfachtes Use-Case Diagramm zur groben Funktionsübersicht des Robotersystems}
- 	\label{fig:dev-usecase}
- \end{figure}
- 
- Der Anwender gibt dem System die Anweisung einen Gegenstand wegzuräumen. Das Robotersystem gliedert die Anweisung in einzelne Tasks auf. Diese Tasks werden von den unterschiedlichen Akteuren mit ihren Funktionalitäten sequentiell oder parallel ausgeführt. In diesem konkreten Fall soll zunächst der Roboter Rose den entsprechenden Gegenstand aufheben. Dies erfordert zunächst eine Lokalisierung des Objektes die von einem Kamerasystem angefordert wird. Anschließend übergeben sich die Roboter Rose und Dummy den Gegenstand, bevor Dummy ihn anschließend an einer gewünschten Position ablegt. Diese sehr grobe Darstellung des Vorgangs beinhaltet die vier zentralen Funktionen, die das System umsetzen muss: Gegenstand aufheben (\textit{pick-up}), Gegenstand ablegen (\textit{place}), Gegenstand lokalisieren und Gegenstand übergeben(\textit{handover}). Des Weiteren muss es eine Möglichkeit für den Anwender geben Befehle an das System zu übergeben. Diese funktionalen Anforderungen werden im nächsten Unterkapitel \ref{sec:dev-funk} aufgelistet und definiert. Neben diesen funktionalen Anforderungen existieren noch nicht-funktionale Anforderungen. Zu diesen zählen Sicherheitsaspekte, sowie Anforderungen an die Zuverlässigkeit, Erweiterbarkeit und die Effizienz. Die nicht-funktionalen Anforderungen werden in Kapitel \ref{sec:dev-nichtfunk} aufgeführt. Die folgenden Anforderungen dienen zur Strukturierung der Arbeit und zerlegen das Robotersystem in Teilsysteme. Dies wird benötigt um einen Aufwand für die Koordinierung und Konfiguration zu bestimmen. Deshalb sind die Anforderungen grobe Darstellungen und aus dem Aspekt der Software-Entwicklung nicht detailliert genug. Dafür müssten die Funktionen weiter runter gebrochen werden. Dies würde jedoch den Umfang dieser wissenschaftlichen Arbeit überschreiten.
- 
-\subsubsection{Funktionale Anforderungen}
+\subsubsection{Leistung}
+Die Leistung bezieht sich auf die Effizienz des MRS. Besonders der Zeit- und Energieaufwand sollen möglichst minimiert werden. Der Zeitaufwand bezieht sich dabei nicht die Performance-Optimierung der Algorithmen, sondern der Bewegungen und deren Abläufe. Dieser Aspekt muss bei der Entwicklung der Funktionen und der Implementierung berücksichtigt werden. Der Energieaufwand ist stark abhängig von den benutzten Aktoren und wird bei der Entwicklung der inversen Kinematik für die Arme und die Pfadbestimmung für die mobile Plattform in Betracht gezogen.
+\subsubsection{Änderbarkeit}
+
+\subsection{Funktionalitäten}
 \label{sec:dev-funk}
+
+In diesem Kapitel werden die Funktionen des Robotersystem aufgelistet. Das folgende Use-Case Diagramm \ref{fig:dev-usecase} stellt die groben Funktionsanforderungen an das Robotersystem dar.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{fig/UseCase}   
+	\caption[Use-Case Robotersystem]{Vereinfachtes Use-Case Diagramm zur groben Funktionsübersicht des Robotersystems}
+	\label{fig:dev-usecase}
+\end{figure}
+
+Der Anwender gibt dem System die Anweisung einen Gegenstand wegzuräumen. Das Robotersystem gliedert die Anweisung in einzelne Tasks auf. Diese Tasks werden von den unterschiedlichen Akteuren mit ihren Funktionalitäten sequentiell oder parallel ausgeführt. In diesem konkreten Fall soll zunächst der Roboter Rose den entsprechenden Gegenstand aufheben. Dies erfordert zunächst eine Lokalisierung des Objektes die von einem Kamerasystem angefordert wird. Anschließend übergeben sich die Roboter Rose und Dummy den Gegenstand, bevor Dummy ihn anschließend an einer gewünschten Position ablegt. Diese sehr grobe Darstellung des Vorgangs beinhaltet die vier zentralen Funktionen, die das System umsetzen muss: Gegenstand aufheben (\textit{pick-up}), Gegenstand ablegen (\textit{place}), Gegenstand lokalisieren und Gegenstand übergeben(\textit{handover}).
+
+ Die folgenden Anforderungen dienen zur Strukturierung der Arbeit und zerlegen das Robotersystem in Teilsysteme. Dies wird benötigt um einen Aufwand für die Koordinierung und Konfiguration zu bestimmen. Deshalb sind die Anforderungen grobe Darstellungen und aus dem Aspekt der Software-Entwicklung nicht detailliert genug. Dafür müssten die Funktionen weiter runter gebrochen werden. Dies würde jedoch den Umfang dieser wissenschaftlichen Arbeit überschreiten.
+
 Alle Funktionen werden nach dem Schema aus \cite{lundh2006plan} angegeben: 
 
 $f = \langle  Id, r, I, O, \Phi, Pr, Po, Freq, Cost\rangle$
@@ -38,6 +61,7 @@ Jede Funktion $f$ entspricht dabei einem Tupel und ist einem oder mehreren Agent
 
 Je nach Typ des Agenten sind die Eingabemenge bei Sensoren $I = \varnothing$ und die Ausgabemenge bei Aktoren $O =  \varnothing$. Außerdem wird jede Funktion beschrieben und für die Verwendung in ein MRS eingeordnet. Aus dem Anwendungsfall für das Robotersystem ergeben sich folgende funktionale Anforderungen.
 
+\subsubsection{Funktion Aufheben}
 
 \begin{tabular}{|p{3cm}|p{10cm}|}
 	\multicolumn{2}{c}{	$f_0$ (Aufheben):}\\
@@ -57,7 +81,9 @@ Die Funktion \textit{pickup} wird in den beiden Robotern Rose und Dummy implemen
 
 \paragraph{Einordnung}
 Die Funktion ist als Single-Robot Task für einen Single-Task-fähigen Agenten einzuordnen, da nur ein Agent zur Erledigung nötig ist. Die Funktion kann von einem Multi-Task fähigen Agenten intern auch parallel ausgeführt werden, da einzelne Subtasks unabhängig von einander erledigt werden können. Ein Beispiel ist das Öffnen des Greifers während der Bewegungsphase des restlichen Armes oder der mobilen Plattform bei Rose. Diese Multi-Task Anwendung fordert aber einen höheren Koordinierungsaufwand, da Funktionen zeitlich voneinander abhängen (siehe TODO). Für eine Single-Task Anwendung ist der Koordinierungsaufwand gering, da alle Subtasks seriell ausgeführt werden. Der Konfigurationsaufwand ist mittel, da zwei Agenten für die Funktionalität bereitstehen, welche sich über den Aktionsradius für die Ausführung qualifizieren. 
- 
+
+\subsubsection{Funktion Ablegen}
+
 \begin{tabular}{|p{3cm}|p{10cm}|}
 	\multicolumn{2}{c}{$f_1$ (Ablegen):}\\
 	\hline  $Id$ & place\\ 
@@ -77,6 +103,7 @@ Die Funktion ist als Single-Robot Task für einen Single-Task-fähigen Agenten e
 \paragraph{Einordnung}
 Die Funktion gilt als Single-Robot Task. Die Subtasks der Funktion können seriell als auch parallel ausgeführt werden. Dadurch eignen sie sich für Multi-Task, sowie Single-Task Agenten. Je nach Typ ist der Koordinierungsaufwand unterschiedlich hoch. Der Single-Task Agent benötigt wenig Koordinierung da nur ein Startsignal notwendig ist. Bei einem Multi-Task Agenten ist die Koordinierung aufwendiger, da Subtasks zeitlich voneinander abhängen. Zum Beispiel darf der Greifer erst öffnen, wenn das Objekt in der Position ist. Der Konfigurationsaufwand ist gering, da nur der Agent die Aktion ausführen kann, der den Gegenstand hält. 
 
+\subsubsection{Funktion Objekt identifizieren und lokalisieren}
 \begin{tabular}{|p{3cm}|p{10cm}|}
 	\multicolumn{2}{c}{$f_2$ (Objekt im Raum finden):}\\
 	\hline  $Id$ & findObj\\ 
@@ -96,6 +123,7 @@ Diese Funktion identifiziert und lokalisiert ein bestimmtes Objekt im Großraum 
 \paragraph{Einordnung}
 Ein simpler Single-Robot Task, der von einem Agenten ausgeführt wird. Der Task wird in zwei Subtasks (Identifizieren und Lokalisieren) zerlegt, die serielle ausgeführt werden. Damit bringen Multi-Task Agenten keinen Vorteil. Der Koordinierungsaufwand ist sehr gering, da die Funktion nur angestoßen werden muss. Sollte die Funktion jedoch mit mehreren Kamerasystemen genutzt werden steigt der Koordinierungsaufwand, da der Task entweder parallel oder seriell von allen Systemen ausgeführt werden kann. Je nach Typ steigt der Konfigurationsaufwand, bei einer parallelen Ausführung ist kein Aufwand nötig, da immer alle Kamerasysteme genutzt werden. Eine serielle Ausführung würde die Komplexität steigen, da die Kamerasysteme in einer, möglicherweise priorisierten, Reihenfolge angestoßen werden.
 
+\subsubsection{Funktion Nahfeld Erkennung}
 
 \begin{tabular}{|p{3cm}|p{10cm}|}
 	\multicolumn{2}{c}{$f_3$ (Nahfeld Erkennung):}\\
@@ -116,6 +144,8 @@ Diese Funktion identifiziert und lokalisiert ein bestimmtes Objekt im Nahfeld (B
 \paragraph{Einordnung}
 Wie $f_2$ einzuordnen. Kann jedoch nicht mit mehreren Kamerasystemen ausgeführt werden, da jedes Kamerasystem auf einem Roboter montiert und mit diesem eng-gekoppelt ist. Dadurch ist der Konfigurationsaufwand konstant, da jedem Roboter ein System zugewiesen wird. 
 
+\subsubsection{Funktion Agentenlokalisierung}
+
 \begin{tabular}{|p{3cm}|p{10cm}|}
 	\multicolumn{2}{c}{$f_4$ (Lokalisierung Agent):}\\
 	\hline  $Id$ & loc\\ 
@@ -135,6 +165,7 @@ Diese Funktionalität lokalisiert den entsprechenden Agenten im Raum. Mögliche 
 \paragraph{Einordnung}
 Eine an den Agenten enge-gekoppelte Funktionalität die an einen mobilen Roboter oder externen Sensor vergeben werden kann. Ein mobiler Roboter muss multi-tasking fähig sein, da diese Funktion in einer bestimmten Frequenz wiederholt wird und von anderen Funktionen benötigt wird. Ein Beispiel ist $f_0$, bei dieser Funktion benötigt Rose die eigene Position zur Fahrwegbestimmung. Dies erhöht den Grad der Koordinierung. Die Konfiguration ist je nach Algorithmus einfach bis komplex. Ein festmontierter Sensor auf einer mobilen Plattform benötigt eine einmalige Konfiguration. Externe Sensoren, zum Beispiel Kamerasysteme, benötigen eine größeren Konfigurationsaufwand. Da zunächst das Kamerasystem ausgewählt werden muss in dessen Arbeitsraum sich der gesuchte Agent befindet. Dadurch steigt auch der Koordinierungsaufwand.
 
+\subsubsection{Funktion Übergabe}
 \begin{tabular}{|p{3cm}|p{10cm}|}
 	\multicolumn{2}{c}{$f_5$ (Übergabe Objekt):}\\
 	\hline  $Id$ & handover\\ 
@@ -178,27 +209,29 @@ Neben der Greifposition ist auch die Pfadplanung zur Greifposition wichtig, da d
  	\label{fig:grip}
  \end{figure}
 
-Da diese Funktionalität ein MR-Task ist, werden Nachrichten zwischen den Agenten ausgetauscht, um den Ablauf zu koordinieren. Dieser Nachrichtenaustausch wird in den folgenden Sequenz-Diagrammen dargestellt und analysiert. Dabei werden die drei Arten der Übergabe Geben (Abbildung \ref{fig:segrip1}), Nehmen (Abbildung \ref{fig:segrip2}) und Rendezvous (Abbildung \ref{fig:segrip3}) auf die Anzahl der Nachrichten $k$, sowie deren Komplexität, untersucht. Ein weiterer Aspekt ist das zeitliche Verhalten $t$ und der Unterschied im Ablauf der drei Varianten.
+Da diese Funktionalität ein MR-Task ist, werden Nachrichten zwischen den Agenten ausgetauscht, um den Ablauf zu koordinieren. Dieser Nachrichtenaustausch wird in den folgenden Sequenz-Diagrammen dargestellt und analysiert. Dabei werden die drei Arten der Übergabe Geben (Abbildung \ref{fig:gripper1}), Nehmen (Abbildung \ref{fig:gripper2}) und Rendezvous (Abbildung \ref{fig:gripper3}) auf die Anzahl der Nachrichten $k$, sowie deren Komplexität, untersucht. Ein weiterer Aspekt ist das zeitliche Verhalten $t$ und der Unterschied im Ablauf der drei Varianten.
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[scale=1.0]{fig/SeqGive}
-	\label{fig:segrip1}
+
 	\caption[Sequenzdiagramm Geben]{Dieses Sequenzdiagramm zeigt den Ablauf des Gebens. Die Aktion wird dabei vom objekttragenden Roboter (A) initialisiert.}
+		\label{fig:gripper1}
 \end{figure}
 
-Die in Abbildung \ref{fig:segrip1} dargestellte Variante des \textit{Gebens} wird von dem Roboter initialisiert, der das Objekt trägt (Roboter A). Nach Bestimmung der Übergabe Position und Orientierung bewegt sich zunächst Roboter A in die Pose. Dabei ist eine lineare Annäherung nicht nötig, da noch kein Kollisionspotential besteht. Anschließend wird eine einfache Bestätigung an Roboter B geschickt, der sich anschließend in Bewegung setzt. Diese besteht zunächst aus einer Positionierung nahe des Objektes. Der Greifer ist dabei schon geöffnet und dem anderen Greifer entgegengesetzt orientiert wie in Abbildung \ref{fig:grip1}. Folgend kommt die Annäherung auf der linearen Trajektorie entlang der Z-Achse an das Objekt. Sobald der Greifer in Position ist wird dieser geschlossen und eine einfache Bestätigung an den anderen Roboter gesendet. Dieser öffnet seinen Greifer und bestätigt ebenfalls. Durch diese Nachricht löst sich nun Roboter B, ebenfalls auf der Z-Achse, um das Objekt aus dem Greifer von Roboter A zu entfernen. Darauf folgt eine Freigabe an Roboter A, welcher sich nun auch von der Position entfernt, und der Übergang in die sichere Candle-Stellung.
+Die in Abbildung \ref{fig:gripper1} dargestellte Variante des \textit{Gebens} wird von dem Roboter initialisiert, der das Objekt trägt (Roboter A). Nach Bestimmung der Übergabe Position und Orientierung bewegt sich zunächst Roboter A in die Pose. Dabei ist eine lineare Annäherung nicht nötig, da noch kein Kollisionspotential besteht. Anschließend wird eine einfache Bestätigung an Roboter B geschickt, der sich anschließend in Bewegung setzt. Diese besteht zunächst aus einer Positionierung nahe des Objektes. Der Greifer ist dabei schon geöffnet und dem anderen Greifer entgegengesetzt orientiert wie in Abbildung \ref{fig:grip1}. Folgend kommt die Annäherung auf der linearen Trajektorie entlang der Z-Achse an das Objekt. Sobald der Greifer in Position ist wird dieser geschlossen und eine einfache Bestätigung an den anderen Roboter gesendet. Dieser öffnet seinen Greifer und bestätigt ebenfalls. Durch diese Nachricht löst sich nun Roboter B, ebenfalls auf der Z-Achse, um das Objekt aus dem Greifer von Roboter A zu entfernen. Darauf folgt eine Freigabe an Roboter A, welcher sich nun auch von der Position entfernt, und der Übergang in die sichere Candle-Stellung.
 
 Alle Nachrichten, die in dieser Variante ausgetauscht werden, sind einfache Bestätigungen oder Freigaben, die nur vom Zeitverhalten her dynamisch sind und keine weiteren Informationen beinhalten. Benötigt werden, ohne die Positionsbestimmung, vier Nachrichten zur vollständigen Koordinierung ($k_{Geben} = 4$). Für das Zeitverhalten gilt: $t_{Geben} = move_A + move_B + near_B + close_B + open_A + near_B + max(move_A, move_B)$ unter der Bedingung, dass $move_B \gg open_B$, da der Greifer von B während der Bewegung geöffnet wird. $move$ entspricht dabei der Zeit die für eine Bewegung von einer Pose in eine Zielpose benötigt wird, $near$ ist die Zeit für die positive oder negative Annäherung, $open$ und $close$ sind die benötigten Zeiten für das Öffnen und Schließen der Greifer.
 
 \begin{figure}
 		\centering
 	\includegraphics[scale=1.0]{fig/SeqTake}
-	\label{fig:segrip2}
+
 \caption[Sequenzdiagramm Nehmen]{In diesem Sequenzdiagramm wird der Ablauf des Nehmens abgebildet. Die Aktion wird dabei vom objektlosen Roboter initialisiert.}
+	\label{fig:gripper2}
 \end{figure}
 
-In Abbildung \ref{fig:segrip2} ist das \textit{Nehmen} dargestellt. Im Gegensatz zum \textit{Geben} wird die Aktion vom dem Roboter initialisiert, an den das Objekt übergeben wird. Nach der Positionsbestimmung bewegt Roboter A den Greifer ohne Objekt an die Übergabeposition und öffnet diesen während der Bewegung. Anschließend fordert er das Objekt an. Darauf nähert sich Roboter B mit dem Objekt auf der linearen Trajektorie entlang der Z-Achse dem Greifer A an und führt den Gegenstand zwischen den Fingern von Greifer A ein. Nach einer Positionsbestätigung schließt Roboter A den Greifer. In diesem Zustand wird das Objekt von beiden Robotern fixiert. Nach der Schließung des Greifers schickt Roboter A eine Nachricht an Roboter B, welcher nun seinen Greifer öffnet und dies mit einer Nachricht bestätigt. Roboter A entfernt nun das Objekt aus dem Greifer von Roboter B und gibt die Position frei nachdem er den Kollisionsraum verlassen hat. Anschließend bewegen beide Roboter die Arme in die sichere Candle-Stellung.
+In Abbildung \ref{fig:gripper2} ist das \textit{Nehmen} dargestellt. Im Gegensatz zum \textit{Geben} wird die Aktion vom dem Roboter initialisiert, an den das Objekt übergeben wird. Nach der Positionsbestimmung bewegt Roboter A den Greifer ohne Objekt an die Übergabeposition und öffnet diesen während der Bewegung. Anschließend fordert er das Objekt an. Darauf nähert sich Roboter B mit dem Objekt auf der linearen Trajektorie entlang der Z-Achse dem Greifer A an und führt den Gegenstand zwischen den Fingern von Greifer A ein. Nach einer Positionsbestätigung schließt Roboter A den Greifer. In diesem Zustand wird das Objekt von beiden Robotern fixiert. Nach der Schließung des Greifers schickt Roboter A eine Nachricht an Roboter B, welcher nun seinen Greifer öffnet und dies mit einer Nachricht bestätigt. Roboter A entfernt nun das Objekt aus dem Greifer von Roboter B und gibt die Position frei nachdem er den Kollisionsraum verlassen hat. Anschließend bewegen beide Roboter die Arme in die sichere Candle-Stellung.
 
 Der Nachrichtenaufwand dieser Variante beträgt $k_{Nehmen} = 5$. Wie beim \textit{Geben}, ist die Komplexität der Nachrichten eher gering, da es sich nur um zeitkritische Freigaben handelt. Für das Zeitverhalten gilt, unter den gleichen Bedingungen und Angaben wie beim \textit{Geben}: $t_{Nehmen} = move_A + move_B + near_B + close_A + open_B + near_A + max(move_A, move_B)$.
 
@@ -208,22 +241,20 @@ Der Nachrichtenaufwand dieser Variante beträgt $k_{Nehmen} = 5$. Wie beim \text
 	\includegraphics[scale=1.0]{fig/SeqRond}
 
 \caption[Sequenzdiagramm Rendezvous]{Dieses Sequenzdiagramm zeigt die Rendezvous Variante der Übergabe. Die Aktion kann von beiden Agenten initialisiert.}
+\label{fig:gripper3}
 \end{figure}
-\label{fig:segrip3}
 
 
-Die Rendezvous-Übergabe in Abbildung \ref{fig:segrip3} wird die Initialisierungsbewegung nicht explizit von einem Roboter ausgeführt, sondern von beiden gleichzeitig. Dabei bewegen sich zunächst beide Arme auf die Übergabeposition, wobei sich beide Greifer das letzte Wegstück auf der linearen Trajektorie annähern. Beide Roboter bestätigen ihre Position, sobald sie diese erreicht haben. Anschließend schließt der Roboter A, ohne Objekt, den Greifer und bestätigt.Roboter B öffnet den Greifer und übergibt so das Objekt. Wie bei den anderen Varianten bewegt sich Roboter A nach einer Nachricht nun mit Objekt auf einer linearen Bahn von Greifer B weg. Nach der anschließenden Positionsfreigabe bewegen sich beide Roboter in die sichere Candle-Stellung.
+
+Die Rendezvous-Übergabe in Abbildung \ref{fig:gripper3} wird die Initialisierungsbewegung nicht explizit von einem Roboter ausgeführt, sondern von beiden gleichzeitig. Dabei bewegen sich zunächst beide Arme auf die Übergabeposition, wobei sich beide Greifer das letzte Wegstück auf der linearen Trajektorie annähern. Beide Roboter bestätigen ihre Position, sobald sie diese erreicht haben. Anschließend schließt der Roboter A, ohne Objekt, den Greifer und bestätigt.Roboter B öffnet den Greifer und übergibt so das Objekt. Wie bei den anderen Varianten bewegt sich Roboter A nach einer Nachricht nun mit Objekt auf einer linearen Bahn von Greifer B weg. Nach der anschließenden Positionsfreigabe bewegen sich beide Roboter in die sichere Candle-Stellung.
 
 Die Nachrichtenkomplexität ist bei dieser Variante etwas höher, als bei den anderen. Den Unterschied macht die erste Koordinierung, nachdem beide Arme in Position gegangen sind, da nicht definiert ist, welcher Roboter zuerst die Stellung erreicht und somit die Reihenfolge der Nachrichten nicht definiert ist. Die Komplexität des Inhaltes bleibt bei dieser Variante genauso gering, wie bei den anderen Variante, da es sich nur um Bestätigungen handelt. Die Anzahl der Nachrichten für diese Variante ist $k_{Rendezvous} = 5$. Für das Zeitverhalten gilt, unter den bekannten Bedingungen und Angaben:  $t_{Rendezvous} = max(move_A + near_A, move_B + near_B) + close_A + open_B + near_A + max(move_A, move_B)$.
 
-Ein Vergleich der Kennzahlen der Varianten zeigt, dass der Koordinierungsaufwand beim \textit{Geben} am geringsten ist. Dies liegt vor allem an der Anzahl der Nachrichten: $k_{Geben} < k_{Nehmen} = k_{Rendezvous}$. Außerdem ist die Komplexität der Nachrichten untereinander identisch, mit der Ausnahme am Anfang der \textit{Rendezvous}-Variante. Für das Zeitverhalten gilt $t_{Rendezvous} < t_{Geben} = t_{Nehmen}$. Dies liegt vor allem an der Parallelisierung der Bewegung am Anfang der Aktion. 
+Ein Vergleich der Kennzahlen der Varianten zeigt, dass der Koordinierungsaufwand beim \textit{Geben} am geringsten ist. Dies liegt vor allem an der Anzahl der Nachrichten: $k_{Geben} < k_{Nehmen} = k_{Rendezvous}$. Außerdem ist die Komplexität der Nachrichten untereinander identisch, mit der Ausnahme am Anfang der \textit{Rendezvous}-Variante. Für das Zeitverhalten gilt $t_{Rendezvous} < t_{Geben} = t_{Nehmen}$. Dies liegt vor allem an der Parallelisierung der Bewegung am Anfang der Aktion.
+
 
 \paragraph{Einordnung}
-Diese Funktion ist eng-gekoppelt und benötigt einen hohen Aufwand an Koordinierung. Neben der Übergabeposition und -orientierung müssen auch die Zeitvorgaben für das Öffnen und Schließen der Greifer, sowie die Bewegungen koordiniert werden. 
-
-\subsubsection{Nicht-Funktionale Anforderungen}
-\label{sec:dev-nichtfunk}
-
+Diese Funktion ist eng-gekoppelt und benötigt einen hohen Aufwand an Koordinierung. Neben der Übergabeposition und -orientierung müssen auch die Zeitvorgaben für das Öffnen und Schließen der Greifer, sowie die Bewegungen koordiniert werden. Dies macht diese Funktionalität zur komplexesten im ganzen System. Dies liegt vor allem daran, dass diese Funktion als MR-Task eingeordnet wird, da sie von zwei Agenten zusammen ausgeführt wird. Diese Agenten sollten Multi-Task fähig sein, da einige Subtasks parallel ausgeführt werden sollen, zum Beispiel das Öffnen des Greifers, während der Arm in eine Position fährt. Ebenfalls komplex ist die Positionsbestimmung der Übergabe. Zunächst müssen dabei die beiden Arbeitsräume einen Schnittraum aufweisen. Eine notwendige Positionskorrektur kann dabei nur vom mobilen Roboter ausgeführt werden. Dies muss unter anderem in der Konfiguration berücksichtigt werden. Dadurch steigt auch der Konfigurationsaufwand für die Aufgabe, da sichergestellt werden muss, dass die Arbeitsräume der beiden Roboter sich überhaupt schneiden können. Weitere Aspekte der Konfiguration sind die Kompatibilität der Greifer zum Objekt und die Erreichbarkeit der nachfolgenden Ziele.
 
 \subsection{Architektur RATS}
 \subsection{Sensoren und Aktoren}
