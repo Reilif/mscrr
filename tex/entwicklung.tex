@@ -23,8 +23,10 @@ Ein weiterer Aspekt der Zuverlässigkeit ist die Wiederherstellbarkeit. Dies bet
 Die Korrektheit lässt sich in dieser Entwicklung durch die Genauigkeit der Funktionen definieren. So dürfen die Positionen und Orientierungen der Arme und der mobilen Plattform nur um bestimmte Grenzen abweichen. Dabei gelten für die End-Effektor-Pose eine Distanzabweichung von maximal 5mm für jede Dimension und für die Orientierung eine Abweichung von maximal 1\textdegree pro Achse. Dies muss bei der Entwicklung der inversen Kinematik berücksichtigt werden. Für die mobile Plattform gelten andere maximale Abweichungen. Für die Distanzabweichungen sind das 5cm in X- und Y-Richtung. Für die Z-Dimension darf sie maximal 5mm sein. Für die Rotation gilt: Z-Achse 5\textdegree, X- und Y- Achse 1\textdegree.
 
 \subsubsection{Leistung}
-Die Leistung bezieht sich auf die Effizienz des MRS. Besonders der Zeit- und Energieaufwand sollen möglichst minimiert werden. Der Zeitaufwand bezieht sich dabei nicht die Performance-Optimierung der Algorithmen, sondern der Bewegungen und deren Abläufe. Dieser Aspekt muss bei der Entwicklung der Funktionen und der Implementierung berücksichtigt werden. Der Energieaufwand ist stark abhängig von den benutzten Aktoren und wird bei der Entwicklung der inversen Kinematik für die Arme und die Pfadbestimmung für die mobile Plattform in Betracht gezogen.
+Die Leistung bezieht sich auf die Effizienz des MRS. Besonders der Zeit- und Energieaufwand sollen möglichst minimiert werden. Der Zeitaufwand bezieht sich dabei nicht auf die Performance-Optimierung der Algorithmen, sondern der Bewegungen und deren Abläufe. Dieser Aspekt muss bei der Entwicklung der Funktionen und der Implementierung berücksichtigt werden. Der Energieaufwand ist stark abhängig von den benutzten Aktoren und wird bei der Entwicklung der inversen Kinematik für die Arme und die Pfadbestimmung für die mobile Plattform in Betracht gezogen.
+
 \subsubsection{Änderbarkeit}
+Die Änderbarkeit besteht aus Sicht der Entwicklung aus mehreren Aspekten. Für diese Arbeit ist dabei die Erweiterbarkeit ein wichtiger Aspekt. Zum einen geht es um die Erweiterbarkeit des MRS um weitere Sensoren und Aktoren. Diese sollen möglichst einfach in das bestehende MRS eingebunden werden können ohne bestehende Subsysteme zu verändern. Zum anderen soll in der Weiterentwicklung dieses MRS weitere Konzepte eingebunden werden. So müssen für eine automatische Konfiguration und verteilte Koordinierung Schnittstellen in der Architektur entworfen werfen. Diese Schnittstellen sollen unter anderem eine Markt-basierte Konfiguration ermöglichen. Diese beiden Aspekte der Erweiterbarkeit müssen in der Entwicklung der Architektur und der Funktionen berücksichtigt werden. So sind grobe Kostenangaben für die Funktionen ein möglicher Ansatz für die Gebote am Markt.
 
 \subsection{Funktionalitäten}
 \label{sec:dev-funk}
@@ -256,7 +258,11 @@ Ein Vergleich der Kennzahlen der Varianten zeigt, dass der Koordinierungsaufwand
 \paragraph{Einordnung}
 Diese Funktion ist eng-gekoppelt und benötigt einen hohen Aufwand an Koordinierung. Neben der Übergabeposition und -orientierung müssen auch die Zeitvorgaben für das Öffnen und Schließen der Greifer, sowie die Bewegungen koordiniert werden. Dies macht diese Funktionalität zur komplexesten im ganzen System. Dies liegt vor allem daran, dass diese Funktion als MR-Task eingeordnet wird, da sie von zwei Agenten zusammen ausgeführt wird. Diese Agenten sollten Multi-Task fähig sein, da einige Subtasks parallel ausgeführt werden sollen, zum Beispiel das Öffnen des Greifers, während der Arm in eine Position fährt. Ebenfalls komplex ist die Positionsbestimmung der Übergabe. Zunächst müssen dabei die beiden Arbeitsräume einen Schnittraum aufweisen. Eine notwendige Positionskorrektur kann dabei nur vom mobilen Roboter ausgeführt werden. Dies muss unter anderem in der Konfiguration berücksichtigt werden. Dadurch steigt auch der Konfigurationsaufwand für die Aufgabe, da sichergestellt werden muss, dass die Arbeitsräume der beiden Roboter sich überhaupt schneiden können. Weitere Aspekte der Konfiguration sind die Kompatibilität der Greifer zum Objekt und die Erreichbarkeit der nachfolgenden Ziele.
 
+
+\subsection{Agenten}
+Aus den Nicht-Funktionalen Anforderungen und den Funktionen lassen sich die folgenden Agenten im MRS extrahieren. Diese Agenten bestehen aus den Sensoren aus Kapitel \ref{sec:aufbau-sensoren} und den Robotern Rose und Dummy. Für Funktionen bei denen unterschiedliche Sensoren zur Verfügung stehen werden Tests vorgestellt. Diese begründen, warum ein Sensor dem anderen vorgezogen wurde.
+
+\paragraph{Roboter} Die beiden Roboter
 \subsection{Architektur RATS}
-\subsection{Sensoren und Aktoren}
 \subsection{Inverse Kinematik}
 

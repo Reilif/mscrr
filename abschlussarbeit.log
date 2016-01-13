@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.2)  12 JAN 2016 19:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.2)  13 JAN 2016 11:36
 entering extended mode
 **abschlussarbeit.tex
 (C:\Users\Robin\Documents\Masterarbeit\mscrr\abschlussarbeit.tex
@@ -1976,59 +1976,58 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 30.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 30.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 30.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 30.
+ [35]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 31.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 31.
 
-<fig/UseCase.png, id=1016, 589.4823pt x 304.85895pt>
+<fig/UseCase.png, id=1020, 589.4823pt x 304.85895pt>
 File: fig/UseCase.png Graphic file (type png)
  <use fig/UseCase.png>
-Package pdftex.def Info: fig/UseCase.png used on input line 36.
+Package pdftex.def Info: fig/UseCase.png used on input line 38.
 (pdftex.def)             Requested size: 471.58647pt x 243.88748pt.
 
-Overfull \hbox (16.34236pt too wide) in paragraph at lines 36--37
+Overfull \hbox (16.34236pt too wide) in paragraph at lines 38--39
  [][] 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 39.
-[35]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 47.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 47.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 47.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 47.
- [36pdfTeX warning (ext4): destination with the same identifier (name{figure.17
-}) has been already used, duplicate ignored
+(babel)             in language  on input line 44.
+[36pdfTeX warning (ext4): destination with the same identifier (name{figure.17}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.47 $
-      f = \langle  Id, r, I, O, \Phi, Pr, Po, Freq, Cost\rangle$ <C:/Users/Robi
-n/Documents/Masterarbeit/mscrr/fig/UseCase.png>]
+l.44 
+      <C:/Users/Robin/Documents/Masterarbeit/mscrr/fig/UseCase.png>]
 
-LaTeX Warning: Command \textasciiacute invalid in math mode on input line 57.
+LaTeX Warning: Command \textasciiacute invalid in math mode on input line 59.
 
 
-LaTeX Warning: Command \textasciiacute invalid in math mode on input line 57.
+LaTeX Warning: Command \textasciiacute invalid in math mode on input line 59.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 64.
+(babel)             in language  on input line 66.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 64.
+(babel)             in language  on input line 66.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 81.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2039,186 +2038,186 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 81.
 [37]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 100.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 100.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 86.
  [38]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 122.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 122.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 122.
  [39]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 143.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 143.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 143.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 143.
  [40]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 147.
+(babel)             in language  on input line 149.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 147.
+(babel)             in language  on input line 149.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 162.
+(babel)             in language  on input line 164.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 162.
+(babel)             in language  on input line 164.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 162.
+(babel)             in language  on input line 164.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 162.
+(babel)             in language  on input line 164.
  [41]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 168.
+(babel)             in language  on input line 170.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 168.
+(babel)             in language  on input line 170.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 184.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 184.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 184.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 184.
  [42]
 <fig/grip1.png, id=1067, 408.0846pt x 459.27585pt>
 File: fig/grip1.png Graphic file (type png)
  <use fig/grip1.png>
-Package pdftex.def Info: fig/grip1.png used on input line 202.
+Package pdftex.def Info: fig/grip1.png used on input line 204.
 (pdftex.def)             Requested size: 183.63637pt x 206.67221pt.
 
 <fig/grip3.png, id=1068, 374.96085pt x 392.1852pt>
 File: fig/grip3.png Graphic file (type png)
  <use fig/grip3.png>
-Package pdftex.def Info: fig/grip3.png used on input line 206.
+Package pdftex.def Info: fig/grip3.png used on input line 208.
 (pdftex.def)             Requested size: 168.7308pt x 176.4817pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 206.
+(Font)              <9> on input line 208.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 206.
+(Font)              <5> on input line 208.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 213.
+(babel)             in language  on input line 215.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 213.
+(babel)             in language  on input line 215.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 213.
+(babel)             in language  on input line 215.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 213.
+(babel)             in language  on input line 215.
  [43]
 <fig/SeqGive.png, id=1081, 359.9046pt x 349.305pt>
 File: fig/SeqGive.png Graphic file (type png)
  <use fig/SeqGive.png>
-Package pdftex.def Info: fig/SeqGive.png used on input line 216.
+Package pdftex.def Info: fig/SeqGive.png used on input line 218.
 (pdftex.def)             Requested size: 359.90372pt x 349.30414pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 227.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 227.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 227.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 227.
 
 [44pdfTeX warning (ext4): destination with the same identifier (name{figure.18}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.225 
+l.227 
        <C:/Users/Robin/Documents/Masterarbeit/mscrr/fig/grip1.png> <C:/Users/Ro
 bin/Documents/Masterarbeit/mscrr/fig/grip3.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 227.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 227.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 227.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 227.
  [45pdfTeX warning (ext4): destination with the same identifier (name{figure.19
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.225 
+l.227 
        <C:/Users/Robin/Documents/Masterarbeit/mscrr/fig/SeqGive.png>]
 <fig/SeqTake.png, id=1094, 362.91585pt x 349.305pt>
 File: fig/SeqTake.png Graphic file (type png)
  <use fig/SeqTake.png>
-Package pdftex.def Info: fig/SeqTake.png used on input line 228.
+Package pdftex.def Info: fig/SeqTake.png used on input line 230.
 (pdftex.def)             Requested size: 362.91495pt x 349.30414pt.
 
 <fig/SeqRond.png, id=1096, 368.0952pt x 349.305pt>
 File: fig/SeqRond.png Graphic file (type png)
  <use fig/SeqRond.png>
-Package pdftex.def Info: fig/SeqRond.png used on input line 241.
+Package pdftex.def Info: fig/SeqRond.png used on input line 243.
 (pdftex.def)             Requested size: 368.09428pt x 349.30414pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 245.
+(babel)             in language  on input line 247.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 245.
+(babel)             in language  on input line 247.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 245.
+(babel)             in language  on input line 247.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 245.
+(babel)             in language  on input line 247.
 
 [46pdfTeX warning (ext4): destination with the same identifier (name{figure.20}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.245 \end{figure}
+l.247 \end{figure}
                    <C:/Users/Robin/Documents/Masterarbeit/mscrr/fig/SeqTake.png
 >]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 254.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 254.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 254.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 254.
+(babel)             in language  on input line 256.
  [47pdfTeX warning (ext4): destination with the same identifier (name{figure.21
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.254 
+l.256 
        <C:/Users/Robin/Documents/Masterarbeit/mscrr/fig/SeqRond.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 259.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 259.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 260.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 260.
-Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 261.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 261.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 262.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 262.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 263.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 263.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 146.
@@ -2446,7 +2445,7 @@ Here is how much of TeX's memory you used:
  17135 multiletter control sequences out of 15000+200000
  78561 words of font info for 67 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 33i,15n,49p,2790b,1128s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 33i,15n,49p,2792b,1128s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files (x86)/MiKTeX 2.9/
@@ -2469,7 +2468,7 @@ rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files (x86)/MiKT
 eX 2.9/fonts/type1/public/marvosym/marvosym.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on abschlussarbeit.pdf (66 pages, 8988425 bytes).
+Output written on abschlussarbeit.pdf (66 pages, 8989435 bytes).
 PDF statistics:
  1290 PDF objects out of 1440 (max. 8388607)
  289 named destinations out of 1000 (max. 500000)
