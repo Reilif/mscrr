@@ -106,6 +106,8 @@ Die Funktion ist als Single-Robot Task für einen Single-Task-fähigen Agenten e
 Die Funktion gilt als Single-Robot Task. Die Subtasks der Funktion können seriell als auch parallel ausgeführt werden. Dadurch eignen sie sich für Multi-Task, sowie Single-Task Agenten. Je nach Typ ist der Koordinierungsaufwand unterschiedlich hoch. Der Single-Task Agent benötigt wenig Koordinierung da nur ein Startsignal notwendig ist. Bei einem Multi-Task Agenten ist die Koordinierung aufwendiger, da Subtasks zeitlich voneinander abhängen. Zum Beispiel darf der Greifer erst öffnen, wenn das Objekt in der Position ist. Der Konfigurationsaufwand ist gering, da nur der Agent die Aktion ausführen kann, der den Gegenstand hält. 
 
 \subsubsection{Funktion Objekt identifizieren und lokalisieren}
+\label{sec:funraum}
+
 \begin{tabular}{|p{3cm}|p{10cm}|}
 	\multicolumn{2}{c}{$f_2$ (Objekt im Raum finden):}\\
 	\hline  $Id$ & findObj\\ 
@@ -126,6 +128,7 @@ Diese Funktion identifiziert und lokalisiert ein bestimmtes Objekt im Großraum 
 Ein simpler Single-Robot Task, der von einem Agenten ausgeführt wird. Der Task wird in zwei Subtasks (Identifizieren und Lokalisieren) zerlegt, die serielle ausgeführt werden. Damit bringen Multi-Task Agenten keinen Vorteil. Der Koordinierungsaufwand ist sehr gering, da die Funktion nur angestoßen werden muss. Sollte die Funktion jedoch mit mehreren Kamerasystemen genutzt werden steigt der Koordinierungsaufwand, da der Task entweder parallel oder seriell von allen Systemen ausgeführt werden kann. Je nach Typ steigt der Konfigurationsaufwand, bei einer parallelen Ausführung ist kein Aufwand nötig, da immer alle Kamerasysteme genutzt werden. Eine serielle Ausführung würde die Komplexität steigen, da die Kamerasysteme in einer, möglicherweise priorisierten, Reihenfolge angestoßen werden.
 
 \subsubsection{Funktion Nahfeld Erkennung}
+\label{sec:funnah}
 
 \begin{tabular}{|p{3cm}|p{10cm}|}
 	\multicolumn{2}{c}{$f_3$ (Nahfeld Erkennung):}\\
@@ -260,9 +263,25 @@ Diese Funktion ist eng-gekoppelt und benötigt einen hohen Aufwand an Koordinier
 
 
 \subsection{Agenten}
-Aus den Nicht-Funktionalen Anforderungen und den Funktionen lassen sich die folgenden Agenten im MRS extrahieren. Diese Agenten bestehen aus den Sensoren aus Kapitel \ref{sec:aufbau-sensoren} und den Robotern Rose und Dummy. Für Funktionen bei denen unterschiedliche Sensoren zur Verfügung stehen werden Tests vorgestellt. Diese begründen, warum ein Sensor dem anderen vorgezogen wurde.
+Aus den Nicht-Funktionalen Anforderungen und den Funktionen lassen sich die folgenden Agenten im MRS extrahieren. Diese Agenten bestehen aus den Sensoren aus Kapitel \ref{sec:aufbau-sensoren} und den Robotern Rose und Dummy. Für die Roboter steht die Zuweisung der Funktionen und Rollen im System fest, die anderen Aktoren und Sensoren werden den Funktionen zugewiesen. Für Funktionen bei denen unterschiedliche Sensoren oder Aktoren zur Verfügung stehen wird evaluiert welcher Hardware die Funktion am besten löst.
 
-\paragraph{Roboter} Die beiden Roboter
+\subsubsection{Raumüberwachung}
+Die Raumüberwachung ist zur Identifizierung und Lokalisierung von Objekten zuständig (siehe $f_2$\ref{sec:funraum}). Dabei soll das Kamerasystem eine große Fläche mit einer hohen Auflösung observieren. Als Hardware Lösungen standen dabei das XTion Kamera System oder der Argos3D Sensor zur Auswahl. Da der Tiefensensor jedoch eine kleinere Auflösung als die XTion hat und kein Farbbild liefert, wird für die Umsetzung des MRS die XTion ausgewählt. Diese wurde plangemäß nach Abbildung \ref{fig:basic-aufbau-teststand} und \ref{fig:basic-aufbau-teststandh} an der Wand montiert. Zur Befestigung wurde eine zusätzliche Halterung mit dem 3D-Drucker gedruckt. Diese ermöglicht einen größeren Winkel in der Ausrichtung. Der eingestellte Winkel beträgt -62 \textdegree um die globale X-Achse. Durch die Höhe und den eingestellten Winkel ergibt sich eine Observerationsfläche auf der globalen X-Y-Ebene von 5,075 $m^2$. In Abbildung \ref{fig:imghawk} sieht man eine aufgenommene Punktwolke der angebrachten Kamera. Auf dieser ist die Trapezform der Punktwolke sehr gut sichtbar. Diese ergibt sich aus der Position und Orientierung der Kamera. Bedingt dadurch weisen nähere Objekte eine größere Punktdichte auf als entfernte Objekte. Auf der Abbildung sind zwei Bereiche ohne Punkte markiert. Die blaue Markierung zeigt auf eine Verschattung durch den Roboterarm. Der grüne Bereich weist viele schlecht gematchte Punkte zwischen Farb- und IR-Bild auf. Dies liegt vor allem an den schlecht reflektierten IR-Punkten auf dem Heizkörpergitter.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=1.0]{fig/imghawk}
+	\caption[Raumüberwachung Aufnahme]{Aufnahme der XTion als Raumüberwachung. Blaue Markierung: Toter Winkel der IR Aufnahme. Grüner Markierung: Heizkörper mit diffusen IR-Reflektionen.}
+	\label{fig:imghawk}
+\end{figure}
+
+\subsubsection{Nahfelderkennung}
+Die Nahfelderkennung setzt die Funktionalität $f_3$ (siehe \ref{sec:funnah}) um. Dabei wird der Sensor auf dem mobilen Roboter befestigt, um ein Objekt auch im Nahfeld identifizieren und lokalisieren zu können. Die Lokalisierung soll dabei wesentlich genau sein, als bei der Raumüberwachung. Zur Auswahl standen dabei wieder die XTion und der Argos3D Sensor. Der Vorteil des Sensors ist die geringe minimale Reichweite. Diese funktioniert schon ab 100 mm, während die XTion einen mindest Abstand von 800 mm braucht. So ist eine Montage des Argos Sensors am Greifer direkt möglich, während die XTion mit Abstand montiert werden muss. Nachteil ist die zusätzliche Stromversorgung, die der Sensor benötigt, und der fehlende Farbkanal. Dennoch wurde der erste Prototyp mit dem Argos3D Sensor entwickelt.
+
+\subsubsection{Lokalisierung}
+
+
+
 \subsection{Architektur RATS}
 \subsection{Inverse Kinematik}
 
