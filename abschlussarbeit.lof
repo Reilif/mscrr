@@ -33,3 +33,10 @@
 \contentsline {figure}{\numberline {20}{\ignorespaces Sequenzdiagramm Nehmen}}{46}{figure.20}
 \contentsline {figure}{\numberline {21}{\ignorespaces Sequenzdiagramm Rendezvous}}{47}{figure.21}
 \contentsline {figure}{\numberline {22}{\ignorespaces Raum\IeC {\"u}berwachung Aufnahme}}{49}{figure.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Argos3D Punktwolke}}{50}{figure.23}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Topansicht der Punktwolke, die Farben repr\IeC {\"a}sentieren die Intensit\IeC {\"a}t der zur\IeC {\"u}ckgeworfenen IR-Strahlen. In der Mitte sind die Umrisse des Objektes erkennbar. Am Rand sind einige abweichende Punkte zu sehen.}}}{50}{figure.23}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Seitenansicht der Punktwolke. Sichtbar sind in der Mitte das Objekt und die kubische Grundform der Punktwolke, die eigentlich der planaren Ebene entsprechen sollte.}}}{50}{figure.23}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Seitenansicht der Punktwolke mit zus\IeC {\"a}tzlicher Stromversorgung am Sensor. Sichtbar ist wieder das Objekt in der Mitte. Die Kr\IeC {\"u}mmung der Oberfl\IeC {\"a}che ist schw\IeC {\"a}cher als bei Abbildung \ref {fig:argoside}}}}{50}{figure.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces XTion als Naherkennung}}{51}{figure.24}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Die XTion Kamera(rot) am Greifer montiert. Das Sichtfeld liegt vor der mobilen Plattform. Durch eine Drehung des Armes kann das Sichtfeld um den Roboter erweitert werden.}}}{51}{figure.24}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {TODO}}}{51}{figure.24}

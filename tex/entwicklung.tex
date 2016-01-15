@@ -150,7 +150,7 @@ Diese Funktion identifiziert und lokalisiert ein bestimmtes Objekt im Nahfeld (B
 Wie $f_2$ einzuordnen. Kann jedoch nicht mit mehreren Kamerasystemen ausgeführt werden, da jedes Kamerasystem auf einem Roboter montiert und mit diesem eng-gekoppelt ist. Dadurch ist der Konfigurationsaufwand konstant, da jedem Roboter ein System zugewiesen wird. 
 
 \subsubsection{Funktion Agentenlokalisierung}
-
+\ref{sec:funl}
 \begin{tabular}{|p{3cm}|p{10cm}|}
 	\multicolumn{2}{c}{$f_4$ (Lokalisierung Agent):}\\
 	\hline  $Id$ & loc\\ 
@@ -271,14 +271,48 @@ Die Raumüberwachung ist zur Identifizierung und Lokalisierung von Objekten zust
 \begin{figure}
 	\centering
 	\includegraphics[scale=1.0]{fig/imghawk}
-	\caption[Raumüberwachung Aufnahme]{Aufnahme der XTion als Raumüberwachung. Blaue Markierung: Toter Winkel der IR Aufnahme. Grüner Markierung: Heizkörper mit diffusen IR-Reflektionen.}
+	\caption[Raumüberwachung Aufnahme]{Aufnahme der XTion als Raumüberwachung. Blaue Markierung: Toter Winkel der IR Aufnahme. Grüne Markierung: Heizkörper mit diffusen IR-Reflektionen.}
 	\label{fig:imghawk}
 \end{figure}
 
 \subsubsection{Nahfelderkennung}
-Die Nahfelderkennung setzt die Funktionalität $f_3$ (siehe \ref{sec:funnah}) um. Dabei wird der Sensor auf dem mobilen Roboter befestigt, um ein Objekt auch im Nahfeld identifizieren und lokalisieren zu können. Die Lokalisierung soll dabei wesentlich genau sein, als bei der Raumüberwachung. Zur Auswahl standen dabei wieder die XTion und der Argos3D Sensor. Der Vorteil des Sensors ist die geringe minimale Reichweite. Diese funktioniert schon ab 100 mm, während die XTion einen mindest Abstand von 800 mm braucht. So ist eine Montage des Argos Sensors am Greifer direkt möglich, während die XTion mit Abstand montiert werden muss. Nachteil ist die zusätzliche Stromversorgung, die der Sensor benötigt, und der fehlende Farbkanal. Dennoch wurde der erste Prototyp mit dem Argos3D Sensor entwickelt.
+Die Nahfelderkennung setzt die Funktionalität $f_3$ (siehe \ref{sec:funnah}) um. Dabei wird der Sensor auf dem mobilen Roboter befestigt, um ein Objekt auch im Nahfeld identifizieren und lokalisieren zu können. Die Lokalisierung soll dabei wesentlich genau sein, als bei der Raumüberwachung. Zur Auswahl standen dabei wieder die XTion und der Argos3D Sensor. Der Vorteil des Sensors ist die geringe minimale Reichweite. Diese funktioniert schon ab 100 mm, während die XTion einen mindest Abstand von 800 mm braucht. So ist eine Montage des Argos Sensors am Greifer direkt möglich, während die XTion mit Abstand montiert werden muss. Nachteil ist die zusätzliche Stromversorgung, die der Sensor benötigt, und der fehlende Farbkanal. Dennoch wurde der erste Prototyp mit dem Argos3D Sensor entwickelt, da er direkt am Greifer montiert werden kann. Ziel des Prototypen war es die Punktwolke eines Objektes von dem planaren Hintergrund zu separieren. Der Prototyp nutzt dafür den RANSAC-Algorithmus mit einem Flächenmodell. Jedoch ergab sich schnell, dass dieser Ansatz nicht mit dem Sensor funktioniert. Die Abbildung \ref{fig:argos} zeigt drei Aufnahmen einer Punktwolke die mit dem Sensor aufgenommen wurden. Die Aufnahmen entstanden von einem Objekt, dass auf einem Tisch liegt. In der Abbildung \ref{fig:argostop} ist die Draufsicht auf die Punktwolke dargestellt. Dabei stellen die unterschiedlichen Farben die Intensität der gemessenen IR-Werte. Das Objekt ist auf dieser Ansicht nur durch die Gradienten der Intensität an den Konturen zu erkennen. Die Abbildung \ref{fig:argoside} ist eine Seitenansicht der selben Punktwolke. Das Objekt ist an den fehlenden Punkten in der Mitte der Punktwolke erkennbar. Diese Punkte sind nicht sichtbar, da die Punktwolke konvex gewölbt ist. Punkte die näher an der Kamera sind verschwinden somit aus dieser Perspektive hinter der restlichen Punktwolke. Die konvexe Wölbung der Punktwolke ist das Problem der Separierung mit einem planaren Modell. Damit das planare Modell auf die Punktwolke angewandt werden kann muss die Fehlerschranke des Algorithmus sehr hoch gesetzt werden. Dadurch werden aber auch die Punkte des Objektes in die Fläche eingeschlossen. Eine Alternative zum planaren Modell wäre die Anwendung eines sphärischen Modells. Dabei muss die Sphäre aber geschlossen sein und nicht nur einen Teilabschnitt der Oberfläche sein.  Die Abbildung \ref{fig:argospowside} zeigt nochmal die Seitenansicht. Diesmal wurde jedoch der Sensor mit einer zusätzlichen externen Stromquelle versehen. Dieses ergab immer noch eine gekrümmte Oberfläche, welche jedoch schwächer ausgeprägt war als vorher. Ein Versuch die Krümmung aus der Punktwolke herauszurechnen, ähnlich wie bei einer Fischaugenlinse, endete in ziemlichen Abweichungen der Punkte, da die Entfernung zur Oberfläche und die Linsenkrümmung unbekannt ist.
+
+\begin{figure}
+	\centering
+	\subfigure[Topansicht der Punktwolke, die Farben repräsentieren die Intensität der zurückgeworfenen IR-Strahlen. In der Mitte sind die Umrisse des Objektes erkennbar. Am Rand sind einige abweichende Punkte zu sehen.]{%
+		\includegraphics[scale=0.3]{fig/argostop}
+		\label{fig:argostop}}
+	\hfill
+	\subfigure[Seitenansicht der Punktwolke. Sichtbar sind in der Mitte das Objekt und die kubische Grundform der Punktwolke, die eigentlich der planaren Ebene entsprechen sollte.]{%
+		\includegraphics[scale=0.3]{fig/argoside}
+		\label{fig:argoside}}
+	\hfill
+	\subfigure[Seitenansicht der Punktwolke mit zusätzlicher Stromversorgung am Sensor. Sichtbar ist wieder das Objekt in der Mitte. Die Krümmung der Oberfläche ist schwächer als bei Abbildung \ref{fig:argoside}]{%
+		\includegraphics[scale=0.3]{fig/argospowside}
+		\label{fig:argospowside}}
+	\caption[Argos3D Punktwolke]{Aufgenommene Punktwolke mit dem Argos3D Sensor. Abgebildet ist ein quaderförmiges Objekt auf einem Tisch.}
+	\label{fig:argos}
+\end{figure}
+
+Nach den negativen Tests mit dem Sensor folgten Überlegungen, ob man die XTion Kamera für die Naherkennung einsetzen kann. Problem war die große minimal Distanz für die Erkennung. Damit die benötigten 800 mm zum Boden erreicht werden, ist die Kamera am Greifer montiert, siehe Abbildung \ref{fig:xtionarm} Befindet sich der Arm in der Candle-Pose ist die Kamera 800 mm vom Untergrund entfernt und erfasst das Feld direkt vor der mobilen Plattform. TODO Infos. Durch eine Drehung des Armes, um das erste oder fünfte Gelenk, kann das Sichtfeld der Kamera erweitert werden. Jedoch gab es auch bei den ersten Tests mit der Kamera einige Probleme. Durch den eingebauten Weißabgleich wurde die Helligkeit des Bildes bei einer zu starken Einstrahlung reduziert. Das führte im Labor unter anderem zu einem schwarzen Bild und resultierte aus der Lichtreflexion der Aluminiumplatte die auf der mobilen Plattform montiert ist. Der Fehler konnte durch Abkleben der reflektierenden Oberfläche beseitigt werden.
+
+\begin{figure}
+	\centering
+	\subfigure[Die XTion Kamera(rot) am Greifer montiert. Das Sichtfeld liegt vor der mobilen Plattform. Durch eine Drehung des Armes kann das Sichtfeld um den Roboter erweitert werden.]{%
+		\includegraphics[scale=0.8]{fig/xtionarm}
+		\label{fig:xtionarm}}
+	\hfill
+	\subfigure[TODO]{%
+		\includegraphics[scale=0.3]{fig/xtionarm}
+		\label{fig:xtionarmbild}}
+	\caption[XTion als Naherkennung]{Die Asus XTion als Hardware Lösung für die Naherkennung}
+	\label{fig:xtionnah}
+\end{figure}
+
 
 \subsubsection{Lokalisierung}
+Für die Lokalisierung, $f_4$ in Kapitel \ref{sec:funl}, sind alle Sensoren potenziell möglich. Die einfachste Variante wäre die Auswertung der Odometriedaten. Dazu wird die Geschwindigkeit der Plattform mit der Laufzeit multipliziert um den zurückgelegten Weg zu berechnen. Um die Genauigkeit zu bestimmen wurden im Rahmen dieser Arbeit Versuche durchgeführt. Dazu wurden zunächst linearen Bewegungen entlang einer Achse ausgeführt und gemessen. Anschließend wurden kombinierte lineare Bewegungen entlang der X- und Y-Achse getestet. Die dabei verwendeten Geschwindigkeiten und Laufzeiten wurden variiert. Gemessen wurde anschließend die zurückgelegte Distanz bei zehn Versuchen pro Messgruppe. Für die anschließende Auswertungen wurden die arithmetischen Mittelwerte für die absolute und relative Abweichung über den Versuchsgruppen berechnet. Die anschließende Bewertung wurde für die einzelnen Versuchsgruppe im Bezug aufeinander und die Geschwindigkeit, sowie Laufzeit vorgenommen. Dabei ergab sich
 
 
 
