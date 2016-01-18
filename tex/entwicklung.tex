@@ -347,10 +347,14 @@ RATSAction und RATSTask bilden die Funktionalitäten innerhalb der Architektur a
 Die zentrale Methode jeder Action ist  \lstinline|execute()|-Methode. Diese besitzt die Logik der Action und ist immer gleich aufgebaut. Zuerst wird der lokale Kontext ausgelesen. In diesem befinden sich mögliche Zeiger auf den globalen Speicher. Dieser wird darauf ausgelesen. Darauf folgt eine Überprüfung, ob alle benötigten Eingabeparameter vorhanden und gültig sind. Dies betrifft auch den aktuellen Systemzustand. Ist diese Überprüfung ungültig bricht die Funktion mit einer Fehlermeldung ab. Anschließend folgt die Ausführung der Funktion. Auch hier wird bei einer Fehlfunktion eine Rückmeldung gegeben und die weitere Ausführung abgebrochen. Zum Abschluss schreibt die Action zunächst Ergebnisse in den globalen und dann in den lokalen Kontext. Neben der Ausführung besitzt jede Action eine Methode die Kosten für eine Funktion vor zu berechnen. Dabei ist die Kostenfunktion von der Funktion und den Umweltparametern abhängig. Diese Methode wurde für eine automatische Konfiguration vorgesehen. So werden die Actions mit ihrer Funktions-ID und den Umweltparametern, im globalen Speicher, angeboten. Alle Agenten, die eine Action mit dieser ID haben, können nun die Kosten ermitteln und mit diesen bieten. Dabei gewinnt der Agent mit den geringsten Kosten. Die Kostenfunktion greift nur lesend auf den Speicher zu und führt die Aktion auch nicht aus.
 
 RATSTasks bieten die Möglichkeit Actions miteinander zu verbinden. Dabei sind die Tasks selber Actions und können so ineinander verkettet werden. Der einfachste Task ist eine serielle Ausführung der hinterlegten Actions. Bricht eine Action ab, bricht der ganze Task ab. Komplexere Tasks steuern parallele oder bedingte Ausführungen von Actions. Dabei können Fehler abgefangen und behandelt werden. So ermöglicht ein Task, dass ein Roboterarm nach einem Fehlschlag der Action in einen sicheren Zustand (Candle- oder Fold-Pose) wechselt.
-\subsubsection{RATSMember}
 
-\subsubsection{RATSCore}
+
+\subsubsection{RATSMember}
+Die RATSMember repräsentieren die Agenten im MRS. Jeder RATSMember registriert sich beim der zentralen Komponente, dem RATSCore, mit einer eindeutigen ID. Ist diese ID im System schon vergeben, muss ein neuer beim Start vergeben werden.
+
 Da ROS als Grundlage für diese Arbeit dient, ist jeder RATSMember ein selbstständiger ROS-Node
+\subsubsection{RATSCore}
+
 
 
 
