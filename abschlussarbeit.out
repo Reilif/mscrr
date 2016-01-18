@@ -55,22 +55,25 @@
 \BOOKMARK [3][-]{subsubsection.5.3.3}{Lokalisierung}{subsection.5.3}% 55
 \BOOKMARK [2][-]{subsection.5.4}{Architektur RATS}{section.5}% 56
 \BOOKMARK [3][-]{subsubsection.5.4.1}{Konzept}{subsection.5.4}% 57
-\BOOKMARK [2][-]{subsection.5.5}{Inverse Kinematik}{section.5}% 58
-\BOOKMARK [1][-]{section.6}{Implementierung}{}% 59
-\BOOKMARK [2][-]{subsection.6.1}{Inverse Kinematik}{section.6}% 60
-\BOOKMARK [2][-]{subsection.6.2}{Robotersteuerung - RATSYoubot \046 RATSDummy \046 RATSRose}{section.6}% 61
-\BOOKMARK [2][-]{subsection.6.3}{Raum\374berwachung - RATSHawk}{section.6}% 62
-\BOOKMARK [2][-]{subsection.6.4}{Nahfelderkennung - RATSEye}{section.6}% 63
-\BOOKMARK [2][-]{subsection.6.5}{Koordinierung - RATSCore}{section.6}% 64
-\BOOKMARK [2][-]{subsection.6.6}{Lokale Positionierung}{section.6}% 65
-\BOOKMARK [2][-]{subsection.6.7}{Handoverpoint}{section.6}% 66
-\BOOKMARK [1][-]{section.7}{Test und Bewertung}{}% 67
-\BOOKMARK [2][-]{subsection.7.1}{Robustheit}{section.7}% 68
-\BOOKMARK [2][-]{subsection.7.2}{Genauigkeit \046 Geschwindigkeit Inverse Kinematik}{section.7}% 69
-\BOOKMARK [2][-]{subsection.7.3}{Genauigkeit Positionierung}{section.7}% 70
-\BOOKMARK [1][-]{section.8}{Zusammenfassung und Ausblick}{}% 71
-\BOOKMARK [1][-]{section.9}{Danksagung}{}% 72
-\BOOKMARK [1][-]{section.10}{Literaturverzeichnis}{}% 73
-\BOOKMARK [1][-]{appendix.A}{ROS Package}{}% 74
-\BOOKMARK [1][-]{appendix.B}{ROS Launchfile}{}% 75
-\BOOKMARK [1][-]{appendix.C}{Datenbl\344tter}{}% 76
+\BOOKMARK [3][-]{subsubsection.5.4.2}{RATSAction und RATSTask}{subsection.5.4}% 58
+\BOOKMARK [3][-]{subsubsection.5.4.3}{RATSMember}{subsection.5.4}% 59
+\BOOKMARK [3][-]{subsubsection.5.4.4}{RATSCore}{subsection.5.4}% 60
+\BOOKMARK [2][-]{subsection.5.5}{Inverse Kinematik}{section.5}% 61
+\BOOKMARK [1][-]{section.6}{Implementierung}{}% 62
+\BOOKMARK [2][-]{subsection.6.1}{Inverse Kinematik}{section.6}% 63
+\BOOKMARK [2][-]{subsection.6.2}{Robotersteuerung - RATSYoubot \046 RATSDummy \046 RATSRose}{section.6}% 64
+\BOOKMARK [2][-]{subsection.6.3}{Raum\374berwachung - RATSHawk}{section.6}% 65
+\BOOKMARK [2][-]{subsection.6.4}{Nahfelderkennung - RATSEye}{section.6}% 66
+\BOOKMARK [2][-]{subsection.6.5}{Koordinierung - RATSCore}{section.6}% 67
+\BOOKMARK [2][-]{subsection.6.6}{Lokale Positionierung}{section.6}% 68
+\BOOKMARK [2][-]{subsection.6.7}{Handoverpoint}{section.6}% 69
+\BOOKMARK [1][-]{section.7}{Test und Bewertung}{}% 70
+\BOOKMARK [2][-]{subsection.7.1}{Robustheit}{section.7}% 71
+\BOOKMARK [2][-]{subsection.7.2}{Genauigkeit \046 Geschwindigkeit Inverse Kinematik}{section.7}% 72
+\BOOKMARK [2][-]{subsection.7.3}{Genauigkeit Positionierung}{section.7}% 73
+\BOOKMARK [1][-]{section.8}{Zusammenfassung und Ausblick}{}% 74
+\BOOKMARK [1][-]{section.9}{Danksagung}{}% 75
+\BOOKMARK [1][-]{section.10}{Literaturverzeichnis}{}% 76
+\BOOKMARK [1][-]{appendix.A}{ROS Package}{}% 77
+\BOOKMARK [1][-]{appendix.B}{ROS Launchfile}{}% 78
+\BOOKMARK [1][-]{appendix.C}{Datenbl\344tter}{}% 79
