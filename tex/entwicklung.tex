@@ -370,25 +370,36 @@ Der RATSCore ist ein selbstständiger ROS-Node, der mit dem ROS Core zusammen ge
 In diesem Kapitel wird die Entwicklung der inversen Kinematik vorgestellt. Dabei wird zunächst auf die schon existierenden inversen Kinematiken für den YouBot Arm eingegangen und eine Bewertung dieser vorgenommen. Darauf folgt die Entwicklung eines stark vereinfachten Prototypens, dessen Weiterentwicklung die endgültige inverse Kinematik darstellt. Den Abschluss bildet die Optimierung der Lösungen der inversen Kinematik mit Bezug auf die Pfadfindung.
 
 \subsubsection{YouBot Kinematiken}
-Mit dem YouBot wird bereits das Software-Paket \textit{MoveIt!} zur Bewegungs- und Pfadbestimmung mitgeliefert. Es ist ROS-basiert und nutzt zur Visualisierung und Konfiguration ein RViz-Plugin. Die implementierte Pfadbestimmung verwendet numerische Ansätze für das Lösen der Bewegungsbahnen. Dabei stehen folgende Planungsbibliotheken zur Auswahl: Die \textit{Open Motion Planning Library} (OMPL), \textit{Covariant Hamiltonian Optimization and Motion Planning} (CHOMP) und \textit{Search-based planning} (SBPL). Die OMPL beinhaltet verschiedene Algorithmen zur Bewegungsplanung die alle auf abstrakten Zuständen des Systems beruhen. Dabei wird zwischen probabilistischen (PRM) und Baum-basierten Algorithmen (RRT, EST, KPiece, SBL) unterschieden. Alle Algorithmen lassen sich konfigurieren, dies betrifft vor allem die Anzahl der Iterationen und die Zeitschranke für die Dauer der Berechnung. Für diese Arbeit wurden drei verschiedene Algorithmen (PRM, EST, CHOMP) für eine Bewertung ausgewählt und evaluiert. Bei dieser Evaluierung wurden fünf Bewegungsziele abgesteckt, welche vom Roboter angefahren werden sollte. Die Anzahl der Iterationen wurden in drei Messgruppen (zehn, 100 und 1000 Iterationen) aufgeteilt und mit jedem Algorithmus getestet. Die Zeitschranke wurde auf 30 Sekunden eingestellt, um möglichst gute Messungen zu erreichen. Pro Bewegungsziel wurde die Dauer der Planung $t$ in Sekunden und die Genauigkeit der Endpose in Zentimetern und Grad gemessen. Dabei wurden die euklidische Distanz für den linearen und dem rotierenden ermittelt: 
+Mit dem YouBot wird bereits das Software-Paket \textit{MoveIt!} zur Bewegungs- und Pfadbestimmung mitgeliefert. Es ist ROS-basiert und nutzt zur Visualisierung und Konfiguration ein RViz-Plugin. Die implementierte Pfadbestimmung verwendet numerische Ansätze für das Lösen der Bewegungsbahnen. Dabei stehen folgende Planungsbibliotheken zur Auswahl: Die \textit{Open Motion Planning Library} (OMPL), \textit{Covariant Hamiltonian Optimization and Motion Planning} (CHOMP) und \textit{Search-based planning} (SBPL). Die OMPL beinhaltet verschiedene Algorithmen zur Bewegungsplanung die alle auf abstrakten Zuständen des Systems beruhen. Dabei wird zwischen probabilistischen (PRM) und Baum-basierten Algorithmen (RRT, EST, KPiece, SBL) unterschieden. Alle Algorithmen lassen sich konfigurieren, dies betrifft vor allem die Anzahl der Iterationen und die Zeitschranke für die Dauer der Berechnung. Für diese Arbeit wurden drei verschiedene Algorithmen (PRM, EST, CHOMP) für eine Bewertung ausgewählt und evaluiert. Bei dieser Evaluierung wurden fünf Bewegungsziele abgesteckt, welche vom Roboter angefahren werden sollten. Die Anzahl der Iterationen wurden in drei Messgruppen (zehn, 100 und 1000 Iterationen) aufgeteilt und mit jedem Algorithmus getestet. Die Zeitschranke wurde auf 30 Sekunden eingestellt, um möglichst optimale Ergebnisse zu erreichen. Pro Bewegungsziel wurde die Dauer der Planung $t$ in Sekunden und die Genauigkeit der Endpose in Zentimetern und Grad gemessen. Dadurch setzt sich ein Bewertungsvektor $x \in  \mathbb{R}^3$ zusammen:
 
 \begin{math}
-\delta_{lin} = \|\lambda(\xi_{Ziel}) - \lambda(\xi_{Plan})\|_2 = \sqrt{\sum_{i=1}^{3}(\xi_{Ziel,i}-\xi_{Plan,i})^2}	
+	x = \left(\begin{array}{c} t \\ \chi \\ \phi \end{array}\right)	
+\end{math}
+
+Dabei wurden die euklidische Distanz für den linearen und den rotierenden Anteil der Pose ermittelt. Wobei die $\lambda$-Funktion den linearen und die $\theta$-Funktion den rotierenden Anteil extrahiert: 
+
+\begin{math}
+	\chi = \|\lambda(\xi_{Ziel}) - \lambda(\xi_{Plan})\|_2 = \sqrt{\sum_{i=1}^{3}(\xi_{Ziel,i}-\xi_{Plan,i})^2}	
 \end{math}
 
 \begin{math}
-	\delta_{rot} = \|\theta(\xi_{Ziel}) - \theta(\xi_{Plan})\|_2 = \sqrt{\sum_{i=4}^{6}(\xi_{Ziel,i}-\xi_{Plan,i})^2}
+	\phi = \|\theta(\xi_{Ziel}) - \theta(\xi_{Plan})\|_2 = \sqrt{\sum_{i=4}^{6}(\xi_{Ziel,i}-\xi_{Plan,i})^2}
 \end{math}
 
-Wobei die $\lambda$-Funktion den linearen und die $\theta$-Funktion den rotierenden Anteil der Pose Für jedes Bewegungsziel setzt sich so ein Bewertungsvektor zusammen mit $x \in  \mathbb{R}^3$:
+Anschließend wurden die Bewertungsvektoren der Bewegungsziele quadriert aufsummiert.
 
 \begin{math}
-x = \left(\begin{array}{c} t \\ \delta_{lin} \\ \delta_{rot} \end{array}\right)	
+	x_{all} = \left(\begin{array}{c}  
+					\sqrt{\sum_{i=1}^{5} t_i^2}\\ 
+					\sqrt{\sum_{i=1}^{5} \chi_i^2} \\
+					\sqrt{\sum_{i=1}^{5} \phi_i^2} \end{array}\right)	
 \end{math}
 
-Diese Ergebnisse wurden gemittelt und in Tabelle \ref{tab:mesplan} eingetragen.
+
+Die Ergebnisse pro Iterationen-Messgruppe und Algorithmus stehen in Tabelle \ref{tab:mesplan}.
+
 \begin{table}
-	\caption[Gemittelte Messwerte der MoveIt!-Planer-Algorithmen]{Die gemittelten Messwerte der MoveIt!-Planer. In den Zeilen sind die unterschiedlichen Interationen pro Planung gegeben. Die Spalten geben den verwendeten Planer-Algorithmus an. Die Messwerte $x$ setzen sich aus der benötigten Planungszeit $x_1$ und der euklidischen Distanz der Zielpose zur Planpose zusammen. Dabei wird zwischen linearer $x_2$ und rotierender $x_3$ Distanz unterschieden.}
+	
 	
 	\centering
 	\begin{tabular}{|c|c|c|c|}
@@ -398,6 +409,8 @@ Diese Ergebnisse wurden gemittelt und in Tabelle \ref{tab:mesplan} eingetragen.
 		\hline 1000 &  &  &  \\ 
 		\hline 
 	\end{tabular}
+	
+	\caption[Gemittelte Messwerte der MoveIt!-Planer-Algorithmen]{Die gemittelten Messwerte der MoveIt!-Planer. In den Zeilen sind die unterschiedlichen Interationen pro Planung gegeben. Die Spalten geben den verwendeten Planer-Algorithmus an. Die Messwerte $x$ setzen sich aus der benötigten Planungszeit $x_1$ und der euklidischen Distanz der Zielpose zur Planpose zusammen. Dabei wird zwischen linearer $x_2$ und rotierender $x_3$ Distanz unterschieden.}
 	
 	\label{tab:mesplan}
 \end{table}
