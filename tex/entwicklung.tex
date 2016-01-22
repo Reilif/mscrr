@@ -370,7 +370,7 @@ Der RATSCore ist ein selbstständiger ROS-Node, der mit dem ROS Core zusammen ge
 In diesem Kapitel wird die Entwicklung der inversen Kinematik vorgestellt. Dabei wird zunächst auf die schon existierenden inversen Kinematiken für den YouBot Arm eingegangen und eine Bewertung dieser vorgenommen. Darauf folgt die Entwicklung eines stark vereinfachten Prototypens, dessen Weiterentwicklung die endgültige inverse Kinematik darstellt. Den Abschluss bildet die Optimierung der Lösungen der inversen Kinematik mit Bezug auf die Pfadfindung.
 
 \subsubsection{YouBot Kinematiken}
-Mit dem YouBot wird bereits das Software-Paket \textit{MoveIt!} zur Bewegungs- und Pfadbestimmung mitgeliefert. Es ist ROS-basiert und nutzt zur Visualisierung und Konfiguration ein RViz-Plugin. Die implementierte Pfadbestimmung verwendet numerische Ansätze für das Lösen der Bewegungsbahnen. Dabei stehen folgende Planungsbibliotheken zur Auswahl: Die \textit{Open Motion Planning Library} (OMPL), \textit{Covariant Hamiltonian Optimization and Motion Planning} (CHOMP) und \textit{Search-based planning} (SBPL). Die OMPL beinhaltet verschiedene Algorithmen zur Bewegungsplanung die alle auf abstrakten Zuständen des Systems beruhen. Dabei wird zwischen probabilistischen (PRM) und Baum-basierten Algorithmen (RRT, EST, KPiece, SBL) unterschieden. Alle Algorithmen lassen sich konfigurieren, dies betrifft vor allem die Anzahl der Iterationen und die Zeitschranke für die Dauer der Berechnung. Für diese Arbeit wurden drei verschiedene Algorithmen (PRM, EST, CHOMP) für eine Bewertung ausgewählt und evaluiert. Bei dieser Evaluierung wurden fünf Bewegungsziele abgesteckt, welche vom Roboter angefahren werden sollten. Die Anzahl der Iterationen wurden in drei Messgruppen (zehn, 100 und 1000 Iterationen) aufgeteilt und mit jedem Algorithmus getestet. Die Zeitschranke wurde auf 30 Sekunden eingestellt, um möglichst optimale Ergebnisse zu erreichen. Pro Bewegungsziel wurde die Dauer der Planung $t$ in Sekunden und die Genauigkeit der Endpose in Zentimetern und Grad gemessen. Dadurch setzt sich ein Bewertungsvektor $x \in  \mathbb{R}^3$ zusammen:
+Mit dem YouBot wird bereits das Software-Paket \textit{MoveIt!} zur Bewegungs- und Pfadbestimmung mitgeliefert. Es ist ROS-basiert und nutzt zur Visualisierung und Konfiguration ein RViz-Plugin. Die implementierte Pfadbestimmung verwendet numerische Ansätze für das Lösen der Bewegungsbahnen. Dabei stehen folgende Planungsbibliotheken zur Auswahl: Die \textit{Open Motion Planning Library} (OMPL), \textit{Covariant Hamiltonian Optimization and Motion Planning} (CHOMP) und \textit{Search-based planning} (SBPL). Die OMPL beinhaltet verschiedene Algorithmen zur Bewegungsplanung die alle auf abstrakten Zuständen des Systems beruhen. Dabei wird zwischen probabilistischen (PRM) und Baum-basierten Algorithmen (RRT, EST, KPiece, SBL) unterschieden. Alle Algorithmen lassen sich konfigurieren, dies betrifft vor allem die Anzahl der Iterationen und die Zeitschranke für die Dauer der Berechnung. Für diese Arbeit wurden drei verschiedene Algorithmen (PRM, EST, CHOMP) für eine Bewertung ausgewählt und evaluiert. Bei dieser Evaluierung wurden fünf Bewegungsziele abgesteckt, welche vom Roboter angefahren werden sollten. Die Anzahl der Iterationen wurden in drei Messgruppen (zehn, 100 und 1000 Iterationen) aufgeteilt und mit jedem Algorithmus getestet. Die Zeitschranke wurde auf 60 Sekunden eingestellt, um möglichst optimale Ergebnisse zu erreichen. Pro Bewegungsziel wurde die Dauer der Planung $t$ in Sekunden und die Genauigkeit der Endpose in Zentimetern und Grad gemessen. Dadurch setzt sich ein Bewertungsvektor $x \in  \mathbb{R}^3$ zusammen:
 
 \begin{math}
 	x = \left(\begin{array}{c} t \\ \chi \\ \phi \end{array}\right)	
@@ -386,33 +386,176 @@ Dabei wurden die euklidische Distanz für den linearen und den rotierenden Antei
 	\phi = \|\theta(\xi_{Ziel}) - \theta(\xi_{Plan})\|_2 = \sqrt{\sum_{i=4}^{6}(\xi_{Ziel,i}-\xi_{Plan,i})^2}
 \end{math}
 
-Anschließend wurden die Bewertungsvektoren der Bewegungsziele quadriert aufsummiert.
+Anschließend wurden die Bewertungsvektoren der fünf Bewegungsziele elementweise quadriert aufsummiert.
 
 \begin{math}
-	x_{all} = \left(\begin{array}{c}  
-					\sqrt{\sum_{i=1}^{5} t_i^2}\\ 
-					\sqrt{\sum_{i=1}^{5} \chi_i^2} \\
-					\sqrt{\sum_{i=1}^{5} \phi_i^2} \end{array}\right)	
+	x_{all} = \left(\begin{array}{c}
+				\sqrt{\sum_{i=1}^{5} t_i^2}/5\\ 
+				\sqrt{\sum_{i=1}^{5} \chi_i^2}/5 \\
+				\sqrt{\sum_{i=1}^{5} \phi_i^2}/5 \end{array}\right)	
 \end{math}
 
 
-Die Ergebnisse pro Iterationen-Messgruppe und Algorithmus stehen in Tabelle \ref{tab:mesplan}.
+Die Ergebnisse pro Iterationen-Messgruppe und Algorithmus sind in Tabelle \ref{tab:mesplan} aufgelistet. In der Auswertung fallen bestimmte Charakteristiken der einzelnen Algorithmen auf. So benötigt EST schon bei wenigen Iterationen mehr Zeit als die anderen Algorithmen. Dafür sind die Abweichungen geringer. PRM und CHOMP sind zeitlich betrachtet sehr ähnlich. Differenzen zeigen sich erst bei der Betrachtung der linearen und rotierenden Abweichungen. So sind die linearen Abweichungen bei PRM immer kleiner als bei den Planungen mit CHOMP. Für die Rotation gilt dies genau umgekehrt. Dort ist CHOMP genauer als PRM. Zusammengefasst sind die Ergebnisse für das MRS dieser Arbeit jedoch ungenügend. Eine Genauigkeit von 1,5 cm linear oder 0,8\textdegree rotierend  ist für die Anwendung nicht ausreichend. Auch die benötigte Zeit der Planungen ist zu hoch. Ein Grund für diese ist die schlechte Hardware des eingebauten Rechners. Vergleichstests auf Dummy zeigten fünf mal schnellere Ergebnisse.
 
 \begin{table}
-	
-	
 	\centering
 	\begin{tabular}{|c|c|c|c|}
-		\hline  	& PRM & EST & CHOMP \\ 
-		\hline 10 	&  &  &  \\ 
-		\hline 100 	&  &  &  \\ 
-		\hline 1000 &  &  &  \\ 
+		\hline  	& EST & PRM & CHOMP \\ 
+		\hline 10 	& 
+		$\left(\begin{array}{c} 1.84 \\ 6.253 \\ 11.6  \end{array}\right)$ & 
+		$\left(\begin{array}{c} 0.32 \\ 10.486 \\ 17.4  \end{array}\right)$ &
+		$\left(\begin{array}{c} 0.46 \\ 11.731 \\ 13.2  \end{array}\right)$ \\ 
+		\hline 100 	&
+		$\left(\begin{array}{c} 15.84 \\ 2.214 \\ 2.1  \end{array}\right)$ & 
+		$\left(\begin{array}{c} 3.84 \\ 3.164 \\ 4.6  \end{array}\right)$ &
+		$\left(\begin{array}{c} 5.21 \\ 4.756 \\ 2.9  \end{array}\right)$ \\ 
+		\hline 1000 &  
+		OOT &
+		$\left(\begin{array}{c} 36.15 \\ 1.54 \\ 1.2  \end{array}\right)$ &
+		$\left(\begin{array}{c} 40.84 \\ 1.78 \\ 0.8  \end{array}\right)$ \\ 
 		\hline 
 	\end{tabular}
 	
-	\caption[Gemittelte Messwerte der MoveIt!-Planer-Algorithmen]{Die gemittelten Messwerte der MoveIt!-Planer. In den Zeilen sind die unterschiedlichen Interationen pro Planung gegeben. Die Spalten geben den verwendeten Planer-Algorithmus an. Die Messwerte $x$ setzen sich aus der benötigten Planungszeit $x_1$ und der euklidischen Distanz der Zielpose zur Planpose zusammen. Dabei wird zwischen linearer $x_2$ und rotierender $x_3$ Distanz unterschieden.}
+	\caption[Gemittelte Messwerte der MoveIt!-Planer-Algorithmen]{Die gemittelten Messwerte der MoveIt!-Planer. In den Zeilen sind die unterschiedlichen Iterationen pro Planung gegeben. Die Spalten geben den verwendeten Planer-Algorithmus an. Die Messwerte $x$ setzen sich aus der benötigten Planungszeit $x_1$ in Sekunden und der euklidischen Distanz der Zielpose zur Planpose zusammen. Dabei wird zwischen linearer $x_2$ (Zentimeter) und rotierender $x_3$ (Grad) Distanz unterschieden. OOT steht für eine Überschreitung der Zeitschranke bei allen Bewegungszielen.}
 	
 	\label{tab:mesplan}
 \end{table}
 	
+Eine weitere inverse Kinematik, beziehungsweise Bewegungsplaner, wurde 2013 von der Robotics \& Perception Group der Universität Zürich veröffentlicht. Dieser Planer unterscheidet sich von dem Kuka Ansatz in der Ansteuerung der Hardware. Dabei wird nicht nur die Konfiguration der Gelenke, sondern auch die  Drehkraft der Gelenke angesteuert. Dadurch können Bewegungen entlang einer Trajektorie ausgeführt werden. Der Planer basiert ebenso auf der MoveIt!-Basis und nutzt die implementierten Planungsalgorithmen. Für diese Arbeit konnte dieser Bewegungsplaner nicht eingesetzt werden, da die Bibliothek zu dem Zeitpunkt der Entwicklung nicht die installierte Firmware der YouBots unterstützte. Inzwischen sind die benötigten Updates installiert und könnten genutzt werden. Diese Änderung würde jedoch den Aufwand der Arbeit überschreiten. Die inverse Kinematik die dabei genutzt wird ist ein Nachfolger der ersten Entwicklung von Kuka. Diese beruht auf den geometrischen Eigenschaften des Arms und ist in der Arbeit \cite{6309496} beschrieben.
+
+\subsubsection{Vereinfachte inverse Kinematik}
+Dieser erste eigene Ansatz für eine inverse Kinematik war prototypisch für die Funktionen $f_0$ und $f_1$ gedacht. Dabei wurde das Modell stark vereinfacht. Dazu wurde die Annahme getroffen, dass die Z-Achse der Pose des Greifers $l_{5,z}$ orthogonal auf der XY-Ebene des Roboter-Koordinatensystems (im Folgenden als \textit{global} bezeichnet) steht:
+
+\begin{equation}
+l_{5,z} \parallel -Z_{Global}
+\label{eq:1}
+\end{equation}
+
+
+Diese Annahme lässt sich auf eine konstante Ausrichtung des Greifers beim Aufheben oder Ablegen zurückführen. Dadurch ist nur noch die Rotation um die Z-Achse, sowie die Position im Kartesischen Raum, als Angaben für die Pose nötig. Dadurch wird die Pose $\xi$ aus dem $ \mathbb{R}^6 $-Raum in den $ \mathbb{R}^4 $-Raum reduziert.
+
+Die Überlegung hinter dieser inversen Kinematik sieht vor, die Dimensionen der Pose immer weiter zu reduzieren bis das Problem mit einfachen geometrischen Sätzen zu lösen ist. Dazu wird zunächst der Mechanismus des YouBots untersucht. Dieser beinhaltet fünf Gelenke. $j_1$ und $j_5$ sind Drehgelenke um die Z-Achsen ihrer Glieder. $j_2$, $j_3$ und $j_4$ sind Drehgelenke um die X-Achsen ihrer Glieder. Das globale Koordinatensystem ist im Mittelpunkt der runden Basis des Roboters. Die Z-Achse zeigt dabei nach oben. Der Null-Punkt der Z-Achse liegt auf der Kontaktfläche zum Untergrund. Es gilt:
+
+\begin{equation}
+l_{0,z} \parallel +Z_{Global}
+\label{eq:2}
+\end{equation}
+
+Aus den Gleichungen \ref{eq:1} und \ref{eq:2} folgt:
+
+\begin{equation}
+l_{0,z} \parallel l_{5,z}
+\label{eq:3}
+\end{equation}
+
+Dies kann durch Betrachtung noch weiter spezifiziert werden. Da die Z-Achse vom Greifer nach $-z_{Global}$ und die Z-Achse von $l_0$ nach $+z_{Global}$  zeigt (Gleichung \ref{eq:1}) folgt:
+
+\begin{equation}
+l_{0,z} \upharpoonleft \downharpoonright l_{5,z}
+\label{eq:4}
+\end{equation}
+
+Da die vierte Komponente der Pose $\alpha$ die Drehung des Greifers um die Z-Achse ist und die Drehgelenke von $j_1$ und $j_5$ in der Z-Achse parallel zu den Z-Achsen ihrer Glieder stehen ergibt sich aus den Gleichungen \ref{eq:1}, \ref{eq:2} und \ref{eq:4}:
+
+\begin{equation}
+j_1 - j_5 = \xi_{\alpha}
+\end{equation}
+
+$j_5$ geht negativ ein, weil die Z-Achse des Gelenks entgegengesetzt zur globalen Z-Achse liegt. Umgestellt nach $j_5$ ergibt sich:
+
+\begin{equation}
+j_5 = j_1 - \xi_{\alpha}
+\end{equation}
+
+Damit ist die erste Gelenkkonfiguration definiert und die Pose kann um eine Dimension, die Rotation des Greifers, reduziert werden. Da beim YouBot alle Glieder nicht in sich verdreht sind, liegen die Dreh-Achsen der Gelenke $j_2$, $j_3$ und $j_4$ parallel:
+
+\begin{equation}
+	\forall l  \in L: l_{\alpha} = 0 \implies r(j_{2}) \parallel r(j_{3}) \parallel r(j_{4}) 
+\end{equation}
+
+Die $r(j)$-Funktion extrahiert die Drehachsenkomponente des Gelenks $j$. Dadurch liegen alle Gelenke und Glieder in einer Ebene. Diese steht senkrecht auf der globalen XY-Ebene. Der Winkel der Schnittgeraden zur X-Achse ist dabei abhängig vom Drehwinkel von $j_1$. Überträgt man die X und Y Komponente der Pose aus dem kartesischen Koordinatensystem in Polarkoordinaten ergibt sich:
+
+\begin{equation}
+r = \sqrt{\xi_x^2 + \xi_y^2}
+\label{eq:5}
+\end{equation}
+
+\begin{equation}
+\phi = cos(\dfrac{\xi_x}{r})
+\label{eq:6}
+\end{equation}
+
+Da die Kosinus-Funktion aber nicht vollständig definiert ist wird auf die $atan2$-Funktion mit zwei Parametern zurückgegriffen. Diese ist in allen gebräuchlichen Programmiersprachen vorhanden. Dadurch ergibt sich:
+
+\begin{equation}
+\phi = atan2(\xi_y,\xi_x)
+\label{eq:7}
+\end{equation}
+
+$\phi$ entspricht dabei dem Drehwinkel von $j_1$. $r$ entspricht der Kombination aus $x$ und $y$. Dadurch kann man die Anzahl der Dimensionen der Pose wieder reduzieren. Diese setzt sich jetzt nur noch aus dem $z$ und dem neuen $r$ Wert zusammen. Die Abbildung \ref{fig:easyik} zeigt die nun reduzierte Umgebung. Dabei wurde der Nullpunkt des Koordinatensystems in die Position von $j_2$ verlegt. Diese Translation ist durch die Glieder $l_0$ und $l_1$ gegeben, die einen Offset entlang der globalen Z-Achse und der X-Achse von $l_1$ erzeugen. Dieser wird von dem neuen Wert $r$ abgezogen. Da $j_5$ nur um Z-Achse rotiert und es keinen Offset zwischen $l_4$ und $l_5$ gibt können diese zu dem neuen Glied $l_{45}$ zusammengefasst werden. Die Länge des Gliedes ergibt sich durch die Summe der Länge der Glieder.
+
+\begin{equation}
+a_{45} = a_{4} +a_{5}
+\label{eq:8}
+\end{equation}
+
+\begin{figure}
+	\centering
+	\subfigure[Mechanismus des Arms im globalen Koordinatensystem.]{%
+		\includegraphics[scale=0.8]{fig/ikeasy1}}
+	\hfill
+	\subfigure[Neues Koordinatensystem mit Ursprung in $j_2$]{%
+		\includegraphics[scale=0.8]{fig/ikeasy2}}
+	\hfill
+	\subfigure[Kennzeichnung der zu ermittelnden Winkel. Die Position $\{x_{eff}, y_{eff}\}$ von $j_4$ wird durch die Offsets von $l_1$,$l_4$ und $l_5$ berechnet.]{%
+		\includegraphics[scale=0.8]{fig/ikeasy3}}
+	\hfill
+	\label{fig:easyik}
+\end{figure}
+
+
+Da $l_{45}$ senkrecht auf der X-Achse steht kann die Position $\{x_{eff}. y_{eff}\}$von $j_4$ aus der Zielpose und der Länge von $l_45$, sowie dem Offset von $l_ {1}$ berechnet werden:
+
+\begin{equation}
+x_{eff} = \xi_{x} - a_{1,x}
+\label{eq:9}
+\end{equation}
+
+\begin{equation}
+y_{eff} = \xi_{y} + a_{45} - a_{1,y}
+\label{eq:10}
+\end{equation}
+
+Mit Hilfe des Kosinus-Satzes lassen sich nun die Winkel $\alpha_1$ und $\alpha_2$ berechnen:
+
+\begin{equation}
+l_3^2 = l_2^2 + l_{eff}^2 + 2 * l_2 * l_{eff} * cos(\alpha_1 - \alpha_{eff}) \text{ mit } l_{eff} = \sqrt{x_{eff}^2 + y_{eff}^2} \text{ und } cos(\alpha_eff) = \dfrac{x_{eff}}{l_{eff}}
+\label{eq:11}
+\end{equation}
+
+
+\begin{equation}
+l_{eff}^2 = l_2^2 + l_3^2 + 2 * l_2 * l_3 * cos(\pi - \alpha_2)
+\label{eq:12}
+\end{equation}
+
+Umgestellt nach $\alpha_1$ und $\alpha_2$ ergibt sich:
+
+\begin{equation}
+\alpha_1 = \alpha_{eff} + arccos(\dfrac{l_3^2-l_2^2-l_{eff}^2}{2*l_2*l_{eff}})
+\label{eq:13}
+\end{equation}
+
+\begin{equation}
+\alpha_2 = \pi - arccos(\dfrac{l_{eff}^2-l_2^2-l_{3}^2}{2*l_2*l_3})
+\label{eq:14}
+\end{equation}
+
+Damit sind alle Winkel bekannt, die in der Kinematik benötigt werden. Diese werden nun mit den entsprechenden Winkeloffsets addiert. Diese Offsets berechnen sich aus Grundeinstellung der Gelenke.
+
+Diese inverse Kinematik ist, wie beschrieben sehr vereinfacht. Sie ermöglicht nur eine sehr eingeschränkte Menge an möglichen Posen. Dies ist für diese Arbeit nicht ausreichend, da für die Übergabe auch schräge Haltungen des Greifers möglich sein sollen. Auch ein Griff nach oben ist mit der bisherigen inversen kinematik nicht möglich, da $\alpha_2 > 0$ ist. Deshalb wurde diese inverse Kinematik weiter entwickelt. Diese Weiterentwicklung beruht auf Beobachtungen der Mechanik, dabei lassen sich Überschläge bei zwei Gelenken $j_1$ und $j_3$ entdecken. Ein Überschlag bezeichnet den Wechsel der Einstellung eines Winkel $\alpha$ von $\alpha <= \pi$ zu $\alpha > \pi$. Dies kann bei $j_3$ als Ellbogen hoch oder runter beschrieben werden. Bei $j_1$ beschreibt die Vorstellung eines Griffes nach vorne oder nach hinten die Konfigurationen am besten. So zeigt der Arm nach vorne, wenn $j_1 = 0$ und $j_2 > 0$ oder $j_1 = \pi$ und $j_3 < 0$. Dies resultiert in vier möglichen Konfigurationen die der Roboterarm einnehmen kann um eine Position zu erreichen. Im besten Fall sind alle vier Konfigurationen möglich, im schlechtesten erfüllt keine Konfiguration die Pose. Die folgende inverse Kinematik versucht für die vier Konfigurationen die möglichen Gelenkkonfigurationen zu berechnen.
+
+\subsubsection{Weiterentwicklung: Inverse Kinematik}
+
 
