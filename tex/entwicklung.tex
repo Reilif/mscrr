@@ -554,8 +554,131 @@ Umgestellt nach $\alpha_1$ und $\alpha_2$ ergibt sich:
 
 Damit sind alle Winkel bekannt, die in der Kinematik benötigt werden. Diese werden nun mit den entsprechenden Winkeloffsets addiert. Diese Offsets berechnen sich aus Grundeinstellung der Gelenke.
 
-Diese inverse Kinematik ist, wie beschrieben sehr vereinfacht. Sie ermöglicht nur eine sehr eingeschränkte Menge an möglichen Posen. Dies ist für diese Arbeit nicht ausreichend, da für die Übergabe auch schräge Haltungen des Greifers möglich sein sollen. Auch ein Griff nach oben ist mit der bisherigen inversen kinematik nicht möglich, da $\alpha_2 > 0$ ist. Deshalb wurde diese inverse Kinematik weiter entwickelt. Diese Weiterentwicklung beruht auf Beobachtungen der Mechanik, dabei lassen sich Überschläge bei zwei Gelenken $j_1$ und $j_3$ entdecken. Ein Überschlag bezeichnet den Wechsel der Einstellung eines Winkel $\alpha$ von $\alpha <= \pi$ zu $\alpha > \pi$. Dies kann bei $j_3$ als Ellbogen hoch oder runter beschrieben werden. Bei $j_1$ beschreibt die Vorstellung eines Griffes nach vorne oder nach hinten die Konfigurationen am besten. So zeigt der Arm nach vorne, wenn $j_1 = 0$ und $j_2 > 0$ oder $j_1 = \pi$ und $j_3 < 0$. Dies resultiert in vier möglichen Konfigurationen die der Roboterarm einnehmen kann um eine Position zu erreichen. Im besten Fall sind alle vier Konfigurationen möglich, im schlechtesten erfüllt keine Konfiguration die Pose. Die folgende inverse Kinematik versucht für die vier Konfigurationen die möglichen Gelenkkonfigurationen zu berechnen.
+Diese inverse Kinematik ist, wie beschrieben sehr vereinfacht. Sie ermöglicht nur eine sehr eingeschränkte Menge an möglichen Posen. Dies ist für diese Arbeit nicht ausreichend, da für die Übergabe auch schräge Haltungen des Greifers möglich sein sollen. Auch ein Griff nach oben ist mit der bisherigen inversen Kinematik nicht möglich, da $\alpha_2 > 0$ ist. Deshalb wurde diese inverse Kinematik weiter entwickelt. Diese Weiterentwicklung beruht auf Beobachtungen der Mechanik, dabei lassen sich Überschläge bei zwei Gelenken $j_1$ und $j_3$ entdecken. Ein Überschlag bezeichnet den Wechsel der Einstellung eines Winkel $\alpha$ von $\alpha <= \pi$ zu $\alpha > \pi$. Dies kann bei $j_3$ als Ellbogen hoch oder runter beschrieben werden. Bei $j_1$ beschreibt die Vorstellung eines Griffes nach vorne oder nach hinten die Konfigurationen am besten. So zeigt der Arm nach vorne, wenn $j_1 = 0$ und $j_2 > 0$ oder $j_1 = \pi$ und $j_3 < 0$. Dies resultiert in vier möglichen Konfigurationen die der Roboterarm einnehmen kann um eine Position zu erreichen. Im besten Fall sind alle vier Konfigurationen möglich, im schlechtesten erfüllt keine Konfiguration die Pose. Die folgende inverse Kinematik versucht für die vier Konfigurationen die möglichen Gelenkkonfigurationen zu berechnen.
 
 \subsubsection{Weiterentwicklung: Inverse Kinematik}
+Die Weiterentwicklung der inversen Kinematik soll die vollständige Pose und alle möglichen Konfigurationen berechnen. Dazu reichen nicht mehr einfache Extraktionen der benötigten Komponenten, da sich diese nun gegenseitig beeinflussen. 
+
+Zunächst wird das Koordinatensystem in den Mittelpunkt von $j_1$ gebracht. Dazu wird die Zielpose $\xi$ um den $T_0$ verschoben, diese setzt sich aus den Offsets von $l_0$ zusammen:
+
+\begin{equation}
+\xi_0 = \xi * T_0
+\label{eq:15}
+\end{equation}
+
+Anschließend wird, wie in Gleichung \ref{eq:7}, $j_1$ aus der $X$ und $Y$ Komponenten Pose bestimmt.
+
+\begin{equation}
+j_1 = atan2(\xi_{0_Y},\xi_{0_X})
+\label{eq:16}
+\end{equation}
+
+$j_1$ stellt eine der Möglichkeiten für das erste Gelenk dar und bildet den Griff nach \textit{vorne} ab. Der Griff nach \textit{hinten} wird durch eine Rotation um $\pi$ erreicht. Da für die Einstellung von $j_1$ gilt:
+
+\begin{equation}
+-\pi \leq j_1 \leq +\pi 
+\label{eq:17}
+\end{equation}
+
+Ergibt sich für die zweite Konfiguration:
+\begin{equation}
+j_1 = 
+\begin{cases}
+j_1 + \pi & \text{f"ur } j_1  \textless 0 \\
+j_1 - \pi & \text{f"ur } j_1  \ge 0 
+\end{cases}
+\label{eq:18}
+\end{equation}
+
+Anschließend wird die Pose wieder in ein anderes Koordinatensystem übertragen. Dabei besteht die homogene Transformation $T_1$ aus einer Translation $\upsilon_1$ und einer Rotation $\theta_1$. Zur besseren Lesbarkeit werden diese getrennt und die Rotation als Roll-Pitch-Yaw angegeben:
+
+\begin{equation}
+\pmb{\upsilon_1} = \left(\begin{array}{c} 
+-a_{1_x} \\
+0\\
+-a_{1_z}
+\end{array}\right)
+,
+\pmb{\theta_1} = \left(\begin{array}{c} 
+0 \\
+0\\
+-j_1
+\end{array}\right)	
+,
+\xi_1 = \xi_0 * T_1(\theta_1, \upsilon_1)	
+\label{eq:19}
+\end{equation}
+
+Als nächstes wird die Gelenkkonfiguration für $j_5$ berechnet. Dazu wird die Pose $\xi_1$ als homogene Koordinate $A$ betrachtet. Indizes weisen auf die Stelle der Matrix:
+
+\begin{equation}
+j_5 = atan2(A_{21} * cos(j_1) - A_{11} * sin(j_1), A_{22}*cos(j_1)-A_{12} * sin(j_1))
+\label{eq:27}
+\end{equation}
+
+Wie in der einfachen inversen Kinematik folgt jetzt die Transformation aus dem 3D-Raum in die 2D-Ebene des Arms. Da hier aber noch die Rotation des Greifers benötigt wird, muss zunächst diese Rotation übertragen werden. Dazu werden die Rotationskomponente der Y- und Z-Achse der Pose $\xi_1$ extrahiert:
+
+\begin{equation}
+\pmb{\hat{\theta}_y} = \xi_{1_{RotY}}, \pmb{\hat{\theta}_z} = \xi_{1_{RotZ}}  
+\label{eq:20}
+\end{equation}
+
+Für die weiteren Schritte wird die Normale der Armebene $\pmb{\hat{m}}$ benötigt:
+
+\begin{equation}
+\pmb{\hat{m}} = 
+\left(\begin{array}{c} 
+0 \\
+-1\\
+0
+\end{array}\right)
+\label{eq:21}
+\end{equation}
+
+Aus dieser und der Z-Rotation lässt sich nun der Rotationsvektor $\pmb{\hat{k}}$ bestimmen um den die Endpose für die Rotation gedreht werden muss:
+
+\begin{equation}
+\pmb{\hat{k}} = \pmb{\hat{m}} \times \pmb{\hat{\theta}_z} 
+\label{eq:22}
+\end{equation}
+
+Dadurch ergibt sich für die Z-Achsen Rotation der neuen Pose $\xi_1'$:
+
+\begin{equation}
+\pmb{\hat{\theta}_z'} = \pmb{\hat{k}} \times \pmb{\hat{m}}
+\label{eq:23}
+\end{equation}
+
+Als nächstes wird die Rotation um die Y-Achse der Pose $\pmb{\hat{\theta}_y'}$ berechnet. Dazu wird die Rodrigues-Formel angewandt. Dafür müssen zunächst die $cos_\theta$ und $sin_\theta$ Werte berechnet werden. Diese lassen sich mit Hilfe des Kreuz- und Skalarproduktes bestimmen:
+
+\begin{equation}
+cos_\theta = \pmb{\hat{\theta}_z} \bullet \pmb{\hat{\theta}_z'}, sin_\theta = (\pmb{\hat{\theta}_z} \times \bullet \pmb{\hat{\theta}_z'}) \bullet \pmb{\hat{k}}
+\label{eq:24}
+\end{equation}
+
+Rodrigues angewandt:
+
+\begin{equation}
+\pmb{\hat{\theta}_y'} = cos_\theta * \pmb{\hat{\theta}_y} + sin_\theta * ( \pmb{\hat{k}} \times \pmb{\hat{\theta}_y}) + (1 - cos_\theta) * (\pmb{\hat{k}} \bullet \pmb{\hat{\theta}_y}) * \pmb{\hat{k}} 
+\label{eq:25}
+\end{equation}
+
+Da $\pmb{\hat{\theta}_y'}$ und $\pmb{\hat{\theta}_z'} $ nun bekannt sind lässt sich aus dem Kreuzprodukt die X-Rotation $\pmb{\hat{\theta}_x'} $ bestimmen:
+
+\begin{equation}
+\pmb{\hat{\theta}_x'} = \pmb{\hat{\theta}_y'} \times \pmb{\hat{\theta}_z'}
+\label{eq:26}
+\end{equation}
+
+Diese drei Komponenten beinhalten die projizierte Rotation der Pose $\xi_1'$. Die Position der Pose bleibt erhalten. Als nächstes wird das Nicken des Greifers berechnet. Dieser ergibt sich aus der Summer der Winkel von $j_2$, $j_3$ und $j_4$. Dazu wird, wie bei der Berechnung zu $j_5$, der Pose als homogene Koordinate $A'$ betrachtet und zunächst $x_{eff}$ und $y_{eff}$ aus der projizierten Pose extrahiert und der Gesamtwinkel $\alpha_{eff}$ berechnet:
+
+\begin{equation}
+x_{eff} = A'_{13}, y_{eff} = A'_{13}, \alpha_{eff} = atan2(y_{eff}, x_{eff})
+\label{eq:28}
+\end{equation}
+
+
+
+
 
 
