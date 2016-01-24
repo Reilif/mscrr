@@ -677,8 +677,63 @@ x_{eff} = A'_{13}, y_{eff} = A'_{13}, \alpha_{eff} = atan2(y_{eff}, x_{eff})
 \label{eq:28}
 \end{equation}
 
+Daraus lässt sich nun die Position von $j_4$ berechnen. Dazu wird die Summe der Länge von $l_4$ und $l_5$ zusammengefasst $d_{45} = l_4 + l_5$. Die neue Position berechnet sich nun aus:
 
+\begin{equation}
+j_{4_{pos}} = 
+\left(\begin{array}{c} 
+\xi_{1_x}' - d_{45} * sin(\alpha_{eff})\\
+\xi_{1_y}' - d_{45} * cos(\alpha_{eff})
+\end{array}\right)
+\label{eq:29}
+\end{equation}
 
+\begin{equation}
+|j_{4_{pos}}| = \sqrt{j_{4_{pos_x}}^2 + j_{4_{pos_y}}^2}
+\label{eq:31}
+\end{equation}
 
+Nun lässt sich schon bestimmen, ob die Zielpose nicht im Arbeitsraum des Roboters liegt. Die Zielpose liegt nicht im Arbeitsraum, wenn:
 
+\begin{equation}
+a_2 + a_3 < |j_{4_{pos}}|
+\label{eq:30}
+\end{equation}
 
+Nachdem nun die beiden Endgelenke $j_1$ und $j_5$ berechnet wurden, wird mit dem mittleren Gelenk $j_3$ fortgefahren. Dies begründet sich durch den zweiten Konfigurationsschritt Ellbogen \textit{hoch} oder \textit{runter}. Diese Konfiguration ist Richtungsvorgabe, in welche sich das Gelenk rotieren soll (positiv oder negativ). Dazu wird zunächst mit dem Kosinussatz der Kosinus von $j_3$ ermittelt:
+
+\begin{equation}
+cos(j_3) = \dfrac{s_E - a_2^2 - a_3^2}{2 * a_2 * a_3} \text{ mit } s_E = j_{4_{pos_x}}^2 + j_{4_{pos_y}}^2 
+\label{eq:32}
+\end{equation}
+
+Da die $acos$-Funktion nur innerhalb vom Wertebereich $[-1;1]$ definiert ist und generell die $atan2$-Funktion genutzt werden soll ergibt sich folgende Fallunterscheidung für $j_3$:
+
+\begin{equation}
+j_3 = 
+\begin{cases}
+0  & \text{f"ur } cos(j_3) \textgreater 0.9999 \\
+\pi & \text{f"ur } cos(j_3) \textless -0.9999 \\
+atan2(\sqrt{1 - cos(j_3)^2}, cos(j_3))  & \text{f"ur } Rest
+\end{cases}
+\label{eq:33}
+\end{equation}
+
+Nun kann je nach Konfiguration der Winkel positiv $j_3 = j_3$ oder negativ $j_3 = -j_3$ betrachtet werden. Er wird für die Berechnung von $j_2$ und $j_4$ weitergenutzt. Dazu wird vom Vollkreis ($2\pi$) der der Winkel zwischen den Gelenken $l_2$ und $l_3$ abgezogen:
+
+\begin{equation}
+j_2 = 2\pi - atan2(j_{4_{pos_y}}, j_{4_{pos_x}}) - atan2(a_3 * sin(j_3), a_2 + a_3 * cos(j_3))
+\label{eq:34}
+\end{equation}
+
+Das letzte fehlende Gelenk $j_2$ ergibt sich aus der dem Nicken des Greifers $\alpha_{eff}$, abzüglich der Gelenke $j_3$ und $j_2$:
+
+\begin{equation}
+j_4 =  \alpha_{eff} - j_2 - j_3
+\label{eq:345}
+\end{equation}
+
+Auf alle Winkel muss noch ein Offset addiert werden, da die Grundeinstellung der inversen Kinematik anders ist als bei der Grundeinstellung der Ansteuerung. Bei der Ansteuerung befinden sich alle Gelenke bei null Grad, wenn der Arm in der \textit{Fold}-Pose ist, die inverse Kinematik geht von der \textit{Candle}-Pose als Grundstellung aus.
+
+\subsubsection{Optimierte Pfadplanung}
+Neben der inversen Kinematik ist auch die Pfadplanung wichtig. Da die inverse Kinematik maximal vier mögliche Konfigurationen 
