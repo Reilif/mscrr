@@ -733,7 +733,31 @@ j_4 =  \alpha_{eff} - j_2 - j_3
 \label{eq:345}
 \end{equation}
 
-Auf alle Winkel muss noch ein Offset addiert werden, da die Grundeinstellung der inversen Kinematik anders ist als bei der Grundeinstellung der Ansteuerung. Bei der Ansteuerung befinden sich alle Gelenke bei null Grad, wenn der Arm in der \textit{Fold}-Pose ist, die inverse Kinematik geht von der \textit{Candle}-Pose als Grundstellung aus.
+Auf alle Winkel muss noch ein Offset addiert werden, da die Grundeinstellung der inversen Kinematik anders ist als bei der Grundeinstellung der Ansteuerung. Bei der Ansteuerung befinden sich alle Gelenke bei null Grad, wenn der Arm in der \textit{Fold}-Pose ist, die inverse Kinematik geht von der \textit{Candle}-Pose als Grundstellung aus. Die vollständige inverse Kinematik wird im folgenden als $Ik(\xi, c)$-Funktion genutzt. Dabei ist $\xi$ die Pose und $c$ die Konfigurationsvariante aus der Menge der Konfigurationen $C$. Für diese inverse Kinematik besteht die Menge aus vier Elementen die abstrakt beschrieben werden können mit: \textit{Vorne-Ellbogen-hoch}, \textit{Vorne-Ellbogen-runter}, \textit{Hinten-Ellbogen-hoch} und \textit{Hinten-Ellbogen-runter}.
 
 \subsubsection{Optimierte Pfadplanung}
-Neben der inversen Kinematik ist auch die Pfadplanung wichtig. Da die inverse Kinematik maximal vier mögliche Konfigurationen 
+Neben der inversen Kinematik ist auch die Pfadplanung wichtig. Da die inverse Kinematik maximal vier mögliche Konfigurationen zurückgibt, muss die Verkettung der Posenübergänge optimiert werden, um möglichst geringe Kosten (Bewegungsenergie und Zeit) zu erreichen. Durch Betrachtung ergibt sich, dass Posenübergänge besonders teuer sind, wenn die Konfiguration gewechselt muss. Dabei ist die Basisrotation, $j_1$ betreffend, teurer, als die Ellbogen-Konfiguration, $j_3$. Dies liegt an dem Einfluss den eine Konfiguration hat. So beeinflusst eine Konfigurationsänderung von $j_1$ alle anderen Winkel. Eine Änderung an der Konfiguration von $j_3$ beeinflusst dagegen nur die Gelenk $j_2$ und $j_4$. Die Kosten $K$ für eine Bewegung ermittelt sich aus den Einstellungen der Winkel bei der Start- und der Zielpose:
+
+\begin{equation}
+K(J_{start}, J_{ziel}) = \sum_{i=1}^{n} (J_{start_i} - J_{ziel_i})^2
+\label{eq:36}
+\end{equation}
+
+Für eine Bewegung $\Gamma$, die aus $n$ Posen besteht $\Gamma: \xi_0 \oplus \xi_1 \oplus ... \oplus \xi_n$, gilt auf Grund der Beobachtung folgende Lösung als optimal ($\xi_0$ entspricht der aktuellen Pose):
+
+\begin{equation}
+K_{min} = \min_{c \in C}(\sum_{i=0}^{n-1} K(Ik(\xi_i, c), Ik(\xi_{i+1}, c))
+\label{eq:37}
+\end{equation}
+
+Dies funktioniert nur solange alle Posen innerhalb einer Konfiguration erreicht werden können. Ist dies nicht möglich muss die günstigste Alternative gefunden werden. Für dieses Problem eignet sich die Graphentheorie. Die Knoten entsprechen dabei allen Gelenkeinstellungen aus der Kombination der Posen und der Konfigurationen der inversen Kinematik. Die Kanten repräsentieren die Kosten für den Übergang zwischen zwei Gelenkeinstellungen. Jeder Knoten besitzt gerichtete Kanten zu den Knoten die auf der folgenden Pose basieren. Am Übersichtlichsten ist der Graph, wenn Knoten basierend auf der gleichen Pose nebeneinander und Knoten mit der gleichen Konfiguration untereinander angeordnet werden. Exemplarisch ist ein solcher Graph in Abbildung \ref{fig:plangraph} dargestellt. Dabei sind die Kantengewichtungen aus Gründen der Lesbarkeit ausgelassen worden. Nur zwei Kanten in blau stellen die Beziehungen exemplarisch dar. $J_0$ beschreibt die Gelenkkonfiguration vor Bewegungsbeginn. Die Pose und die Konfiguration sind dabei unbekannt.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.8]{fig/graphplan}
+	\caption[Graph zur Pfadplanung]{Der dargestellte Graph bildet die Planung des Bewegungspfad ab. Knoten stellen eine Gelenkeinstellung zu einer Pose und einer Konfiguration. Dabei werden Knoten mit der gleichen Konfiguration senkrecht und mit der gleichen Pose waagerecht angeordnet. Aufeinander folgende Posen sind untereinander sortiert. Die Kanten werden mit den Übergangskosten gewichtet. Zur Übersichtlichkeit wurden nur zwei Kanten exemplarisch in blau gekennzeichnet.}
+	\label{fig:plangraph}
+\end{figure}
+
+\subsubsection{Nachtrag Literatur}
+Nach der Entwicklung und der Niederschrift über die inverse Kinematik wurde im Rahmen einer erweiterten Literaturrecherche das Paper \cite{6309496} gesichtet, das eine ähnliche inverse Kinematik beschreibt. Diese geht auch von einer geometrischen Lösung aus. Der Unterschied bei der Bestimmung ist vor allem die Einbindung der mobilen Plattform in die inverse Kinematik. Dies ist für den stationären Arm unnötig und kann zwar auch aus der Gleichung entfernt werden. Dennoch wurde entschieden, dass die eigene inverse Kinematik genutzt werden soll. Dies ist vor allem durch die Wartbarkeit und Änderbarkeit, aber auch durch Interesse an der eigenen Arbeit begründet.
