@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.2)  25 JAN 2016 14:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.2)  25 JAN 2016 15:32
 entering extended mode
 **abschlussarbeit.tex
 (C:\Users\Robin\Documents\Masterarbeit\mscrr\abschlussarbeit.tex
@@ -2806,65 +2806,67 @@ Package babel Info: Redefining ngerman shorthand "~
 File: fig/ikeasy1.png Graphic file (type png)
  <use fig/ikeasy1.png>
 Package pdftex.def Info: fig/ikeasy1.png used on input line 506.
-(pdftex.def)             Requested size: 206.01796pt x 171.61739pt.
+(pdftex.def)             Requested size: 180.26424pt x 150.16399pt.
 
 <fig/ikeasy2.png, id=1299, 271.7352pt x 219.09856pt>
 File: fig/ikeasy2.png Graphic file (type png)
  <use fig/ikeasy2.png>
 Package pdftex.def Info: fig/ikeasy2.png used on input line 509.
-(pdftex.def)             Requested size: 217.38843pt x 175.27907pt.
+(pdftex.def)             Requested size: 190.21332pt x 153.36794pt.
 
 <fig/ikeasy3.png, id=1300, 272.57835pt x 228.1323pt>
 File: fig/ikeasy3.png Graphic file (type png)
  <use fig/ikeasy3.png>
 Package pdftex.def Info: fig/ikeasy3.png used on input line 512.
-(pdftex.def)             Requested size: 218.06297pt x 182.50607pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 556.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 556.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 556.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 556.
+(pdftex.def)             Requested size: 190.80354pt x 159.69151pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 556.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 556.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 556.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 556.
 [61]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 556.
+(babel)             in language  on input line 559.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 556.
+(babel)             in language  on input line 559.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 556.
+(babel)             in language  on input line 561.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 556.
+(babel)             in language  on input line 561.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 561.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 561.
  [62 <C:/Users/Robin/Documents/Masterarbeit/mscrr/fig/ikeasy1.png> <C:/Users/Ro
 bin/Documents/Masterarbeit/mscrr/fig/ikeasy2.png> <C:/Users/Robin/Documents/Mas
 terarbeit/mscrr/fig/ikeasy3.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 559.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 559.
-
 
 LaTeX Warning: Command \textless invalid in math mode on input line 587.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 594.
+(babel)             in language  on input line 624.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 594.
+(babel)             in language  on input line 624.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 594.
+(babel)             in language  on input line 624.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 594.
+(babel)             in language  on input line 624.
 [63]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 664.
+(babel)             in language  on input line 681.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 664.
+(babel)             in language  on input line 681.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 664.
+(babel)             in language  on input line 681.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 664.
+(babel)             in language  on input line 681.
  [64]
 
 LaTeX Warning: Command \textgreater invalid in math mode on input line 715.
@@ -2873,37 +2875,42 @@ LaTeX Warning: Command \textgreater invalid in math mode on input line 715.
 LaTeX Warning: Command \textless invalid in math mode on input line 716.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 720.
+(babel)             in language  on input line 737.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 720.
+(babel)             in language  on input line 737.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 720.
+(babel)             in language  on input line 737.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 720.
+(babel)             in language  on input line 737.
 [65]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 738.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 738.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 751.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 751.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 751.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 751.
- [66] <fig/graphplan.png, id=1363, 353.03896pt x 344.0052pt>
+ <fig/graphplan.png, id=1358, 353.03896pt x 344.0052pt>
 File: fig/graphplan.png Graphic file (type png)
 
 <use fig/graphplan.png>
 Package pdftex.def Info: fig/graphplan.png used on input line 757.
 (pdftex.def)             Requested size: 282.43153pt x 275.20453pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 762.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 762.
 )
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 148.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 148.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 148.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 148.
+ [66]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 148.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2920,36 +2927,15 @@ Package babel Info: Redefining ngerman shorthand "~
 l.148 \input{tex/entwicklung}\clearpage
                                         <C:/Users/Robin/Documents/Masterarbeit/
 mscrr/fig/graphplan.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 148.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 148.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 148.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 148.
- [68]
 (C:\Users\Robin\Documents\Masterarbeit\mscrr\tex/implementierung.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 6.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 6.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 7.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 7.
-Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 8.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 9.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2962,6 +2948,18 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 12.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 13.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 13.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 14.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 14.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 15.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 15.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 149.
@@ -2971,7 +2969,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 149.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 149.
- [69
+ [68
 
 ]
 (C:\Users\Robin\Documents\Masterarbeit\mscrr\tex/test.tex
@@ -3000,7 +2998,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 150.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 150.
- [70
+ [69
 
 ]
 (C:\Users\Robin\Documents\Masterarbeit\mscrr\tex/zusammenfassung.tex
@@ -3017,7 +3015,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 154.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 154.
- [71
+ [70
 
 ]
 (C:\Users\Robin\Documents\Masterarbeit\mscrr\tex/danksagung.tex
@@ -3034,7 +3032,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 159.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 159.
- [72
+ [71
 
 ]
 (C:\Users\Robin\Documents\Masterarbeit\mscrr\tex/literatur.tex
@@ -3052,7 +3050,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 101.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 101.
- [73
+ [72
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
@@ -3063,7 +3061,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 202.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 202.
- [74]
+ [73]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 298.
 Package babel Info: Redefining ngerman shorthand "~
@@ -3073,7 +3071,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 298.
 
-[75]
+[74]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 403.
 Package babel Info: Redefining ngerman shorthand "~
@@ -3082,7 +3080,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 403.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 403.
- [76]
+ [75]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 493.
 Package babel Info: Redefining ngerman shorthand "~
@@ -3091,7 +3089,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 493.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 493.
- [77]))
+ [76]))
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 166.
 Package babel Info: Redefining ngerman shorthand "~
@@ -3100,7 +3098,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 166.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 166.
- [78]
+ [77]
 (C:\Users\Robin\Documents\Masterarbeit\mscrr\tex/anhang.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 7.
@@ -3123,7 +3121,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 171.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 171.
- [79
+ [78
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
@@ -3141,9 +3139,9 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  24878 strings out of 493705
- 433060 string characters out of 3142152
+ 433066 string characters out of 3142152
  543054 words of memory out of 3000000
- 27239 multiletter control sequences out of 15000+200000
+ 27240 multiletter control sequences out of 15000+200000
  78561 words of font info for 67 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  55i,15n,54p,2960b,1128s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3172,9 +3170,9 @@ ype1/public/lm/lmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 /marvosym/marvosym.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
 sfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb>
-Output written on abschlussarbeit.pdf (87 pages, 14958069 bytes).
+Output written on abschlussarbeit.pdf (86 pages, 14957836 bytes).
 PDF statistics:
- 1581 PDF objects out of 1728 (max. 8388607)
- 379 named destinations out of 1000 (max. 500000)
+ 1577 PDF objects out of 1728 (max. 8388607)
+ 378 named destinations out of 1000 (max. 500000)
  875 words of extra memory for PDF output out of 10000 (max. 10000000)
 

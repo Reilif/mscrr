@@ -78,22 +78,22 @@
 \contentsline {subsubsection}{\numberline {5.5.2}Vereinfachte inverse Kinematik}{59}{subsubsection.5.5.2}
 \contentsline {subsubsection}{\numberline {5.5.3}Weiterentwicklung: Inverse Kinematik}{63}{subsubsection.5.5.3}
 \contentsline {subsubsection}{\numberline {5.5.4}Optimierte Pfadplanung}{66}{subsubsection.5.5.4}
-\contentsline {subsubsection}{\numberline {5.5.5}Nachtrag Literatur}{68}{subsubsection.5.5.5}
-\contentsline {section}{\numberline {6}Implementierung}{69}{section.6}
-\contentsline {subsection}{\numberline {6.1}Inverse Kinematik}{69}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Robotersteuerung - RATSYoubot \& RATSDummy \& RATSRose}{69}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Raum\IeC {\"u}berwachung - RATSHawk}{69}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Nahfelderkennung - RATSEye}{69}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Koordinierung - RATSCore}{69}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Lokale Positionierung}{69}{subsection.6.6}
-\contentsline {subsection}{\numberline {6.7}Handoverpoint}{69}{subsection.6.7}
-\contentsline {section}{\numberline {7}Test und Bewertung}{70}{section.7}
-\contentsline {subsection}{\numberline {7.1}Robustheit}{70}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Genauigkeit \& Geschwindigkeit Inverse Kinematik}{70}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Genauigkeit Positionierung}{70}{subsection.7.3}
-\contentsline {section}{\numberline {8}Zusammenfassung und Ausblick}{71}{section.8}
-\contentsline {section}{\numberline {9}Danksagung}{72}{section.9}
-\contentsline {section}{\numberline {10}Literaturverzeichnis}{73}{section.10}
-\contentsline {section}{\numberline {A}ROS Package}{79}{appendix.A}
-\contentsline {section}{\numberline {B}ROS Launchfile}{79}{appendix.B}
-\contentsline {section}{\numberline {C}Datenbl\IeC {\"a}tter}{79}{appendix.C}
+\contentsline {subsubsection}{\numberline {5.5.5}Nachtrag Literatur}{67}{subsubsection.5.5.5}
+\contentsline {section}{\numberline {6}Implementierung}{68}{section.6}
+\contentsline {subsection}{\numberline {6.1}Inverse Kinematik}{68}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Robotersteuerung - RATSYoubot \& RATSDummy \& RATSRose}{68}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Raum\IeC {\"u}berwachung - RATSHawk}{68}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Nahfelderkennung - RATSEye}{68}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Koordinierung - RATSCore}{68}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Lokale Positionierung}{68}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}Handoverpoint}{68}{subsection.6.7}
+\contentsline {section}{\numberline {7}Test und Bewertung}{69}{section.7}
+\contentsline {subsection}{\numberline {7.1}Robustheit}{69}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Genauigkeit \& Geschwindigkeit Inverse Kinematik}{69}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Genauigkeit Positionierung}{69}{subsection.7.3}
+\contentsline {section}{\numberline {8}Zusammenfassung und Ausblick}{70}{section.8}
+\contentsline {section}{\numberline {9}Danksagung}{71}{section.9}
+\contentsline {section}{\numberline {10}Literaturverzeichnis}{72}{section.10}
+\contentsline {section}{\numberline {A}ROS Package}{78}{appendix.A}
+\contentsline {section}{\numberline {B}ROS Launchfile}{78}{appendix.B}
+\contentsline {section}{\numberline {C}Datenbl\IeC {\"a}tter}{78}{appendix.C}
