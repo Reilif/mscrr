@@ -312,6 +312,11 @@ Mirza, K. and D.~Orin (1990).
 \newblock In {\em Proc. 8th CISM-IFToMM Symp. Theory Practice Robots
   Manipulators}.
 
+\bibitem[\protect\citeauthoryear{M{\"u}ggler, F{\"a}ssler, Scaramuzza, Huck,
+  and Lygeros}{M{\"u}ggler et~al.}{2013}]{muggler2013torque}
+M{\"u}ggler, E., M.~F{\"a}ssler, D.~Scaramuzza, S.~Huck, and J.~Lygeros (2013).
+\newblock Torque control of a kuka youbot arm.
+
 \bibitem[\protect\citeauthoryear{Nguyen}{Nguyen}{1988}]{nguyen1988constructing}
 Nguyen, V.-D. (1988).
 \newblock Constructing force-closure grasps.
