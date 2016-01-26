@@ -3,13 +3,15 @@
 \section{Implementierung}
 \label{sec:impl}
 
-In diesem Kapitel werden einige Aspekte der Entwicklung aufgegriffen und im Detail ausgeführt. Der Name Implementierung bezieht sich nicht auf die Programmierung, sondern die Umsetzung von Schnittstellen und den Algorithmen hinter speziellen Problemen. So wird in dem Unterkapitel \ref{sec:impl-ik} auf die Bewegung auf der linearen Trajektorie eingegangen.
+In diesem Kapitel werden einige Aspekte der Entwicklung aufgegriffen und im Detail ausgeführt. Der Name Implementierung bezieht sich nicht auf die Programmierung, sondern die Umsetzung von Schnittstellen und den Algorithmen hinter speziellen Problemen. So wird zum Beispiel in dem Unterkapitel \ref{sec:impl-rs} auf die Bewegung auf einer linearen Trajektorie eingegangen. Außerdem werden Probleme beschrieben und gelöst, die während der Umsetzung der Konzepte auftraten. Des Weiteren werden die genutzten Bibliotheken erwähnt und die Anbindung von ROS an die Konzepte. Den zentralen Aspekt in diesem Kapitel stellt jedoch Unterkapitel \ref{sec:impl-hop} dar. In diesem wird die Bestimmung für die Übergabeposition vorgestellt.
 
-\subsection{Inverse Kinematik}
-\label{sec:impl-ik}
 \subsection{Robotersteuerung - RATSYoubot \& RATSDummy \& RATSRose}
+\label{sec:impl-rs}
+In diesem Kapitel wird die Ansteuerung für die Roboter und deren Arme vorgestellt. Diese beruht vor allem auf Kuka API für den Youbot
+
 \subsection{Raumüberwachung - RATSHawk}
 \subsection{Nahfelderkennung - RATSEye}
 \subsection{Koordinierung - RATSCore}
 \subsection{Lokale Positionierung}
 \subsection{Handoverpoint}
+\label{sec:impl-hop}
