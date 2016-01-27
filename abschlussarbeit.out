@@ -1,0 +1,86 @@
+\BOOKMARK [1][-]{section.1}{Einleitung}{}% 1
+\BOOKMARK [1][-]{section.2}{Grundlagen}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Nomenklatur}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{ROS: Robotic Operating System}{section.2}% 4
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Package und Nodes}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Master und Parameter Server}{subsection.2.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Topics und Messages}{subsection.2.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Services}{subsection.2.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.2.5}{Action-Lib}{subsection.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.3}{Kinematik }{section.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Mechanismus}{subsection.2.3}% 11
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Kinematik}{subsection.2.3}% 12
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Forward Kinematics}{subsection.2.3}% 13
+\BOOKMARK [3][-]{subsubsection.2.3.4}{Inverse Kinematik}{subsection.2.3}% 14
+\BOOKMARK [1][-]{section.3}{Stand der Technik}{}% 15
+\BOOKMARK [2][-]{subsection.3.1}{Multi-robot system - Konzepte zur Verwaltung mehrerer Roboter}{section.3}% 16
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Klassifizierung der Koordinierung}{subsection.3.1}% 17
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Probleme der Koordinierung}{subsection.3.1}% 18
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Zusammenfassung}{subsection.3.1}% 19
+\BOOKMARK [2][-]{subsection.3.2}{Physically Embedded Intelligent Systems - PEIS}{section.3}% 20
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Konzept}{subsection.3.2}% 21
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Implementation}{subsection.3.2}% 22
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Zusammenfassung}{subsection.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.3}{Grasping und Handover - Arbeiten zu Roboterarmen}{section.3}% 24
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Grasping - Greifen mit einem Roboterarm}{subsection.3.3}% 25
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Handover - \334bergabe zwischen zwei Systemen}{subsection.3.3}% 26
+\BOOKMARK [1][-]{section.4}{Laboraufbau}{}% 27
+\BOOKMARK [2][-]{subsection.4.1}{Aufbau Teststand}{section.4}% 28
+\BOOKMARK [2][-]{subsection.4.2}{YouBot}{section.4}% 29
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Manipulator}{subsection.4.2}% 30
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Mobile Plattform}{subsection.4.2}% 31
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Rechner}{subsection.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.3}{Sensoren}{section.4}% 33
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Asus XTion Pro}{subsection.4.3}% 34
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Hokuyo URG-04LX-UG01}{subsection.4.3}% 35
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Argos 3D - P100}{subsection.4.3}% 36
+\BOOKMARK [3][-]{subsubsection.4.3.4}{Netzwerk- und Sensoranbindung}{subsection.4.3}% 37
+\BOOKMARK [1][-]{section.5}{Entwicklung}{}% 38
+\BOOKMARK [2][-]{subsection.5.1}{Nicht-Funktionale Anforderungen}{section.5}% 39
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Sicherheit - Safety}{subsection.5.1}% 40
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Zuverl\344ssigkeit}{subsection.5.1}% 41
+\BOOKMARK [3][-]{subsubsection.5.1.3}{Korrektheit}{subsection.5.1}% 42
+\BOOKMARK [3][-]{subsubsection.5.1.4}{Leistung}{subsection.5.1}% 43
+\BOOKMARK [3][-]{subsubsection.5.1.5}{\304nderbarkeit}{subsection.5.1}% 44
+\BOOKMARK [2][-]{subsection.5.2}{Funktionalit\344ten}{section.5}% 45
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Funktion Aufheben}{subsection.5.2}% 46
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Funktion Ablegen}{subsection.5.2}% 47
+\BOOKMARK [3][-]{subsubsection.5.2.3}{Funktion Objekt identifizieren und lokalisieren}{subsection.5.2}% 48
+\BOOKMARK [3][-]{subsubsection.5.2.4}{Funktion Nahfeld Erkennung}{subsection.5.2}% 49
+\BOOKMARK [3][-]{subsubsection.5.2.5}{Funktion Agentenlokalisierung}{subsection.5.2}% 50
+\BOOKMARK [3][-]{subsubsection.5.2.6}{Funktion \334bergabe}{subsection.5.2}% 51
+\BOOKMARK [2][-]{subsection.5.3}{Agenten}{section.5}% 52
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Raum\374berwachung}{subsection.5.3}% 53
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Nahfelderkennung}{subsection.5.3}% 54
+\BOOKMARK [3][-]{subsubsection.5.3.3}{Lokalisierung}{subsection.5.3}% 55
+\BOOKMARK [2][-]{subsection.5.4}{Architektur RATS}{section.5}% 56
+\BOOKMARK [3][-]{subsubsection.5.4.1}{Konzept}{subsection.5.4}% 57
+\BOOKMARK [3][-]{subsubsection.5.4.2}{RATSAction und RATSTask}{subsection.5.4}% 58
+\BOOKMARK [3][-]{subsubsection.5.4.3}{RATSMember}{subsection.5.4}% 59
+\BOOKMARK [3][-]{subsubsection.5.4.4}{RATSCore}{subsection.5.4}% 60
+\BOOKMARK [2][-]{subsection.5.5}{Inverse Kinematik}{section.5}% 61
+\BOOKMARK [3][-]{subsubsection.5.5.1}{YouBot Kinematiken}{subsection.5.5}% 62
+\BOOKMARK [3][-]{subsubsection.5.5.2}{Vereinfachte inverse Kinematik}{subsection.5.5}% 63
+\BOOKMARK [3][-]{subsubsection.5.5.3}{Weiterentwicklung: Inverse Kinematik}{subsection.5.5}% 64
+\BOOKMARK [3][-]{subsubsection.5.5.4}{Optimierte Pfadplanung}{subsection.5.5}% 65
+\BOOKMARK [3][-]{subsubsection.5.5.5}{Nachtrag Literatur}{subsection.5.5}% 66
+\BOOKMARK [1][-]{section.6}{Implementierung}{}% 67
+\BOOKMARK [2][-]{subsection.6.1}{Robotersteuerung - RATSYoubot \046 RATSDummy \046 RATSRose}{section.6}% 68
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Ansteuerung der Aktoren}{subsection.6.1}% 69
+\BOOKMARK [3][-]{subsubsection.6.1.2}{Lineare Bahnbewegung}{subsection.6.1}% 70
+\BOOKMARK [3][-]{subsubsection.6.1.3}{Aktionen der Roboter}{subsection.6.1}% 71
+\BOOKMARK [2][-]{subsection.6.2}{Raum\374berwachung - RATSHawk}{section.6}% 72
+\BOOKMARK [2][-]{subsection.6.3}{Nahfelderkennung - RATSEye}{section.6}% 73
+\BOOKMARK [2][-]{subsection.6.4}{Koordinierung - RATSCore \046 RATSMember}{section.6}% 74
+\BOOKMARK [2][-]{subsection.6.5}{Lokale Positionierung}{section.6}% 75
+\BOOKMARK [2][-]{subsection.6.6}{Handoverpoint}{section.6}% 76
+\BOOKMARK [1][-]{section.7}{Test und Bewertung}{}% 77
+\BOOKMARK [2][-]{subsection.7.1}{Robustheit}{section.7}% 78
+\BOOKMARK [2][-]{subsection.7.2}{Genauigkeit \046 Geschwindigkeit Inverse Kinematik}{section.7}% 79
+\BOOKMARK [2][-]{subsection.7.3}{Genauigkeit Positionierung}{section.7}% 80
+\BOOKMARK [1][-]{section.8}{Zusammenfassung und Ausblick}{}% 81
+\BOOKMARK [1][-]{section.9}{Danksagung}{}% 82
+\BOOKMARK [1][-]{section.10}{Literaturverzeichnis}{}% 83
+\BOOKMARK [1][-]{appendix.A}{ROS Package}{}% 84
+\BOOKMARK [1][-]{appendix.B}{ROS Launchfile}{}% 85
+\BOOKMARK [1][-]{appendix.C}{Datenbl\344tter}{}% 86

@@ -1,0 +1,52 @@
+\select@language {ngerman}
+\select@language {english}
+\select@language {ngerman}
+\contentsline {figure}{\numberline {1}{\ignorespaces Roboter in Seniorenheimen}}{2}{figure.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Roboterteddy K\={o}-chan Quelle: \citep {panasonic2005}}}}{2}{figure.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Roboterkatze zur Therapie Quelle: \citep {wagner2009tele}}}}{2}{figure.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Beispiel Szenario 1}}{3}{figure.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Erweiterung Szenario 1}}{3}{figure.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Master Service}}{7}{figure.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Netzwerk Entlastung durch Peer-to-Peer Verbindungen}}{8}{figure.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Topic Beispiel}}{8}{figure.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Aufbau Teststand: Draufsicht}}{24}{figure.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Aufbau Teststand: Seitenansicht}}{25}{figure.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces YouBot Arm Kinematik}}{26}{figure.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Arbeitsraum YouBot. Bilderquelle:\cite {monikaflorekjasinska2015}}}{27}{figure.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {YouBot Arm Arbeitsraum. Reichweite der einzelnen Gelenk und einzelne Abmessung der Links und Link-Offsets. Einheitslose Angaben sind in mm.}}}{27}{figure.10}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Draufsicht YouBot Arm Arbeitsraum.}}}{27}{figure.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces YouBot Base}}{28}{figure.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Mobile YouBot Plattform mit Sensorplatte. Bilderquelle:\cite {kuka2015}}}{29}{figure.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Asus Xtion Pro Live}}{30}{figure.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Hokuyo URG-04LX-UG01}}{31}{figure.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Argos 3D - P100}}{32}{figure.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Schematische Darstellung der Verbindungen}}{32}{figure.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Use-Case Robotersystem}}{36}{figure.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Greifer bei der \IeC {\"U}bergabe}}{44}{figure.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Seitenansicht mobile Plattform mit Sensorplatte}}}{44}{figure.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Draufsicht mobile Plattform mit Sensorplatte}}}{44}{figure.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Produktbild. Bildquelle: \cite {nowak2015}}}}{44}{figure.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Schema: Reichweite und Sichtfeld. Sichtfeld in Messpunktsektoren (MP) unterteilt. Ver\IeC {\"a}ndert nach: \cite {maeda2009}}}}{44}{figure.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Entgegengesetzter Griff: Die Ausrichtung der Greifer (grau) ist zueinander invertiert. Die Achsen liegen alle parallel, sind jedoch in gegensetzige ausgerichtet. Die Symetrie des Objekts (rosa) und die parallelen Finger der Greifer erm\IeC {\"o}glichen eine lineare Transjektion entlang der Z-Achsen (gr\IeC {\"u}n) ohne Kollisionen mit dem anderen Greifer oder dem Objekt.}}}{44}{figure.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Translation($T_\tau $) an der X-Achse (blau) des Objektes (rose) zur Kollisionsvermeidung der Finger (grau). Die minimale L\IeC {\"a}nge der Translation betr\IeC {\"a}gt die H\IeC {\"a}lfter der aufsummierten Breite der Finger.}}}{44}{figure.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Sequenzdiagramm Geben}}{45}{figure.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Sequenzdiagramm Nehmen}}{46}{figure.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Sequenzdiagramm Rendezvous}}{47}{figure.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Raum\IeC {\"u}berwachung Aufnahme}}{49}{figure.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Argos3D Punktwolke}}{50}{figure.23}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Topansicht der Punktwolke, die Farben repr\IeC {\"a}sentieren die Intensit\IeC {\"a}t der zur\IeC {\"u}ckgeworfenen IR-Strahlen. In der Mitte sind die Umrisse des Objektes erkennbar. Am Rand sind einige abweichende Punkte zu sehen.}}}{50}{figure.23}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Seitenansicht der Punktwolke. Sichtbar sind in der Mitte das Objekt und die kubische Grundform der Punktwolke, die eigentlich der planaren Ebene entsprechen sollte.}}}{50}{figure.23}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Seitenansicht der Punktwolke mit zus\IeC {\"a}tzlicher Stromversorgung am Sensor. Sichtbar ist wieder das Objekt in der Mitte. Die Kr\IeC {\"u}mmung der Oberfl\IeC {\"a}che ist schw\IeC {\"a}cher als bei Abbildung \ref {fig:argoside}}}}{50}{figure.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces XTion als Naherkennung}}{51}{figure.24}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Die XTion Kamera(rot) am Greifer montiert. Das Sichtfeld liegt vor der mobilen Plattform. Durch eine Drehung des Armes kann das Sichtfeld um den Roboter erweitert werden.}}}{51}{figure.24}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {TODO}}}{51}{figure.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Klassen\IeC {\"u}bersicht RATS}}{53}{figure.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces RATS globaler Speicher}}{54}{figure.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces JSON Action Message}}{56}{figure.27}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Mechanismus des Arms im globalen Koordinatensystem.}}}{62}{subfigure.28.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Neues Koordinatensystem mit Ursprung in $j_2$}}}{62}{subfigure.28.3}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Kennzeichnung der zu ermittelnden Winkel. Die Position $\{x_{eff}, y_{eff}\}$ von $j_4$ wird durch die Offsets von $l_1$,$l_4$ und $l_5$ berechnet.}}}{62}{subfigure.28.3}
+\contentsline {figure}{\numberline {28}{\ignorespaces Graph zur Pfadplanung}}{67}{figure.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces Trajektorien des Greifers}}{70}{figure.29}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{70}{figure.29}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{70}{figure.29}
