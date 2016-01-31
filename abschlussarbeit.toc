@@ -96,16 +96,18 @@
 \contentsline {subsubsection}{\numberline {6.2.2}Detektion}{72}{subsubsection.6.2.2}
 \contentsline {subsubsection}{\numberline {6.2.3}Lokalisierung}{73}{subsubsection.6.2.3}
 \contentsline {subsection}{\numberline {6.3}Nahfelderkennung - RATSEye}{73}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Koordinierung - RATSCore \& RATSMember}{74}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Lokale Positionierung}{74}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Handoverpoint}{74}{subsection.6.6}
-\contentsline {section}{\numberline {7}Test und Bewertung}{75}{section.7}
-\contentsline {subsection}{\numberline {7.1}Robustheit}{75}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Genauigkeit \& Geschwindigkeit Inverse Kinematik}{75}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Genauigkeit Positionierung}{75}{subsection.7.3}
-\contentsline {section}{\numberline {8}Zusammenfassung und Ausblick}{76}{section.8}
-\contentsline {section}{\numberline {9}Danksagung}{77}{section.9}
-\contentsline {section}{\numberline {10}Literaturverzeichnis}{78}{section.10}
-\contentsline {section}{\numberline {A}ROS Package}{84}{appendix.A}
-\contentsline {section}{\numberline {B}ROS Launchfile}{84}{appendix.B}
-\contentsline {section}{\numberline {C}Datenbl\IeC {\"a}tter}{84}{appendix.C}
+\contentsline {subsection}{\numberline {6.4}Koordinierung}{74}{subsection.6.4}
+\contentsline {subsubsection}{\numberline {6.4.1}Koordinierung beim RATSMember}{74}{subsubsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.2}Koordinierung beim RATSCore}{75}{subsubsection.6.4.2}
+\contentsline {subsection}{\numberline {6.5}Bewegung \& Lokalisierung der mobilen Plattform}{75}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Handoverpoint}{76}{subsection.6.6}
+\contentsline {section}{\numberline {7}Test und Bewertung}{78}{section.7}
+\contentsline {subsection}{\numberline {7.1}Robustheit}{78}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Genauigkeit \& Geschwindigkeit Inverse Kinematik}{78}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Genauigkeit Positionierung}{78}{subsection.7.3}
+\contentsline {section}{\numberline {8}Zusammenfassung und Ausblick}{79}{section.8}
+\contentsline {section}{\numberline {9}Danksagung}{80}{section.9}
+\contentsline {section}{\numberline {10}Literaturverzeichnis}{81}{section.10}
+\contentsline {section}{\numberline {A}ROS Package}{87}{appendix.A}
+\contentsline {section}{\numberline {B}ROS Launchfile}{87}{appendix.B}
+\contentsline {section}{\numberline {C}Datenbl\IeC {\"a}tter}{87}{appendix.C}

@@ -74,16 +74,18 @@
 \BOOKMARK [3][-]{subsubsection.6.2.2}{Detektion}{subsection.6.2}% 74
 \BOOKMARK [3][-]{subsubsection.6.2.3}{Lokalisierung}{subsection.6.2}% 75
 \BOOKMARK [2][-]{subsection.6.3}{Nahfelderkennung - RATSEye}{section.6}% 76
-\BOOKMARK [2][-]{subsection.6.4}{Koordinierung - RATSCore \046 RATSMember}{section.6}% 77
-\BOOKMARK [2][-]{subsection.6.5}{Lokale Positionierung}{section.6}% 78
-\BOOKMARK [2][-]{subsection.6.6}{Handoverpoint}{section.6}% 79
-\BOOKMARK [1][-]{section.7}{Test und Bewertung}{}% 80
-\BOOKMARK [2][-]{subsection.7.1}{Robustheit}{section.7}% 81
-\BOOKMARK [2][-]{subsection.7.2}{Genauigkeit \046 Geschwindigkeit Inverse Kinematik}{section.7}% 82
-\BOOKMARK [2][-]{subsection.7.3}{Genauigkeit Positionierung}{section.7}% 83
-\BOOKMARK [1][-]{section.8}{Zusammenfassung und Ausblick}{}% 84
-\BOOKMARK [1][-]{section.9}{Danksagung}{}% 85
-\BOOKMARK [1][-]{section.10}{Literaturverzeichnis}{}% 86
-\BOOKMARK [1][-]{appendix.A}{ROS Package}{}% 87
-\BOOKMARK [1][-]{appendix.B}{ROS Launchfile}{}% 88
-\BOOKMARK [1][-]{appendix.C}{Datenbl\344tter}{}% 89
+\BOOKMARK [2][-]{subsection.6.4}{Koordinierung}{section.6}% 77
+\BOOKMARK [3][-]{subsubsection.6.4.1}{Koordinierung beim RATSMember}{subsection.6.4}% 78
+\BOOKMARK [3][-]{subsubsection.6.4.2}{Koordinierung beim RATSCore}{subsection.6.4}% 79
+\BOOKMARK [2][-]{subsection.6.5}{Bewegung \046 Lokalisierung der mobilen Plattform}{section.6}% 80
+\BOOKMARK [2][-]{subsection.6.6}{Handoverpoint}{section.6}% 81
+\BOOKMARK [1][-]{section.7}{Test und Bewertung}{}% 82
+\BOOKMARK [2][-]{subsection.7.1}{Robustheit}{section.7}% 83
+\BOOKMARK [2][-]{subsection.7.2}{Genauigkeit \046 Geschwindigkeit Inverse Kinematik}{section.7}% 84
+\BOOKMARK [2][-]{subsection.7.3}{Genauigkeit Positionierung}{section.7}% 85
+\BOOKMARK [1][-]{section.8}{Zusammenfassung und Ausblick}{}% 86
+\BOOKMARK [1][-]{section.9}{Danksagung}{}% 87
+\BOOKMARK [1][-]{section.10}{Literaturverzeichnis}{}% 88
+\BOOKMARK [1][-]{appendix.A}{ROS Package}{}% 89
+\BOOKMARK [1][-]{appendix.B}{ROS Launchfile}{}% 90
+\BOOKMARK [1][-]{appendix.C}{Datenbl\344tter}{}% 91
