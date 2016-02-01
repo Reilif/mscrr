@@ -2,7 +2,41 @@
 %% Zusammenfassung und Ausblick
 \section{Test und Bewertung}
 \label{sec:test}
+Dieses Kapitel umfasst Testreihen zur Bewertung des MRS. Diese Testreihen folgen dem \textit{Top-Down} Prinzip und sind nicht als vollwertige Softwaretests zu sehen, da unter anderem auch das Zusammenspiel der Konzepte und der Hardware getestet wird. Zunächst wird das Gesamtsystem getestet, da die einzelnen Algorithmen und Konzepte zum Teil schon in ihrer Entwicklungsphase getestet wurden. Kommt es zu Fehlschlägen des Gesamtsystems, wird der Fehlschlag analysiert und die betreffenden Subsysteme getestet. Diese Tests sind vor allem als funktionsorientierter Test zusehen. Es werden also keine Daten- oder Kontrollflüsse getestet, sondern der Fokus auf Positiv- und Negativtests gelegt. Auch die Ursache-Wirkung-Analyse ist für die Subsysteme angewendet. 
 
+Die Tests für das Gesamtsystem werden mit Hilfe von funktionalen Äquivalenzklassen durchgeführt. Dazu wurde folgendes Szenario 24 mal ausgeführt: Das Zielobjekt liegt an einer Position im Raum. Rose befindet sich in einer definierten Startposition. Das System bekommt die Aufgabe das Objekt aufzuheben und an einer definierten Stelle auf dem Tisch abzulegen. Die Position des Objektes im Raum variiert bei den Testfällen und ist in Äquivalenzklassen unterteilt. Diese sind an den notwendigen Bewegungen der Plattform orientiert. Die Äquivalenzklassen setzen sich aus der Achse und der Strecke der Bewegung zusammen: \textit{ X-Kurz}, \textit{ X-Lang}, \textit{ X-Kurz, Y-Kurz}, \textit{ X-Lang, Y-Kurz}, \textit{ X-Kurz, Y-Lang}, \textit{ X-Lang, Y-Lang}. Wird eine Achse nicht erwähnt findet keine Bewegung entlang dieser statt. Kurz steht für eine Bewegungsdistanz kleiner 50 Zentimeter entlang der angegeben Achse. Die folgende Tabelle enthält alle Testfälle mit allen Zwischenergebnissen die während dieses Szenarios erzielt werden. Dazu zählen die Genauigkeit der Raumüberwachung $\gamma$ und der Differenz zwischen Odometriedaten und Laserdaten $\eta$ in Zentimetern, die Anzahl der Korrekturversuche $k$ der mobilen Plattform, die Anzahl der Verhandlungsversuche $j$ für den Übergabepunkt und die Genauigkeit bei der Übergabe $\iota$ in Zentimetern. Die letzte Spalte bildet den Erfolg des Testfalls oder den auftretenden Fehler ab.
+
+\begin{center}
+	\begin{longtable}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Testfall & Äquivalenzklasse &$\gamma$ & $\eta$ & $k$ & $j$ & $\iota$ & Erfolg oder Fehler\\
+		\hline
+		1 & X-Kurz & & & & & & \checkmark\\
+		2 & X-Kurz & & & & & & \checkmark\\
+		3 & X-Kurz & & & & & & \checkmark\\
+		4 & X-Kurz & & & & & & \checkmark\\
+		5 & X-Lang & & & & & & \checkmark\\
+		6 & X-Lang & & & & & & \checkmark\\
+		7 & X-Lang & & & & & & \checkmark\\
+		8 & X-Lang & & & & & & \checkmark\\
+		9 & X-Kurz, Y-Kurz & & & & & & \checkmark\\
+		10 & X-Kurz, Y-Kurz & & & & & & \checkmark\\
+		11 & X-Kurz, Y-Kurz & & & & & & \checkmark\\
+		12 & X-Kurz, Y-Kurz & & & & & & \checkmark\\
+		13 & X-Lang, Y-Kurz & & & & & & \checkmark\\
+		14 & X-Lang, Y-Kurz & & & & & & \checkmark\\
+		15 & X-Lang, Y-Kurz & & & & & & \checkmark\\
+		16 & X-Lang, Y-Kurz & & & & & & \checkmark\\
+		17 & X-Kurz, Y-Lang & & & & & & \checkmark\\
+		18 & X-Kurz, Y-Lang & & & & & & \checkmark\\
+		19 & X-Kurz, Y-Lang & & & & & & \checkmark\\
+		20 & X-Kurz, Y-Lang & & & & & & \checkmark\\
+		21 & X-Lang, Y-Lang & & & & & & \checkmark\\
+		22 & X-Lang, Y-Lang & & & & & & \checkmark\\
+		23 & X-Lang, Y-Lang & & & & & & \checkmark\\
+		24 & X-Lang, Y-Lang & & & & & & \checkmark\\
+	\end{longtable}
+\end{center}
 \subsection{Robustheit}
 \subsection{Genauigkeit \& Geschwindigkeit Inverse Kinematik}
 \subsection{Genauigkeit Positionierung}

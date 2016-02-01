@@ -102,12 +102,12 @@
 \contentsline {subsection}{\numberline {6.5}Bewegung \& Lokalisierung der mobilen Plattform}{75}{subsection.6.5}
 \contentsline {subsection}{\numberline {6.6}Handoverpoint}{76}{subsection.6.6}
 \contentsline {section}{\numberline {7}Test und Bewertung}{78}{section.7}
-\contentsline {subsection}{\numberline {7.1}Robustheit}{78}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Genauigkeit \& Geschwindigkeit Inverse Kinematik}{78}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Genauigkeit Positionierung}{78}{subsection.7.3}
-\contentsline {section}{\numberline {8}Zusammenfassung und Ausblick}{79}{section.8}
-\contentsline {section}{\numberline {9}Danksagung}{80}{section.9}
-\contentsline {section}{\numberline {10}Literaturverzeichnis}{81}{section.10}
-\contentsline {section}{\numberline {A}ROS Package}{87}{appendix.A}
-\contentsline {section}{\numberline {B}ROS Launchfile}{87}{appendix.B}
-\contentsline {section}{\numberline {C}Datenbl\IeC {\"a}tter}{87}{appendix.C}
+\contentsline {subsection}{\numberline {7.1}Robustheit}{79}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Genauigkeit \& Geschwindigkeit Inverse Kinematik}{79}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Genauigkeit Positionierung}{79}{subsection.7.3}
+\contentsline {section}{\numberline {8}Zusammenfassung und Ausblick}{80}{section.8}
+\contentsline {section}{\numberline {9}Danksagung}{81}{section.9}
+\contentsline {section}{\numberline {10}Literaturverzeichnis}{82}{section.10}
+\contentsline {section}{\numberline {A}ROS Package}{88}{appendix.A}
+\contentsline {section}{\numberline {B}ROS Launchfile}{88}{appendix.B}
+\contentsline {section}{\numberline {C}Datenbl\IeC {\"a}tter}{88}{appendix.C}
