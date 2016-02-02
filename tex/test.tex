@@ -4,39 +4,84 @@
 \label{sec:test}
 Dieses Kapitel umfasst Testreihen zur Bewertung des MRS. Diese Testreihen folgen dem \textit{Top-Down} Prinzip und sind nicht als vollwertige Softwaretests zu sehen, da unter anderem auch das Zusammenspiel der Konzepte und der Hardware getestet wird. Zunächst wird das Gesamtsystem getestet, da die einzelnen Algorithmen und Konzepte zum Teil schon in ihrer Entwicklungsphase getestet wurden. Kommt es zu Fehlschlägen des Gesamtsystems, wird der Fehlschlag analysiert und die betreffenden Subsysteme getestet. Diese Tests sind vor allem als funktionsorientierter Test zusehen. Es werden also keine Daten- oder Kontrollflüsse getestet, sondern der Fokus auf Positiv- und Negativtests gelegt. Auch die Ursache-Wirkung-Analyse ist für die Subsysteme angewendet. 
 
-Die Tests für das Gesamtsystem werden mit Hilfe von funktionalen Äquivalenzklassen durchgeführt. Dazu wurde folgendes Szenario 24 mal ausgeführt: Das Zielobjekt liegt an einer Position im Raum. Rose befindet sich in einer definierten Startposition. Das System bekommt die Aufgabe das Objekt aufzuheben und an einer definierten Stelle auf dem Tisch abzulegen. Die Position des Objektes im Raum variiert bei den Testfällen und ist in Äquivalenzklassen unterteilt. Diese sind an den notwendigen Bewegungen der Plattform orientiert. Die Äquivalenzklassen setzen sich aus der Achse und der Strecke der Bewegung zusammen: \textit{ X-Kurz}, \textit{ X-Lang}, \textit{ X-Kurz, Y-Kurz}, \textit{ X-Lang, Y-Kurz}, \textit{ X-Kurz, Y-Lang}, \textit{ X-Lang, Y-Lang}. Wird eine Achse nicht erwähnt findet keine Bewegung entlang dieser statt. Kurz steht für eine Bewegungsdistanz kleiner 50 Zentimeter entlang der angegeben Achse. Die folgende Tabelle enthält alle Testfälle mit allen Zwischenergebnissen die während dieses Szenarios erzielt werden. Dazu zählen die Genauigkeit der Raumüberwachung $\gamma$ und der Differenz zwischen Odometriedaten und Laserdaten $\eta$ in Zentimetern, die Anzahl der Korrekturversuche $k$ der mobilen Plattform, die Anzahl der Verhandlungsversuche $j$ für den Übergabepunkt und die Genauigkeit bei der Übergabe $\iota$ in Zentimetern. Die letzte Spalte bildet den Erfolg des Testfalls oder den auftretenden Fehler ab.
+Die Tests für das Gesamtsystem werden mit Hilfe von funktionalen Äquivalenzklassen durchgeführt. Dazu wurde folgendes Szenario 24 mal ausgeführt: Das Zielobjekt liegt an einer Position im Raum. Rose befindet sich in einer definierten Startposition. Das System bekommt die Aufgabe das Objekt aufzuheben und an einer definierten Stelle auf dem Tisch abzulegen. Die Position des Objektes im Raum variiert bei den Testfällen und ist in Äquivalenzklassen unterteilt. Diese sind an den notwendigen Bewegungen der Plattform orientiert. Die Äquivalenzklassen setzen sich aus der Achse und der Strecke der Bewegung zusammen: \textit{ X-Kurz}, \textit{ X-Lang}, \textit{ X-Kurz, Y-Kurz}, \textit{ X-Lang, Y-Kurz}, \textit{ X-Kurz, Y-Lang}, \textit{ X-Lang, Y-Lang}. Wird eine Achse nicht erwähnt findet keine Bewegung entlang dieser statt. Kurz steht für eine Bewegungsdistanz kleiner 50 Zentimeter entlang der angegeben Achse. Die Tabelle \ref{tab:messw} bildet alle Testfälle mit allen Messergebnissen, die während dieses Szenarios erzielt wurden, ab. Dazu zählen die Genauigkeit der Raumüberwachung $\gamma$ und der Differenz zwischen Odometriedaten und Laserdaten $\eta$ in Zentimetern, die Anzahl der Korrekturversuche $k$ der mobilen Plattform, die Anzahl der Verhandlungsversuche $j$ für den Übergabepunkt und die Genauigkeit bei der Übergabe $\iota$ in Zentimetern. Die letzte Spalte bildet den Erfolg des Testfalls oder den auftretenden Fehler ab. Dabei traten drei Fehlerwirkungen auf: \textit{Fehler 1} steht für einen Abbruch bei der Aufnahme des Objektes, zum Beispiel durch eine Überschreitung der Versuchsschranke, zehn Versuche, oder einem Fehlgriff. \textit{Fehler 2} bildet den Abbruch während der Bestimmung der Übergabeposition ab. Dies kann nur durch ein überschreiten der Verhandlungsschranke, maximal zehn Verhandlungen, ausgelöst werden. \textit{Fehler 3} tritt bei einer falschen Übergabe auf. Die Ursache der Fehler wird im folgenden analysiert. 
 
 \begin{center}
 	\begin{longtable}{|c|c|c|c|c|c|c|c|}
 		\hline
-		Testfall & Äquivalenzklasse &$\gamma$ & $\eta$ & $k$ & $j$ & $\iota$ & Erfolg oder Fehler\\
+		Testlauf & Äquivalenzklasse &$\gamma$ & $\eta$ & $k$ & $j$ & $\iota$ & Erfolg oder Fehler\\
 		\hline
-		1 & X-Kurz & & & & & & \checkmark\\
-		2 & X-Kurz & & & & & & \checkmark\\
-		3 & X-Kurz & & & & & & \checkmark\\
-		4 & X-Kurz & & & & & & \checkmark\\
-		5 & X-Lang & & & & & & \checkmark\\
-		6 & X-Lang & & & & & & \checkmark\\
-		7 & X-Lang & & & & & & \checkmark\\
-		8 & X-Lang & & & & & & \checkmark\\
-		9 & X-Kurz, Y-Kurz & & & & & & \checkmark\\
-		10 & X-Kurz, Y-Kurz & & & & & & \checkmark\\
-		11 & X-Kurz, Y-Kurz & & & & & & \checkmark\\
-		12 & X-Kurz, Y-Kurz & & & & & & \checkmark\\
-		13 & X-Lang, Y-Kurz & & & & & & \checkmark\\
-		14 & X-Lang, Y-Kurz & & & & & & \checkmark\\
-		15 & X-Lang, Y-Kurz & & & & & & \checkmark\\
-		16 & X-Lang, Y-Kurz & & & & & & \checkmark\\
-		17 & X-Kurz, Y-Lang & & & & & & \checkmark\\
-		18 & X-Kurz, Y-Lang & & & & & & \checkmark\\
-		19 & X-Kurz, Y-Lang & & & & & & \checkmark\\
-		20 & X-Kurz, Y-Lang & & & & & & \checkmark\\
-		21 & X-Lang, Y-Lang & & & & & & \checkmark\\
-		22 & X-Lang, Y-Lang & & & & & & \checkmark\\
-		23 & X-Lang, Y-Lang & & & & & & \checkmark\\
-		24 & X-Lang, Y-Lang & & & & & & \checkmark\\
+		\hline
+		1 & X-Kurz & $\left(\begin{array}{c} 2,2 \\ 1,6\end{array}\right)$ & $\left(\begin{array}{c} 3,2 \\ -0,4\end{array}\right)$ & $0$ & $2$ & <1cm& \checkmark\\
+		\hline
+		2 & X-Kurz &  $\left(\begin{array}{c} -2,1 \\ 1,3\end{array}\right)$ & $\left(\begin{array}{c} 4,1 \\ -0,3\end{array}\right)$ & 0 & 4 & <1cm & \checkmark\\
+		\hline
+		3 & X-Kurz &  $\left(\begin{array}{c} 1,4 \\ 2,2\end{array}\right)$ & $\left(\begin{array}{c} 3,5 \\ -0,5\end{array}\right)$ & 0 & 2& <1cm& \checkmark\\
+		\hline
+		4 & X-Kurz &  $\left(\begin{array}{c} 2,3 \\ -2,1\end{array}\right)$ & $\left(\begin{array}{c} 3,7 \\ -0,3\end{array}\right)$ & 0& 2&<1cm & \checkmark\\
+		\hline
+		5 & X-Lang &  $\left(\begin{array}{c} -1,6 \\ 1,8\end{array}\right)$ & $\left(\begin{array}{c} 5,2 \\ -0,7\end{array}\right)$ & 1& 2& <1cm& \checkmark\\
+		\hline
+		6 & X-Lang &  $\left(\begin{array}{c} 1,4 \\ 1,4\end{array}\right)$ & $\left(\begin{array}{c} 6,1 \\ -0,8\end{array}\right)$ & 1& 3& <1cm& \checkmark\\
+		\hline
+		7 & X-Lang &  $\left(\begin{array}{c} 1,3 \\ -2,2\end{array}\right)$ & $\left(\begin{array}{c} 7,2 \\ -0,8\end{array}\right)$ & 0& 2& <1cm& \checkmark\\
+		\hline
+		8 & X-Lang &  $\left(\begin{array}{c} 5,4 \\ 1,3\end{array}\right)$ & $\left(\begin{array}{c} 6,8 \\ -0,5\end{array}\right)$ & 1& 2& <1cm& \checkmark\\
+		\hline
+		9 & X-Kurz, Y-Kurz &  $\left(\begin{array}{c} 2,1 \\ -1,5\end{array}\right)$ & $\left(\begin{array}{c} 10.4 \\ -4,8\end{array}\right)$ & >10& -& -& Fehler 1\\
+		\hline
+		10 & X-Kurz, Y-Kurz &  $\left(\begin{array}{c} 1,2 \\ 3,8\end{array}\right)$ & $\left(\begin{array}{c} 4,2 \\ -7,4\end{array}\right)$ & 1& 3& <1cm& \checkmark\\
+		\hline
+		11 & X-Kurz, Y-Kurz &  $\left(\begin{array}{c} -2,4 \\ 4,2\end{array}\right)$ & $\left(\begin{array}{c} 3,7 \\ -6,3\end{array}\right)$ & 2& 4& <1cm& \checkmark\\
+		\hline
+		12 & X-Kurz, Y-Kurz &  $\left(\begin{array}{c} -3,2 \\ -2,1\end{array}\right)$ & $\left(\begin{array}{c} 6,1 \\ -4,2\end{array}\right)$ & 1& 2& 3,2& Fehler 3\\
+		\hline
+		13 & X-Lang, Y-Kurz &  $\left(\begin{array}{c} -4,1 \\ -2,8\end{array}\right)$ & $\left(\begin{array}{c} 3,8 \\ -7,2\end{array}\right)$ & 1& 3& 4,2& Fehler 3\\
+		\hline
+		14 & X-Lang, Y-Kurz &  $\left(\begin{array}{c} 7,2 \\ 1,2\end{array}\right)$ & $\left(\begin{array}{c} 9,4 \\ -4,8\end{array}\right)$ & 2& 4& 4,5& Fehler 3\\
+		\hline
+		15 & X-Lang, Y-Kurz &  $\left(\begin{array}{c} -1,4 \\ 8,1\end{array}\right)$ & $\left(\begin{array}{c} 6,2 \\ -5,5\end{array}\right)$ & 2& 3& <1cm& \checkmark\\
+		\hline
+		16 & X-Lang, Y-Kurz &  $\left(\begin{array}{c} 2,4 \\ 1,3\end{array}\right)$ & $\left(\begin{array}{c} -1,2 \\ -4,2\end{array}\right)$ & 2& 3& <1cm& \checkmark\\
+		\hline
+		17 & X-Kurz, Y-Lang &  $\left(\begin{array}{c} 1,2 \\ -3,4\end{array}\right)$ & $\left(\begin{array}{c} 5,4 \\ -22,8\end{array}\right)$ & >10& -&- & Fehler 1\\
+		\hline
+		18 & X-Kurz, Y-Lang &  $\left(\begin{array}{c} 3,8 \\ 2,1\end{array}\right)$ & $\left(\begin{array}{c} 3,2 \\ -17,2\end{array}\right)$ & 2& >10& -& Fehler 2\\
+		\hline
+		19 & X-Kurz, Y-Lang &  $\left(\begin{array}{c} 2,5 \\ 2,4\end{array}\right)$ & $\left(\begin{array}{c} 1,6 \\ -20,1\end{array}\right)$ & 1& 7& <1cm& \checkmark\\
+		\hline
+		20 & X-Kurz, Y-Lang &  $\left(\begin{array}{c} 1,6 \\ 2,7\end{array}\right)$ & $\left(\begin{array}{c} 4,2 \\ -19,8\end{array}\right)$ & 2& 8& 4,2cm& Fehler 3\\
+		\hline
+		21 & X-Lang, Y-Lang &  $\left(\begin{array}{c} 3,2 \\ -1,7\end{array}\right)$ & $\left(\begin{array}{c} 3,8 \\ -21,2\end{array}\right)$ & 1& 6& 5,6cm& Fehler 3\\
+		\hline
+		22 & X-Lang, Y-Lang &  $\left(\begin{array}{c} 2,4 \\ 2,1\end{array}\right)$ & $\left(\begin{array}{c} 2,8 \\ -18,4\end{array}\right)$ & 2& 5& <1cm& \checkmark\\
+		\hline
+		23 & X-Lang, Y-Lang &  $\left(\begin{array}{c} -3,3 \\ 1,6\end{array}\right)$ & $\left(\begin{array}{c} 2,8 \\ -31,4\end{array}\right)$ & >10& -& -& Fehler 1\\
+		\hline
+		24 & X-Lang, Y-Lang &  $\left(\begin{array}{c} 2,7 \\ 1,8\end{array}\right)$ & $\left(\begin{array}{c} 3,1 \\ -16,1\end{array}\right)$ & 2& 8& 6,2& Fehler 3\\
+		\hline
+	\caption{Messwerte der Testphase}
+	\label{tab:messw}
 	\end{longtable}
 \end{center}
+
+Zusammengefasst ergibt sich, dass das Robotersystem eine Erfolgsquote von ca. 60 Prozent hat. Dabei ist auffällig, dass die Fehler sich bei einer großen Distanz auf der Y-Achse häufen. Um die Fehlerquelle genauer identifizieren zu können werden zunächst die einzelnen Aktionen aufgelistet. Anschließend wird eine Vorauswahl getroffen, welche Aktionen für den Fehler verantwortlich sein können. Anschließend werden diese Aktionen genauer untersucht. Fehler 1 gehen fünf Aktionen voraus: Objekt identifizieren und lokalisieren, Rose an die Zielposition bewegen, Naherkennung des Objektes, Korrekturbewegung und Objekt aufheben. Diese können alle potenzielle Fehlerquellen sein. Jedoch lassen sich einzelne Aktionen durch Subsystemtests schon ausschließen. So ist die Raumüberwachung mit einer Genauigkeit von fünf Zentimetern entwickelt worden. Die Werte aus der Tabelle ergeben, dass diese Genauigkeit auch eingehalten wurden. Ausnahmen bilden die Testläufe 14 und 15. Zwischen Fehler 1 und 2 liegt nur die Bestimmung der Übergabeposition, sowie die Korrektur der Position von Rose. Dies betrifft also die Lokalisierung und Positionierung der mobilen Plattform, sowie das Konzept der Bestimmung der Korrektur. Zu Fehler 3 führen die Positionierung und die inverse Kinematik. Im Folgenden werden diese einzelnen Aktionen getestet und mögliche Folgefehler analysiert.
+
+\subsection{Genauigkeit Inverse Kinematik}
+\label{sec:iktest}
+Für die Tests der inversen Kinematik wurden 25 Posen im lokalen Koordinatensystem von Dummy definiert. Diese wurden nacheinander vom Greifer von Dummy angefahren. Zwischen den einzelnen Posen wurde die \textit{Candle}-Pose eingenommen. Bei allen Posen wurde die Distanz zwischen Greiferpose und Zielpose aufgenommen. Die Greiferposen wurden mit der RViz-Anwendung von ROS gemessen. Diese gibt Position und Rotation des Greifers aus. Anschließend wurden die Differenzen der einzelnen Posen berechnet und der arithmetische Mittel-, der Min- und der Max-Wert festgestellt und in eine CSV-Datei abgelegt. Die Ergebnisse sind Anhang \ref{app:tdik} zu entnehmen. Entscheidend sind die maximalen Abweichungen, diese betragen linear 3,78 Millimeter und 0,66 \textdegree für den rotierenden Anteil. Diese Ergebnisse der inversen Kinematik sind für diese Arbeit sehr gut und erfüllen die selbst gesetzten Anforderungen. Folglich ist die inverse Kinematik nicht die Ursache für die obigen Fehler.
+
+Ein weiterer Bestandteil ist der Bewegungsplaner für die linearen Trajektorien. Bei diesem werden Zwischenpose berechnet. Da diese jedoch durch Matrixmultiplikationen berechnet werden, ist die Wahrscheinlichkeit für einen Fehler so gering, dass die genutzte KDL-Api nicht zusätzlich getestet wurde.
+ 
+\subsection{Test Übergabeposition}
+Die Übergabeposition hat zwei mögliche Fehlerquellen: das Konzept der Verhandlung oder der Korrekturbewegung. Auffällig ist Testlauf 18, der als einziger in der Übergabephase abgebrochen hat. Bei diesem konnte man beobachten, dass die mobile Plattform die Korrekturbewegungen nur auf ihrer lokalen X-Achse durchführte. Dabei war die Distanz zwischen den Robotern so gering, dass die Posen der Greifer nicht zu einander passten. Dies führte zu wiederholenden Verhandlungsabbrüchen. Die anschließende Korrektur führte dabei auf die Position vor der letzten Korrektur zurück. Dieses Pendeln zwischen den beiden Position wurde schon in Kapitel \ref{sec:impl-hop} erwähnt und sollte eigentlich durch die Abweichung der Bewegung beseitigt sein. Die Abweichungen auf der lokalen X-Achse der mobilen Plattform ist jedoch zu gering. Dies führte bei Testlauf 18 zum Fehler. Ein Lösungsansatz dafür ist eine bessere Korrekturbewegung, die dynamisch die Korrekturweite bestimmt.
+
+Für die Testläufe mit Fehler 3 ist eine Ungenauigkeit der Position festzustellen. Diese ist auf Schleppfehler durch die Korrekturen zurückzuführen und von der Navigation der mobilen Plattform abhängig.
+
+\subsection{Genauigkeit Navigation}
+Die Genauigkeit der Odometrie wurde schon während der Entwicklung getestet und in Kapitel \ref{seq:lok} analysiert. Dabei wurden starke Abweichungen und Varianzen bei Bewegungen entlang der Y-Achse der mobilen Plattform festgestellt. Deshalb wurde die Kopplung an die Sensordaten entwickelt. Wie Tabelle \ref{tab:messw} zeigt sind die Abweichungen zwischen Odometrie $o$ und Laserdaten $l$ gerade bei den genannten Bewegungen sehr hoch. Wobei die $o$ entlang der Y-Achse immer kleiner und entlang der X-Achse größer als $l$ sind. Neben $l$ und $o$ wurde bei den fehlgeschlagenen Testläufen auch die Differenz zur realen Position $p$ im globalen Koordinatensystem genommen. Auffällig dabei ist Testlauf 9. Dabei ist $||p-o||<||p-l||$. Dies lässt sich mit dem Einwand aus Kapitel \ref{sec:impl-lopo} erklären, dass die Auswertung der Laserdaten die Fensterreihe und nicht die Wand detektiert hat. Ansonsten gilt $||p-o||>||p-l||$.  Aber auch die Lokalisierung mit Hilfe der Laserdaten hat Abweichungen von mehreren Zentimetern. Diese addiert mit der geringen Ungenauigkeit der Kamera führt dazu, dass Objekte komplett verfehlt werden. Auch die nötigen Korrekturen erzeugen auf Grund der schlechten Odometriedaten Schleppfehler.
+
+\subsection{Zusammenfassung der Tests}
+Durch die Ungenauigkeit der Navigation der mobilen ergeben sich Schleppfehler, die zu großen Ungenauigkeiten führen. Diese sind vor allem bei Bewegungen der lokalen Y-Achse der Plattform merkbar. Auch die eingesetzten Lasersensoren bringen bei diesem Konzept der Steuerung keinen Vorteil. Eine Alternative dazu wird in Kapitel \ref{sec:ausblick} vorgestellt. Die andere Fehlerquelle ist das Korrekturkonzept bei der Übergabe. Bei einer Überarbeitung der Navigation kann die Steigerung der Genauigkeit für ein einfacheres Korrekturkonzept genutzt werden. Dieses beruht auf einer inversen Kinematik, welche die Bewegungsfreiheit der mobilen Plattform berücksichtigt.
+
 \subsection{Robustheit}
-\subsection{Genauigkeit \& Geschwindigkeit Inverse Kinematik}
-\subsection{Genauigkeit Positionierung}

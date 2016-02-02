@@ -217,47 +217,37 @@ Neben der Greifposition ist auch die Pfadplanung zur Greifposition wichtig, da d
 
 Da diese Funktionalität ein MR-Task ist, werden Nachrichten zwischen den Agenten ausgetauscht, um den Ablauf zu koordinieren. Dieser Nachrichtenaustausch wird in den folgenden Sequenz-Diagrammen dargestellt und analysiert. Dabei werden die drei Arten der Übergabe Geben (Abbildung \ref{fig:gripper1}), Nehmen (Abbildung \ref{fig:gripper2}) und Rendezvous (Abbildung \ref{fig:gripper3}) auf die Anzahl der Nachrichten $k$, sowie deren Komplexität, untersucht. Ein weiterer Aspekt ist das zeitliche Verhalten $t$ und der Unterschied im Ablauf der drei Varianten.
 
-\begin{figure}
-	\centering
-	\includegraphics[scale=1.0]{fig/SeqGive}
+ \begin{figure}
+ 	\centering
+ 	\subfigure[Dieses Sequenzdiagramm zeigt den Ablauf des Gebens. Die Aktion wird dabei vom objekttragenden Roboter (A) initialisiert.]{%
+ 		\includegraphics[scale=0.6]{fig/SeqGive}
+ 		\label{fig:gripper1}
+	}
+ 	\hfill
+ 	\subfigure[In diesem Sequenzdiagramm wird der Ablauf des Nehmens abgebildet. Die Aktion wird dabei vom objektlosen Roboter initialisiert.]{%
+ 		\includegraphics[scale=0.6]{fig/SeqTake}
+ 		\label{fig:gripper2}
+ 	}
+ 	\hfill
+ 	\subfigure[Dieses Sequenzdiagramm zeigt die Rendezvous Variante der Übergabe. Die Aktion kann von beiden Agenten initialisiert.]{%
+ 		\includegraphics[scale=0.6]{fig/SeqRond}
+ 		\label{fig:gripper3}
+ 	}
+ 	\caption{Sequenzdiagramme für Übergabevarianten}
+ 	\label{fig:grips}
+ \end{figure}
 
-	\caption[Sequenzdiagramm Geben]{Dieses Sequenzdiagramm zeigt den Ablauf des Gebens. Die Aktion wird dabei vom objekttragenden Roboter (A) initialisiert.}
-		\label{fig:gripper1}
-\end{figure}
-
-Die in Abbildung \ref{fig:gripper1} dargestellte Variante des \textit{Gebens} wird von dem Roboter initialisiert, der das Objekt trägt (Roboter A). Nach Bestimmung der Übergabe Position und Orientierung bewegt sich zunächst Roboter A in die Pose. Dabei ist eine lineare Annäherung nicht nötig, da noch kein Kollisionspotential besteht. Anschließend wird eine einfache Bestätigung an Roboter B geschickt, der sich anschließend in Bewegung setzt. Diese besteht zunächst aus einer Positionierung nahe des Objektes. Der Greifer ist dabei schon geöffnet und dem anderen Greifer entgegengesetzt orientiert wie in Abbildung \ref{fig:grip1}. Folgend kommt die Annäherung auf der linearen Trajektorie entlang der Z-Achse an das Objekt. Sobald der Greifer in Position ist wird dieser geschlossen und eine einfache Bestätigung an den anderen Roboter gesendet. Dieser öffnet seinen Greifer und bestätigt ebenfalls. Durch diese Nachricht löst sich nun Roboter B, ebenfalls auf der Z-Achse, um das Objekt aus dem Greifer von Roboter A zu entfernen. Darauf folgt eine Freigabe an Roboter A, welcher sich nun auch von der Position entfernt, und der Übergang in die sichere Candle-Stellung.
-
-Alle Nachrichten, die in dieser Variante ausgetauscht werden, sind einfache Bestätigungen oder Freigaben, die nur vom Zeitverhalten her dynamisch sind und keine weiteren Informationen beinhalten. Benötigt werden, ohne die Positionsbestimmung, vier Nachrichten zur vollständigen Koordinierung ($k_{Geben} = 4$). Für das Zeitverhalten gilt: $t_{Geben} = move_A + move_B + near_B + close_B + open_A + near_B + max(move_A, move_B)$ unter der Bedingung, dass $move_B \gg open_B$, da der Greifer von B während der Bewegung geöffnet wird. $move$ entspricht dabei der Zeit die für eine Bewegung von einer Pose in eine Zielpose benötigt wird, $near$ ist die Zeit für die positive oder negative Annäherung, $open$ und $close$ sind die benötigten Zeiten für das Öffnen und Schließen der Greifer.
-
-\begin{figure}
-		\centering
-	\includegraphics[scale=1.0]{fig/SeqTake}
-
-\caption[Sequenzdiagramm Nehmen]{In diesem Sequenzdiagramm wird der Ablauf des Nehmens abgebildet. Die Aktion wird dabei vom objektlosen Roboter initialisiert.}
-	\label{fig:gripper2}
-\end{figure}
+Die in Abbildung \ref{fig:gripper1} dargestellte Variante des \textit{Gebens} wird von dem Roboter initialisiert, der das Objekt trägt (Roboter A). Nach Bestimmung der Übergabe Position und Orientierung bewegt sich zunächst Roboter A in die Pose. Dabei ist eine lineare Annäherung nicht nötig, da noch kein Kollisionspotential besteht. Anschließend wird eine einfache Bestätigung an Roboter B geschickt, der sich anschließend in Bewegung setzt. Diese besteht zunächst aus einer Positionierung nahe des Objektes. Der Greifer ist dabei schon geöffnet und dem anderen Greifer entgegengesetzt orientiert wie in Abbildung \ref{fig:grip1}. Folgend kommt die Annäherung auf der linearen Trajektorie entlang der Z-Achse an das Objekt. Sobald der Greifer in Position ist wird dieser geschlossen und eine einfache Bestätigung an den anderen Roboter gesendet. Dieser öffnet seinen Greifer und bestätigt ebenfalls. Durch diese Nachricht löst sich nun Roboter B, ebenfalls auf der Z-Achse, um das Objekt aus dem Greifer von Roboter A zu entfernen. Darauf folgt eine Freigabe an Roboter A, welcher sich nun auch von der Position entfernt, und der Übergang in die sichere Candle-Stellung. Alle Nachrichten, die in dieser Variante ausgetauscht werden, sind einfache Bestätigungen oder Freigaben, die nur vom Zeitverhalten her dynamisch sind und keine weiteren Informationen beinhalten. Benötigt werden, ohne die Positionsbestimmung, vier Nachrichten zur vollständigen Koordinierung ($k_{Geben} = 4$). Für das Zeitverhalten gilt: $t_{Geben} = move_A + move_B + near_B + close_B + open_A + near_B + max(move_A, move_B)$ unter der Bedingung, dass $move_B \gg open_B$, da der Greifer von B während der Bewegung geöffnet wird. $move$ entspricht dabei der Zeit die für eine Bewegung von einer Pose in eine Zielpose benötigt wird, $near$ ist die Zeit für die positive oder negative Annäherung, $open$ und $close$ sind die benötigten Zeiten für das Öffnen und Schließen der Greifer.
 
 In Abbildung \ref{fig:gripper2} ist das \textit{Nehmen} dargestellt. Im Gegensatz zum \textit{Geben} wird die Aktion vom dem Roboter initialisiert, an den das Objekt übergeben wird. Nach der Positionsbestimmung bewegt Roboter A den Greifer ohne Objekt an die Übergabeposition und öffnet diesen während der Bewegung. Anschließend fordert er das Objekt an. Darauf nähert sich Roboter B mit dem Objekt auf der linearen Trajektorie entlang der Z-Achse dem Greifer A an und führt den Gegenstand zwischen den Fingern von Greifer A ein. Nach einer Positionsbestätigung schließt Roboter A den Greifer. In diesem Zustand wird das Objekt von beiden Robotern fixiert. Nach der Schließung des Greifers schickt Roboter A eine Nachricht an Roboter B, welcher nun seinen Greifer öffnet und dies mit einer Nachricht bestätigt. Roboter A entfernt nun das Objekt aus dem Greifer von Roboter B und gibt die Position frei nachdem er den Kollisionsraum verlassen hat. Anschließend bewegen beide Roboter die Arme in die sichere Candle-Stellung.
 
 Der Nachrichtenaufwand dieser Variante beträgt $k_{Nehmen} = 5$. Wie beim \textit{Geben}, ist die Komplexität der Nachrichten eher gering, da es sich nur um zeitkritische Freigaben handelt. Für das Zeitverhalten gilt, unter den gleichen Bedingungen und Angaben wie beim \textit{Geben}: $t_{Nehmen} = move_A + move_B + near_B + close_A + open_B + near_A + max(move_A, move_B)$.
-
-
-\begin{figure}
-		\centering
-	\includegraphics[scale=1.0]{fig/SeqRond}
-
-\caption[Sequenzdiagramm Rendezvous]{Dieses Sequenzdiagramm zeigt die Rendezvous Variante der Übergabe. Die Aktion kann von beiden Agenten initialisiert.}
-\label{fig:gripper3}
-\end{figure}
-
-
 
 Die Rendezvous-Übergabe in Abbildung \ref{fig:gripper3} wird die Initialisierungsbewegung nicht explizit von einem Roboter ausgeführt, sondern von beiden gleichzeitig. Dabei bewegen sich zunächst beide Arme auf die Übergabeposition, wobei sich beide Greifer das letzte Wegstück auf der linearen Trajektorie annähern. Beide Roboter bestätigen ihre Position, sobald sie diese erreicht haben. Anschließend schließt der Roboter A, ohne Objekt, den Greifer und bestätigt.Roboter B öffnet den Greifer und übergibt so das Objekt. Wie bei den anderen Varianten bewegt sich Roboter A nach einer Nachricht nun mit Objekt auf einer linearen Bahn von Greifer B weg. Nach der anschließenden Positionsfreigabe bewegen sich beide Roboter in die sichere Candle-Stellung.
 
 Die Nachrichtenkomplexität ist bei dieser Variante etwas höher, als bei den anderen. Den Unterschied macht die erste Koordinierung, nachdem beide Arme in Position gegangen sind, da nicht definiert ist, welcher Roboter zuerst die Stellung erreicht und somit die Reihenfolge der Nachrichten nicht definiert ist. Die Komplexität des Inhaltes bleibt bei dieser Variante genauso gering, wie bei den anderen Variante, da es sich nur um Bestätigungen handelt. Die Anzahl der Nachrichten für diese Variante ist $k_{Rendezvous} = 5$. Für das Zeitverhalten gilt, unter den bekannten Bedingungen und Angaben:  $t_{Rendezvous} = max(move_A + near_A, move_B + near_B) + close_A + open_B + near_A + max(move_A, move_B)$.
 
 Ein Vergleich der Kennzahlen der Varianten zeigt, dass der Koordinierungsaufwand beim \textit{Geben} am geringsten ist. Dies liegt vor allem an der Anzahl der Nachrichten: $k_{Geben} < k_{Nehmen} = k_{Rendezvous}$. Außerdem ist die Komplexität der Nachrichten untereinander identisch, mit der Ausnahme am Anfang der \textit{Rendezvous}-Variante. Für das Zeitverhalten gilt $t_{Rendezvous} < t_{Geben} = t_{Nehmen}$. Dies liegt vor allem an der Parallelisierung der Bewegung am Anfang der Aktion.
-
 
 \paragraph{Einordnung}
 Diese Funktion ist eng-gekoppelt und benötigt einen hohen Aufwand an Koordinierung. Neben der Übergabeposition und -orientierung müssen auch die Zeitvorgaben für das Öffnen und Schließen der Greifer, sowie die Bewegungen koordiniert werden. Dies macht diese Funktionalität zur komplexesten im ganzen System. Dies liegt vor allem daran, dass diese Funktion als MR-Task eingeordnet wird, da sie von zwei Agenten zusammen ausgeführt wird. Diese Agenten sollten Multi-Task fähig sein, da einige Subtasks parallel ausgeführt werden sollen, zum Beispiel das Öffnen des Greifers, während der Arm in eine Position fährt. Ebenfalls komplex ist die Positionsbestimmung der Übergabe. Zunächst müssen dabei die beiden Arbeitsräume einen Schnittraum aufweisen. Eine notwendige Positionskorrektur kann dabei nur vom mobilen Roboter ausgeführt werden. Dies muss unter anderem in der Konfiguration berücksichtigt werden. Dadurch steigt auch der Konfigurationsaufwand für die Aufgabe, da sichergestellt werden muss, dass die Arbeitsräume der beiden Roboter sich überhaupt schneiden können. Weitere Aspekte der Konfiguration sind die Kompatibilität der Greifer zum Objekt und die Erreichbarkeit der nachfolgenden Ziele.
@@ -313,6 +303,7 @@ Nach den negativen Tests mit dem Sensor folgten Überlegungen, ob man die XTion 
 
 
 \subsubsection{Lokalisierung}
+\label{seq:lok}
 Für die Lokalisierung, $f_4$ in Kapitel \ref{sec:funl}, sind alle Sensoren potenziell möglich. Die einfachste Variante wäre die Auswertung der Odometriedaten. Dazu wird die Geschwindigkeit der Plattform mit der Laufzeit multipliziert um den zurückgelegten Weg zu berechnen. Um die Genauigkeit zu bestimmen wurden im Rahmen dieser Arbeit Versuche durchgeführt. Dazu wurden zunächst linearen Bewegungen entlang einer Achse ausgeführt und gemessen. Anschließend wurden kombinierte lineare Bewegungen entlang der X- und Y-Achse getestet. Die dabei verwendeten Geschwindigkeiten und Laufzeiten wurden variiert. Gemessen wurde anschließend die zurückgelegte Distanz bei zehn Versuchen pro Messgruppe. Für die anschließende Auswertungen wurden die arithmetischen Mittelwerte für die absolute und relative Abweichung über den Versuchsgruppen berechnet. Die anschließende Bewertung wurde für die einzelnen Versuchsgruppen im Bezug aufeinander und der Geschwindigkeit, sowie Laufzeit vorgenommen. Dabei ergab sich, dass es eine starke positive Kovarianz zwischen Geschwindigkeit und Abweichung gibt. Diese liegt vor allem an den nicht sehr genauen Motoren-Controllern und dem Anhalten, da die Plattform nicht langsam negativ beschleunigt, sondern die Geschwindigkeit direkt auf null setzt. Auch die Kovarianz zwischen Laufzeit und Abweichung ist positiv ausgeprägt, erreicht aber nicht den Wert der Geschwindigkeit. Die größten relativen Abweichungen zeigen die kombinierten Bewegungen bei hohen Geschwindigkeiten. Auch die seitlichen Bewegungen auf der Y-Achse der Plattform zeigen starke Abweichungen. Diese sind auf die omnidirektionalen Räder zurückzuführen. Auffällig sind auch die hohen relativen Abweichungen bei kurzen Laufzeiten. Nach Beobachtung der mobilen Plattform lässt sich dies mit dem Schlupf der Räder und dem glatten staubigen Untergrund erklären. So scheinen die Räder zunächst durchzudrehen. Ein weiteres Problem scheint die Ansteuerung zu sein. Das Testprogramm zur Versuchssteuerung schickt zunächst asynchron das Signal mit den Geschwindigkeiten an die Motorensteuerung. Anschließend pausiert die Steuerung für die eingestellte Laufzeit, bevor das Stopp-Signal asynchron an die Motoren geschickt wird. Dabei entsteht eine unbekannte Verzögerung durch das asynchrone Steuersignal. Zusammengefasst ist diese Methodik alleine zur Lokalisierung des Roboters ungeeignet, da die Abweichungen zu groß sind. Eine mögliche Fehlerkorrektur ist auf Grund des hohen Standardfehlers und den zufälligen Umweltfaktoren (Schlupf und Signalverzögerung) nur schwer realisierbar.
 
 Eine weitere Option zur Lokalisierung ist die visuelle Odometrie. Dabei wird der optische Fluss einer Bildsequenz genutzt um die eigene Geschwindigkeit und Positionsveränderung zu bestimmen. Dazu müssen zunächst in zeitlich aufeinanderfolgenden Bildern Features detektiert und untereinander zugewiesen werden. Durch die Veränderung der Position auf dem Bild aller Features entsteht ein Vektorfeld. Dieses wird zur Bewegungsschätzung der Kamera genutzt. Diese Methodik benötigt jedoch ein Kamerasystem mit einer geringen Verzögerungszeit. Das XTion Kamerasystem hat an dem Rechner von Dummy eine Verzögerung von einer Sekunde. An dem eingebauten Rechner in der mobilen Plattform beträgt die Verzögerung über drei Sekunden und die Bildrate unter ein Bild pro Sekunde, was für eine zuverlässige Ortung nicht reicht.
