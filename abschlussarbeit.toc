@@ -105,10 +105,11 @@
 \contentsline {subsection}{\numberline {7.1}Genauigkeit Inverse Kinematik}{78}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Test \IeC {\"U}bergabeposition}{79}{subsection.7.2}
 \contentsline {subsection}{\numberline {7.3}Genauigkeit Navigation}{79}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Zusammenfassung der Tests}{79}{subsection.7.4}
-\contentsline {subsection}{\numberline {7.5}Robustheit}{80}{subsection.7.5}
+\contentsline {subsection}{\numberline {7.4}Robustheit}{79}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.5}Zusammenfassung der Tests}{80}{subsection.7.5}
 \contentsline {section}{\numberline {8}Zusammenfassung und Ausblick}{81}{section.8}
-\contentsline {section}{\numberline {9}Danksagung}{82}{section.9}
-\contentsline {section}{\numberline {10}Literaturverzeichnis}{83}{section.10}
+\contentsline {subsection}{\numberline {8.1}Zusammenfassung}{81}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Ausblick}{82}{subsection.8.2}
+\contentsline {section}{\numberline {9}Literaturverzeichnis}{83}{section.9}
 \contentsline {section}{\numberline {A}Datenbl\IeC {\"a}tter}{89}{appendix.A}
 \contentsline {section}{\numberline {B}Testdaten Inverse Kinematik}{89}{appendix.B}
