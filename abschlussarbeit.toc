@@ -37,7 +37,8 @@
 \contentsline {subsubsection}{\numberline {4.3.1}Asus XTion Pro}{29}{subsubsection.4.3.1}
 \contentsline {subsubsection}{\numberline {4.3.2}Hokuyo URG-04LX-UG01}{29}{subsubsection.4.3.2}
 \contentsline {subsubsection}{\numberline {4.3.3}Argos 3D - P100}{30}{subsubsection.4.3.3}
-\contentsline {subsubsection}{\numberline {4.3.4}Netzwerk- und Sensoranbindung}{31}{subsubsection.4.3.4}
+\contentsline {subsection}{\numberline {4.4}Koordinatensysteme}{31}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Netzwerk- und Sensoranbindung}{32}{subsection.4.5}
 \contentsline {section}{\numberline {5}Entwicklung}{33}{section.5}
 \contentsline {subsection}{\numberline {5.1}Nicht-Funktionale Anforderungen}{33}{subsection.5.1}
 \contentsline {subsubsection}{\numberline {5.1.1}Sicherheit - Safety}{33}{subsubsection.5.1.1}
@@ -77,8 +78,8 @@
 \contentsline {subsubsection}{\numberline {5.5.1}YouBot Kinematiken}{55}{subsubsection.5.5.1}
 \contentsline {subsubsection}{\numberline {5.5.2}Vereinfachte inverse Kinematik}{57}{subsubsection.5.5.2}
 \contentsline {subsubsection}{\numberline {5.5.3}Weiterentwicklung: Inverse Kinematik}{60}{subsubsection.5.5.3}
-\contentsline {subsubsection}{\numberline {5.5.4}Optimierte Pfadplanung}{64}{subsubsection.5.5.4}
-\contentsline {subsubsection}{\numberline {5.5.5}Nachtrag Literatur}{65}{subsubsection.5.5.5}
+\contentsline {subsubsection}{\numberline {5.5.4}Optimierte Pfadplanung}{63}{subsubsection.5.5.4}
+\contentsline {subsubsection}{\numberline {5.5.5}Nachtrag Literatur}{64}{subsubsection.5.5.5}
 \contentsline {section}{\numberline {6}Implementierung}{66}{section.6}
 \contentsline {subsection}{\numberline {6.1}Robotersteuerung - RATSYoubot \& RATSDummy \& RATSRose}{66}{subsection.6.1}
 \contentsline {subsubsection}{\numberline {6.1.1}Ansteuerung der Aktoren}{66}{subsubsection.6.1.1}
@@ -99,7 +100,7 @@
 \contentsline {subsection}{\numberline {6.4}Koordinierung}{72}{subsection.6.4}
 \contentsline {subsubsection}{\numberline {6.4.1}Koordinierung beim RATSMember}{72}{subsubsection.6.4.1}
 \contentsline {subsubsection}{\numberline {6.4.2}Koordinierung beim RATSCore}{73}{subsubsection.6.4.2}
-\contentsline {subsection}{\numberline {6.5}Bewegung \& Lokalisierung der mobilen Plattform}{73}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.5}Navigation der mobilen Plattform}{73}{subsection.6.5}
 \contentsline {subsection}{\numberline {6.6}Handoverpoint}{74}{subsection.6.6}
 \contentsline {section}{\numberline {7}Test und Bewertung}{76}{section.7}
 \contentsline {subsection}{\numberline {7.1}Genauigkeit Inverse Kinematik}{78}{subsection.7.1}

@@ -151,7 +151,10 @@ Ein weiterer Tiefensensor ist die Argos 3D – P100 von Bluetechnix. Diese arbei
 	\label{fig:aufbau-argos3d}
 \end{figure}
 
-\subsubsection{Netzwerk- und Sensoranbindung}
+\subsection{Koordinatensysteme}
+Im Verlauf dieser Arbeit werden häufig rechtshändige kartesische Koordinatensysteme genutzt. Unterschieden wird vor allem zwischen dem globalen und den lokalen Koordinatensystemen. Das globale Koordinatensystem bezieht sich auf den Teststand. Der Ursprung liegt dabei in Ecke der Wände auf dem Boden. Die positive Z-Achse zeigt dabei nach oben und die positive X-Achse führt von der Fensterwand weg. Dadurch liegt die positive Y-Achse entlang der Fensterwand. Die lokalen Koordinatensysteme sind immer von ihrem Kontext abhängig. So besitzen zum Beispiel die YouBot Arme, die Greifer und die mobile Plattform eigene Koordinatensysteme. Diese sind meistens voneinander abhängig. Bei den YouBot Arme zeigt die positive Z-Achse von der Grundfläche zu dem ersten Gelenk. Die positive X-Achse zeigt vom Ursprung zur \textit{A1}-Markierung, welche gegenüber den Anschlüssen liegt. Der Ursprung liegt im Mittelpunkt der Grundfläche des Arms. Bei der mobilen Plattform liegt der Ursprung in der Mitte der Sensorplatte. Die positive Z-Achse zeigt nach oben und die positive X-Achse nach vorne zur KUKA Aufschrift. Alle lokalen Koordinatensysteme haben einen Bezug zum globalen Koordinatensystem. Dieser besteht aus einer Translation und einer Rotation.
+
+\subsection{Netzwerk- und Sensoranbindung}
 
 \begin{figure}[H]
 	\centering
@@ -163,3 +166,4 @@ Ein weiterer Tiefensensor ist die Argos 3D – P100 von Bluetechnix. Diese arbei
 Abbildung \ref{fig:aufbau-netw} stellt den genutzten Verbindungsplan dar. Die zentrale Komponente ist der Router, welcher mit einem externen Access-Point (AP) eine WLAN-Verbindung ermöglicht. Mit diesem WLAN verbinden sich die beiden Steuerungsrechner \textit{Rose} und \textit{Dummy}, welche beide unter diesen Hostnames im Netz erreichbar sind. Die Verbindungen auf beiden Seiten sind gleich gehalten. Die Verbindung zwischen Rechner und Roboter sind mit der EtherCAT-Schnittstelle (Ethernet for Control Automation Technology) realisiert. Diese Ethernet-Variante wurde für Echtzeit-Anforderungen entwickelt, indem Wert auf kurze Zykluszeiten ($\leq$ 100 $\mu$s) und  niedrigem Jitter für exakte Synchronisierung ($\leq$ 1 $\mu$s) gelegt wurde.\cite{ethercat} Die Verbindung zwischen den Rechnern und den Sensoren ist mit USB-Verbindungen umgesetzt. Dabei werden alle USB-Anschlüsse auf der mobilen Plattform von Rose vollständig durch die Sensoren, sowie dem WLAN-USB-Dongle und dem Tastatur/Maus-Dongle belegt. Weitere USB-Geräte sind nur durch einen zusätzlichen HUB möglich. 
 
 Eine Alternative zu diesem Plan ist ein vermaschtes Netz, wie bei PEIS gefordet. Dadurch könnte der Router wegfallen, da alle Endgeräte direkt miteinander verbunden sind. Des Weiteren könnten einige Sensoren auf eigene Rechner ausgegliedert werden. Dies würde die einzelnen Rechner, besonders den leistungsschwachen Rechner von Rose, entlasten, aber auch die Netzwerkkomplexität und die Kosten steigern.
+
