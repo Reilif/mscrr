@@ -7,7 +7,7 @@ Dieses Unterkapitel befasst sich mit dem Begriff der Kinematik und den dazu geh�
 
 \subsubsection{Mechanismus}
 
-Ein Mechanismus ist der Grundbegriff von beweglichen Körper. Dabei wird zwischen \textit{Gliedern} (engl. Link, $L$ = Set of Links) und \textit{Gelenken} (engl. Joint, $J$ = Set of Joints) unterschieden. Glieder sind die starren Körper eines Mechanismus und sind durch Gelenke miteinander verbunden. Ein Glied ist nicht auf ein Gelenk beschränkt, sondern kann mehrere haben ($N_{joint} \in \mathds{N}_0$). Auch die Verbindung zwischen zwei Gliedern kann durch mehrere  Gelenke realisiert sein. Ein Gelenk wiederum ist auf genau zwei Glieder beschränkt  ($N_{link} = 0$) und ermöglicht so eine eingeschränkte relative Bewegung zueinander. Gelenke werden nicht als eigenständige physikalische Körper gesehen. Gelenkhälften, zum Beispiel die Schenkel eines Kippscharniers, werden als Bestandteil des damit verbundenen Glied betrachtet.
+Ein Mechanismus ist der Grundbegriff von beweglichen Körper. Dabei wird zwischen \textit{Gliedern} (engl. Link, $L$ = Set of Links) und \textit{Gelenken} (engl. Joint, $J$ = Set of Joints) unterschieden. Glieder sind die starren Körper eines Mechanismus und sind durch Gelenke miteinander verbunden. Ein Glied ist nicht auf ein Gelenk beschränkt, sondern kann mehrere haben ($N_{joint} \in \mathds{N}_0$). Auch die Verbindung zwischen zwei Gliedern kann durch mehrere  Gelenke realisiert sein. Ein Gelenk wiederum ist auf genau zwei Glieder beschränkt  ($N_{link} = 2$) und ermöglicht so eine eingeschränkte relative Bewegung zueinander. Gelenke werden nicht als eigenständige physikalische Körper gesehen. Gelenkhälften, zum Beispiel die Schenkel eines Kippscharniers, werden als Bestandteil des damit verbundenen Gliedes betrachtet. Die folgenden Definitionen sind als Denavit–Hartenberg Parameter bekannt \citep{Corke2011}.
 
 Glieder können mit zwei Parametern definiert werden, der Länge $a$ und der Verdrehung $\alpha$:
 
@@ -23,7 +23,7 @@ a_i =  \text{Länge von } l_i
 \alpha_i =  \text{Verdrehung von } l_i 
 \end{equation}
 
-Gelenke werden ebenfalls mit 2 Parametern definiert. Der Gelenk-Offset beschreibt den Abstand zwischen den zwei Gliedern eines Gelenks auf der Gelenkachse. Der Gelenkwinkel beschreibt die Rotation zwischen den beiden verbundenen Glieder im Bezug zur Gelenkachse. \cite{Corke2011}
+Gelenke werden ebenfalls mit zwei Parametern definiert. Der Gelenk-Offset beschreibt den Abstand zwischen den zwei Gliedern eines Gelenks auf der Gelenkachse. Der Gelenkwinkel beschreibt die Rotation zwischen den beiden verbundenen Glieder im Bezug zur Gelenkachse\citep{Corke2011}.  Zur Veranschaulichung dieser Nomenklatur ist die Abbildung \ref{fig:ik-dh} vorhanden. Dabei sind die Parameter in rot dargestellt. Außerdem werden die einzelnen Koordinatensysteme der Gelenke gezeigt.
 
 \begin{displaymath}
 j_i \in J \\
@@ -37,14 +37,19 @@ d_i =  \text{Gelenk-Offset von } j_i
 \theta_i =  \text{Gelenkwinkel von } j_i 
 \end{equation}
 
-Im Anschluss werden nur noch die englischen Begriffe Link und Joint benutzt.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{fig/dh}   
+	\caption[Darstellung Denavit–Hartenberg Parameter]{Darstellung Denavit–Hartenberg Parameter. Bildquelle \cite{wiki}}
+	\label{fig:ik-dh}
+\end{figure}
 
 \subsubsection{Kinematik}
 \label{sec:basics-ik-k}
 
-Die \textit{Kinematik} eines Mechanismus beschreibt die Bewegungsmöglichkeiten der Links relativ zueinander. Es wird dabei abstrahiert, ob ein Joint motorisch angetrieben oder passiv bewegt wird. Die Kinematik betrachtet bei der Bewegung auftretende \textit{Geschwindigkeiten} und \textit{Beschleunigungen}. Auftretende Kräfte werden nicht in der Kinematik, sondern in der \textit{Dynamik} untersucht. Zentrale Aspekte dabei sind die Trägheits- und Schwerkraft.
+Die \textit{Kinematik} eines Mechanismus beschreibt die Bewegungsmöglichkeiten der Glieder relativ zueinander. Es wird dabei abstrahiert, ob ein Gelenk motorisch angetrieben oder passiv bewegt wird. Die Kinematik betrachtet bei der Bewegung auftretende \textit{Geschwindigkeiten} und \textit{Beschleunigungen}. Auftretende Kräfte werden nicht in der Kinematik, sondern in der \textit{Dynamik} untersucht. Zentrale Aspekte dabei sind die Trägheits- und Schwerkraft.
 
-Die \textit{Kinematische Kette} beschreibt den Aufbau eines speziellen Mechanismus. Dabei ist die Anzahl der Joints pro Link auf maximal 2 beschränkt ($N_{joint} <= 2$). Besitzt jeder Link genau zwei Joints gilt die Kette als geschlossen, ansonsten als offen.
+Die \textit{Kinematische Kette} beschreibt den Aufbau eines speziellen Mechanismus. Dabei ist die Anzahl der Gelenke pro Glied auf maximal 2 beschränkt ($N_{joint} <= 2$). Besitzt jedes Glied genau zwei Gelenke gilt die Kette als geschlossen, ansonsten als offen.
 
 \begin{equation}
 	 \text{Kinematische Kette} = 
@@ -54,9 +59,9 @@ Die \textit{Kinematische Kette} beschreibt den Aufbau eines speziellen Mechanism
 	\end{cases}
 \end{equation}
 
-Für diese Arbeit ist nur die offene Kette interessant, da die Manipulatoren der meisten Roboter an beiden Enden (Base und End-Effektor) frei sind. Dadurch ergibt sich für $N_{link} = N_{joint} + 1$. Typischerweise wird der erste Joint mit dem Index 1 versehen und der erste Link mit dem Index 0. Link 0 ist die \textit{Base} des Manipulators und Link N beinhaltet den\textit{ End-Effektor}. Durch die Bezeichnung ergibt sich, dass Joint j die Links j-1 und j mit einander verbindet und den Link j bewegt. \cite{Corke2011}
+Für diese Arbeit ist nur die offene Kette interessant, da die Manipulatoren der meisten Roboter an beiden Enden (Base und End-Effektor) frei sind. Dadurch ergibt sich für $N_{link} = N_{joint} + 1$. Typischerweise wird das erste Gelenk mit dem Index 1 versehen und das erste Glied mit dem Index 0. Glied 0 ist die \textit{Base} des Manipulators und Glied N beinhaltet den\textit{ End-Effektor}. Aus der Bezeichnung ergibt sich, dass Gelenk j die Glieder j-1 und j mit einander verbindet und das Glied j bewegt \citep{Corke2011}. 
 
-Die Transformation eines Link-Koordinatensystems {j-1} zu Link {j} wird doch elementare Rotation und Translation beschrieben:
+Die Transformation eines Glied-Koordinatensystems {j-1} zu Glied {j} wird durch elementare Rotation und Translation beschrieben (siehe auch Abbildung \ref{fig:ik-dh}):
 
 \begin{equation}
 ^{j-1}A_{j}(\theta_j,d_j,a_j,\alpha_j) = T_{Rz}(\theta_j)T_{z}(d_j)T_{x}(a_j)T_{Rx}(\alpha_j)
@@ -64,7 +69,7 @@ Die Transformation eines Link-Koordinatensystems {j-1} zu Link {j} wird doch ele
 \end{equation}
 
 
-Durch die Vereinigung der einzelnen Matrizen ergibt sich:
+Durch die Vereinigung der einzelnen Matrizen ergibt sich \cite{Corke2011}:
 \begin{equation}
 ^{j-1}A_{j}(\theta_j,d_j,a_j,\alpha_j) = 
 \begin{pmatrix}
@@ -77,14 +82,14 @@ sin \theta_j & cos \theta_j cos \alpha_j & -cos \theta_j sin \alpha_j  & a_j sin
 
 \subsubsection{Forward Kinematics}
 
-Die Vorwärts-Kinematik (engl. Forward Kinematic) beschreibt die "vorwärts" Rechnung der Kinematik. Aus den gegebenen Joint-Informationen wird die Pose des End-Effectors berechnet. Hier reichen die Daten für den Gelenkwinkel $\theta_j$ bei Drehgelenken und über den Winkel-Offset $d_j$ bei Schiebe-/ Schubgelenken, da die restlichen Werte für den Mechanismus als konstant angesehen werden können. Die Forward Kinematic wird häufig als Funktion $K$ angegeben \cite{Corke2011}
+Die Vorwärts-Kinematik (engl. Forward Kinematic) beschreibt die "vorwärts"  Rechnung der Kinematik. Aus den gegebenen Gelenk-Informationen wird die Pose des End-Effectors $\xi_E$ berechnet. Hier reichen die Daten für den Gelenkwinkel $\theta_j$ bei Drehgelenken und für den Winkel-Offset $d_j$ bei Schiebe-/ Schubgelenken, da die restlichen Werte für den Mechanismus als konstant angesehen werden können. Die Forward Kinematic wird häufig als Funktion $K$ angegeben \citep{Corke2011}.
 
 \begin{equation}
 \xi_E = K(\textbf{q})
 \label{f1}
 \end{equation}
 
-$q$ entspricht dabei der aktuellen Joint-Konfiguration und $\xi_E$ der Pose des End-Effectors. Durch die Kombination der Transformation aus Gleichung \ref{f:basics-ik-k} ergibt sich für einen Manipulator mit N-Joints\cite{Corke2011}
+$q$ entspricht dabei der aktuellen Gelenk-Konfiguration und $\xi_E$ der Pose des End-Effectors. Durch die Kombination der Transformation aus Gleichung \ref{f:basics-ik-k} ergibt sich für einen Manipulator mit N-Gelenken  \cite{Corke2011}. Dies wird benötigt, um die aktuelle Pose des End-Effektors für den Roboter zu berechnen. In dem Anwendungsszenario für diese Arbeit wird dies unter anderem für Positionsüberprüfungen und Kollisionskontrollen, aber auch für die Übergabe benötigt.
 
 \begin{equation}
 \xi_E \sim \: ^0T_E =\: ^0A_1\:^1A_2 \:\dots\:^{N-1}A_N
@@ -92,7 +97,7 @@ $q$ entspricht dabei der aktuellen Joint-Konfiguration und $\xi_E$ der Pose des 
 
 \subsubsection{Inverse Kinematik}
 
-Die Inverse Kinematik berechnet die Inverse der Forward-Kinematic. Sie bestimmt die möglichen Joint-Konfigurationen $\textbf{q}$ für eine Zielpose. Im Gegensatz zur Forward-Kinematic ist die Inverse Kinematik nicht eindeutig. Eine einfache Veranschaulichung kann man am menschlichen Körper sehen. Fixiert man das Handgelenk an einer Position kann man den Ellbogen in verschiedene Positionen bewegen ohne die Position der Schulter zu ändern. Für die Inverse Kinematik ergibt sich folgende Funktion\cite{Corke2011}
+Die Inverse Kinematik berechnet die Inverse der Forward-Kinematic. Sie bestimmt die möglichen Gelenk-Konfigurationen $\textbf{q}$ für eine Zielpose. Im Gegensatz zur Forward-Kinematic ist die Inverse Kinematik nicht eindeutig. Eine einfache Veranschaulichung kann man am menschlichen Körper sehen. Fixiert man das Handgelenk an einer Position kann man den Ellenbogen in verschiedene Positionen bewegen, ohne die Position der Schulter zu ändern. Für die Inverse Kinematik ergibt sich folgende Funktion für eine beliebige Pose $\xi$ \citep{Corke2011}:
 
 
 \begin{equation}
@@ -111,12 +116,12 @@ Aber \textbf{nicht}
 \textbf{q} = K^{-1}(K(\textbf{q}))
 \end{displaymath}
 
-Um eine Inverse Kinematik zu lösen gibt es drei Methoden: geometrisch (analytisch), numerisch und heuristisch.\cite{danielasteidl2011}
+Um eine Inverse Kinematik zu lösen gibt es drei Methoden: geometrisch (analytisch), numerisch und heuristisch \citep{danielasteidl2011}.
 
-Die geometrische Lösung nutzt die einfache geometrische Abstraktion des Mechanismus und versucht diesen mit trigonometrischen Funktionen abzubilden. Damit auch hier mehrere Lösungen bestimmt werden können, werden verschiedene Konfigurationen für bestimmte Abstraktionsmodelle geschaffen und alle Konfigurationen berechnet. Am Beispiel des Menschen wären mögliche Konfigurationen: Ellbogen oben oder Ellbogen unten. Bei der Verwendung der trigonometrischen Funktionen muss beachtet werden, dass die Umkehrfunktionen in bestimmten Bereichen nicht eindeutig, ungenau oder gar nicht definiert sind. Empfohlen wird dafür die Verwendung von atan2, der in den meisten Programmiersprachen vorhanden ist. Diese Methodik funktioniert nur für einfache Mechanismen bei denen möglichst alle Joints die selben Achsen haben.
+Die geometrische Lösung nutzt die einfache geometrische Abstraktion des Mechanismus und versucht diesen mit trigonometrischen Funktionen abzubilden. Damit auch hier mehrere Lösungen bestimmt werden können, werden verschiedene Konfigurationen für bestimmte Abstraktionsmodelle geschaffen und alle Konfigurationen berechnet. Am Beispiel des Menschen wären mögliche Konfigurationen: \"Ellenbogen oben\" oder \"Ellenbogen unten\". Bei der Verwendung der trigonometrischen Funktionen muss beachtet werden, dass die Umkehrfunktionen in bestimmten Bereichen nicht eindeutig, ungenau oder gar nicht definiert sind. Empfohlen wird dafür die Verwendung von atan2, der in den meisten Programmiersprachen vorhanden ist. Diese Methodik funktioniert nur für einfache Mechanismen bei denen möglichst alle Gelenke die selben Achsen haben.
 
-Die numerische Lösung versucht durch Iterationen eine Näherung an die gewünschte End-Pose zu erreichen. Das ganze fällt in die Thematik der Optimierung. Für die numerische Lösung gibt es unterschiedliche Algorithmen. Dazu gehören Jacobian Transpose, Pseudo Inverse und Damped Least Square. Die numerischen Lösungen sind im Vergleich zur analytischen langsamer und ungenauer, jedoch lassen sich mit ihr größere und komplexere Manipulatoren berechnen.\cite{danielasteidl2011}
+Die numerische Lösung versucht durch Iterationen eine Näherung an die gewünschte End-Pose zu erreichen. Das ganze fällt in die Thematik der Optimierung. Für die numerische Lösung gibt es unterschiedliche Algorithmen. Dazu gehören Jacobian-Transpose, Pseudo-Inverse und Damped-Least-Square. Die numerischen Lösungen sind im Vergleich zur analytischen langsamer und ungenauer, jedoch lassen sich mit ihr größere und komplexere Manipulatoren berechnen \citep{danielasteidl2011}.
 
-Die heuristischen Lösungen nutzen abstrakte Bezüge und Vorhersagen für Veränderungen der End-Pose im Bezug zur Joint-Konfiguration um mögliche Konfigurationen zu bestimmen. Eine anschließende Güteberechnung (zum Beispiel euklidische Distanz) gibt an, ob eine Konfiguration verworfen oder angenommen wird. Wie für die numerische Lösung gibt es auch bei der heuristischen Lösung mehrere Algorithmen. Diese sind unter anderem Cyclic Coordinate Descent und Lagrange-Multiplier.\cite{danielasteidl2011}
+Die heuristischen Lösungen nutzen abstrakte Bezüge und Vorhersagen für Veränderungen der Ziel-Pose im Bezug zur Gelenk-Konfiguration um mögliche Konfigurationen zu bestimmen. Eine anschließende Güteberechnung (zum Beispiel euklidische Distanz) gibt an, ob eine Konfiguration verworfen oder angenommen wird. Wie für die numerische Lösung gibt es auch bei der heuristischen Lösung mehrere Algorithmen. Diese sind unter anderem Cyclic Coordinate Descent und Lagrange-Multiplier \citep{danielasteidl2011}.
 
 %Weitere Informationen zu den verschiedenen Algorithmen und ein Vergleich zwischen finden sich im Anhang

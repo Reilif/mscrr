@@ -6,48 +6,55 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Roboterkatze zur Therapie Quelle: \citep {wagner2009tele}}}}{2}{figure.1}
 \contentsline {figure}{\numberline {2}{\ignorespaces Beispiel Szenario 1}}{3}{figure.2}
 \contentsline {figure}{\numberline {3}{\ignorespaces Erweiterung Szenario 1}}{3}{figure.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Master Service}}{7}{figure.4}
+\contentsline {figure}{\numberline {4}{\ignorespaces Master-Service}}{7}{figure.4}
 \contentsline {figure}{\numberline {5}{\ignorespaces Netzwerk Entlastung durch Peer-to-Peer Verbindungen}}{8}{figure.5}
 \contentsline {figure}{\numberline {6}{\ignorespaces Topic Beispiel}}{8}{figure.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Aufbau Teststand: Draufsicht}}{23}{figure.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Aufbau Teststand: Seitenansicht}}{24}{figure.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces YouBot Arm Kinematik}}{25}{figure.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Arbeitsraum YouBot. Bilderquelle:\cite {monikaflorekjasinska2015}}}{26}{figure.10}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {YouBot Arm Arbeitsraum. Reichweite der einzelnen Gelenk und einzelne Abmessung der Links und Link-Offsets. Einheitslose Angaben sind in mm.}}}{26}{figure.10}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Draufsicht YouBot Arm Arbeitsraum.}}}{26}{figure.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces YouBot Base}}{27}{figure.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Mobile YouBot Plattform mit Sensorplatte. Bilderquelle:\cite {kuka2015}}}{28}{figure.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Asus Xtion Pro Live}}{29}{figure.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Hokuyo URG-04LX-UG01}}{30}{figure.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Argos 3D - P100}}{31}{figure.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Schematische Darstellung der Verbindungen}}{32}{figure.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Use-Case Robotersystem}}{35}{figure.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Greifer bei der \IeC {\"U}bergabe}}{43}{figure.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Seitenansicht mobile Plattform mit Sensorplatte}}}{43}{figure.18}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Draufsicht mobile Plattform mit Sensorplatte}}}{43}{figure.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Produktbild. Bildquelle: \cite {nowak2015}}}}{43}{figure.18}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Schema: Reichweite und Sichtfeld. Sichtfeld in Messpunktsektoren (MP) unterteilt. Ver\IeC {\"a}ndert nach: \cite {maeda2009}}}}{43}{figure.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Entgegengesetzter Griff: Die Ausrichtung der Greifer (grau) ist zueinander invertiert. Die Achsen liegen alle parallel, sind jedoch in gegensetzige ausgerichtet. Die Symetrie des Objekts (rosa) und die parallelen Finger der Greifer erm\IeC {\"o}glichen eine lineare Transjektion entlang der Z-Achsen (gr\IeC {\"u}n) ohne Kollisionen mit dem anderen Greifer oder dem Objekt.}}}{43}{figure.18}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Translation($T_\tau $) an der X-Achse (blau) des Objektes (rose) zur Kollisionsvermeidung der Finger (grau). Die minimale L\IeC {\"a}nge der Translation betr\IeC {\"a}gt die H\IeC {\"a}lfter der aufsummierten Breite der Finger.}}}{43}{figure.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Sequenzdiagramme f\IeC {\"u}r \IeC {\"U}bergabevarianten}}{44}{figure.19}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Dieses Sequenzdiagramm zeigt den Ablauf des Gebens. Die Aktion wird dabei vom objekttragenden Roboter (A) initialisiert.}}}{44}{figure.19}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {In diesem Sequenzdiagramm wird der Ablauf des Nehmens abgebildet. Die Aktion wird dabei vom objektlosen Roboter initialisiert.}}}{44}{figure.19}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Dieses Sequenzdiagramm zeigt die Rendezvous Variante der \IeC {\"U}bergabe. Die Aktion kann von beiden Agenten initialisiert.}}}{44}{figure.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces Raum\IeC {\"u}berwachung Aufnahme}}{47}{figure.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Argos3D Punktwolke}}{48}{figure.21}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Topansicht der Punktwolke, die Farben repr\IeC {\"a}sentieren die Intensit\IeC {\"a}t der zur\IeC {\"u}ckgeworfenen IR-Strahlen. In der Mitte sind die Umrisse des Objektes erkennbar. Am Rand sind einige abweichende Punkte zu sehen.}}}{48}{figure.21}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Seitenansicht der Punktwolke. Sichtbar sind in der Mitte das Objekt und die kubische Grundform der Punktwolke, die eigentlich der planaren Ebene entsprechen sollte.}}}{48}{figure.21}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Seitenansicht der Punktwolke mit zus\IeC {\"a}tzlicher Stromversorgung am Sensor. Sichtbar ist wieder das Objekt in der Mitte. Die Kr\IeC {\"u}mmung der Oberfl\IeC {\"a}che ist schw\IeC {\"a}cher als bei Abbildung \ref {fig:argoside}}}}{48}{figure.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces XTion als Naherkennung}}{49}{figure.22}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Die XTion Kamera(rot) am Greifer montiert. Das Sichtfeld liegt vor der mobilen Plattform. Durch eine Drehung des Armes kann das Sichtfeld um den Roboter erweitert werden.}}}{49}{figure.22}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {TODO}}}{49}{figure.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces Klassen\IeC {\"u}bersicht RATS}}{51}{figure.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces RATS globaler Speicher}}{52}{figure.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces JSON Action Message}}{54}{figure.25}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Mechanismus des Arms im globalen Koordinatensystem.}}}{59}{subfigure.26.3}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Neues Koordinatensystem mit Ursprung in $j_2$}}}{59}{subfigure.26.3}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Kennzeichnung der zu ermittelnden Winkel. Die Position $\{x_{eff}, y_{eff}\}$ von $j_4$ wird durch die Offsets von $l_1$,$l_4$ und $l_5$ berechnet.}}}{59}{subfigure.26.3}
-\contentsline {figure}{\numberline {26}{\ignorespaces Graph zur Pfadplanung}}{65}{figure.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Trajektorien des Greifers}}{68}{figure.27}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{68}{figure.27}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{68}{figure.27}
+\contentsline {figure}{\numberline {7}{\ignorespaces Darstellung Denavit\IeC {\textendash }Hartenberg Parameter}}{11}{figure.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Kompetenzen PEIS}}{19}{figure.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Aufbau Teststand: Draufsicht}}{24}{figure.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Aufbau Teststand: Seitenansicht}}{25}{figure.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Fotografien der YouBots im Teststand}}{25}{figure.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces YouBot Arm Kinematik}}{26}{figure.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Arbeitsraum YouBot. Bilderquelle:\cite {monikaflorekjasinska2015}}}{27}{figure.13}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Dummy in der Fold-Pose mit lokalem Koordinatensystem. Blau: X-Achse, Gr\IeC {\"u}n: Y-Achse, Rot: Z-Achse.}}}{27}{figure.13}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Dummy und Rose in der Candle-Pose. Dummy ist auf dem Tisch montiert.}}}{27}{figure.13}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {YouBot Arm Arbeitsraum. Reichweite der einzelnen Gelenk und einzelne Abmessung der Links und Link-Offsets. Einheitslose Angaben sind in mm.}}}{27}{figure.13}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Draufsicht YouBot Arm Arbeitsraum.}}}{27}{figure.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces YouBot Base}}{28}{figure.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Mobile YouBot Plattform mit Sensorplatte. Bilderquelle: \cite {kuka2015}}}{29}{figure.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Asus Xtion Pro Live}}{30}{figure.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Hokuyo URG-04LX-UG01}}{31}{figure.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Argos 3D - P100}}{31}{figure.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Schematische Darstellung der Verbindungen}}{32}{figure.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Use-Case Robotersystem}}{36}{figure.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Greifer bei der \IeC {\"U}bergabe}}{44}{figure.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Seitenansicht mobile Plattform mit Sensorplatte}}}{44}{figure.21}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Draufsicht mobile Plattform mit Sensorplatte}}}{44}{figure.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Produktbild. Bildquelle: \cite {nowak2015}}}}{44}{figure.21}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Schema: Reichweite und Sichtfeld. Sichtfeld in Messpunktsektoren (MP) unterteilt. Ver\IeC {\"a}ndert nach: \cite {maeda2009}}}}{44}{figure.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Entgegengesetzter Griff: Die Ausrichtung der Greifer (grau) ist zueinander invertiert. Die Achsen liegen alle parallel, sind jedoch in gegensetzige ausgerichtet. Die Symetrie des Objekts (rosa) und die parallelen Finger der Greifer erm\IeC {\"o}glichen eine lineare Transjektion entlang der Z-Achsen (gr\IeC {\"u}n) ohne Kollisionen mit dem anderen Greifer oder dem Objekt.}}}{44}{figure.21}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Translation($T_\tau $) an der X-Achse (blau) des Objektes (rose) zur Kollisionsvermeidung der Finger (grau). Die minimale L\IeC {\"a}nge der Translation betr\IeC {\"a}gt die H\IeC {\"a}lfter der aufsummierten Breite der Finger.}}}{44}{figure.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Sequenzdiagramme f\IeC {\"u}r \IeC {\"U}bergabevarianten}}{45}{figure.22}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Dieses Sequenzdiagramm zeigt den Ablauf des Gebens. Die Aktion wird dabei vom objekttragenden Roboter (A) initialisiert.}}}{45}{figure.22}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {In diesem Sequenzdiagramm wird der Ablauf des Nehmens abgebildet. Die Aktion wird dabei vom objektlosen Roboter initialisiert.}}}{45}{figure.22}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Dieses Sequenzdiagramm zeigt die Rendezvous Variante der \IeC {\"U}bergabe. Die Aktion kann von beiden Agenten initialisiert.}}}{45}{figure.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Raum\IeC {\"u}berwachung Aufnahme}}{48}{figure.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Argos3D Punktwolke}}{49}{figure.24}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Testaufbau}}}{49}{figure.24}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Topansicht der Punktwolke, die Farben repr\IeC {\"a}sentieren die Intensit\IeC {\"a}t der zur\IeC {\"u}ckgeworfenen IR-Strahlen. In der Mitte sind die Umrisse des Objektes erkennbar. Am Rand sind einige abweichende Punkte zu sehen.}}}{49}{figure.24}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Seitenansicht der Punktwolke. Sichtbar sind in der Mitte das Objekt und die kubische Grundform der Punktwolke, die eigentlich der planaren Ebene entsprechen sollte.}}}{49}{figure.24}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seitenansicht der Punktwolke mit zus\IeC {\"a}tzlicher Stromversorgung am Sensor. Sichtbar ist wieder das Objekt in der Mitte. Die Kr\IeC {\"u}mmung der Oberfl\IeC {\"a}che ist schw\IeC {\"a}cher als bei Abbildung \ref {fig:argoside}}}}{49}{figure.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces XTion als Naherkennung}}{50}{figure.25}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Die XTion Kamera(rot) am Greifer montiert. Das Sichtfeld liegt vor der mobilen Plattform. Durch eine Drehung des Armes kann das Sichtfeld um den Roboter erweitert werden.}}}{50}{figure.25}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Fotographie von Rose bei der Naherkennung. Der schwarz abgeklebte Teil der Plattform ist gut erkennbar.}}}{50}{figure.25}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Sichtfeld der Kamera. Umfasst neben dem Boden auch den vorderen Teil der Plattform. Basierend auf der N\IeC {\"a}he zum Arm fehlen unten in der Mitte einige Bildpunkte.}}}{50}{figure.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Klassen\IeC {\"u}bersicht RATS}}{52}{figure.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces RATS globaler Speicher}}{53}{figure.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces JSON Action Message}}{55}{figure.28}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Mechanismus des Arms im globalen Koordinatensystem.}}}{60}{subfigure.29.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Neues Koordinatensystem mit Ursprung in $j_2$}}}{60}{subfigure.29.3}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Kennzeichnung der zu ermittelnden Winkel. Die Position $\{x_{eff}, y_{eff}\}$ von $j_4$ wird durch die Offsets von $l_1$,$l_4$ und $l_5$ berechnet.}}}{60}{subfigure.29.3}
+\contentsline {figure}{\numberline {29}{\ignorespaces Graph zur Pfadplanung}}{66}{figure.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Trajektorien des Greifers}}{69}{figure.30}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{69}{figure.30}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{69}{figure.30}

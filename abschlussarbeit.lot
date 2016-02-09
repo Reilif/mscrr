@@ -2,6 +2,6 @@
 \select@language {english}
 \select@language {ngerman}
 \contentsline {table}{\numberline {1}{\ignorespaces Nomenklatur}}{5}{table.1}
-\contentsline {table}{\numberline {2}{\ignorespaces YouBot Arm Joints}}{25}{table.2}
-\contentsline {table}{\numberline {3}{\ignorespaces Gemittelte Messwerte der MoveIt!-Planer-Algorithmen}}{56}{table.3}
-\contentsline {table}{\numberline {4}{Messwerte der Testphase}}{78}{table.4}
+\contentsline {table}{\numberline {2}{\ignorespaces YouBot Arm Gelenke}}{27}{table.2}
+\contentsline {table}{\numberline {3}{\ignorespaces Gemittelte Messwerte der MoveIt!-Planer-Algorithmen}}{57}{table.3}
+\contentsline {table}{\numberline {4}{Messwerte der Testphase}}{79}{table.4}

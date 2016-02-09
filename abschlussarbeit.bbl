@@ -7,6 +7,13 @@ Adjie-Winoto, W., E.~Schwartz, H.~Balakrishnan, and J.~Lilley (1999).
 \newblock In {\em ACM SIGOPS Operating Systems Review}, Volume~33, pp.\
   186--201. ACM.
 
+\bibitem[\protect\citeauthoryear{Amend~Jr, Brown, Rodenberg, Jaeger, and
+  Lipson}{Amend~Jr et~al.}{2012}]{amend2012positive}
+Amend~Jr, J.~R., E.~Brown, N.~Rodenberg, H.~M. Jaeger, and H.~Lipson (2012).
+\newblock A positive pressure universal gripper based on the jamming of
+  granular material.
+\newblock {\em Robotics, IEEE Transactions on\/}~{\em 28\/}(2), 341--350.
+
 \bibitem[\protect\citeauthoryear{Arkin}{Arkin}{1987}]{arkin1987motor}
 Arkin, R.~C. (1987).
 \newblock Motor schema based navigation for a mobile robot: An approach to
@@ -60,14 +67,6 @@ Bicchi, A. (1994).
 Bicchi, A. and V.~Kumar (2000).
 \newblock Robotic grasping and contact: A review.
 \newblock In {\em ICRA}, pp.\  348--353. Citeseer.
-
-\bibitem[\protect\citeauthoryear{Bicchi, Salisbury, and Brock}{Bicchi
-  et~al.}{1993}]{bicchi1993experimental}
-Bicchi, A., J.~Salisbury, and D.~Brock (1993).
-\newblock Experimental evaluation of friction data with an articulated hand and
-  intrinsic contact sensors.
-\newblock {\em Experimental robotics: III (eds Chatila R., Hirzinger G.),
-  Berlin/Heidelberg, Germany: Springer\/}.
 
 \bibitem[\protect\citeauthoryear{Bluetechnix}{Bluetechnix}{2015}]{bluetechnix2015}
 Bluetechnix (2015, dec).
@@ -316,12 +315,6 @@ Mirza, K. and D.~Orin (1990).
   and Lygeros}{M{\"u}ggler et~al.}{2013}]{muggler2013torque}
 M{\"u}ggler, E., M.~F{\"a}ssler, D.~Scaramuzza, S.~Huck, and J.~Lygeros (2013).
 \newblock Torque control of a kuka youbot arm.
-
-\bibitem[\protect\citeauthoryear{Nguyen}{Nguyen}{1988}]{nguyen1988constructing}
-Nguyen, V.-D. (1988).
-\newblock Constructing force-closure grasps.
-\newblock {\em The International Journal of Robotics Research\/}~{\em 7\/}(3),
-  3--16.
 
 \bibitem[\protect\citeauthoryear{Nowak}{Nowak}{2015}]{nowak2015}
 Nowak (2015, dec).
