@@ -4,24 +4,34 @@ Database file #1: babib.bib
 Warning--entry type for "panasonic2005" isn't style-file defined
 --line 32 of file babib.bib
 Warning--entry type for "danielasteidl2011" isn't style-file defined
---line 102 of file babib.bib
+--line 101 of file babib.bib
 Warning--entry type for "monikaflorekjasinska2015" isn't style-file defined
 --line 116 of file babib.bib
+I was expecting a `,' or a `}'---line 120 of file babib.bib
+ :  
+ :  lastvisited = {2015-12-10},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--entry type for "kuka2015" isn't style-file defined
---line 123 of file babib.bib
+--line 122 of file babib.bib
 Warning--entry type for "asus2015" isn't style-file defined
---line 130 of file babib.bib
+--line 128 of file babib.bib
 Warning--entry type for "nowak2015" isn't style-file defined
---line 144 of file babib.bib
+--line 141 of file babib.bib
 Warning--entry type for "bluetechnix2015" isn't style-file defined
---line 151 of file babib.bib
-Repeated entry---line 627 of file babib.bib
+--line 147 of file babib.bib
+Repeated entry---line 623 of file babib.bib
  : @article{saxena2008robotic
  :                           ,
 I'm skipping whatever remains of this entry
+Warning--entry type for "wiki" isn't style-file defined
+--line 709 of file babib.bib
+Warning--entry type for "roswiki" isn't style-file defined
+--line 716 of file babib.bib
 Warning--can't use both volume and number fields in adjie1999design
 Warning--no number and no volume in asada1979studies
 Warning--page numbers missing in asada1979studies
+Warning--empty year in asus2015
 Warning--empty year in basiliapproach
 Warning--no journal in basiliapproach
 Warning--no number and no volume in basiliapproach
@@ -29,7 +39,9 @@ Warning--page numbers missing in basiliapproach
 Warning--no journal in boella2002norms
 Warning--no number and no volume in boella2002norms
 Warning--page numbers missing in boella2002norms
+Warning--empty year in monikaflorekjasinska2015
 Warning--can't use both volume and number fields in heidemann2001building
+Warning--empty year in kuka2015
 Warning--no journal in lundh2006plan
 Warning--no number and no volume in lundh2006plan
 Warning--page numbers missing in lundh2006plan
@@ -40,6 +52,7 @@ Warning--page numbers missing in mason1985robot
 Warning--no journal in muggler2013torque
 Warning--no number and no volume in muggler2013torque
 Warning--page numbers missing in muggler2013torque
+Warning--empty year in nowak2015
 Warning--can't use both volume and number fields in quigley2009ros
 Warning--no journal in townsend1988effect
 Warning--no number and no volume in townsend1988effect
@@ -48,4 +61,4 @@ Warning--no number and no volume in vail2003multi
 Warning--no journal in brunozandonella2013
 Warning--no number and no volume in brunozandonella2013
 Warning--page numbers missing in brunozandonella2013
-(There was 1 error message)
+(There were 2 error messages)

@@ -2,7 +2,7 @@
 \BOOKMARK [1][-]{section.2}{Grundlagen}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Nomenklatur}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{ROS: Robotic Operating System}{section.2}% 4
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Package und Nodes}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Packages und Nodes}{subsection.2.2}% 5
 \BOOKMARK [3][-]{subsubsection.2.2.2}{Master und Parameter-Server}{subsection.2.2}% 6
 \BOOKMARK [3][-]{subsubsection.2.2.3}{Topics und Messages}{subsection.2.2}% 7
 \BOOKMARK [3][-]{subsubsection.2.2.4}{Services}{subsection.2.2}% 8
@@ -60,7 +60,7 @@
 \BOOKMARK [3][-]{subsubsection.5.4.3}{RATSMember}{subsection.5.4}% 60
 \BOOKMARK [3][-]{subsubsection.5.4.4}{RATSCore}{subsection.5.4}% 61
 \BOOKMARK [2][-]{subsection.5.5}{Inverse Kinematik}{section.5}% 62
-\BOOKMARK [3][-]{subsubsection.5.5.1}{YouBot Kinematiken}{subsection.5.5}% 63
+\BOOKMARK [3][-]{subsubsection.5.5.1}{YouBot-Kinematiken}{subsection.5.5}% 63
 \BOOKMARK [3][-]{subsubsection.5.5.2}{Vereinfachte inverse Kinematik}{subsection.5.5}% 64
 \BOOKMARK [3][-]{subsubsection.5.5.3}{Weiterentwicklung: Inverse Kinematik}{subsection.5.5}% 65
 \BOOKMARK [3][-]{subsubsection.5.5.4}{Optimierte Pfadplanung}{subsection.5.5}% 66

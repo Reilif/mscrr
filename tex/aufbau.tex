@@ -25,7 +25,7 @@ Der Aufbau vom Teststand ist in den beiden Abbildungen \ref{fig:basic-aufbau-tes
   \end{figure}
 
 \subsection{YouBot}
-In dieser Arbeit werden zwei Roboter genutzt. Bei beiden handelt es sich um YouBots der Firma Kuka. Diese wurden 2010 erstmals auf der Automatica in München vorgestellt. Kuka ist ein deutscher Hersteller von Industrierobotern mit Sitz in Augsburg. Kuka hat aber auch Erfahrung im Bau von experimentellen Robotern wie etwas die Arme für Justin, einem Service-Roboter.
+In dieser Arbeit werden zwei Roboter genutzt. Bei beiden handelt es sich um YouBots der Firma Kuka. Diese wurden 2010 erstmals auf der Automatica in München vorgestellt. Kuka ist ein deutscher Hersteller von Industrierobotern mit Sitz in Augsburg. Kuka hat aber auch Erfahrung im Bau von experimentellen Robotern wie zum Beispiel die Arme für Justin, einen Service-Roboter.
 
 Die beiden YouBots unterscheiden sich im Aufbau. YouBot 1 besteht aus einem Manipulator mit Greifer und ist auf dem Tisch fixiert (siehe Abbildung \ref{fig:imgdummy}). YouBot 2 besteht aus Manipulator mit Greifer und mobiler Plattform mit omnidirektionalen Rollen (siehe Abbildung \ref{fig:imgboth}). Zur besseren Unterscheidung und zur Lesbarkeit dieser Arbeit haben beide Roboter je einen Namen bekommen. YouBot 1 entspricht dabei \textbf{Dummy}, YouBot 2 ist \textbf{Rose}. Im Weiteren Verlauf der Arbeit werden nur noch diese Namen genutzt, um eine Verwechslung zu vermeiden.
 
@@ -46,7 +46,7 @@ Die beiden YouBots unterscheiden sich im Aufbau. YouBot 1 besteht aus einem Mani
 \subsubsection{Manipulator}
  Die Roboterarme von Dummy und Rose sind eine offene kinematische Kette mit fünf Gelenken, die von der Basis aufsteigend nummeriert sind. An Gelenk 5 sind die Greifer montiert. Diese bestehen aus zwei individuellen Fingern, die linear auf einer Achse bewegt werden können.
 
-Gelenk 1 und Gelenk 5 sind zwei Drehgelenke um die Z-Achse. Diese liegen bei ausgestreckter Haltung (Candle-Pose) parallel. Gelenk 2, 3 und 4 sind Kippgelenke um die X-Achse, die immer parallel liegen. Durch diese Konstellation ergeben sich für den kompletten Arm fünf Freiheitsgrade (5-DOF). Durch die Einschränkung der Achsen auf die X- und Z-Achsen der einzelnen Gelenke ist ein seitlicher Griff bei $x_{base} = 0$ oder $y_{base} = 0$ nicht möglich. Die Höhe des Roboters in der Candle-Pose beträgt inklusiv Greifer 655 mm. Die einzelnen Abstände lassen sich der Grafik \ref{fig:basic-aufbau-youbot-kinematik} entnehmen.
+Gelenk 1 und Gelenk 5 sind zwei Drehgelenke um die Z-Achse. Diese liegen bei ausgestreckter Haltung (Candle-Pose) parallel. Gelenk 2, 3 und 4 sind Kippgelenke um die X-Achse, die immer parallel liegen. Durch diese Konstellation ergeben sich für den kompletten Arm fünf Freiheitsgrade (5-DOF). Durch die Einschränkung der Achsen auf die X- und Z-Achsen der einzelnen Gelenke ist ein seitlicher Griff bei $x_{base} = 0$ oder $y_{base} = 0$ nicht möglich. Die Höhe des Roboters in der Candle-Pose beträgt inklusiv Greifer 655 mm. Die einzelnen Abstände lassen sich der Abbildung \ref{fig:basic-aufbau-youbot-kinematik} entnehmen.
 
 \begin{figure}[H]
 	\centering
@@ -70,11 +70,11 @@ Gelenk 1 und Gelenk 5 sind zwei Drehgelenke um die Z-Achse. Diese liegen bei aus
    		\hline Gelenk 5 & $\pm$2.91 & $\frac{\pi}{2}$ \\ 
    		\hline 
    	\end{tabular}
-   	\caption[YouBot Arm Gelenke]{YouBot Arm Gelenke. Quelle: \cite{monikaflorekjasinska2015}}
+   	\caption[YouBot Arm Gelenke]{YouBot Arm Gelenke. Bildquelle: \cite{monikaflorekjasinska2015}}
    	\label{tab:basic-aufbau-youbot-joints}
    \end{table}
    
-   Der Arbeitsraum des YouBot Arms beschränkt sich durch die Gelenke. Die Grafiken \ref{fig:basic-aufbau-youbot-workspace} und \ref{fig:basic-aufbau-youbot-workspace-top} stellen den Arbeitsbereich eingeschränkt dar. Die Darstellung \ref{fig:basic-aufbau-youbot-workspace} zeigt mit Hilfe von Konturen die einzelnen Bahnen unter Beschränkung der Gelenke, sowie der End-Effektor Ausrichtung.  Die äußere Kontur gibt die maximale Reichweite für den End-Effektor an. Die Z-Achse steht dabei orthogonal zur Tangente an der Konturposition. Abbildung \ref{fig:basic-aufbau-youbot-workspace-top} gibt eine Draufsicht auf den Arbeitsraum. Durch die Beschränkung von Gelenk 1 befindet sich ein toter Winkel im "Rücken" des Arms. Dieser kann durch einen Überschlag des ganzen Arms, insbesondere Gelenk 2 und 3, und einer 180 \textdegree Drehung von Gelenk 1 dennoch erreicht werden. Dies wird durch den linken Bereich in Abbildung \ref{fig:basic-aufbau-youbot-workspace} klar.
+   Der Arbeitsraum des YouBot Arms beschränkt sich durch die Gelenke. Die Abbildungen \ref{fig:basic-aufbau-youbot-workspace} und \ref{fig:basic-aufbau-youbot-workspace-top} stellen den Arbeitsbereich eingeschränkt dar. Die Abbildung \ref{fig:basic-aufbau-youbot-workspace} zeigt mit Hilfe von Konturen die einzelnen Bahnen unter Beschränkung der Gelenke, sowie der End-Effektor Ausrichtung.  Die äußere Kontur gibt die maximale Reichweite für den End-Effektor an. Die Z-Achse steht dabei orthogonal zur Tangente an der Konturposition. Abbildung \ref{fig:basic-aufbau-youbot-workspace-top} gibt eine Draufsicht auf den Arbeitsraum. Durch die Beschränkung von Gelenk 1 befindet sich ein toter Winkel im "Rücken" des Arms. Dieser kann durch einen Überschlag des ganzen Arms, insbesondere Gelenk 2 und 3, und einer 180 \textdegree { } Drehung von Gelenk 1 dennoch erreicht werden. Dies wird durch den linken Bereich in Abbildung \ref{fig:basic-aufbau-youbot-workspace} klar.
    
    \begin{figure}
    	\centering
@@ -85,7 +85,7 @@ Gelenk 1 und Gelenk 5 sind zwei Drehgelenke um die Z-Achse. Diese liegen bei aus
    	\subfigure[Draufsicht YouBot Arm Arbeitsraum.]{%
    		\includegraphics[scale=0.55]{fig/kukaarm_3}
    		\label{fig:basic-aufbau-youbot-workspace-top}}
-   	\caption{Arbeitsraum YouBot. Bilderquelle:\cite{monikaflorekjasinska2015}}
+   	\caption[Arbeitsraum YouBot]{Arbeitsraum YouBot. Bilderquelle: \cite{monikaflorekjasinska2015}}
    	\label{fig:basic-aufbau-youbot-workspace-full}
    \end{figure}
 
@@ -94,7 +94,7 @@ Rose besitzt neben dem Arm noch eine mobile Plattform. Diese ist 590 mm lang, 38
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.8]{fig/kukabase}   
+	\includegraphics[scale=0.5]{fig/kukabase}   
 	\caption[YouBot Base]{YouBot Base. A = 74.87 mm, B = 100 mm, C = 471 mm, D = 300.46 mm E = 28 mm. Die Bodenfreiheit der Plattform beträgt 20 mm. Bildquelle: \cite{monikaflorekjasinska2015}}
 	\label{fig:basic-aufbau-youbot-base}
 \end{figure}
@@ -104,12 +104,12 @@ Die Plattform von Rose ist modifiziert und besitzt eine Aufsatzplatte. Diese die
  \begin{figure}[H]
  	\centering
  	\subfigure[Seitenansicht mobile Plattform mit Sensorplatte]{%
- 		\includegraphics[scale=0.55]{fig/base2}
+ 		\includegraphics[width=0.45\textwidth]{fig/base2}
  		\label{fig:basic-aufbau-youbot-base_side}}
  	\subfigure[Draufsicht mobile Plattform mit Sensorplatte]{%
- 		\includegraphics[scale=0.55]{fig/base3}
+ 		\includegraphics[width=0.45\textwidth]{fig/base3}
  		\label{fig:basic-aufbau-youbot-base-top}}
- 	\caption{Mobile YouBot Plattform mit Sensorplatte. Bilderquelle: \cite{kuka2015}}
+ 	\caption[Mobile YouBot Plattform mit Sensorplatte]{Mobile YouBot Plattform mit Sensorplatte. Bilderquelle: \cite{kuka2015}}
  	\label{fig:basic-aufbau-youbot-base-full}
  \end{figure}
 
@@ -124,7 +124,7 @@ Für die Erkennung von Objekten und der Positionierung im Raum sind mehrere Sens
 \subsubsection{Asus XTion Pro}
 Die XTion Pro ist ein Tiefenkamerasystem von Asus. Es besteht aus einer RGB-Kamera, einer Tiefen-Kamera und zwei Mikrophonen. Die Kamera wurde von Prime Sense entwickelt und ist eine umgelabelte Microsoft Kinect. Die XTion ist kleiner und leichter als die Kinect und damit besser für die Robotik geeignet. Angeschlossen wird die XTion mit einem USB Kabel und betrieben mit dem ROS Paket OpenNI2. Der Node published eine PointCloud mit RGB Daten, sowie eine PointCloud für die Tiefenkamera, als auch Bilder der RGB Kamera.
 
-Das Sichtfeld der Kamera beträgt horizontal 58\textdegree, 45\textdegree vertikal und 70\textdegree diagonal. Die Auflösung der Tiefenkamera beträgt bei 30 Frames pro Sekunde 640x480 und bei 60 FPS 320x240. Die Auflösung des RGB-Bildes 1280x1024. Die nutzbare Distanz der Tiefenkamera beträgt zwischen 800 mm und 3500 mm.\cite{asus2015} Diese Distanz schränkt die Nutzbarkeit der Kamera ein, so ist sie nicht für eine visuelle Unterstützung der Greifer geeignet, wenn sie an diesen montiert ist, da die Distanz zwischen Kamera und Greifer kleiner 800 mm ist.
+Das Sichtfeld der Kamera beträgt horizontal 58°, 45° vertikal und 70° diagonal. Die Auflösung der Tiefenkamera beträgt bei 30 Frames pro Sekunde 640x480 und bei 60 FPS 320x240. Die Auflösung des RGB-Bildes 1280x1024. Die nutzbare Distanz der Tiefenkamera beträgt zwischen 800 mm und 3500 mm \citep{asus2015}. Diese Distanz schränkt die Nutzbarkeit der Kamera ein, so ist sie nicht für eine visuelle Unterstützung der Greifer geeignet, wenn sie an diesen montiert ist, da die Distanz zwischen Kamera und Greifer kleiner 800 mm ist.
 
 \begin{figure}[H]
 	\centering
@@ -136,7 +136,7 @@ Das Sichtfeld der Kamera beträgt horizontal 58\textdegree, 45\textdegree vertik
 \subsubsection{Hokuyo URG-04LX-UG01}
 Der URG-04LX-UG01 ist ein optischer Abstandsmesser. Dieser kann Entfernungen in einer zirkulären Ebene messen. Entwickelt wurde er von der Firma Hokuyo, welche neben dem URG noch weitere, ähnliche Sensoren anbietet, die andere Reichweiten und Sichtfelder abdecken. Die Sensoren nutzen zur Messung der Entfernung eine Infrarot-Diode mit einer Wellenlänge von 785 nm. Die Distanz wird mit Hilfe der Phasenverschiebung berechnet. Diese Technik reduziert den Einfluss durch das Oberflächenmaterial des gemessenen Objektes. Versorgt wird der Sensor mit 5V DC, welche über den USB-Anschluss angelegt werden. Da die Startleistung des Sensors die maximale Abgabeleistung eines einzigen USB-Anschluss überschreitet, müssen ein Y-USB-Kabel und zwei USB-Anschlüsse genutzt werden. Angesteuert wird der Sensor mit dem ROS-Paket Hokuyo-Node, welche eine PointCloud published.
 
-Der URG-Sensor hat eine Reichweite von maximal 4000 mm und benötigt für eine Messung 100 ms, was einer Messrate von 10 FPS entspricht. Das Sichtfeld beträgt 240\textdegree. Die minimale Graduelle Auflösung beträgt 0.36\textdegree. Dadurch ergeben sich die ungefähren Disparitäten von 20 mm bei 2000 mm und maximal 40 mm bei 4000 mm Radius. Die Ungenauigkeit beträgt maximal 3 Prozent des gemessenen Wertes, was bei der maximalen Reichweite von 4000 mm einer Abweichung von 120 mm entspricht.\cite{maeda2009}
+Der URG-Sensor hat eine Reichweite von maximal 4000 mm und benötigt für eine Messung 100 ms, was einer Messrate von 10 FPS entspricht. Das Sichtfeld beträgt 240\textdegree. Die minimale Graduelle Auflösung beträgt 0.36\textdegree. Dadurch ergeben sich die ungefähren Disparitäten von 20 mm bei 2000 mm und maximal 40 mm bei 4000 mm Radius. Die Ungenauigkeit beträgt maximal 3 Prozent des gemessenen Wertes, was bei der maximalen Reichweite von 4000 mm einer Abweichung von 120 mm entspricht \citep{maeda2009}.
 
  \begin{figure}[H]
  	\centering
@@ -151,7 +151,7 @@ Der URG-Sensor hat eine Reichweite von maximal 4000 mm und benötigt für eine M
  \end{figure}
 
 \subsubsection{Argos 3D - P100}
-Ein weiterer Tiefensensor ist die Argos 3D – P100 von Bluetechnix. Diese arbeitet mit dem Time of Flight (ToF) Prinzip. Der Sensor wird mit einem USB-Kabel angesteuert, benötigt aber noch eine weitere Stromzufuhr. Der Sensor kann aus ROS mit einem eigenen Node angesprochen werden. Der Sensor hat eine Reichweite zwischen 100 mm und 3000mm. Die Framerate beträgt bis zu 160 FPS bei ein Auflösung von 160 x120. Das Sichtfeld beträgt 90 \textdegree.\citep{bluetechnix2015}
+Ein weiterer Tiefensensor ist die Argos 3D – P100 von Bluetechnix. Diese arbeitet mit dem Time of Flight (ToF) Prinzip. Der Sensor wird mit einem USB-Kabel angesteuert, benötigt aber noch eine weitere Stromzufuhr. Der Sensor kann aus ROS mit einem eigenen Node angesprochen werden. Der Sensor hat eine Reichweite zwischen 100 mm und 3000mm. Die Framerate beträgt bis zu 160 FPS bei ein Auflösung von 160 x120. Das Sichtfeld beträgt 90 \textdegree { }\citep{bluetechnix2015}.
 
 \begin{figure}[H]
 	\centering
@@ -165,7 +165,7 @@ Im Verlauf dieser Arbeit werden häufig rechtshändige kartesische Koordinatensy
 
 \subsection{Netzwerk- und Sensoranbindung}
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[scale=0.5]{fig/netw}   
 	\caption[Schematische Darstellung der Verbindungen]{Schematische Darstellung der Verbindungen}

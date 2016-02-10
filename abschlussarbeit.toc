@@ -5,7 +5,7 @@
 \contentsline {section}{\numberline {2}Grundlagen}{5}{section.2}
 \contentsline {subsection}{\numberline {2.1}Nomenklatur}{5}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}ROS: Robotic Operating System}{6}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Package und Nodes}{6}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.1}Packages und Nodes}{6}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}Master und Parameter-Server}{7}{subsubsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.3}Topics und Messages}{8}{subsubsection.2.2.3}
 \contentsline {subsubsection}{\numberline {2.2.4}Services}{9}{subsubsection.2.2.4}
@@ -23,7 +23,7 @@
 \contentsline {subsection}{\numberline {3.2}Physically Embedded Intelligent Systems - PEIS}{18}{subsection.3.2}
 \contentsline {subsubsection}{\numberline {3.2.1}Konzept}{19}{subsubsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2}Implementation}{20}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Zusammenfassung}{20}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.3}Zusammenfassung}{21}{subsubsection.3.2.3}
 \contentsline {subsection}{\numberline {3.3}Grasping und Handover - Arbeiten zu Roboterarmen}{21}{subsection.3.3}
 \contentsline {subsubsection}{\numberline {3.3.1}Grasping - Greifen mit einem Roboterarm}{21}{subsubsection.3.3.1}
 \contentsline {subsubsection}{\numberline {3.3.2}Handover - \IeC {\"U}bergabe zwischen zwei Systemen}{22}{subsubsection.3.3.2}
@@ -34,83 +34,83 @@
 \contentsline {subsubsection}{\numberline {4.2.2}Mobile Plattform}{27}{subsubsection.4.2.2}
 \contentsline {subsubsection}{\numberline {4.2.3}Rechner}{29}{subsubsection.4.2.3}
 \contentsline {subsection}{\numberline {4.3}Sensoren}{29}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Asus XTion Pro}{30}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.1}Asus XTion Pro}{29}{subsubsection.4.3.1}
 \contentsline {subsubsection}{\numberline {4.3.2}Hokuyo URG-04LX-UG01}{30}{subsubsection.4.3.2}
-\contentsline {subsubsection}{\numberline {4.3.3}Argos 3D - P100}{31}{subsubsection.4.3.3}
-\contentsline {subsection}{\numberline {4.4}Koordinatensysteme}{32}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Netzwerk- und Sensoranbindung}{32}{subsection.4.5}
-\contentsline {section}{\numberline {5}Entwicklung}{34}{section.5}
-\contentsline {subsection}{\numberline {5.1}Nicht-Funktionale Anforderungen}{34}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Sicherheit - Safety}{34}{subsubsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.2}Zuverl\IeC {\"a}ssigkeit}{35}{subsubsection.5.1.2}
-\contentsline {subsubsection}{\numberline {5.1.3}Korrektheit}{35}{subsubsection.5.1.3}
-\contentsline {subsubsection}{\numberline {5.1.4}Leistung}{35}{subsubsection.5.1.4}
-\contentsline {subsubsection}{\numberline {5.1.5}\IeC {\"A}nderbarkeit}{36}{subsubsection.5.1.5}
-\contentsline {subsection}{\numberline {5.2}Funktionalit\IeC {\"a}ten}{36}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}Funktion Aufheben}{38}{subsubsection.5.2.1}
-\contentsline {paragraph}{Beschreibung}{38}{section*.4}
-\contentsline {paragraph}{Einordnung}{38}{section*.5}
-\contentsline {subsubsection}{\numberline {5.2.2}Funktion Ablegen}{39}{subsubsection.5.2.2}
-\contentsline {paragraph}{Beschreibung}{39}{section*.6}
-\contentsline {paragraph}{Einordnung}{39}{section*.7}
-\contentsline {subsubsection}{\numberline {5.2.3}Funktion Objekt identifizieren und lokalisieren}{40}{subsubsection.5.2.3}
-\contentsline {paragraph}{Beschreibung}{40}{section*.8}
-\contentsline {paragraph}{Einordnung}{40}{section*.9}
-\contentsline {subsubsection}{\numberline {5.2.4}Funktion Nahfeld Erkennung}{41}{subsubsection.5.2.4}
-\contentsline {paragraph}{Beschreibung}{41}{section*.10}
-\contentsline {paragraph}{Einordnung}{41}{section*.11}
-\contentsline {subsubsection}{\numberline {5.2.5}Funktion Agentenlokalisierung}{42}{subsubsection.5.2.5}
-\contentsline {paragraph}{Beschreibung}{42}{section*.12}
-\contentsline {paragraph}{Einordnung}{42}{section*.13}
-\contentsline {subsubsection}{\numberline {5.2.6}Funktion \IeC {\"U}bergabe}{43}{subsubsection.5.2.6}
-\contentsline {paragraph}{Beschreibung}{43}{section*.14}
-\contentsline {paragraph}{Einordnung}{47}{section*.15}
-\contentsline {subsection}{\numberline {5.3}Agenten}{47}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}Raum\IeC {\"u}berwachung}{47}{subsubsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.2}Nahfelderkennung}{48}{subsubsection.5.3.2}
-\contentsline {subsubsection}{\numberline {5.3.3}Lokalisierung}{50}{subsubsection.5.3.3}
-\contentsline {subsection}{\numberline {5.4}Architektur RATS}{51}{subsection.5.4}
-\contentsline {subsubsection}{\numberline {5.4.1}Konzept}{51}{subsubsection.5.4.1}
-\contentsline {subsubsection}{\numberline {5.4.2}RATSAction und RATSTask}{53}{subsubsection.5.4.2}
-\contentsline {subsubsection}{\numberline {5.4.3}RATSMember}{54}{subsubsection.5.4.3}
-\contentsline {subsubsection}{\numberline {5.4.4}RATSCore}{55}{subsubsection.5.4.4}
-\contentsline {subsection}{\numberline {5.5}Inverse Kinematik}{56}{subsection.5.5}
-\contentsline {subsubsection}{\numberline {5.5.1}YouBot Kinematiken}{56}{subsubsection.5.5.1}
-\contentsline {subsubsection}{\numberline {5.5.2}Vereinfachte inverse Kinematik}{58}{subsubsection.5.5.2}
-\contentsline {subsubsection}{\numberline {5.5.3}Weiterentwicklung: Inverse Kinematik}{61}{subsubsection.5.5.3}
-\contentsline {subsubsection}{\numberline {5.5.4}Optimierte Pfadplanung}{65}{subsubsection.5.5.4}
-\contentsline {subsubsection}{\numberline {5.5.5}Nachtrag Literatur}{66}{subsubsection.5.5.5}
-\contentsline {section}{\numberline {6}Implementierung}{67}{section.6}
-\contentsline {subsection}{\numberline {6.1}Robotersteuerung - RATSYoubot \& RATSDummy \& RATSRose}{67}{subsection.6.1}
-\contentsline {subsubsection}{\numberline {6.1.1}Ansteuerung der Aktoren}{67}{subsubsection.6.1.1}
-\contentsline {subsubsection}{\numberline {6.1.2}Lineare Bahnbewegung}{68}{subsubsection.6.1.2}
-\contentsline {subsubsection}{\numberline {6.1.3}Aktionen der Roboter}{68}{subsubsection.6.1.3}
+\contentsline {subsubsection}{\numberline {4.3.3}Argos 3D - P100}{30}{subsubsection.4.3.3}
+\contentsline {subsection}{\numberline {4.4}Koordinatensysteme}{31}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Netzwerk- und Sensoranbindung}{31}{subsection.4.5}
+\contentsline {section}{\numberline {5}Entwicklung}{33}{section.5}
+\contentsline {subsection}{\numberline {5.1}Nicht-Funktionale Anforderungen}{33}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Sicherheit - Safety}{33}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Zuverl\IeC {\"a}ssigkeit}{34}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}Korrektheit}{34}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.4}Leistung}{34}{subsubsection.5.1.4}
+\contentsline {subsubsection}{\numberline {5.1.5}\IeC {\"A}nderbarkeit}{35}{subsubsection.5.1.5}
+\contentsline {subsection}{\numberline {5.2}Funktionalit\IeC {\"a}ten}{35}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Funktion Aufheben}{37}{subsubsection.5.2.1}
+\contentsline {paragraph}{Beschreibung}{37}{section*.4}
+\contentsline {paragraph}{Einordnung}{37}{section*.5}
+\contentsline {subsubsection}{\numberline {5.2.2}Funktion Ablegen}{38}{subsubsection.5.2.2}
+\contentsline {paragraph}{Beschreibung}{38}{section*.6}
+\contentsline {paragraph}{Einordnung}{38}{section*.7}
+\contentsline {subsubsection}{\numberline {5.2.3}Funktion Objekt identifizieren und lokalisieren}{39}{subsubsection.5.2.3}
+\contentsline {paragraph}{Beschreibung}{39}{section*.8}
+\contentsline {paragraph}{Einordnung}{39}{section*.9}
+\contentsline {subsubsection}{\numberline {5.2.4}Funktion Nahfeld Erkennung}{40}{subsubsection.5.2.4}
+\contentsline {paragraph}{Beschreibung}{40}{section*.10}
+\contentsline {paragraph}{Einordnung}{40}{section*.11}
+\contentsline {subsubsection}{\numberline {5.2.5}Funktion Agentenlokalisierung}{41}{subsubsection.5.2.5}
+\contentsline {paragraph}{Beschreibung}{41}{section*.12}
+\contentsline {paragraph}{Einordnung}{41}{section*.13}
+\contentsline {subsubsection}{\numberline {5.2.6}Funktion \IeC {\"U}bergabe}{42}{subsubsection.5.2.6}
+\contentsline {paragraph}{Beschreibung}{42}{section*.14}
+\contentsline {paragraph}{Einordnung}{46}{section*.15}
+\contentsline {subsection}{\numberline {5.3}Agenten}{46}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Raum\IeC {\"u}berwachung}{46}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.2}Nahfelderkennung}{47}{subsubsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.3}Lokalisierung}{49}{subsubsection.5.3.3}
+\contentsline {subsection}{\numberline {5.4}Architektur RATS}{50}{subsection.5.4}
+\contentsline {subsubsection}{\numberline {5.4.1}Konzept}{50}{subsubsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.2}RATSAction und RATSTask}{52}{subsubsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.3}RATSMember}{53}{subsubsection.5.4.3}
+\contentsline {subsubsection}{\numberline {5.4.4}RATSCore}{54}{subsubsection.5.4.4}
+\contentsline {subsection}{\numberline {5.5}Inverse Kinematik}{55}{subsection.5.5}
+\contentsline {subsubsection}{\numberline {5.5.1}YouBot-Kinematiken}{55}{subsubsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.2}Vereinfachte inverse Kinematik}{57}{subsubsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.3}Weiterentwicklung: Inverse Kinematik}{60}{subsubsection.5.5.3}
+\contentsline {subsubsection}{\numberline {5.5.4}Optimierte Pfadplanung}{63}{subsubsection.5.5.4}
+\contentsline {subsubsection}{\numberline {5.5.5}Nachtrag Literatur}{65}{subsubsection.5.5.5}
+\contentsline {section}{\numberline {6}Implementierung}{66}{section.6}
+\contentsline {subsection}{\numberline {6.1}Robotersteuerung - RATSYoubot \& RATSDummy \& RATSRose}{66}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Ansteuerung der Aktoren}{66}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}Lineare Bahnbewegung}{67}{subsubsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.3}Aktionen der Roboter}{67}{subsubsection.6.1.3}
 \contentsline {paragraph}{Greifer \IeC {\"o}ffnen und schlie\IeC {\ss }en}{68}{section*.16}
-\contentsline {paragraph}{Greifer in Pose bringen}{69}{section*.17}
-\contentsline {paragraph}{Greifer an eine Pose ann\IeC {\"a}hern}{69}{section*.18}
-\contentsline {paragraph}{Objekt aufheben}{69}{section*.19}
-\contentsline {paragraph}{Objekt ablegen}{70}{section*.20}
-\contentsline {paragraph}{Position einnehmen}{70}{section*.21}
-\contentsline {paragraph}{\IeC {\"U}bergabe}{70}{section*.22}
-\contentsline {subsection}{\numberline {6.2}Raum\IeC {\"u}berwachung - RATSHawk}{70}{subsection.6.2}
+\contentsline {paragraph}{Greifer in Pose bringen}{68}{section*.17}
+\contentsline {paragraph}{Greifer an eine Pose ann\IeC {\"a}hern}{68}{section*.18}
+\contentsline {paragraph}{Objekt aufheben}{68}{section*.19}
+\contentsline {paragraph}{Objekt ablegen}{69}{section*.20}
+\contentsline {paragraph}{Position einnehmen}{69}{section*.21}
+\contentsline {paragraph}{\IeC {\"U}bergabe}{69}{section*.22}
+\contentsline {subsection}{\numberline {6.2}Raum\IeC {\"u}berwachung - RATSHawk}{69}{subsection.6.2}
 \contentsline {subsubsection}{\numberline {6.2.1}PCL \& ROS}{70}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}Detektion}{71}{subsubsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.3}Lokalisierung}{72}{subsubsection.6.2.3}
-\contentsline {subsection}{\numberline {6.3}Nahfelderkennung - RATSEye}{72}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Koordinierung}{73}{subsection.6.4}
+\contentsline {subsubsection}{\numberline {6.2.2}Detektion}{70}{subsubsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.3}Lokalisierung}{71}{subsubsection.6.2.3}
+\contentsline {subsection}{\numberline {6.3}Nahfelderkennung - RATSEye}{71}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Koordinierung}{72}{subsection.6.4}
 \contentsline {subsubsection}{\numberline {6.4.1}Koordinierung beim RATSMember}{73}{subsubsection.6.4.1}
-\contentsline {subsubsection}{\numberline {6.4.2}Koordinierung beim RATSCore}{74}{subsubsection.6.4.2}
-\contentsline {subsection}{\numberline {6.5}Navigation der mobilen Plattform}{74}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Handoverpoint}{75}{subsection.6.6}
-\contentsline {section}{\numberline {7}Test und Bewertung}{77}{section.7}
-\contentsline {subsection}{\numberline {7.1}Genauigkeit Inverse Kinematik}{79}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Test \IeC {\"U}bergabeposition}{80}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Genauigkeit Navigation}{80}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Robustheit}{80}{subsection.7.4}
-\contentsline {subsection}{\numberline {7.5}Zusammenfassung der Tests}{81}{subsection.7.5}
-\contentsline {section}{\numberline {8}Zusammenfassung und Ausblick}{82}{section.8}
-\contentsline {subsection}{\numberline {8.1}Zusammenfassung}{82}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Ausblick}{83}{subsection.8.2}
-\contentsline {section}{\numberline {9}Literaturverzeichnis}{84}{section.9}
-\contentsline {section}{\numberline {A}Datenbl\IeC {\"a}tter}{90}{appendix.A}
-\contentsline {section}{\numberline {B}Testdaten Inverse Kinematik}{90}{appendix.B}
+\contentsline {subsubsection}{\numberline {6.4.2}Koordinierung beim RATSCore}{73}{subsubsection.6.4.2}
+\contentsline {subsection}{\numberline {6.5}Navigation der mobilen Plattform}{73}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Handoverpoint}{74}{subsection.6.6}
+\contentsline {section}{\numberline {7}Test und Bewertung}{76}{section.7}
+\contentsline {subsection}{\numberline {7.1}Genauigkeit Inverse Kinematik}{78}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Test \IeC {\"U}bergabeposition}{79}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Genauigkeit Navigation}{79}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Robustheit}{79}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.5}Zusammenfassung der Tests}{80}{subsection.7.5}
+\contentsline {section}{\numberline {8}Zusammenfassung und Ausblick}{81}{section.8}
+\contentsline {subsection}{\numberline {8.1}Zusammenfassung}{81}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Ausblick}{82}{subsection.8.2}
+\contentsline {section}{\numberline {9}Literaturverzeichnis}{83}{section.9}
+\contentsline {section}{\numberline {A}Datenbl\IeC {\"a}tter}{89}{appendix.A}
+\contentsline {section}{\numberline {B}Testdaten Inverse Kinematik}{89}{appendix.B}
