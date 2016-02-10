@@ -1,12 +1,36 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Anhang
 \begin{appendix}
-
     
-    \section{Datenblätter}
-    \label{app:daten}
+        \section{Testdaten MoveIt Bewegungsplaner}
+        \label{app:tmv}
+        
+    \begin{table}[H]
+    	\centering
+    	\begin{tabular}{|c|c|c|c|}
+    		\hline  	& EST & PRM & CHOMP \\ 
+    		\hline 10 	& 
+    		$\left(\begin{array}{c} 1.84 \\ 6.253 \\ 11.6  \end{array}\right)$ & 
+    		$\left(\begin{array}{c} 0.32 \\ 10.486 \\ 17.4  \end{array}\right)$ &
+    		$\left(\begin{array}{c} 0.46 \\ 11.731 \\ 13.2  \end{array}\right)$ \\ 
+    		\hline 100 	&
+    		$\left(\begin{array}{c} 15.84 \\ 2.214 \\ 2.1  \end{array}\right)$ & 
+    		$\left(\begin{array}{c} 3.84 \\ 3.164 \\ 4.6  \end{array}\right)$ &
+    		$\left(\begin{array}{c} 5.21 \\ 4.756 \\ 2.9  \end{array}\right)$ \\ 
+    		\hline 1000 &  
+    		OOT &
+    		$\left(\begin{array}{c} 36.15 \\ 1.54 \\ 1.2  \end{array}\right)$ &
+    		$\left(\begin{array}{c} 40.84 \\ 1.78 \\ 0.8  \end{array}\right)$ \\ 
+    		\hline 
+    	\end{tabular}
+    	
+    	\caption[Gemittelte Messwerte der MoveIt!-Planer-Algorithmen]{Die gemittelten Messwerte der MoveIt!-Planer. In den Zeilen sind die unterschiedlichen Iterationen pro Planung gegeben. Die Spalten geben den verwendeten Planer-Algorithmus an. Die Messwerte $x$ setzen sich aus der benötigten Planungszeit $x_1$ in Sekunden und der euklidischen Distanz der Zielpose zur Planpose zusammen. Dabei wird zwischen linearer $x_2$ (Zentimeter) und rotierender $x_3$ (Grad) Distanz unterschieden. OOT steht für eine Überschreitung der Zeitschranke bei allen Bewegungszielen.}
+    	
+    	\label{tab:mesplan}
+    \end{table}
     
-    \section{Testdaten Inverse Kinematik}
+    
+        \section{Testdaten Inverse Kinematik}
     \label{app:tdik}
     
     \begin{tabular}{|c|c|c|}
@@ -51,6 +75,66 @@
     	
     \end{tabular} 
     
+    \section{Messwerte Systemtest}
+    \label{app:systest}
+    \begin{center}
+    	\begin{longtable}{|c|c|c|c|c|c|c|c|}
+    		\hline
+    		Testlauf & Äquivalenzklasse &$\gamma$ & $\eta$ & $k$ & $j$ & $\iota$ & Erfolg oder Fehler\\
+    		\hline
+    		\hline
+    		1 & X-Kurz & $\left(\begin{array}{c} 2,2 \\ 1,6\end{array}\right)$ & $\left(\begin{array}{c} 3,2 \\ -0,4\end{array}\right)$ & $0$ & $2$ & <1cm& \checkmark\\
+    		\hline
+    		2 & X-Kurz &  $\left(\begin{array}{c} -2,1 \\ 1,3\end{array}\right)$ & $\left(\begin{array}{c} 4,1 \\ -0,3\end{array}\right)$ & 0 & 4 & <1cm & \checkmark\\
+    		\hline
+    		3 & X-Kurz &  $\left(\begin{array}{c} 1,4 \\ 2,2\end{array}\right)$ & $\left(\begin{array}{c} 3,5 \\ -0,5\end{array}\right)$ & 0 & 2& <1cm& \checkmark\\
+    		\hline
+    		4 & X-Kurz &  $\left(\begin{array}{c} 2,3 \\ -2,1\end{array}\right)$ & $\left(\begin{array}{c} 3,7 \\ -0,3\end{array}\right)$ & 0& 2&<1cm & \checkmark\\
+    		\hline
+    		5 & X-Lang &  $\left(\begin{array}{c} -1,6 \\ 1,8\end{array}\right)$ & $\left(\begin{array}{c} 5,2 \\ -0,7\end{array}\right)$ & 1& 2& <1cm& \checkmark\\
+    		\hline
+    		6 & X-Lang &  $\left(\begin{array}{c} 1,4 \\ 1,4\end{array}\right)$ & $\left(\begin{array}{c} 6,1 \\ -0,8\end{array}\right)$ & 1& 3& <1cm& \checkmark\\
+    		\hline
+    		7 & X-Lang &  $\left(\begin{array}{c} 1,3 \\ -2,2\end{array}\right)$ & $\left(\begin{array}{c} 7,2 \\ -0,8\end{array}\right)$ & 0& 2& <1cm& \checkmark\\
+    		\hline
+    		8 & X-Lang &  $\left(\begin{array}{c} 5,4 \\ 1,3\end{array}\right)$ & $\left(\begin{array}{c} 6,8 \\ -0,5\end{array}\right)$ & 1& 2& <1cm& \checkmark\\
+    		\hline
+    		9 & X-Kurz, Y-Kurz &  $\left(\begin{array}{c} 2,1 \\ -1,5\end{array}\right)$ & $\left(\begin{array}{c} 10,4 \\ -4,8\end{array}\right)$ & >10& -& -& Fehler 1\\
+    		\hline
+    		10 & X-Kurz, Y-Kurz &  $\left(\begin{array}{c} 1,2 \\ 3,8\end{array}\right)$ & $\left(\begin{array}{c} 4,2 \\ -7,4\end{array}\right)$ & 1& 3& <1cm& \checkmark\\
+    		\hline
+    		11 & X-Kurz, Y-Kurz &  $\left(\begin{array}{c} -2,4 \\ 4,2\end{array}\right)$ & $\left(\begin{array}{c} 3,7 \\ -6,3\end{array}\right)$ & 2& 4& <1cm& \checkmark\\
+    		\hline
+    		12 & X-Kurz, Y-Kurz &  $\left(\begin{array}{c} -3,2 \\ -2,1\end{array}\right)$ & $\left(\begin{array}{c} 6,1 \\ -4,2\end{array}\right)$ & 1& 2& 3,2& Fehler 3\\
+    		\hline
+    		13 & X-Lang, Y-Kurz &  $\left(\begin{array}{c} -4,1 \\ -2,8\end{array}\right)$ & $\left(\begin{array}{c} 3,8 \\ -7,2\end{array}\right)$ & 1& 3& 4,2& Fehler 3\\
+    		\hline
+    		14 & X-Lang, Y-Kurz &  $\left(\begin{array}{c} 7,2 \\ 1,2\end{array}\right)$ & $\left(\begin{array}{c} 9,4 \\ -4,8\end{array}\right)$ & 2& 4& 4,5& Fehler 3\\
+    		\hline
+    		15 & X-Lang, Y-Kurz &  $\left(\begin{array}{c} -1,4 \\ 8,1\end{array}\right)$ & $\left(\begin{array}{c} 6,2 \\ -5,5\end{array}\right)$ & 2& 3& <1cm& \checkmark\\
+    		\hline
+    		16 & X-Lang, Y-Kurz &  $\left(\begin{array}{c} 2,4 \\ 1,3\end{array}\right)$ & $\left(\begin{array}{c} -1,2 \\ -4,2\end{array}\right)$ & 2& 3& <1cm& \checkmark\\
+    		\hline
+    		17 & X-Kurz, Y-Lang &  $\left(\begin{array}{c} 1,2 \\ -3,4\end{array}\right)$ & $\left(\begin{array}{c} 5,4 \\ -22,8\end{array}\right)$ & >10& -&- & Fehler 1\\
+    		\hline
+    		18 & X-Kurz, Y-Lang &  $\left(\begin{array}{c} 3,8 \\ 2,1\end{array}\right)$ & $\left(\begin{array}{c} 3,2 \\ -17,2\end{array}\right)$ & 2& >10& -& Fehler 2\\
+    		\hline
+    		19 & X-Kurz, Y-Lang &  $\left(\begin{array}{c} 2,5 \\ 2,4\end{array}\right)$ & $\left(\begin{array}{c} 1,6 \\ -20,1\end{array}\right)$ & 1& 7& <1cm& \checkmark\\
+    		\hline
+    		20 & X-Kurz, Y-Lang &  $\left(\begin{array}{c} 1,6 \\ 2,7\end{array}\right)$ & $\left(\begin{array}{c} 4,2 \\ -19,8\end{array}\right)$ & 2& 8& 4,2cm& Fehler 3\\
+    		\hline
+    		21 & X-Lang, Y-Lang &  $\left(\begin{array}{c} 3,2 \\ -1,7\end{array}\right)$ & $\left(\begin{array}{c} 3,8 \\ -21,2\end{array}\right)$ & 1& 6& 5,6cm& Fehler 3\\
+    		\hline
+    		22 & X-Lang, Y-Lang &  $\left(\begin{array}{c} 2,4 \\ 2,1\end{array}\right)$ & $\left(\begin{array}{c} 2,8 \\ -18,4\end{array}\right)$ & 2& 5& <1cm& \checkmark\\
+    		\hline
+    		23 & X-Lang, Y-Lang &  $\left(\begin{array}{c} -3,3 \\ 1,6\end{array}\right)$ & $\left(\begin{array}{c} 2,8 \\ -31,4\end{array}\right)$ & >10& -& -& Fehler 1\\
+    		\hline
+    		24 & X-Lang, Y-Lang &  $\left(\begin{array}{c} 2,7 \\ 1,8\end{array}\right)$ & $\left(\begin{array}{c} 3,1 \\ -16,1\end{array}\right)$ & 2& 8& 6,2& Fehler 3\\
+    		\hline
+    		\caption{Messwerte der Testphase}
+    		\label{tab:messw}
+    	\end{longtable}
+    \end{center}
     
 \end{appendix}
 

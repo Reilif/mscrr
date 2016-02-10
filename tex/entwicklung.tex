@@ -186,7 +186,7 @@ Eine an den Agenten enge-gekoppelte Funktionalität, die an einen mobilen Robote
 \end{tabular} 
 
 \paragraph{Beschreibung}
-Diese Funktionalität bildet die zentrale Aufgabe dieser Arbeit ab und ist deshalb ausführlicher beschrieben. Ein Objekt soll zwischen zwei Robotern übergeben werden. Roboter A hat das Objekt gegriffen und soll nun dieses nur an Roboter B übergeben. Dazu müssen zunächst die beiden Arbeitsräume der Roboter eine Schnittmenge aufweisen, in der das Objekt übergeben werden kann. Danach muss eine Übergabeposition bestimmt werden. Neben der Position spielt die Orientierung im Raum einen wichtigen Faktor, da je nach Objekt und Greifer die Griffpositionen an dem Objekt variiert. Da in dieser Arbeit mit einem einfachen symmetrischen Objekt, einem langgezogenen Quader, und einem Gripper mit parallelen Fingern gearbeitet wird, ist ein entgegengesetzter Griff möglich (siehe Abbildung \ref{fig:grip1}). Dabei entspricht die Pose von Greifer B der invertierten Pose von Greifer A:
+Diese Funktionalität bildet die zentrale Aufgabe dieser Arbeit ab und ist deshalb ausführlicher beschrieben. Ein Objekt soll zwischen zwei Robotern übergeben werden. Roboter A hat das Objekt gegriffen und soll nun dieses nur an Roboter B übergeben. Dazu müssen zunächst die beiden Arbeitsräume der Roboter eine Schnittmenge aufweisen, in der das Objekt übergeben werden kann. Danach muss eine Übergabeposition bestimmt werden. Neben der Position spielt die Orientierung im Raum einen wichtigen Faktor, da je nach Objekt und Greifer die Griffpositionen an dem Objekt variiert. Da in dieser Arbeit mit einem einfachen symmetrischen Objekt, einem langgezogenen Quader, und einem Greifer mit parallelen Fingern gearbeitet wird, ist ein entgegengesetzter Griff möglich (siehe Abbildung \ref{fig:grip1}). Dabei entspricht die Pose von Greifer B der invertierten Pose von Greifer A:
 
 \begin{equation}
 \xi_{GreiferB} = \ominus \xi_{GreiferA}
@@ -400,32 +400,8 @@ Anschließend wurden die Bewertungsvektoren der fünf Bewegungsziele elementweis
 \end{math}
 
 
-Die Ergebnisse pro Iterationen-Messgruppe und Algorithmus sind in Tabelle \ref{tab:mesplan} aufgelistet. In der Auswertung fallen bestimmte Charakteristiken der einzelnen Algorithmen auf. So benötigt EST schon bei wenigen Iterationen mehr Zeit als die anderen Algorithmen. Dafür sind die Abweichungen geringer. PRM und CHOMP sind zeitlich betrachtet sehr ähnlich. Differenzen zeigen sich erst bei der Betrachtung der linearen und rotierenden Abweichungen. So sind die linearen Abweichungen bei PRM immer kleiner als bei den Planungen mit CHOMP. Für die Rotation gilt dies genau umgekehrt. Dort ist CHOMP genauer als PRM. Zusammengefasst sind die Ergebnisse für das MRS dieser Arbeit jedoch ungenügend. Eine Genauigkeit von 1,5 cm linear oder 0,8\textdegree{ }rotierend  ist für die Anwendung nicht ausreichend. Auch die benötigte Zeit der Planungen ist zu hoch. Ein Grund dafür ist die schlechte Hardware des eingebauten Rechners. Vergleichstests auf Dummy zeigten einen Beschleunigungsfaktor von 5.
+Die Ergebnisse pro Iterationen-Messgruppe und Algorithmus sind in Tabelle \ref{tab:mesplan} in Anhang \ref{app:tmv} aufgelistet. In der Auswertung fallen bestimmte Charakteristiken der einzelnen Algorithmen auf. So benötigt EST schon bei wenigen Iterationen mehr Zeit als die anderen Algorithmen. Dafür sind die Abweichungen geringer. PRM und CHOMP sind zeitlich betrachtet sehr ähnlich. Differenzen zeigen sich erst bei der Betrachtung der linearen und rotierenden Abweichungen. So sind die linearen Abweichungen bei PRM immer kleiner als bei den Planungen mit CHOMP. Für die Rotation gilt dies genau umgekehrt. Dort ist CHOMP genauer als PRM. Zusammengefasst sind die Ergebnisse für das MRS dieser Arbeit jedoch ungenügend. Eine Genauigkeit von 1,5 cm linear oder 0,8\textdegree{ }rotierend  ist für die Anwendung nicht ausreichend. Auch die benötigte Zeit der Planungen ist zu hoch. Ein Grund dafür ist die schlechte Hardware des eingebauten Rechners. Vergleichstests auf Dummy zeigten einen Beschleunigungsfaktor von 5.
 
-\begin{table}
-	\centering
-	\begin{tabular}{|c|c|c|c|}
-		\hline  	& EST & PRM & CHOMP \\ 
-		\hline 10 	& 
-		$\left(\begin{array}{c} 1.84 \\ 6.253 \\ 11.6  \end{array}\right)$ & 
-		$\left(\begin{array}{c} 0.32 \\ 10.486 \\ 17.4  \end{array}\right)$ &
-		$\left(\begin{array}{c} 0.46 \\ 11.731 \\ 13.2  \end{array}\right)$ \\ 
-		\hline 100 	&
-		$\left(\begin{array}{c} 15.84 \\ 2.214 \\ 2.1  \end{array}\right)$ & 
-		$\left(\begin{array}{c} 3.84 \\ 3.164 \\ 4.6  \end{array}\right)$ &
-		$\left(\begin{array}{c} 5.21 \\ 4.756 \\ 2.9  \end{array}\right)$ \\ 
-		\hline 1000 &  
-		OOT &
-		$\left(\begin{array}{c} 36.15 \\ 1.54 \\ 1.2  \end{array}\right)$ &
-		$\left(\begin{array}{c} 40.84 \\ 1.78 \\ 0.8  \end{array}\right)$ \\ 
-		\hline 
-	\end{tabular}
-	
-	\caption[Gemittelte Messwerte der MoveIt!-Planer-Algorithmen]{Die gemittelten Messwerte der MoveIt!-Planer. In den Zeilen sind die unterschiedlichen Iterationen pro Planung gegeben. Die Spalten geben den verwendeten Planer-Algorithmus an. Die Messwerte $x$ setzen sich aus der benötigten Planungszeit $x_1$ in Sekunden und der euklidischen Distanz der Zielpose zur Planpose zusammen. Dabei wird zwischen linearer $x_2$ (Zentimeter) und rotierender $x_3$ (Grad) Distanz unterschieden. OOT steht für eine Überschreitung der Zeitschranke bei allen Bewegungszielen.}
-	
-	\label{tab:mesplan}
-\end{table}
-	
 Eine weitere inverse Kinematik, beziehungsweise ein Bewegungsplaner, wurde 2013 von der Robotics \& Perception Group der Universität Zürich veröffentlicht (siehe \cite{muggler2013torque}). Dieser Planer unterscheidet sich von dem Kuka-Ansatz in der Ansteuerung der Hardware. Dabei wird nicht nur die Konfiguration der Gelenke, sondern auch die  Drehkraft der Gelenke angesteuert. Dadurch können Bewegungen entlang einer Trajektorie ausgeführt werden. Der Planer basiert ebenso auf der MoveIt!-Basis und nutzt die implementierten Planungsalgorithmen. Für diese Arbeit konnte dieser Bewegungsplaner nicht eingesetzt werden, da die Bibliothek zu dem Zeitpunkt der Entwicklung nicht die installierte Firmware der YouBots unterstützte. Inzwischen sind die benötigten Updates installiert und könnten genutzt werden. Diese Änderung würde jedoch den Aufwand der Arbeit überschreiten. Die inverse Kinematik, die dabei genutzt wird, ist ein Nachfolger der ersten Entwicklung von Kuka. Diese beruht auf den geometrischen Eigenschaften des Arms und ist in der Arbeit \cite{6309496} beschrieben.
 
 \subsubsection{Vereinfachte inverse Kinematik}

@@ -79,38 +79,39 @@
 \contentsline {subsubsection}{\numberline {5.5.2}Vereinfachte inverse Kinematik}{57}{subsubsection.5.5.2}
 \contentsline {subsubsection}{\numberline {5.5.3}Weiterentwicklung: Inverse Kinematik}{60}{subsubsection.5.5.3}
 \contentsline {subsubsection}{\numberline {5.5.4}Optimierte Pfadplanung}{63}{subsubsection.5.5.4}
-\contentsline {subsubsection}{\numberline {5.5.5}Nachtrag Literatur}{65}{subsubsection.5.5.5}
-\contentsline {section}{\numberline {6}Implementierung}{66}{section.6}
-\contentsline {subsection}{\numberline {6.1}Robotersteuerung - RATSYoubot \& RATSDummy \& RATSRose}{66}{subsection.6.1}
-\contentsline {subsubsection}{\numberline {6.1.1}Ansteuerung der Aktoren}{66}{subsubsection.6.1.1}
-\contentsline {subsubsection}{\numberline {6.1.2}Lineare Bahnbewegung}{67}{subsubsection.6.1.2}
-\contentsline {subsubsection}{\numberline {6.1.3}Aktionen der Roboter}{67}{subsubsection.6.1.3}
-\contentsline {paragraph}{Greifer \IeC {\"o}ffnen und schlie\IeC {\ss }en}{68}{section*.16}
-\contentsline {paragraph}{Greifer in Pose bringen}{68}{section*.17}
-\contentsline {paragraph}{Greifer an eine Pose ann\IeC {\"a}hern}{68}{section*.18}
-\contentsline {paragraph}{Objekt aufheben}{68}{section*.19}
-\contentsline {paragraph}{Objekt ablegen}{69}{section*.20}
-\contentsline {paragraph}{Position einnehmen}{69}{section*.21}
-\contentsline {paragraph}{\IeC {\"U}bergabe}{69}{section*.22}
-\contentsline {subsection}{\numberline {6.2}Raum\IeC {\"u}berwachung - RATSHawk}{69}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}PCL \& ROS}{70}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}Detektion}{70}{subsubsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.3}Lokalisierung}{71}{subsubsection.6.2.3}
-\contentsline {subsection}{\numberline {6.3}Nahfelderkennung - RATSEye}{71}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Koordinierung}{72}{subsection.6.4}
-\contentsline {subsubsection}{\numberline {6.4.1}Koordinierung beim RATSMember}{73}{subsubsection.6.4.1}
-\contentsline {subsubsection}{\numberline {6.4.2}Koordinierung beim RATSCore}{73}{subsubsection.6.4.2}
-\contentsline {subsection}{\numberline {6.5}Navigation der mobilen Plattform}{73}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Handoverpoint}{74}{subsection.6.6}
-\contentsline {section}{\numberline {7}Test und Bewertung}{76}{section.7}
-\contentsline {subsection}{\numberline {7.1}Genauigkeit Inverse Kinematik}{78}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Test \IeC {\"U}bergabeposition}{79}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Genauigkeit Navigation}{79}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Robustheit}{79}{subsection.7.4}
-\contentsline {subsection}{\numberline {7.5}Zusammenfassung der Tests}{80}{subsection.7.5}
-\contentsline {section}{\numberline {8}Zusammenfassung und Ausblick}{81}{section.8}
-\contentsline {subsection}{\numberline {8.1}Zusammenfassung}{81}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Ausblick}{82}{subsection.8.2}
-\contentsline {section}{\numberline {9}Literaturverzeichnis}{83}{section.9}
-\contentsline {section}{\numberline {A}Datenbl\IeC {\"a}tter}{89}{appendix.A}
-\contentsline {section}{\numberline {B}Testdaten Inverse Kinematik}{89}{appendix.B}
+\contentsline {subsubsection}{\numberline {5.5.5}Nachtrag Literatur}{64}{subsubsection.5.5.5}
+\contentsline {section}{\numberline {6}Implementierung}{65}{section.6}
+\contentsline {subsection}{\numberline {6.1}Robotersteuerung - RATSYoubot \& RATSDummy \& RATSRose}{65}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Ansteuerung der Aktoren}{65}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}Lineare Bahnbewegung}{66}{subsubsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.3}Aktionen der Roboter}{66}{subsubsection.6.1.3}
+\contentsline {paragraph}{Greifer \IeC {\"o}ffnen und schlie\IeC {\ss }en}{67}{section*.16}
+\contentsline {paragraph}{Greifer in Pose bringen}{67}{section*.17}
+\contentsline {paragraph}{Greifer an eine Pose ann\IeC {\"a}hern}{67}{section*.18}
+\contentsline {paragraph}{Objekt aufheben}{67}{section*.19}
+\contentsline {paragraph}{Objekt ablegen}{68}{section*.20}
+\contentsline {paragraph}{Position einnehmen}{68}{section*.21}
+\contentsline {paragraph}{\IeC {\"U}bergabe}{68}{section*.22}
+\contentsline {subsection}{\numberline {6.2}Raum\IeC {\"u}berwachung - RATSHawk}{68}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}PCL \& ROS}{69}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}Detektion}{69}{subsubsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.3}Lokalisierung}{70}{subsubsection.6.2.3}
+\contentsline {subsection}{\numberline {6.3}Nahfelderkennung - RATSEye}{70}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Koordinierung}{71}{subsection.6.4}
+\contentsline {subsubsection}{\numberline {6.4.1}Koordinierung beim RATSMember}{72}{subsubsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.2}Koordinierung beim RATSCore}{72}{subsubsection.6.4.2}
+\contentsline {subsection}{\numberline {6.5}Navigation der mobilen Plattform}{72}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Handoverpoint}{73}{subsection.6.6}
+\contentsline {section}{\numberline {7}Test und Bewertung}{75}{section.7}
+\contentsline {subsection}{\numberline {7.1}Genauigkeit Inverse Kinematik}{76}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Genauigkeit \IeC {\"U}bergabeposition}{76}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Genauigkeit Navigation}{77}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Robustheit}{77}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.5}Zusammenfassung der Tests}{78}{subsection.7.5}
+\contentsline {section}{\numberline {8}Zusammenfassung und Ausblick}{79}{section.8}
+\contentsline {subsection}{\numberline {8.1}Zusammenfassung}{79}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Ausblick}{80}{subsection.8.2}
+\contentsline {section}{\numberline {9}Literaturverzeichnis}{81}{section.9}
+\contentsline {section}{\numberline {A}Testdaten MoveIt Bewegungsplaner}{87}{appendix.A}
+\contentsline {section}{\numberline {B}Testdaten Inverse Kinematik}{88}{appendix.B}
+\contentsline {section}{\numberline {C}Messwerte Systemtest}{88}{appendix.C}
